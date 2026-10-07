@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Distance and Displacement · Visual Physics</title>
+<meta name="description" content="Walk a route on a map and see why the distance you travel and your displacement are different quantities.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.css">
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+<div class="wrap">
+
+<header class="site-head">
+  <a class="brand" href="../../index.html">Visual <span>Physics</span></a>
+  <span class="crumb">Std 9 · Ch. 1 Laws of Motion</span>
+</header>
+
+<main>
+<p class="eyebrow">Laws of Motion · Lesson 1</p>
+<h1>Distance and Displacement</h1>
+<p class="lede">You walk to a friend's house and back home. You walked a long way, yet you ended up exactly where you started. Physics has a separate word for each of those facts.</p>
+<p class="downloads"><a class="btn" href="../../slides/distance-and-displacement.pptx" download>Download slides (.pptx)</a> <span>13 slides with teacher notes</span></p>
+
+<div id="sim-distance"></div>
+
+<section class="prose">
+  <h2>What is motion?</h2>
+  <p>An object is <strong>in motion</strong> when its position changes with respect to its surroundings. To decide, we compare it with a fixed point called the <strong>reference point</strong>. A tree beside the road is at rest. A bus passing it is in motion.</p>
+  <p>Motion depends on the reference point. A passenger sitting in the bus is at rest compared with the seat in front, but in motion compared with the tree.</p>
+
+  <h2>Distance</h2>
+  <p><span class="c-path">Distance</span> is the total length of the path an object actually travels. It does not care about direction. Every step adds to it, so it can only grow.</p>
+  <p>In the simulation, distance is the <span class="c-path">violet line</span>, the route the walker really took.</p>
+
+  <h2>Displacement</h2>
+  <p><span class="c-vx">Displacement</span> is the minimum distance between the starting point and the finishing point, measured in a straight line, <strong>together with its direction</strong>. It only cares about where you started and where you are now, not the route in between.</p>
+  <p>In the simulation, displacement is the <span class="c-vx">teal arrow</span> from Start to the walker.</p>
+
+  <div class="note"><strong>Both are measured in metres (m).</strong> Distance has size only, so it is a <em>scalar</em>. Displacement has size and direction, so it is a <em>vector</em>.</div>
+</section>
+
+<h2>Distance or displacement?</h2>
+<div class="table-wrap">
+<table class="compare">
+  <thead><tr><th></th><th class="c-path">Distance</th><th class="c-vx">Displacement</th></tr></thead>
+  <tbody>
+    <tr><th>Meaning</th><td>Length of the actual path</td><td>Straight line from start to finish</td></tr>
+    <tr><th>Direction</th><td>Not included (scalar)</td><td>Included (vector)</td></tr>
+    <tr><th>Can it be zero while moving?</th><td>No</td><td>Yes, after a round trip</td></tr>
+    <tr><th>Depends on route?</th><td>Yes</td><td>No, only on start and end</td></tr>
+    <tr><th>Which is bigger?</th><td colspan="2">Displacement is never larger than distance. They are equal only for a straight walk with no turning back.</td></tr>
+  </tbody>
+</table>
+</div>
+
+<h2>Try it</h2>
+<p class="prose" style="margin-top:1rem">Predict both numbers first, then press the button and check the readout under the map.</p>
+<ul class="tries">
+  <li><span><strong>Two routes to school.</strong> Route A and route B start at the same home and end at the same school. Compare both numbers.</span>
+    <span class="pair"><button class="btn" data-preset="schoolA">Route A</button> <button class="btn" data-preset="schoolB">Route B</button></span></li>
+  <li><span><strong>Walk 70 m in a straight line.</strong> Are distance and displacement equal?</span>
+    <button class="btn" data-preset="straight">Walk straight</button></li>
+  <li><span><strong>Walk 70 m, then come back.</strong> What happens to the teal arrow on the way back?</span>
+    <button class="btn" data-preset="roundtrip">Walk there and back</button></li>
+  <li><span><strong>Run half a lap of a circular track</strong> with radius 20 m.</span>
+    <button class="btn" data-preset="halfLap">Run half a lap</button></li>
+  <li><span><strong>Now run the full lap.</strong> Where does the arrow end up?</span>
+    <button class="btn" data-preset="fullLap">Run a full lap</button></li>
+</ul>
+<p class="prose" style="margin-top:1rem;font-size:.875rem;color:var(--muted)">What you should see: route A is 105 m and route B is 119 m, but both give the same displacement, 78.3 m, because they start and end at the same places. The straight walk gives 70 m for both. The round trip gives a distance of 140 m and zero displacement. Half a lap gives 62.8 m of distance but only 40 m of displacement (the diameter). A full lap brings displacement back to zero.</p>
+
+<h2>Worked examples</h2>
+<div class="example">
+  <h3 style="margin-top:0">1. Going to the shop</h3>
+  <p>Riya walks 40 m east and then 30 m north to reach a shop. Find the distance she walked and her displacement.</p>
+  <ol>
+    <li>Distance is the whole path: \(40 + 30 = \) <span class="answer">70 m</span></li>
+    <li>Displacement is the straight line from start to shop. The two walks form a right angle, so use Pythagoras: \(\sqrt{40^2 + 30^2} = \sqrt{2500} = \) <span class="answer">50 m</span></li>
+    <li>Direction: \(\tan\theta = 30/40\), so \(\theta \approx 37^\circ\). Her displacement is <span class="answer">50 m, 37° north of east</span></li>
+  </ol>
+  <button class="btn" data-preset="lshape">Check it in the simulation</button>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">2. Round the track</h3>
+  <p>An athlete runs around a circular track of radius 50 m. Find the distance and displacement after half a lap and after one full lap.</p>
+  <ol>
+    <li>Circumference \(= 2\pi r = 2 \times 3.14 \times 50 = 314\) m.</li>
+    <li>Half a lap: distance \(= 314 / 2 = \) <span class="answer">157 m</span>. The athlete is now directly across the circle, so displacement is the diameter \(= 2r = \) <span class="answer">100 m</span></li>
+    <li>Full lap: distance <span class="answer">314 m</span>. The athlete is back at the start, so displacement is <span class="answer">0 m</span></li>
+  </ol>
+</div>
+
+<h2>Common mistakes</h2>
+<ul class="mistakes" style="margin-top:1rem">
+  <li><strong>Giving displacement without a direction.</strong> "50 m" is incomplete. Write "50 m north-east" or "50 m, 37° north of east".</li>
+  <li><strong>Adding the two legs to get displacement.</strong> 40 m east and 30 m north is not 70 m of displacement. Draw the straight line from start to finish.</li>
+  <li><strong>Thinking zero displacement means no motion.</strong> A full lap is plenty of motion. Only the start and end points coincide.</li>
+</ul>
+
+<h2>Quick check</h2>
+<div class="quiz">
+  <fieldset class="q" data-answer="c">
+    <legend>1. A car drives 5 km east and then 5 km west. What are its distance and displacement?</legend>
+    <div class="opts">
+      <button data-opt="a">0 km and 10 km</button>
+      <button data-opt="b">10 km and 10 km</button>
+      <button data-opt="c">10 km and 0 km</button>
+      <button data-opt="d">5 km and 5 km</button>
+    </div>
+    <p class="why" hidden>The car covered 5 + 5 = 10 km of road, but it ended where it started, so its displacement is zero.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="b">
+    <legend>2. Which of these is a vector quantity?</legend>
+    <div class="opts">
+      <button data-opt="a">Distance</button>
+      <button data-opt="b">Displacement</button>
+      <button data-opt="c">Time</button>
+      <button data-opt="d">Length of a path</button>
+    </div>
+    <p class="why" hidden>A vector has both size and direction. Displacement needs a direction to be complete; the others do not.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="a">
+    <legend>3. Can the displacement of an object ever be larger than the distance it travels?</legend>
+    <div class="opts">
+      <button data-opt="a">No, never</button>
+      <button data-opt="b">Yes, if it moves in a circle</button>
+      <button data-opt="c">Yes, if it moves fast</button>
+    </div>
+    <p class="why" hidden>A straight line is the shortest path between two points, so displacement is at most equal to the distance.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="d">
+    <legend>4. A student sitting in a moving train is…</legend>
+    <div class="opts">
+      <button data-opt="a">at rest, always</button>
+      <button data-opt="b">in motion, always</button>
+      <button data-opt="c">neither at rest nor in motion</button>
+      <button data-opt="d">at rest compared with the train, in motion compared with the platform</button>
+    </div>
+    <p class="why" hidden>Rest and motion always depend on the reference point you choose.</p>
+  </fieldset>
+  <p class="score" aria-live="polite"></p>
+</div>
+
+<nav class="next-prev" aria-label="Lessons">
+  <a href="../../index.html">← All lessons</a>
+  <a href="speed-and-velocity.html">Next: Speed and velocity →</a>
+</nav>
+</main>
+
+<footer class="foot">Follows Chapter 1 of the Maharashtra State Board Std 9 Science and Technology textbook. Explanations and examples are original.</footer>
+</div>
+
+<script src="../../assets/js/sims/displacement.js"></script>
+<script src="../../assets/js/quiz.js"></script>
+<script>
+  (function () {
+    var simEl = document.getElementById("sim-distance");
+    var sim = DisplacementSim.mount(simEl, { preset: "lshape" });
+    document.querySelectorAll("main [data-preset]").forEach(function (b) {
+      if (simEl.contains(b)) return;
+      b.addEventListener("click", function () {
+        sim.preset(b.dataset.preset, true);
+        simEl.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+      });
+    });
+  })();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/contrib/auto-render.min.js"></script>
+<script>
+  renderMathInElement(document.body, {
+    delimiters: [{ left: "$$", right: "$$", display: true }, { left: "\\(", right: "\\)", display: false }],
+    output: window.KATEX_OUTPUT || "htmlAndMathml",
+    throwOnError: false
+  });
+</script>
+</body>
+</html>

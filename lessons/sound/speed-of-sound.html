@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Speed of Sound · Visual Physics</title>
+<meta name="description" content="Race a sound pulse through air, water and steel, warm up the air, and time the gap between lightning and thunder to find how far away a storm is.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.css">
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+<div class="wrap">
+
+<header class="site-head">
+  <a class="brand" href="../../index.html">Visual <span>Physics</span></a>
+  <span class="crumb">Std 9 · Ch. 12 Study of Sound</span>
+</header>
+
+<main>
+<p class="eyebrow">Study of Sound · Lesson 2</p>
+<h1>The Speed of Sound</h1>
+<p class="lede">At a cricket match you see the bat hit the ball a moment before you hear the crack. Light reaches you almost at once; sound takes its time, and how long depends on what it travels through.</p>
+<p class="downloads"><a class="btn" href="../../slides/speed-of-sound.pptx" download>Download slides (.pptx)</a> <span>12 slides with teacher notes</span></p>
+
+<div id="sim-main"></div>
+
+<section class="prose">
+  <h2>It depends on the medium</h2>
+  <p>Sound is passed on by particles pushing their neighbours. In a solid the particles are tightly linked, so the push passes on very quickly; in a gas they are far apart, so it passes slowly. In general sound travels <strong>fastest in solids, slower in liquids and slowest in gases</strong>.</p>
+</section>
+
+<div class="table-wrap">
+<table class="compare">
+  <thead><tr><th>Medium</th><th>Approximate speed of sound</th></tr></thead>
+  <tbody>
+    <tr><th>Air at 0 °C</th><td>332 m/s</td></tr>
+    <tr><th>Air at 20 °C</th><td>344 m/s</td></tr>
+    <tr><th>Water</th><td>about 1500 m/s</td></tr>
+    <tr><th>Steel</th><td>about 5000 m/s</td></tr>
+  </tbody>
+</table>
+</div>
+
+<section class="prose">
+  <h2>Temperature and density</h2>
+  <p>In a gas, sound travels faster when the gas is <strong>warmer</strong>: its particles move faster and pass the push along more quickly. For air, the speed rises by about 0.6 m/s for every degree Celsius:</p>
+  <div class="eq">$$v \approx 332 + 0.6\,t \quad (\text{m/s, with } t \text{ in } ^\circ\text{C})$$</div>
+  <p>At the same temperature, sound is faster in a <strong>lighter (less dense) gas</strong>. It travels about four times faster in hydrogen than in oxygen. The speed of sound does <em>not</em> depend on its frequency or loudness: every note from an orchestra reaches the back of the hall together.</p>
+
+  <h2>Light is much faster</h2>
+  <p>Light travels at about \(3 \times 10^8\) m/s, nearly a million times faster than sound in air. In a storm the flash reaches you almost at once, and the thunder, made at the same instant, arrives later. Count the seconds between them and</p>
+  <div class="eq">$$\text{distance} = \text{speed of sound} \times \text{time}$$</div>
+</section>
+<h2>Try it</h2>
+<p class="prose" style="margin-top:1rem">Press Play to start each race or storm.</p>
+<ul class="tries">
+  <li><span><strong>The race.</strong> Which pulse arrives first?</span>
+    <button class="btn" data-sim='{"mode":"race","D":1000,"temp":20}'>Race 1000 m</button></li>
+  <li><span><strong>A cold day.</strong> Does the air pulse get faster or slower?</span>
+    <button class="btn" data-sim='{"mode":"race","D":1000,"temp":-10}'>−10 °C</button></li>
+  <li><span><strong>A storm.</strong> How many seconds until the thunder?</span>
+    <button class="btn" data-sim='{"mode":"storm","d":1720,"temp":20}'>Storm 1.7 km</button></li>
+  <li><span><strong>A hot day.</strong> Same storm, warmer air.</span>
+    <button class="btn" data-sim='{"mode":"storm","d":1720,"temp":40}'>Storm at 40 °C</button></li>
+</ul>
+<p class="prose" style="margin-top:1rem;font-size:.875rem;color:var(--muted)">What you should see: Steel wins easily (0.2 s), then water (0.67 s), and air comes last (2.91 s at 20 °C). At −10 °C the air speed drops to 326 m/s and the air pulse takes 3.07 s. The thunder from 1720 m arrives after 5.0 s at 20 °C, and after 4.83 s at 40 °C.</p>
+
+<h2>Worked examples</h2>
+<div class="example">
+  <h3 style="margin-top:0">1. Warm and cold air</h3>
+  <p>Find the speed of sound in air at 20 °C. At what temperature is it 350 m/s?</p>
+  <ol>
+    <li>\(v = 332 + 0.6 \times 20 = \) <span class="answer">344 m/s</span></li>
+    <li>\(350 = 332 + 0.6\,t\), so \(t = 18 \div 0.6 = \) <span class="answer">30 °C</span></li>
+  </ol>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">2. How far is the storm?</h3>
+  <p>On a 30 °C evening, Meera hears thunder 3 s after she sees the lightning. How far away was the lightning?</p>
+  <ol>
+    <li>\(v = 332 + 0.6 \times 30 = 350\) m/s</li>
+    <li>Distance \(= 350 \times 3 = \) <span class="answer">1050 m</span></li>
+  </ol>
+  <button class="btn" data-sim='{"mode":"storm","d":1050,"temp":30}'>Check it</button>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">3. An ear to the rail</h3>
+  <p>A railway worker taps a steel rail 1000 m away. You have one ear on the rail and the other in the air (20 °C). How far apart are the two sounds?</p>
+  <ol>
+    <li>Through steel: \(1000 \div 5000 = 0.2\) s</li>
+    <li>Through air: \(1000 \div 344 \approx 2.91\) s</li>
+    <li>Gap \(\approx\) <span class="answer">2.7 s</span>; you hear the tap twice</li>
+  </ol>
+  <button class="btn" data-sim='{"mode":"race","D":1000,"temp":20}'>Race it</button>
+</div>
+
+<h2>Common mistakes</h2>
+<ul class="mistakes" style="margin-top:1rem">
+  <li><strong>“Sound is fastest in air.”</strong> It is slowest in gases and fastest in solids.</li>
+  <li><strong>“High notes travel faster.”</strong> In one medium, all frequencies travel at the same speed.</li>
+  <li><strong>Ignoring temperature.</strong> Air carries sound faster when it is warmer: about 0.6 m/s more per °C.</li>
+  <li><strong>“The thunder happens after the lightning.”</strong> They happen together; the sound simply takes longer to arrive.</li>
+</ul>
+
+<h2>Quick check</h2>
+<div class="quiz">
+  <fieldset class="q" data-answer="c">
+    <legend>1. In which medium does sound travel fastest?</legend>
+    <div class="opts">
+      <button data-opt="a">Air</button>
+      <button data-opt="b">Water</button>
+      <button data-opt="c">Steel</button>
+      <button data-opt="d">A vacuum</button>
+    </div>
+    <p class="why" hidden>Sound travels fastest in solids.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="b">
+    <legend>2. The speed of sound in air at 25 °C is about…</legend>
+    <div class="opts">
+      <button data-opt="a">332 m/s</button>
+      <button data-opt="b">347 m/s</button>
+      <button data-opt="c">357 m/s</button>
+      <button data-opt="d">325 m/s</button>
+    </div>
+    <p class="why" hidden>332 + 0.6 × 25 = 347 m/s.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="c">
+    <legend>3. You hear thunder 5 s after the flash. The speed of sound is 340 m/s. How far away is the storm?</legend>
+    <div class="opts">
+      <button data-opt="a">68 m</button>
+      <button data-opt="b">340 m</button>
+      <button data-opt="c">1700 m</button>
+      <button data-opt="d">3400 m</button>
+    </div>
+    <p class="why" hidden>340 × 5 = 1700 m.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="b">
+    <legend>4. At the same temperature, sound travels faster in…</legend>
+    <div class="opts">
+      <button data-opt="a">oxygen than in hydrogen</button>
+      <button data-opt="b">hydrogen than in oxygen</button>
+      <button data-opt="c">both at the same speed</button>
+      <button data-opt="d">neither</button>
+    </div>
+    <p class="why" hidden>Sound travels faster in a lighter, less dense gas.</p>
+  </fieldset>
+  <p class="score" aria-live="polite"></p>
+</div>
+<nav class="next-prev" aria-label="Lessons">
+  <a href="sound-waves.html">← Sound waves</a>
+  <a href="echo-and-reverberation.html">Next: Echo and reverberation →</a>
+</nav>
+</main>
+
+<footer class="foot">Follows Chapter 12 of the Maharashtra State Board Std 9 Science and Technology textbook. Explanations and examples are original.</footer>
+</div>
+
+<script src="../../assets/js/sim-kit.js"></script>
+<script src="../../assets/js/sims/soundspeed.js"></script>
+<script src="../../assets/js/quiz.js"></script>
+<script>
+  (function () {
+    var simEl = document.getElementById("sim-main");
+    var sim = SoundSpeedSim.mount(simEl, { mode: "race", D: 1000, temp: 20 });
+    window.lessonSim = sim;
+    // Buttons in the lesson that set up the simulation: data-sim='{...settings}'
+    document.querySelectorAll("main [data-sim]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        sim.set(JSON.parse(b.dataset.sim));
+        sim.play();
+        simEl.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+      });
+    });
+  })();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/contrib/auto-render.min.js"></script>
+<script>
+  renderMathInElement(document.body, {
+    delimiters: [{ left: "$$", right: "$$", display: true }, { left: "\\(", right: "\\)", display: false }],
+    output: window.KATEX_OUTPUT || "htmlAndMathml",
+    throwOnError: false
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Conservation of Momentum · Visual Physics</title>
+<meta name="description" content="Collide two balls, make them stick, or push them apart from rest, and watch the total momentum stay the same.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.css">
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+<div class="wrap">
+
+<header class="site-head">
+  <a class="brand" href="../../index.html">Visual <span>Physics</span></a>
+  <span class="crumb">Std 9 · Ch. 1 Laws of Motion</span>
+</header>
+
+<main>
+<p class="eyebrow">Laws of Motion · Lesson 9</p>
+<h1>Conservation of Momentum</h1>
+<p class="lede">Two marbles collide, a gun recoils, a rocket lifts off. In every case the objects push on each other, and in every case the total momentum before equals the total momentum after.</p>
+<p class="downloads"><a class="btn" href="../../slides/conservation-of-momentum.pptx" download>Download slides (.pptx)</a> <span>12 slides with teacher notes</span></p>
+
+<div id="sim-main"></div>
+
+<section class="prose">
+  <h2>Momentum, again</h2>
+  <p>Momentum is mass times velocity, \(P = mv\), measured in kg·m/s. Like velocity, it has a direction. In the simulation, momentum to the right is positive and momentum to the left is negative.</p>
+
+  <h2>The law</h2>
+  <div class="note"><strong>When no external force acts on two interacting objects, their total momentum remains constant.</strong></div>
+  <p style="margin-top:1rem">For two objects with masses \(m_1, m_2\), velocities \(u_1, u_2\) before and \(v_1, v_2\) after:</p>
+  <div class="eq">$$m_1u_1 + m_2u_2 = m_1v_1 + m_2v_2$$</div>
+
+  <h2>Why it works</h2>
+  <p>During a collision, ball A pushes ball B and ball B pushes ball A. By Newton's third law these forces are equal and opposite, and they act for exactly the same time. So whatever momentum one ball gains, the other loses. The total cannot change.</p>
+
+  <h2>Recoil</h2>
+  <p>Before a gun fires, the gun and the bullet are at rest, so their total momentum is zero. Afterwards it must still be zero: the bullet's forward momentum is matched by the gun's backward momentum. The gun is much heavier, so it moves back much more slowly. Rockets work the same way, pushing gases out backwards to move forwards.</p>
+</section>
+<h2>Try it</h2>
+<p class="prose" style="margin-top:1rem">Compare the total momentum before and after in the bars and the readout.</p>
+<ul class="tries">
+  <li><span><strong>Equal masses.</strong> A 1 kg ball at 4 m/s hits an identical ball at rest.</span>
+    <button class="btn" data-sim='{"m1":1,"m2":1,"u1":4,"u2":0,"mode":"bouncy"}'>Play</button></li>
+  <li><span><strong>Heavy hits light.</strong> 3 kg at 3 m/s hits 1 kg at rest.</span>
+    <button class="btn" data-sim='{"m1":3,"m2":1,"u1":3,"u2":0,"mode":"bouncy"}'>Play</button></li>
+  <li><span><strong>Stick together.</strong> 2 kg at 3 m/s hits 1 kg at rest, and they stick.</span>
+    <button class="btn" data-sim='{"m1":2,"m2":1,"u1":3,"u2":0,"mode":"sticky"}'>Play</button></li>
+  <li><span><strong>Recoil.</strong> A 3 kg ball and a 1 kg ball push apart from rest.</span>
+    <button class="btn" data-sim='{"m1":3,"m2":1,"u1":0,"u2":0,"mode":"recoil"}'>Play</button></li>
+</ul>
+<p class="prose" style="margin-top:1rem;font-size:.875rem;color:var(--muted)">What you should see: with equal masses, A stops dead and B moves off at 4 m/s. Heavy hits light: A slows to 1.5 m/s and B shoots off at 4.5 m/s; the total stays 9 kg·m/s. Sticking together, both move at 2 m/s, still 6 kg·m/s in total. In the recoil, the total is 0 before and after: −6 kg·m/s for the heavy ball, +6 kg·m/s for the light one.</p>
+
+<h2>Worked examples</h2>
+<div class="example">
+  <h3 style="margin-top:0">1. Gun recoil</h3>
+  <p>A 4 kg gun fires a 20 g bullet at 400 m/s. Find the recoil velocity of the gun.</p>
+  <ol>
+    <li>Before firing, total momentum = 0. Bullet mass = 0.02 kg.</li>
+    <li>\(0 = 0.02 \times 400 + 4 \times v\), so \(4v = -8\) and \(v = \) <span class="answer">−2 m/s</span></li>
+  </ol>
+  <p>The minus sign means the gun moves backwards, opposite to the bullet.</p>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">2. Trolleys that stick</h3>
+  <p>A 2 kg trolley moving at 3 m/s hits a 1 kg trolley at rest. They stick together. Find their common velocity.</p>
+  <ol>
+    <li>Momentum before \(= 2 \times 3 + 1 \times 0 = 6\) kg·m/s.</li>
+    <li>After: \((2 + 1)\,v = 6\), so \(v = \) <span class="answer">2 m/s</span></li>
+  </ol>
+  <button class="btn" data-sim='{"m1":2,"m2":1,"u1":3,"u2":0,"mode":"sticky"}'>Check it in the simulation</button>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">3. Finding a missing velocity</h3>
+  <p>A 3 kg ball moving at 3 m/s hits a 1 kg ball at rest. After the collision the 3 kg ball moves on at 1.5 m/s. Find the velocity of the 1 kg ball.</p>
+  <ol>
+    <li>Before: \(3 \times 3 + 1 \times 0 = 9\) kg·m/s.</li>
+    <li>After: \(3 \times 1.5 + 1 \times v_2 = 4.5 + v_2\).</li>
+    <li>\(4.5 + v_2 = 9\), so \(v_2 = \) <span class="answer">4.5 m/s</span></li>
+  </ol>
+  <button class="btn" data-sim='{"m1":3,"m2":1,"u1":3,"u2":0,"mode":"bouncy"}'>Check it in the simulation</button>
+</div>
+
+<h2>Common mistakes</h2>
+<ul class="mistakes" style="margin-top:1rem">
+  <li><strong>Forgetting the signs.</strong> Choose one direction as positive. Velocities, and so momenta, in the other direction are negative.</li>
+  <li><strong>Adding speeds instead of momenta.</strong> Multiply each mass by its velocity first. It is the momenta that add up to the same total.</li>
+  <li><strong>“Momentum is lost when objects stick.”</strong> Some energy turns into heat and sound, but the total momentum is still the same.</li>
+  <li><strong>Ignoring external forces.</strong> The law needs no outside force. Friction from the ground, over a long time, changes the total.</li>
+</ul>
+
+<h2>Quick check</h2>
+<div class="quiz">
+  <fieldset class="q" data-answer="a">
+    <legend>1. What is the momentum of a 0.5 kg ball moving at 6 m/s?</legend>
+    <div class="opts">
+      <button data-opt="a">3 kg·m/s</button>
+      <button data-opt="b">12 kg·m/s</button>
+      <button data-opt="c">6.5 kg·m/s</button>
+      <button data-opt="d">0.08 kg·m/s</button>
+    </div>
+    <p class="why" hidden>\(P = mv = 0.5 \times 6 = 3\) kg·m/s.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="b">
+    <legend>2. A cannon fires a shell forward. The cannon moves backward because…</legend>
+    <div class="opts">
+      <button data-opt="a">the shell pulls it</button>
+      <button data-opt="b">total momentum must stay zero</button>
+      <button data-opt="c">the explosion is stronger at the back</button>
+      <button data-opt="d">of friction</button>
+    </div>
+    <p class="why" hidden>Before firing the total momentum is zero, so after firing the forward momentum of the shell is balanced by the backward momentum of the cannon.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="c">
+    <legend>3. A 1 kg ball at 4 m/s hits an identical ball at rest and stops. The second ball moves off at…</legend>
+    <div class="opts">
+      <button data-opt="a">1 m/s</button>
+      <button data-opt="b">2 m/s</button>
+      <button data-opt="c">4 m/s</button>
+      <button data-opt="d">8 m/s</button>
+    </div>
+    <p class="why" hidden>Momentum before = 4 kg·m/s, so the second ball must carry 4 kg·m/s: \(1 \times v = 4\).</p>
+  </fieldset>
+  <fieldset class="q" data-answer="b">
+    <legend>4. Total momentum is conserved only when…</legend>
+    <div class="opts">
+      <button data-opt="a">the objects are the same size</button>
+      <button data-opt="b">no external force acts</button>
+      <button data-opt="c">the objects stick together</button>
+      <button data-opt="d">the objects move fast</button>
+    </div>
+    <p class="why" hidden>The law holds when the only forces are the ones the objects exert on each other.</p>
+  </fieldset>
+  <p class="score" aria-live="polite"></p>
+</div>
+<nav class="next-prev" aria-label="Lessons">
+  <a href="newtons-laws.html">← Newton's laws of motion</a>
+  <a href="../../index.html">All lessons →</a>
+</nav>
+</main>
+
+<footer class="foot">Follows Chapter 1 of the Maharashtra State Board Std 9 Science and Technology textbook. Explanations and examples are original.</footer>
+</div>
+
+<script src="../../assets/js/sim-kit.js"></script>
+<script src="../../assets/js/sims/collision.js"></script>
+<script src="../../assets/js/quiz.js"></script>
+<script>
+  (function () {
+    var simEl = document.getElementById("sim-main");
+    var sim = CollisionSim.mount(simEl, { m1: 3, m2: 1, u1: 3, u2: 0, mode: "bouncy" });
+    window.lessonSim = sim;
+    // Buttons in the lesson that set up the simulation: data-sim='{...settings}'
+    document.querySelectorAll("main [data-sim]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        sim.set(JSON.parse(b.dataset.sim));
+        sim.play();
+        simEl.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+      });
+    });
+  })();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/contrib/auto-render.min.js"></script>
+<script>
+  renderMathInElement(document.body, {
+    delimiters: [{ left: "$$", right: "$$", display: true }, { left: "\\(", right: "\\)", display: false }],
+    output: window.KATEX_OUTPUT || "htmlAndMathml",
+    throwOnError: false
+  });
+</script>
+</body>
+</html>

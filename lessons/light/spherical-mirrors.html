@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Spherical Mirrors and Ray Diagrams · Visual Physics</title>
+<meta name="description" content="Move an object towards a concave or convex mirror and watch three rays find the image: real or virtual, upright or inverted, bigger or smaller.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.css">
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+<div class="wrap">
+
+<header class="site-head">
+  <a class="brand" href="../../index.html">Visual <span>Physics</span></a>
+  <span class="crumb">Std 9 · Ch. 11 Reflection of Light</span>
+</header>
+
+<main>
+<p class="eyebrow">Reflection of Light · Lesson 3</p>
+<h1>Spherical Mirrors and Ray Diagrams</h1>
+<p class="lede">The back of a steel spoon shows you small and upright; the inside shows you upside down, and up close, huge. Both are curved mirrors, and three simple rays explain everything they do.</p>
+<p class="downloads"><a class="btn" href="../../slides/spherical-mirrors.pptx" download>Download slides (.pptx)</a> <span>13 slides with teacher notes</span></p>
+
+<div id="sim-main"></div>
+
+<section class="prose">
+  <h2>Concave and convex mirrors</h2>
+  <p>A <strong>spherical mirror</strong> is a piece cut from a hollow, shiny sphere. If the inside (the hollow side) reflects, it is a <strong>concave mirror</strong>. If the outside (the bulging side) reflects, it is a <strong>convex mirror</strong>.</p>
+  <p>Rays coming in parallel to each other meet after reflecting from a concave mirror, so it is called a <strong>converging</strong> mirror. A convex mirror spreads parallel rays apart: it is a <strong>diverging</strong> mirror.</p>
+
+  <h2>Words you need</h2>
+  <ul class="mistakes">
+    <li><strong>Pole (P):</strong> the centre of the mirror's reflecting surface.</li>
+    <li><strong>Centre of curvature (C):</strong> the centre of the sphere the mirror is part of. <strong>Radius of curvature (R):</strong> the radius of that sphere, the distance PC.</li>
+    <li><strong>Principal axis:</strong> the straight line through P and C.</li>
+    <li><strong>Principal focus (F):</strong> the point on the axis where rays parallel to the axis meet after reflection (concave), or seem to come from (convex).</li>
+    <li><strong>Focal length (f):</strong> the distance PF. For small mirrors \(f = R \div 2\), so F lies halfway between P and C.</li>
+  </ul>
+
+  <h2>Three rays to find an image</h2>
+  <p>Light from the tip of an object goes in all directions, but three rays are easy to follow:</p>
+  <ul class="mistakes">
+    <li><strong>Ray 1 (teal):</strong> a ray parallel to the principal axis reflects <strong>through F</strong> (concave) or as if it came <strong>from F</strong> (convex).</li>
+    <li><strong>Ray 2 (green):</strong> a ray through F (or heading towards F, for convex) reflects <strong>parallel to the axis</strong>.</li>
+    <li><strong>Ray 3 (red):</strong> a ray through C (or heading towards C) hits the mirror at right angles and reflects <strong>straight back</strong>.</li>
+  </ul>
+  <p>Where the reflected rays meet is the tip of the image. Any two rays are enough. If they really meet, the image is <strong>real</strong> and inverted, and can be caught on a screen. If they only seem to meet behind the mirror (dashed lines), it is <strong>virtual</strong> and erect.</p>
+</section>
+
+<h2>Images formed by a concave mirror</h2>
+<div class="table-wrap">
+<table class="compare">
+  <thead><tr><th>Object</th><th>Image</th><th>Size</th><th>Nature</th></tr></thead>
+  <tbody>
+    <tr><th>Very far away (at infinity)</th><td>At F</td><td>Point-sized</td><td>Real, inverted</td></tr>
+    <tr><th>Beyond C</th><td>Between F and C</td><td>Diminished</td><td>Real, inverted</td></tr>
+    <tr><th>At C</th><td>At C</td><td>Same size</td><td>Real, inverted</td></tr>
+    <tr><th>Between C and F</th><td>Beyond C</td><td>Magnified</td><td>Real, inverted</td></tr>
+    <tr><th>At F</th><td>At infinity</td><td>Highly magnified</td><td>Real, inverted</td></tr>
+    <tr><th>Between F and P</th><td>Behind the mirror</td><td>Magnified</td><td>Virtual, erect</td></tr>
+  </tbody>
+</table>
+</div>
+
+<section class="prose">
+  <h2>Images formed by a convex mirror</h2>
+  <p>Wherever the object is, a convex mirror gives an image that is <strong>virtual, erect and diminished</strong>, behind the mirror between P and F. The closer the object, the bigger the image, but it never gets as big as the object.</p>
+
+  <h2>Uses</h2>
+  <ul class="mistakes">
+    <li><strong>Concave:</strong> shaving and make-up mirrors and dentists' mirrors (object inside F gives a large upright image); torches, car headlamps and searchlights (bulb at F sends out a parallel beam); solar cookers and furnaces (sunlight is concentrated at F).</li>
+    <li><strong>Convex:</strong> rear-view mirrors of vehicles and mirrors at sharp bends or in shops, because they show a wide area in a small, upright image.</li>
+  </ul>
+</section>
+<h2>Try it</h2>
+<p class="prose" style="margin-top:1rem">Pick a mirror and move the object. Watch where the coloured rays meet.</p>
+<ul class="tries">
+  <li><span><strong>Walk the object in.</strong> Concave mirror: watch the image change at C and F.</span>
+    <button class="btn" data-sim='{"type":"concave","f":10,"h":3,"sweep":true}'>Play</button></li>
+  <li><span><strong>Object at C.</strong> Compare the image with the object.</span>
+    <button class="btn" data-sim='{"type":"concave","f":10,"h":3,"u":20}'>Object at C</button></li>
+  <li><span><strong>Inside F.</strong> Like a shaving mirror.</span>
+    <button class="btn" data-sim='{"type":"concave","f":10,"h":3,"u":6}'>Object at 6 cm</button></li>
+  <li><span><strong>Convex mirror.</strong> Try any distance.</span>
+    <button class="btn" data-sim='{"type":"convex","f":10,"h":3,"sweep":true}'>Play</button></li>
+</ul>
+<p class="prose" style="margin-top:1rem;font-size:.875rem;color:var(--muted)">What you should see: Far away, the concave mirror's image is small, inverted and near F. It grows as the object comes in, is the same size at C, rushes off to infinity at F, and then jumps behind the mirror as a large upright virtual image. The convex mirror's image always stays small, upright and between P and F.</p>
+
+<h2>Worked examples</h2>
+<div class="example">
+  <h3 style="margin-top:0">1. From R to f</h3>
+  <p>A concave mirror has a radius of curvature of 36 cm. Where is its principal focus?</p>
+  <ol>
+    <li>\(f = R \div 2 = 36 \div 2 = \) <span class="answer">18 cm</span> in front of the mirror, halfway between P and C</li>
+  </ol>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">2. Predicting an image</h3>
+  <p>An object stands 25 cm in front of a concave mirror of focal length 10 cm. Describe the image.</p>
+  <ol>
+    <li>C is at \(2f = 20\) cm, so the object is beyond C.</li>
+    <li>The image is <span class="answer">between F and C, real, inverted and diminished</span></li>
+  </ol>
+  <button class="btn" data-sim='{"type":"concave","f":10,"h":3,"u":25}'>Check it in the simulation</button>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">3. Which mirror?</h3>
+  <p>A mirror always gives a small, upright image, whatever the distance of the object. What kind of mirror is it, and where might you find one?</p>
+  <ol>
+    <li>Only a <span class="answer">convex mirror</span> always gives a virtual, erect, diminished image.</li>
+    <li>It is used as a rear-view mirror in vehicles.</li>
+  </ol>
+</div>
+
+<h2>Common mistakes</h2>
+<ul class="mistakes" style="margin-top:1rem">
+  <li><strong>“The focus is at C.”</strong> F is halfway between P and C: f = R ÷ 2.</li>
+  <li><strong>“Concave mirrors always invert.”</strong> Inside F the image is virtual and erect.</li>
+  <li><strong>Drawing the image behind a concave mirror for every case.</strong> Only when the object is between P and F.</li>
+  <li><strong>“A convex mirror can magnify.”</strong> Its image is always smaller than the object.</li>
+</ul>
+
+<h2>Quick check</h2>
+<div class="quiz">
+  <fieldset class="q" data-answer="c">
+    <legend>1. Rays parallel to the principal axis of a concave mirror meet after reflection at…</legend>
+    <div class="opts">
+      <button data-opt="a">the pole</button>
+      <button data-opt="b">the centre of curvature</button>
+      <button data-opt="c">the principal focus</button>
+      <button data-opt="d">infinity</button>
+    </div>
+    <p class="why" hidden>That point is the definition of the principal focus F.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="b">
+    <legend>2. Where should the bulb of a torch be placed in front of its concave mirror to give a parallel beam?</legend>
+    <div class="opts">
+      <button data-opt="a">At C</button>
+      <button data-opt="b">At F</button>
+      <button data-opt="c">Between F and P</button>
+      <button data-opt="d">Beyond C</button>
+    </div>
+    <p class="why" hidden>Rays from F reflect parallel to the axis.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="b">
+    <legend>3. An object is placed at C of a concave mirror. The image is…</legend>
+    <div class="opts">
+      <button data-opt="a">at F, point-sized</button>
+      <button data-opt="b">at C, same size, real and inverted</button>
+      <button data-opt="c">behind the mirror, virtual</button>
+      <button data-opt="d">beyond C, magnified</button>
+    </div>
+    <p class="why" hidden>A ray through C returns along itself, so the image forms at C, the same size and inverted.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="b">
+    <legend>4. Why are convex mirrors used as rear-view mirrors?</legend>
+    <div class="opts">
+      <button data-opt="a">They magnify</button>
+      <button data-opt="b">They give a wide view with an erect image</button>
+      <button data-opt="c">They form real images</button>
+      <button data-opt="d">They are cheaper</button>
+    </div>
+    <p class="why" hidden>A convex mirror shows a wide area in a small, upright image.</p>
+  </fieldset>
+  <p class="score" aria-live="polite"></p>
+</div>
+<nav class="next-prev" aria-label="Lessons">
+  <a href="images-in-inclined-mirrors.html">← Images in inclined mirrors</a>
+  <a href="mirror-formula.html">Next: The mirror formula →</a>
+</nav>
+</main>
+
+<footer class="foot">Follows Chapter 11 of the Maharashtra State Board Std 9 Science and Technology textbook. Explanations and examples are original.</footer>
+</div>
+
+<script src="../../assets/js/sim-kit.js"></script>
+<script src="../../assets/js/sims/spherical.js"></script>
+<script src="../../assets/js/quiz.js"></script>
+<script>
+  (function () {
+    var simEl = document.getElementById("sim-main");
+    var sim = MirrorSim.mount(simEl, { type: "concave", u: 30, f: 10, h: 3 });
+    window.lessonSim = sim;
+    // Buttons in the lesson that set up the simulation: data-sim='{...settings}'
+    document.querySelectorAll("main [data-sim]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        sim.set(JSON.parse(b.dataset.sim));
+        sim.play();
+        simEl.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+      });
+    });
+  })();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/contrib/auto-render.min.js"></script>
+<script>
+  renderMathInElement(document.body, {
+    delimiters: [{ left: "$$", right: "$$", display: true }, { left: "\\(", right: "\\)", display: false }],
+    output: window.KATEX_OUTPUT || "htmlAndMathml",
+    throwOnError: false
+  });
+</script>
+
+</body>
+</html>

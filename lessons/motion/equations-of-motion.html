@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Equations of Motion · Visual Physics</title>
+<meta name="description" content="Derive the three equations of motion from the area under a velocity–time graph, and check them live.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.css">
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+<div class="wrap">
+
+<header class="site-head">
+  <a class="brand" href="../../index.html">Visual <span>Physics</span></a>
+  <span class="crumb">Std 9 · Ch. 1 Laws of Motion</span>
+</header>
+
+<main>
+<p class="eyebrow">Laws of Motion · Lesson 6</p>
+<h1>Equations of Motion</h1>
+<p class="lede">Three short equations connect starting velocity, final velocity, acceleration, time and distance. All three come straight out of one velocity–time graph.</p>
+<p class="downloads"><a class="btn" href="../../slides/equations-of-motion.pptx" download>Download slides (.pptx)</a> <span>12 slides with teacher notes</span></p>
+
+<div id="sim-main"></div>
+
+<section class="prose">
+  <h2>The five quantities</h2>
+  <p>For an object moving in a straight line with <strong>uniform acceleration</strong>:</p>
+  <ul class="mistakes">
+    <li>\(u\) = initial velocity, \(v\) = final velocity (m/s)</li>
+    <li>\(a\) = acceleration (m/s²), \(t\) = time taken (s)</li>
+    <li>\(s\) = displacement, the distance travelled in a straight line (m)</li>
+  </ul>
+  <p>The simulation shows the velocity–time graph for these quantities. Change \(u\), \(a\) and \(t\), and every equation updates in the readout.</p>
+
+  <h2>1. Velocity and time: \(v = u + at\)</h2>
+  <p>The slope of a velocity–time graph is the acceleration. The line rises from \(u\) to \(v\) in time \(t\), so</p>
+  <div class="eq">$$a = \frac{v - u}{t} \quad\Longrightarrow\quad v = u + at$$</div>
+
+  <h2>2. Displacement and time: \(s = ut + \tfrac12 at^2\)</h2>
+  <p>The area under the graph is the displacement. Split it into two shapes:</p>
+  <ul class="mistakes">
+    <li>a <span class="c-vx">rectangle</span> of height \(u\) and width \(t\): area \(= ut\)</li>
+    <li>a <span class="c-path">triangle</span> of base \(t\) and height \(v - u = at\): area \(= \tfrac12 \times t \times at = \tfrac12 at^2\)</li>
+  </ul>
+  <div class="eq">$$s = ut + \tfrac12 at^2$$</div>
+
+  <h2>3. Velocity and displacement: \(v^2 = u^2 + 2as\)</h2>
+  <p>The whole area is also a trapezium: \(s = \tfrac12 (u + v)\,t\). From the first equation, \(t = (v - u)/a\). Substituting:</p>
+  <div class="eq">$$s = \frac{(u + v)(v - u)}{2a} = \frac{v^2 - u^2}{2a} \quad\Longrightarrow\quad v^2 = u^2 + 2as$$</div>
+  <p>In the readout, \(v^2\) and \(u^2 + 2as\) always match.</p>
+</section>
+
+<h2>Which equation to use</h2>
+<p class="prose" style="margin-top:1rem">Each equation leaves out one quantity. Pick the one that leaves out the quantity you neither know nor need.</p>
+<div class="table-wrap">
+<table class="compare">
+  <thead><tr><th>Equation</th><th>Connects</th><th>Leaves out</th></tr></thead>
+  <tbody>
+    <tr><th>\(v = u + at\)</th><td>u, v, a, t</td><td>s</td></tr>
+    <tr><th>\(s = ut + \tfrac12 at^2\)</th><td>u, a, t, s</td><td>v</td></tr>
+    <tr><th>\(v^2 = u^2 + 2as\)</th><td>u, v, a, s</td><td>t</td></tr>
+  </tbody>
+</table>
+</div>
+<p class="prose" style="margin-top:1rem;font-size:.875rem;color:var(--muted)">Watch for hidden values: "starts from rest" means \(u = 0\), and "comes to rest" means \(v = 0\).</p>
+<h2>Try it</h2>
+<p class="prose" style="margin-top:1rem">Each button sets up one of the worked examples below. Check the readout against the working.</p>
+<ul class="tries">
+  <li><span><strong>From rest.</strong> u = 0, a = 2 m/s², t = 6 s.</span>
+    <button class="btn" data-sim='{"u":0,"a":2,"tEnd":6}'>Play</button></li>
+  <li><span><strong>Already moving.</strong> u = 4 m/s, a = 1.5 m/s², t = 4 s.</span>
+    <button class="btn" data-sim='{"u":4,"a":1.5,"tEnd":4}'>Play</button></li>
+  <li><span><strong>Slowing to a stop.</strong> u = 10 m/s, a = −2 m/s².</span>
+    <button class="btn" data-sim='{"u":10,"a":-2,"tEnd":5}'>Play</button></li>
+</ul>
+<p class="prose" style="margin-top:1rem;font-size:.875rem;color:var(--muted)">What you should see: from rest the area is a single triangle of 36 m and v = 12 m/s. Starting at 4 m/s, the rectangle is 16 m and the triangle 12 m, giving 28 m. Slowing from 10 m/s, the object stops after 5 s having travelled 25 m.</p>
+
+<h2>Worked examples</h2>
+<div class="example">
+  <h3 style="margin-top:0">1. A car pulling away</h3>
+  <p>A car starts from rest and accelerates at 2 m/s² for 6 s. Find its final velocity and the distance it covers.</p>
+  <ol>
+    <li>\(u = 0,\ a = 2,\ t = 6\).</li>
+    <li>\(v = u + at = 0 + 2 \times 6 = \) <span class="answer">12 m/s</span></li>
+    <li>\(s = ut + \tfrac12 at^2 = 0 + \tfrac12 \times 2 \times 36 = \) <span class="answer">36 m</span></li>
+  </ol>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">2. A cyclist going downhill</h3>
+  <p>A cyclist moving at 4 m/s accelerates at 1.5 m/s² for 4 s. Find her final velocity and the distance covered, then check with the third equation.</p>
+  <ol>
+    <li>\(v = 4 + 1.5 \times 4 = \) <span class="answer">10 m/s</span></li>
+    <li>\(s = 4 \times 4 + \tfrac12 \times 1.5 \times 16 = 16 + 12 = \) <span class="answer">28 m</span></li>
+    <li>Check: \(u^2 + 2as = 16 + 2 \times 1.5 \times 28 = 100 = 10^2\) ✓</li>
+  </ol>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">3. A ball rolling to a stop</h3>
+  <p>A ball rolls across a rough floor at 10 m/s and decelerates uniformly at 2 m/s². How far does it roll before stopping, and how long does that take?</p>
+  <ol>
+    <li>Comes to rest, so \(v = 0\); slowing down, so \(a = -2\). Time is not given: use \(v^2 = u^2 + 2as\).</li>
+    <li>\(0 = 100 + 2(-2)s \Rightarrow s = \) <span class="answer">25 m</span></li>
+    <li>\(v = u + at \Rightarrow 0 = 10 - 2t \Rightarrow t = \) <span class="answer">5 s</span></li>
+  </ol>
+  <button class="btn" data-sim='{"u":10,"a":-2,"tEnd":5}'>Check it in the simulation</button>
+</div>
+
+<h2>Common mistakes</h2>
+<ul class="mistakes" style="margin-top:1rem">
+  <li><strong>Positive a for slowing down.</strong> If the object slows down, a is negative. Put the minus sign into the equation.</li>
+  <li><strong>Missing hidden zeros.</strong> “From rest” gives u = 0. “Comes to rest” or “stops” gives v = 0.</li>
+  <li><strong>Using the equations for any motion.</strong> They only work when the acceleration is uniform (constant).</li>
+  <li><strong>Mixing units.</strong> Use m, s, m/s and m/s² throughout. Convert km/h first.</li>
+</ul>
+
+<h2>Quick check</h2>
+<div class="quiz">
+  <fieldset class="q" data-answer="b">
+    <legend>1. A bike starts from rest and accelerates at 3 m/s² for 4 s. Its final velocity is…</legend>
+    <div class="opts">
+      <button data-opt="a">7 m/s</button>
+      <button data-opt="b">12 m/s</button>
+      <button data-opt="c">24 m/s</button>
+      <button data-opt="d">0.75 m/s</button>
+    </div>
+    <p class="why" hidden>\(v = u + at = 0 + 3 \times 4 = 12\) m/s.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="c">
+    <legend>2. Which equation would you use if the time is not given?</legend>
+    <div class="opts">
+      <button data-opt="a">\(v = u + at\)</button>
+      <button data-opt="b">\(s = ut + \tfrac12 at^2\)</button>
+      <button data-opt="c">\(v^2 = u^2 + 2as\)</button>
+      <button data-opt="d">\(a = v/t\)</button>
+    </div>
+    <p class="why" hidden>\(v^2 = u^2 + 2as\) is the only one without \(t\).</p>
+  </fieldset>
+  <fieldset class="q" data-answer="c">
+    <legend>3. A car moving at 20 m/s brakes and comes to rest. In the equations, its final velocity v is…</legend>
+    <div class="opts">
+      <button data-opt="a">20 m/s</button>
+      <button data-opt="b">−20 m/s</button>
+      <button data-opt="c">0 m/s</button>
+      <button data-opt="d">unknown</button>
+    </div>
+    <p class="why" hidden>“Comes to rest” means v = 0.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="c">
+    <legend>4. A ball starts from rest with a = 4 m/s². How far does it go in 3 s?</legend>
+    <div class="opts">
+      <button data-opt="a">6 m</button>
+      <button data-opt="b">12 m</button>
+      <button data-opt="c">18 m</button>
+      <button data-opt="d">36 m</button>
+    </div>
+    <p class="why" hidden>\(s = 0 + \tfrac12 \times 4 \times 9 = 18\) m.</p>
+  </fieldset>
+  <p class="score" aria-live="polite"></p>
+</div>
+<nav class="next-prev" aria-label="Lessons">
+  <a href="motion-graphs.html">← Distance–time and velocity–time graphs</a>
+  <a href="uniform-circular-motion.html">Next: Uniform circular motion →</a>
+</nav>
+</main>
+
+<footer class="foot">Follows Chapter 1 of the Maharashtra State Board Std 9 Science and Technology textbook. Explanations and examples are original.</footer>
+</div>
+
+<script src="../../assets/js/sim-kit.js"></script>
+<script src="../../assets/js/sims/equations.js"></script>
+<script src="../../assets/js/quiz.js"></script>
+<script>
+  (function () {
+    var simEl = document.getElementById("sim-main");
+    var sim = EquationSim.mount(simEl, { u: 4, a: 2, tEnd: 6 });
+    window.lessonSim = sim;
+    // Buttons in the lesson that set up the simulation: data-sim='{...settings}'
+    document.querySelectorAll("main [data-sim]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        sim.set(JSON.parse(b.dataset.sim));
+        sim.play();
+        simEl.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+      });
+    });
+  })();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/contrib/auto-render.min.js"></script>
+<script>
+  renderMathInElement(document.body, {
+    delimiters: [{ left: "$$", right: "$$", display: true }, { left: "\\(", right: "\\)", display: false }],
+    output: window.KATEX_OUTPUT || "htmlAndMathml",
+    throwOnError: false
+  });
+</script>
+</body>
+</html>

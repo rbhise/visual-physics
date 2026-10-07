@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Resistors in Series and Parallel · Visual Physics</title>
+<meta name="description" content="Join resistors in series or in parallel, change their values and break one, and watch the currents and voltages change.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.css">
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+<div class="wrap">
+
+<header class="site-head">
+  <a class="brand" href="../../index.html">Visual <span>Physics</span></a>
+  <span class="crumb">Std 9 · Ch. 3 Current Electricity</span>
+</header>
+
+<main>
+<p class="eyebrow">Current Electricity · Lesson 3</p>
+<h1>Resistors in Series and Parallel</h1>
+<p class="lede">When one bulb in an old string of festival lights fails, the whole string goes dark. When one bulb fails at home, the rest stay on. The difference is how they are connected.</p>
+<p class="downloads"><a class="btn" href="../../slides/series-and-parallel.pptx" download>Download slides (.pptx)</a> <span>12 slides with teacher notes</span></p>
+
+<div id="sim-main"></div>
+
+<section class="prose">
+  <h2>Resistors in series</h2>
+  <p>Resistors are in <strong>series</strong> when they are joined end to end, so there is only one path for the current.</p>
+  <div class="eq">$$R_s = R_1 + R_2 + R_3 + \dots$$</div>
+  <ul class="mistakes">
+    <li>The <strong>same current</strong> flows through every resistor.</li>
+    <li>The potential differences across the resistors <strong>add up</strong> to the total: \(V = V_1 + V_2 + V_3\).</li>
+    <li>The effective resistance is <strong>larger than any single resistor</strong>. Series connection is used to increase resistance.</li>
+    <li>If one resistor breaks, the circuit is broken and the current stops everywhere.</li>
+  </ul>
+
+  <h2>Resistors in parallel</h2>
+  <p>Resistors are in <strong>parallel</strong> when they are joined between the same two points, so each has its own path.</p>
+  <div class="eq">$$\frac{1}{R_p} = \frac{1}{R_1} + \frac{1}{R_2} + \frac{1}{R_3} + \dots$$</div>
+  <ul class="mistakes">
+    <li>The <strong>same potential difference</strong> is across every resistor.</li>
+    <li>The current divides between the branches, and the branch currents <strong>add up</strong> to the total: \(I = I_1 + I_2 + I_3\).</li>
+    <li>The effective resistance is <strong>smaller than the smallest resistor</strong>. Parallel connection is used to reduce resistance.</li>
+    <li>If one resistor breaks, the others keep working.</li>
+  </ul>
+</section>
+
+<h2>Series or parallel?</h2>
+<div class="table-wrap">
+<table class="compare">
+  <thead><tr><th></th><th>Series</th><th>Parallel</th></tr></thead>
+  <tbody>
+    <tr><th>Effective resistance</th><td>R₁ + R₂ + R₃ (bigger)</td><td>1/R₁ + 1/R₂ + 1/R₃ = 1/Rp (smaller)</td></tr>
+    <tr><th>Current</th><td>Same in each</td><td>Divides; adds up to the total</td></tr>
+    <tr><th>Potential difference</th><td>Divides; adds up to the total</td><td>Same across each</td></tr>
+    <tr><th>If one breaks</th><td>All stop</td><td>Others keep working</td></tr>
+  </tbody>
+</table>
+</div>
+<h2>Try it</h2>
+<p class="prose" style="margin-top:1rem">Use the readouts to check the rules above.</p>
+<ul class="tries">
+  <li><span><strong>Two in series.</strong> 4 Ω and 8 Ω across 12 V.</span>
+    <button class="btn" data-sim='{"mode":"series","V":12,"R1":4,"R2":8,"R3":0,"broken":false}'>Set up</button></li>
+  <li><span><strong>Two in parallel.</strong> 6 Ω and 3 Ω across 6 V.</span>
+    <button class="btn" data-sim='{"mode":"parallel","V":6,"R1":6,"R2":3,"R3":0,"broken":false}'>Set up</button></li>
+  <li><span><strong>Break one in series.</strong> Same series circuit, R₂ broken.</span>
+    <button class="btn" data-sim='{"mode":"series","V":12,"R1":4,"R2":8,"R3":0,"broken":true}'>Set up</button></li>
+  <li><span><strong>Break one in parallel.</strong> Three in parallel, R₂ broken.</span>
+    <button class="btn" data-sim='{"mode":"parallel","V":10,"R1":10,"R2":20,"R3":20,"broken":true}'>Set up</button></li>
+</ul>
+<p class="prose" style="margin-top:1rem;font-size:.875rem;color:var(--muted)">What you should see: in series, Rs = 12 Ω and 1 A flows through both; the 12 V splits into 4 V and 8 V. In parallel, Rp = 2 Ω; the 6 Ω branch takes 1 A and the 3 Ω branch 2 A, 3 A in total. Breaking a series resistor stops all current. Breaking one parallel branch leaves the other two working, though the total current falls.</p>
+
+<h2>Worked examples</h2>
+<div class="example">
+  <h3 style="margin-top:0">1. Two resistors in series</h3>
+  <p>Resistors of 4 Ω and 8 Ω are joined in series to a 12 V battery. Find the effective resistance, the current and the potential difference across each.</p>
+  <ol>
+    <li>\(R_s = 4 + 8 = \) <span class="answer">12 Ω</span></li>
+    <li>\(I = V / R_s = 12 / 12 = \) <span class="answer">1 A</span></li>
+    <li>\(V_1 = 1 \times 4 = \) <span class="answer">4 V</span>; \(V_2 = 1 \times 8 = \) <span class="answer">8 V</span> (together 12 V)</li>
+  </ol>
+  <button class="btn" data-sim='{"mode":"series","V":12,"R1":4,"R2":8,"R3":0,"broken":false}'>Check it in the simulation</button>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">2. Two resistors in parallel</h3>
+  <p>Resistors of 6 Ω and 3 Ω are joined in parallel across a 6 V battery. Find the effective resistance and the current in each branch.</p>
+  <ol>
+    <li>\(\dfrac{1}{R_p} = \dfrac{1}{6} + \dfrac{1}{3} = \dfrac{3}{6}\), so \(R_p = \) <span class="answer">2 Ω</span></li>
+    <li>\(I_1 = 6 / 6 = \) <span class="answer">1 A</span>; \(I_2 = 6 / 3 = \) <span class="answer">2 A</span></li>
+    <li>Total \(= 3\) A, and check: \(6 / 2 = 3\) A ✓</li>
+  </ol>
+  <button class="btn" data-sim='{"mode":"parallel","V":6,"R1":6,"R2":3,"R3":0,"broken":false}'>Check it in the simulation</button>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">3. Three in parallel</h3>
+  <p>Find the effective resistance of 10 Ω, 20 Ω and 20 Ω joined in parallel.</p>
+  <ol>
+    <li>\(\dfrac{1}{R_p} = \dfrac{1}{10} + \dfrac{1}{20} + \dfrac{1}{20} = 0.1 + 0.05 + 0.05 = 0.2\)</li>
+    <li>\(R_p = 1 / 0.2 = \) <span class="answer">5 Ω</span>, less than the smallest resistor (10 Ω)</li>
+  </ol>
+</div>
+
+<h2>Common mistakes</h2>
+<ul class="mistakes" style="margin-top:1rem">
+  <li><strong>Forgetting to flip at the end.</strong> In parallel you first find 1/Rp. Take the reciprocal to get Rp.</li>
+  <li><strong>Adding parallel resistors.</strong> R₁ + R₂ is only for series. Parallel always gives a smaller value.</li>
+  <li><strong>Same current in parallel.</strong> In parallel the voltage is shared equally, not the current.</li>
+  <li><strong>Expecting voltages to add in parallel.</strong> In parallel each resistor has the full battery voltage.</li>
+</ul>
+
+<h2>Quick check</h2>
+<div class="quiz">
+  <fieldset class="q" data-answer="b">
+    <legend>1. Resistors of 2 Ω, 3 Ω and 5 Ω are joined in series. The effective resistance is…</legend>
+    <div class="opts">
+      <button data-opt="a">0.97 Ω</button>
+      <button data-opt="b">10 Ω</button>
+      <button data-opt="c">30 Ω</button>
+      <button data-opt="d">5 Ω</button>
+    </div>
+    <p class="why" hidden>In series, add them: 2 + 3 + 5 = 10 Ω.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="c">
+    <legend>2. Two 10 Ω resistors are joined in parallel. The effective resistance is…</legend>
+    <div class="opts">
+      <button data-opt="a">20 Ω</button>
+      <button data-opt="b">10 Ω</button>
+      <button data-opt="c">5 Ω</button>
+      <button data-opt="d">0.2 Ω</button>
+    </div>
+    <p class="why" hidden>1/Rp = 1/10 + 1/10 = 1/5, so Rp = 5 Ω.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="b">
+    <legend>3. In a parallel circuit, what is the same for every resistor?</legend>
+    <div class="opts">
+      <button data-opt="a">The current</button>
+      <button data-opt="b">The potential difference</button>
+      <button data-opt="c">The resistance</button>
+      <button data-opt="d">The power</button>
+    </div>
+    <p class="why" hidden>Each branch is joined between the same two points, so each has the same potential difference.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="b">
+    <legend>4. Why are household appliances connected in parallel?</legend>
+    <div class="opts">
+      <button data-opt="a">To increase the total resistance</button>
+      <button data-opt="b">So each gets the full voltage and can be switched on or off by itself</button>
+      <button data-opt="c">To save wire</button>
+      <button data-opt="d">So the same current flows through each</button>
+    </div>
+    <p class="why" hidden>Parallel connection gives every appliance the full supply voltage and its own independent path.</p>
+  </fieldset>
+  <p class="score" aria-live="polite"></p>
+</div>
+<nav class="next-prev" aria-label="Lessons">
+  <a href="resistance-and-ohms-law.html">← Resistance and Ohm's law</a>
+  <a href="household-electricity.html">Next: Electricity at home →</a>
+</nav>
+</main>
+
+<footer class="foot">Follows Chapter 3 of the Maharashtra State Board Std 9 Science and Technology textbook. Explanations and examples are original.</footer>
+</div>
+
+<script src="../../assets/js/sim-kit.js"></script>
+<script src="../../assets/js/circuit-kit.js"></script>
+<script src="../../assets/js/sims/combine.js"></script>
+<script src="../../assets/js/quiz.js"></script>
+<script>
+  (function () {
+    var simEl = document.getElementById("sim-main");
+    var sim = CombineSim.mount(simEl, { mode: "series", V: 12, R1: 4, R2: 8, R3: 0 });
+    window.lessonSim = sim;
+    // Buttons in the lesson that set up the simulation: data-sim='{...settings}'
+    document.querySelectorAll("main [data-sim]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        sim.set(JSON.parse(b.dataset.sim));
+        sim.play();
+        simEl.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+      });
+    });
+  })();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/contrib/auto-render.min.js"></script>
+<script>
+  renderMathInElement(document.body, {
+    delimiters: [{ left: "$$", right: "$$", display: true }, { left: "\\(", right: "\\)", display: false }],
+    output: window.KATEX_OUTPUT || "htmlAndMathml",
+    throwOnError: false
+  });
+</script>
+
+</body>
+</html>

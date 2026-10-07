@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Neutralisation and Salts · Visual Physics</title>
+<meta name="description" content="Run a titration: add base from a burette to acid until the indicator changes, and watch the pH curve jump at the neutral point.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.css">
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+<div class="wrap">
+
+<header class="site-head">
+  <a class="brand" href="../../index.html">Visual <span>Physics</span></a>
+  <span class="crumb">Std 9 · Ch. 5 Acids, Bases and Salts</span>
+</header>
+
+<main>
+<p class="eyebrow">Acids, Bases and Salts · Lesson 2</p>
+<h1>Neutralisation and Salts</h1>
+<p class="lede">An antacid tablet soothes an acidic stomach, and farmers add lime to sour soil. Both use the same reaction: an acid and a base cancelling each other out.</p>
+<p class="downloads"><a class="btn" href="../../slides/neutralisation-and-salts.pptx" download>Download slides (.pptx)</a> <span>12 slides with teacher notes</span></p>
+
+<div id="sim-main"></div>
+
+<section class="prose">
+  <h2>Neutralisation</h2>
+  <p>When an acid reacts with a base, they cancel each other's properties. The reaction is called <strong>neutralisation</strong>, and it always makes a <strong>salt and water</strong>:</p>
+  <div class="eq">$$\text{acid} + \text{base} \rightarrow \text{salt} + \text{water}$$</div>
+  <div class="eq">$$\text{HCl} + \text{NaOH} \rightarrow \text{NaCl} + \text{H}_2\text{O}$$</div>
+  <p>What really happens is that the H⁺ ions from the acid join the OH⁻ ions from the base to make water: \(\text{H}^+ + \text{OH}^- \rightarrow \text{H}_2\text{O}\). The other ions (here Na⁺ and Cl⁻) stay in solution as the salt.</p>
+
+  <h2>Titration</h2>
+  <p>In a <strong>titration</strong>, a base is added drop by drop from a burette to a measured volume of acid containing an indicator. When just enough base has been added to use up all the acid, the solution is neutral and the indicator changes colour. This is the <strong>end point</strong>.</p>
+  <p>The simulation uses 20 mL of acid and a base of the same strength. Watch the pH curve: it rises slowly at first, then jumps steeply around 20 mL, then levels off again.</p>
+</section>
+
+<section class="prose">
+  <h2>Salts</h2>
+  <p>A <strong>salt</strong> is an ionic compound formed when the hydrogen of an acid is replaced by a metal (or by the ammonium group). The name comes from both parents: the metal from the base and the ending from the acid.</p>
+</section>
+<div class="table-wrap">
+<table class="compare">
+  <thead><tr><th>Acid</th><th>Base</th><th>Salt formed</th></tr></thead>
+  <tbody>
+    <tr><th>Hydrochloric acid, HCl</th><td>Sodium hydroxide, NaOH</td><td>Sodium chloride, NaCl</td></tr>
+    <tr><th>Sulphuric acid, H₂SO₄</th><td>Sodium hydroxide, NaOH</td><td>Sodium sulphate, Na₂SO₄</td></tr>
+    <tr><th>Nitric acid, HNO₃</th><td>Potassium hydroxide, KOH</td><td>Potassium nitrate, KNO₃</td></tr>
+    <tr><th>Hydrochloric acid, HCl</th><td>Ammonium hydroxide, NH₄OH</td><td>Ammonium chloride, NH₄Cl</td></tr>
+  </tbody>
+</table>
+</div>
+<section class="prose">
+  <p style="margin-top:1rem">Salts are ionic compounds. In water they break up (dissociate) into positive and negative ions, for example \(\text{NaCl} \rightarrow \text{Na}^+ + \text{Cl}^-\). That is why salt solutions conduct electricity.</p>
+  <h2>Neutralisation in daily life</h2>
+  <ul class="mistakes">
+    <li><strong>Indigestion:</strong> antacids such as milk of magnesia (a weak base) neutralise extra stomach acid.</li>
+    <li><strong>Insect stings:</strong> an ant or bee sting is acidic; rubbing baking soda solution on it neutralises the acid.</li>
+    <li><strong>Soil:</strong> farmers add lime (calcium hydroxide) to soil that is too acidic.</li>
+    <li><strong>Tooth decay:</strong> toothpaste is slightly basic and neutralises acid made by bacteria in the mouth.</li>
+  </ul>
+</section>
+<h2>Try it</h2>
+<p class="prose" style="margin-top:1rem">Run each titration and watch the indicator and the pH curve.</p>
+<ul class="tries">
+  <li><span><strong>HCl with phenolphthalein.</strong> When does the flask turn pink?</span>
+    <button class="btn" data-sim='{"acid":"HCl","base":"NaOH","ind":"phenol"}'>Run</button></li>
+  <li><span><strong>HCl with methyl orange.</strong> Red to yellow instead.</span>
+    <button class="btn" data-sim='{"acid":"HCl","base":"NaOH","ind":"methyl"}'>Run</button></li>
+  <li><span><strong>Sulphuric acid.</strong> Two H⁺ per molecule.</span>
+    <button class="btn" data-sim='{"acid":"H2SO4","base":"NaOH","ind":"universal"}'>Run</button></li>
+  <li><span><strong>Nitric acid and KOH.</strong> Which salt forms?</span>
+    <button class="btn" data-sim='{"acid":"HNO3","base":"KOH","ind":"phenol"}'>Run</button></li>
+</ul>
+<p class="prose" style="margin-top:1rem;font-size:.875rem;color:var(--muted)">What you should see: phenolphthalein stays colourless until just past 20 mL, then turns pink: one drop changes the pH from about 4 to about 10. Methyl orange changes from red to yellow slightly before the end point. With 0.05 M sulphuric acid the curve is the same, because each molecule gives two H⁺. Nitric acid and potassium hydroxide make potassium nitrate.</p>
+
+<h2>Worked examples</h2>
+<div class="example">
+  <h3 style="margin-top:0">1. Naming the salt</h3>
+  <p>Write the equation for the neutralisation of sulphuric acid by sodium hydroxide and name the salt.</p>
+  <ol>
+    <li>Each H₂SO₄ gives two H⁺, so it needs two NaOH:</li>
+    <li>\(\text{H}_2\text{SO}_4 + 2\text{NaOH} \rightarrow \text{Na}_2\text{SO}_4 + 2\text{H}_2\text{O}\); the salt is <span class="answer">sodium sulphate</span></li>
+  </ol>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">2. The end point</h3>
+  <p>20 mL of 0.1 M hydrochloric acid is titrated with 0.1 M sodium hydroxide. What volume of base is needed, and how much salt forms?</p>
+  <ol>
+    <li>Acid: \(0.1 \times 20 = 2\) mmol of H⁺. Base needed: 2 mmol of OH⁻.</li>
+    <li>Volume of base \(= 2 / 0.1 = \) <span class="answer">20 mL</span></li>
+    <li>Salt formed: <span class="answer">2 mmol of NaCl</span> \(= 0.002 \times 58.5 = 0.117\) g</li>
+  </ol>
+  <button class="btn" data-sim='{"acid":"HCl","base":"NaOH","ind":"phenol"}'>Run this titration</button>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">3. An ant sting</h3>
+  <p>Ant stings contain formic acid. Which would you put on a sting: vinegar or a paste of baking soda? Why?</p>
+  <ol>
+    <li>Vinegar is an acid and would not help.</li>
+    <li>Baking soda is a weak base that neutralises the acid: <span class="answer">baking soda paste</span></li>
+  </ol>
+</div>
+
+<h2>Common mistakes</h2>
+<ul class="mistakes" style="margin-top:1rem">
+  <li><strong>“A salt means table salt.”</strong> Sodium chloride is just one salt. Any compound made by neutralisation is a salt.</li>
+  <li><strong>Forgetting the water.</strong> Neutralisation always makes water as well as a salt.</li>
+  <li><strong>Unbalanced sulphuric acid.</strong> H₂SO₄ has two H⁺, so it reacts with 2NaOH.</li>
+  <li><strong>Expecting a gradual colour change.</strong> Near the end point the pH jumps sharply; one drop can change the colour.</li>
+</ul>
+
+<h2>Quick check</h2>
+<div class="quiz">
+  <fieldset class="q" data-answer="b">
+    <legend>1. Neutralisation of an acid by a base produces…</legend>
+    <div class="opts">
+      <button data-opt="a">salt and hydrogen</button>
+      <button data-opt="b">salt and water</button>
+      <button data-opt="c">water only</button>
+      <button data-opt="d">an acid and a base</button>
+    </div>
+    <p class="why" hidden>Acid + base → salt + water.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="b">
+    <legend>2. Which salt forms when nitric acid reacts with potassium hydroxide?</legend>
+    <div class="opts">
+      <button data-opt="a">Potassium chloride</button>
+      <button data-opt="b">Potassium nitrate</button>
+      <button data-opt="c">Sodium nitrate</button>
+      <button data-opt="d">Potassium sulphate</button>
+    </div>
+    <p class="why" hidden>The metal (potassium) comes from the base, the nitrate from the acid.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="b">
+    <legend>3. During a titration of HCl with NaOH using phenolphthalein, the flask turns pink when…</legend>
+    <div class="opts">
+      <button data-opt="a">the first drop is added</button>
+      <button data-opt="b">just past the end point, when the solution becomes basic</button>
+      <button data-opt="c">the solution is most acidic</button>
+      <button data-opt="d">never</button>
+    </div>
+    <p class="why" hidden>Phenolphthalein turns pink only in basic solution.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="b">
+    <legend>4. Why does a farmer add lime to acidic soil?</legend>
+    <div class="opts">
+      <button data-opt="a">To make it more acidic</button>
+      <button data-opt="b">To neutralise the excess acid</button>
+      <button data-opt="c">To add salt</button>
+      <button data-opt="d">To kill insects</button>
+    </div>
+    <p class="why" hidden>Lime is a base that neutralises the acid in the soil.</p>
+  </fieldset>
+  <p class="score" aria-live="polite"></p>
+</div>
+<nav class="next-prev" aria-label="Lessons">
+  <a href="indicators-and-ph.html">← Acids, bases, indicators and pH</a>
+  <a href="../../index.html">All lessons →</a>
+</nav>
+</main>
+
+<footer class="foot">Follows Chapter 5 of the Maharashtra State Board Std 9 Science and Technology textbook. Explanations and examples are original.</footer>
+</div>
+
+<script src="../../assets/js/sim-kit.js"></script>
+<script src="../../assets/js/chem-kit.js"></script>
+<script src="../../assets/js/sims/titration.js"></script>
+<script src="../../assets/js/quiz.js"></script>
+<script>
+  (function () {
+    var simEl = document.getElementById("sim-main");
+    var sim = TitrationSim.mount(simEl, { acid: "HCl", base: "NaOH", ind: "phenol", v: 12 });
+    window.lessonSim = sim;
+    // Buttons in the lesson that set up the simulation: data-sim='{...settings}'
+    document.querySelectorAll("main [data-sim]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        sim.set(JSON.parse(b.dataset.sim));
+        sim.play();
+        simEl.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+      });
+    });
+  })();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/contrib/auto-render.min.js"></script>
+<script>
+  renderMathInElement(document.body, {
+    delimiters: [{ left: "$$", right: "$$", display: true }, { left: "\\(", right: "\\)", display: false }],
+    output: window.KATEX_OUTPUT || "htmlAndMathml",
+    throwOnError: false
+  });
+</script>
+
+</body>
+</html>

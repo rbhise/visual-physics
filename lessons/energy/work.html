@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Work · Visual Physics</title>
+<meta name="description" content="Move a box with a force at different angles and see when the force does positive, negative or zero work.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.css">
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+<div class="wrap">
+
+<header class="site-head">
+  <a class="brand" href="../../index.html">Visual <span>Physics</span></a>
+  <span class="crumb">Std 9 · Ch. 2 Work and Energy</span>
+</header>
+
+<main>
+<p class="eyebrow">Work and Energy · Lesson 1</p>
+<h1>Work</h1>
+<p class="lede">Holding a heavy bag still for an hour is tiring, yet a physicist says you did no work at all. In science, work has a precise meaning.</p>
+<p class="downloads"><a class="btn" href="../../slides/work.pptx" download>Download slides (.pptx)</a> <span>12 slides with teacher notes</span></p>
+
+<div id="sim-main"></div>
+
+<section class="prose">
+  <h2>What counts as work</h2>
+  <p>Work is done when a force applied on an object causes <strong>displacement</strong> of the object. Two things are needed: a force, and movement caused by it.</p>
+  <ul class="mistakes">
+    <li>Pushing a cart along a road: force and movement, so work is done.</li>
+    <li>Pushing hard against a wall that does not move: no displacement, so no work.</li>
+    <li>Holding a bag still: you get tired, but the bag does not move, so no work is done on it.</li>
+  </ul>
+
+  <h2>How much work</h2>
+  <p>When the force acts in the direction of the displacement:</p>
+  <div class="eq">$$W = F \times s$$</div>
+  <p>The unit of work is the <strong>joule (J)</strong>. If a force of 1 newton moves an object through 1 metre in the direction of the force, the work done is 1 joule: \(1\ \text{J} = 1\ \text{N} \times 1\ \text{m}\).</p>
+
+  <h2>A force at an angle</h2>
+  <p>When the force acts at an angle \(\theta\) to the displacement, only the part of the force along the motion does work. That part is \(F\cos\theta\), so</p>
+  <div class="eq">$$W = F s \cos\theta$$</div>
+  <p>In the simulation, the <span class="c-vy">coral arrow</span> is the force and the <span class="c-vx">dashed teal arrow</span> is the part along the motion. Useful values: \(\cos 0^\circ = 1\), \(\cos 60^\circ = 0.5\), \(\cos 90^\circ = 0\), \(\cos 180^\circ = -1\).</p>
+</section>
+
+<h2>Positive, negative and zero work</h2>
+<div class="eq-grid">
+  <div class="eq"><h3 style="font-size:1rem;margin:0 0 .25rem" class="c-path">Positive (θ = 0°)</h3><p>Force and displacement in the same direction. Examples: pulling a trolley forward; gravity on a falling ball.</p></div>
+  <div class="eq"><h3 style="font-size:1rem;margin:0 0 .25rem" class="c-vy">Negative (θ = 180°)</h3><p>Force opposite to the displacement. Examples: friction on a sliding box; brakes on a moving bicycle; gravity on a ball thrown upward.</p></div>
+  <div class="eq"><h3 style="font-size:1rem;margin:0 0 .25rem">Zero (θ = 90°)</h3><p>Force at right angles to the displacement, or no displacement. Example: carrying a bag while walking on level ground; your upward force on the bag does no work.</p></div>
+</div>
+<h2>Try it</h2>
+<p class="prose" style="margin-top:1rem">Each set-up uses a 50 N force and moves the box 6 m. Watch the work bar.</p>
+<ul class="tries">
+  <li><span><strong>Pull along the floor.</strong> θ = 0°.</span>
+    <button class="btn" data-sim='{"F":50,"s":6,"theta":0}'>Move the box</button></li>
+  <li><span><strong>Pull at an angle.</strong> θ = 60°.</span>
+    <button class="btn" data-sim='{"F":50,"s":6,"theta":60}'>Move the box</button></li>
+  <li><span><strong>Force at right angles.</strong> θ = 90°.</span>
+    <button class="btn" data-sim='{"F":50,"s":6,"theta":90}'>Move the box</button></li>
+  <li><span><strong>Force against the motion.</strong> θ = 180°.</span>
+    <button class="btn" data-sim='{"F":50,"s":6,"theta":180}'>Move the box</button></li>
+</ul>
+<p class="prose" style="margin-top:1rem;font-size:.875rem;color:var(--muted)">What you should see: pulling straight along gives 50 × 6 = 300 J. At 60°, only half the force acts along the motion, so the work is 150 J. At 90° the work is zero, even though the force is just as big. At 180° the work is −300 J.</p>
+
+<h2>Worked examples</h2>
+<div class="example">
+  <h3 style="margin-top:0">1. Pushing a handcart</h3>
+  <p>A vendor pushes a handcart with a force of 60 N along the road, moving it 5 m in the direction of the push. How much work does he do?</p>
+  <ol>
+    <li>\(W = F \times s = 60 \times 5 = \) <span class="answer">300 J</span></li>
+  </ol>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">2. Pulling a suitcase</h3>
+  <p>A traveller pulls a suitcase with a force of 100 N along a handle that makes 60° with the floor. The suitcase moves 10 m. Find the work done.</p>
+  <ol>
+    <li>\(W = F s \cos\theta = 100 \times 10 \times \cos 60^\circ\)</li>
+    <li>\(= 100 \times 10 \times 0.5 = \) <span class="answer">500 J</span></li>
+  </ol>
+  <p>Pulling at an angle wastes part of the force: only 50 N of it moves the suitcase forward.</p>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">3. Lifting a school bag</h3>
+  <p>A student lifts a 5 kg school bag from the floor onto a table 0.8 m high at a steady speed. Find the work done by the student and by gravity. (g = 9.8 m/s²)</p>
+  <ol>
+    <li>The lifting force equals the bag's weight: \(F = mg = 5 \times 9.8 = 49\) N, upward.</li>
+    <li>Work by the student \(= 49 \times 0.8 = \) <span class="answer">39.2 J</span> (positive)</li>
+    <li>Gravity acts downward while the bag moves up, so its work is <span class="answer">−39.2 J</span></li>
+  </ol>
+</div>
+
+<h2>Common mistakes</h2>
+<ul class="mistakes" style="margin-top:1rem">
+  <li><strong>“I am tired, so I did work.”</strong> In physics, work needs displacement. Holding or pushing something that does not move is zero work.</li>
+  <li><strong>Using the whole force at an angle.</strong> Only F cos θ, the part along the motion, does work.</li>
+  <li><strong>Dropping the sign.</strong> A force opposite to the motion does negative work. Keep the minus sign.</li>
+  <li><strong>Mass instead of weight.</strong> To lift something you need a force of mg newtons, not m kilograms.</li>
+</ul>
+
+<h2>Quick check</h2>
+<div class="quiz">
+  <fieldset class="q" data-answer="c">
+    <legend>1. In which case is work done on the object?</legend>
+    <div class="opts">
+      <button data-opt="a">Pushing a wall that does not move</button>
+      <button data-opt="b">Holding a bucket of water still</button>
+      <button data-opt="c">Pulling a box 2 m across the floor</button>
+      <button data-opt="d">Thinking hard about a maths problem</button>
+    </div>
+    <p class="why" hidden>Only the box is displaced by the applied force.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="c">
+    <legend>2. A force of 20 N moves a crate 3 m in the direction of the force. The work done is…</legend>
+    <div class="opts">
+      <button data-opt="a">6.7 J</button>
+      <button data-opt="b">23 J</button>
+      <button data-opt="c">60 J</button>
+      <button data-opt="d">17 J</button>
+    </div>
+    <p class="why" hidden>\(W = 20 \times 3 = 60\) J.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="c">
+    <legend>3. A coolie carries a load on his head and walks 50 m on level ground. The work done by his upward force on the load is…</legend>
+    <div class="opts">
+      <button data-opt="a">positive</button>
+      <button data-opt="b">negative</button>
+      <button data-opt="c">zero</button>
+      <button data-opt="d">50 J</button>
+    </div>
+    <p class="why" hidden>The upward force is at 90° to the horizontal displacement, so \(\cos 90^\circ = 0\).</p>
+  </fieldset>
+  <fieldset class="q" data-answer="b">
+    <legend>4. Friction acting on a sliding box does…</legend>
+    <div class="opts">
+      <button data-opt="a">positive work</button>
+      <button data-opt="b">negative work</button>
+      <button data-opt="c">zero work</button>
+      <button data-opt="d">infinite work</button>
+    </div>
+    <p class="why" hidden>Friction acts opposite to the motion, so θ = 180° and the work is negative.</p>
+  </fieldset>
+  <p class="score" aria-live="polite"></p>
+</div>
+<nav class="next-prev" aria-label="Lessons">
+  <a href="../../index.html">← All lessons</a>
+  <a href="kinetic-and-potential-energy.html">Next: Kinetic and potential energy →</a>
+</nav>
+</main>
+
+<footer class="foot">Follows Chapter 2 of the Maharashtra State Board Std 9 Science and Technology textbook, with ideas from NCERT Class 9 Science (Exploration). Explanations and examples are original.</footer>
+</div>
+
+<script src="../../assets/js/sim-kit.js"></script>
+<script src="../../assets/js/sims/work.js"></script>
+<script src="../../assets/js/quiz.js"></script>
+<script>
+  (function () {
+    var simEl = document.getElementById("sim-main");
+    var sim = WorkSim.mount(simEl, { F: 50, s: 6, theta: 60 });
+    window.lessonSim = sim;
+    // Buttons in the lesson that set up the simulation: data-sim='{...settings}'
+    document.querySelectorAll("main [data-sim]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        sim.set(JSON.parse(b.dataset.sim));
+        sim.play();
+        simEl.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+      });
+    });
+  })();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/contrib/auto-render.min.js"></script>
+<script>
+  renderMathInElement(document.body, {
+    delimiters: [{ left: "$$", right: "$$", display: true }, { left: "\\(", right: "\\)", display: false }],
+    output: window.KATEX_OUTPUT || "htmlAndMathml",
+    throwOnError: false
+  });
+</script>
+
+</body>
+</html>

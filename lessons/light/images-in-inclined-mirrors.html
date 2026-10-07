@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Images in Inclined Mirrors · Visual Physics</title>
+<meta name="description" content="Close two mirrors like a book and count the images of an object between them; see why a kaleidoscope makes patterns and how a periscope works.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.css">
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+<div class="wrap">
+
+<header class="site-head">
+  <a class="brand" href="../../index.html">Visual <span>Physics</span></a>
+  <span class="crumb">Std 9 · Ch. 11 Reflection of Light</span>
+</header>
+
+<main>
+<p class="eyebrow">Reflection of Light · Lesson 2</p>
+<h1>Images in Inclined Mirrors</h1>
+<p class="lede">Stand between two mirrors in a tailor's shop and a whole crowd of you appears. Fewer degrees between the mirrors means more images, and there is a simple rule for how many.</p>
+<p class="downloads"><a class="btn" href="../../slides/images-in-inclined-mirrors.pptx" download>Download slides (.pptx)</a> <span>12 slides with teacher notes</span></p>
+
+<div id="sim-main"></div>
+
+<section class="prose">
+  <h2>Two mirrors at an angle</h2>
+  <p>Place two plane mirrors edge to edge, like a book standing half open, and put a small object between them. Some light from the object reflects once, from either mirror, and makes two images. Some of that light then reflects from the other mirror too, making images of images. The smaller the angle between the mirrors, the more times light can bounce, and the more images you see.</p>
+  <p>If the angle between the mirrors is \(A\), the number of images \(n\) is</p>
+  <div class="eq">$$n = \frac{360^\circ}{A} - 1$$</div>
+  <p>The rule works neatly when \(360^\circ \div A\) is a whole number and the object sits midway between the mirrors. The simulation shows all the images on a circle around the corner where the mirrors meet. Each image sits in its own sector, as if the mirrors had been copied all the way round.</p>
+</section>
+
+<div class="table-wrap">
+<table class="compare">
+  <thead><tr><th>Angle A</th><th>120°</th><th>90°</th><th>72°</th><th>60°</th><th>45°</th><th>30°</th></tr></thead>
+  <tbody>
+    <tr><th>360° ÷ A</th><td>3</td><td>4</td><td>5</td><td>6</td><td>8</td><td>12</td></tr>
+    <tr><th>Images n</th><td>2</td><td>3</td><td>4</td><td>5</td><td>7</td><td>11</td></tr>
+  </tbody>
+</table>
+</div>
+
+<section class="prose">
+  <h2>Mirror-reversed or not?</h2>
+  <p>Every reflection swaps left and right. An image made by <em>one</em> reflection is reversed; one made by <em>two</em> reflections is reversed twice, so it looks the right way round again. In the simulation, watch which way each little flag points.</p>
+
+  <h2>Parallel mirrors</h2>
+  <p>As the angle shrinks towards 0°, \(360^\circ \div A\) grows without limit. Two mirrors facing each other (parallel) give an endless row of images, each one dimmer than the last because some light is lost at each reflection. You see this in lifts and salons.</p>
+
+  <h2>Uses</h2>
+  <ul class="mistakes">
+    <li><strong>Kaleidoscope:</strong> three long mirror strips form a triangle with 60° between each pair. Bits of coloured glass at one end are reflected again and again into a symmetrical pattern that changes as you turn the tube.</li>
+    <li><strong>Periscope:</strong> two plane mirrors, parallel to each other and each at 45° to the tube, turn the light through 90° twice. Submarines and soldiers in trenches use periscopes to look over obstacles.</li>
+  </ul>
+</section>
+<h2>Try it</h2>
+<p class="prose" style="margin-top:1rem">Choose an angle and count the dashed images.</p>
+<ul class="tries">
+  <li><span><strong>90°.</strong> How many images? Which ones are reversed?</span>
+    <button class="btn" data-sim='{"A":90}'>Set 90°</button></li>
+  <li><span><strong>60°.</strong> Count them, then check with the rule.</span>
+    <button class="btn" data-sim='{"A":60}'>Set 60°</button></li>
+  <li><span><strong>45°.</strong> Which images need the most reflections?</span>
+    <button class="btn" data-sim='{"A":45}'>Set 45°</button></li>
+  <li><span><strong>180°.</strong> What happens when the mirrors are in a line?</span>
+    <button class="btn" data-sim='{"A":180}'>Set 180°</button></li>
+</ul>
+<p class="prose" style="margin-top:1rem;font-size:.875rem;color:var(--muted)">What you should see: 90° gives 3 images: the two made by one reflection are reversed, the one opposite the object is not. 60° gives 5 and 45° gives 7; the images furthest round need the most reflections and are the dimmest. At 180° the mirrors form one flat mirror with a single image.</p>
+
+<h2>Worked examples</h2>
+<div class="example">
+  <h3 style="margin-top:0">1. Counting images</h3>
+  <p>Two mirrors are placed at 40° to each other with a coin between them. How many images of the coin are formed?</p>
+  <ol>
+    <li>\(360^\circ \div 40^\circ = 9\)</li>
+    <li>\(n = 9 - 1 = \) <span class="answer">8 images</span></li>
+  </ol>
+  <button class="btn" data-sim='{"A":40}'>Check with 40°</button>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">2. Finding the angle</h3>
+  <p>A student sees 11 images of a pencil placed between two mirrors. What is the angle between the mirrors?</p>
+  <ol>
+    <li>\(n + 1 = \dfrac{360^\circ}{A}\), so \(\dfrac{360^\circ}{A} = 12\)</li>
+    <li>\(A = 360^\circ \div 12 = \) <span class="answer">30°</span></li>
+  </ol>
+  <button class="btn" data-sim='{"A":30}'>Check with 30°</button>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">3. Inside a kaleidoscope</h3>
+  <p>In a kaleidoscope each pair of mirrors meets at 60°. How many images of a bead does one pair make? Including the bead itself, how many copies make up the pattern?</p>
+  <ol>
+    <li>\(n = 360^\circ \div 60^\circ - 1 = \) <span class="answer">5 images</span></li>
+    <li>With the bead itself: <span class="answer">6 copies</span>, arranged evenly around the centre</li>
+  </ol>
+</div>
+
+<h2>Common mistakes</h2>
+<ul class="mistakes" style="margin-top:1rem">
+  <li><strong>Forgetting the −1.</strong> 360° ÷ A counts the object too. Subtract 1 to count only the images.</li>
+  <li><strong>“Smaller angle, fewer images.”</strong> It is the other way round: a smaller angle gives more images.</li>
+  <li><strong>“All the images look the same.”</strong> Images formed by an odd number of reflections are left–right reversed.</li>
+  <li><strong>Using the rule for any angle.</strong> n = 360°/A − 1 works neatly when 360° ÷ A is a whole number and the object is midway.</li>
+</ul>
+
+<h2>Quick check</h2>
+<div class="quiz">
+  <fieldset class="q" data-answer="b">
+    <legend>1. How many images are formed by two mirrors at 72°?</legend>
+    <div class="opts">
+      <button data-opt="a">5</button>
+      <button data-opt="b">4</button>
+      <button data-opt="c">6</button>
+      <button data-opt="d">3</button>
+    </div>
+    <p class="why" hidden>360° ÷ 72° = 5, and 5 − 1 = 4.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="c">
+    <legend>2. Three images are seen between two mirrors. The angle between them is…</legend>
+    <div class="opts">
+      <button data-opt="a">60°</button>
+      <button data-opt="b">120°</button>
+      <button data-opt="c">90°</button>
+      <button data-opt="d">45°</button>
+    </div>
+    <p class="why" hidden>3 + 1 = 4 = 360° ÷ A, so A = 90°.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="b">
+    <legend>3. Which instrument uses two parallel mirrors each at 45°?</legend>
+    <div class="opts">
+      <button data-opt="a">Kaleidoscope</button>
+      <button data-opt="b">Periscope</button>
+      <button data-opt="c">Telescope</button>
+      <button data-opt="d">Microscope</button>
+    </div>
+    <p class="why" hidden>A periscope turns light through 90° at each of its two mirrors.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="c">
+    <legend>4. What happens to the number of images as the angle between the mirrors gets smaller?</legend>
+    <div class="opts">
+      <button data-opt="a">It decreases</button>
+      <button data-opt="b">It stays the same</button>
+      <button data-opt="c">It increases</button>
+      <button data-opt="d">It becomes zero</button>
+    </div>
+    <p class="why" hidden>Smaller A means a larger 360° ÷ A, so more images; parallel mirrors give endless images.</p>
+  </fieldset>
+  <p class="score" aria-live="polite"></p>
+</div>
+<nav class="next-prev" aria-label="Lessons">
+  <a href="reflection-and-plane-mirrors.html">← Reflection and plane mirrors</a>
+  <a href="spherical-mirrors.html">Next: Spherical mirrors →</a>
+</nav>
+</main>
+
+<footer class="foot">Follows Chapter 11 of the Maharashtra State Board Std 9 Science and Technology textbook. Explanations and examples are original.</footer>
+</div>
+
+<script src="../../assets/js/sim-kit.js"></script>
+<script src="../../assets/js/sims/angled.js"></script>
+<script src="../../assets/js/quiz.js"></script>
+<script>
+  (function () {
+    var simEl = document.getElementById("sim-main");
+    var sim = AngledSim.mount(simEl, { A: 90 });
+    window.lessonSim = sim;
+    // Buttons in the lesson that set up the simulation: data-sim='{...settings}'
+    document.querySelectorAll("main [data-sim]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        sim.set(JSON.parse(b.dataset.sim));
+        sim.play();
+        simEl.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+      });
+    });
+  })();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/contrib/auto-render.min.js"></script>
+<script>
+  renderMathInElement(document.body, {
+    delimiters: [{ left: "$$", right: "$$", display: true }, { left: "\\(", right: "\\)", display: false }],
+    output: window.KATEX_OUTPUT || "htmlAndMathml",
+    throwOnError: false
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Uniform and Non-uniform Motion · Visual Physics</title>
+<meta name="description" content="Race two cars, one steady and one not, and compare the distance each covers every second.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.css">
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+<div class="wrap">
+
+<header class="site-head">
+  <a class="brand" href="../../index.html">Visual <span>Physics</span></a>
+  <span class="crumb">Std 9 · Ch. 1 Laws of Motion</span>
+</header>
+
+<main>
+<p class="eyebrow">Laws of Motion · Lesson 3</p>
+<h1>Uniform and Non-uniform Motion</h1>
+<p class="lede">Watch a car on an empty highway, then one stuck in city traffic. One covers the same ground every second. The other never does.</p>
+<p class="downloads"><a class="btn" href="../../slides/uniform-and-non-uniform-motion.pptx" download>Download slides (.pptx)</a> <span>12 slides with teacher notes</span></p>
+
+<div id="sim-main"></div>
+
+<section class="prose">
+  <h2>Uniform motion</h2>
+  <p>An object is in <strong>uniform motion</strong> when it covers <strong>equal distances in equal intervals of time</strong>, however small those intervals are. Its speed does not change. When this happens along a straight line, we call it uniform linear motion.</p>
+  <p>In the simulation, <span class="c-path">car A</span> moves uniformly. The dots it leaves each second are evenly spaced.</p>
+
+  <h2>Non-uniform motion</h2>
+  <p>An object is in <strong>non-uniform motion</strong> when it covers <strong>unequal distances in equal intervals of time</strong>. Its speed keeps changing: a bus pulling away from a stop, a scooter braking for a signal, a car in heavy traffic.</p>
+  <p><span class="c-vy">Car B</span> moves non-uniformly. The gaps between its dots grow, shrink or jump around.</p>
+
+  <div class="note"><strong>How to spot it:</strong> look at the distance covered in each second. If every second gives the same distance, the motion is uniform. If not, it is non-uniform.</div>
+
+  <h2>What the graph shows</h2>
+  <p>The graph under the cars plots distance against time. Uniform motion gives a <span class="c-path">straight line</span>, because the same distance is added every second. Non-uniform motion gives a <span class="c-vy">curve</span> or a line that bends. Lesson 5 looks at these graphs in detail.</p>
+</section>
+
+<h2>Read the table</h2>
+<p class="prose" style="margin-top:1rem">Two cars start together. Their distances from the start are recorded every second.</p>
+<div class="table-wrap">
+<table class="compare">
+  <thead><tr><th>Time (s)</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th></tr></thead>
+  <tbody>
+    <tr><th class="c-path">Car P (m)</th><td>0</td><td>15</td><td>30</td><td>45</td><td>60</td><td>75</td></tr>
+    <tr><th class="c-vy">Car Q (m)</th><td>0</td><td>5</td><td>15</td><td>30</td><td>50</td><td>75</td></tr>
+  </tbody>
+</table>
+</div>
+<p class="prose" style="margin-top:1rem">Car P adds 15 m every second, so it moves uniformly. Car Q adds 5, 10, 15, 20 and 25 m, so it moves non-uniformly. Both cover 75 m in 5 s, so they have the same <em>average</em> speed of 15 m/s. Only car P actually travels at that speed the whole time.</p>
+<h2>Try it</h2>
+<p class="prose" style="margin-top:1rem">Car A always moves uniformly. Change how car B moves and compare the dots and the graph.</p>
+<ul class="tries">
+  <li><span><strong>Speeding up.</strong> How do B's gaps change?</span>
+    <button class="btn" data-sim='{"profile":"speedup","speedA":10}'>Run it</button></li>
+  <li><span><strong>Slowing down.</strong> B starts fast and brakes to a stop.</span>
+    <button class="btn" data-sim='{"profile":"slowdown","speedA":10}'>Run it</button></li>
+  <li><span><strong>Heavy traffic.</strong> B moves, stops, then moves again.</span>
+    <button class="btn" data-sim='{"profile":"traffic","speedA":10}'>Run it</button></li>
+</ul>
+<p class="prose" style="margin-top:1rem;font-size:.875rem;color:var(--muted)">What you should see: car A's dots stay evenly spaced and its graph is a straight line. Speeding up, B's gaps grow; slowing down, they shrink; in traffic, some gaps are zero (B is standing still) and its graph has flat parts. With A at 10 m/s, both cars reach 100 m at 10 s in the first two runs, yet only A moved uniformly.</p>
+
+<h2>Worked examples</h2>
+<div class="example">
+  <h3 style="margin-top:0">1. An express train</h3>
+  <p>An express train covers 25 m in every second for 2 minutes. Is its motion uniform? What is its speed, and how far does it travel?</p>
+  <ol>
+    <li>Equal distances (25 m) in equal times (each second): the motion is <span class="answer">uniform</span></li>
+    <li>Speed \(= 25\ \text{m} \div 1\ \text{s} = \) <span class="answer">25 m/s</span></li>
+    <li>Time \(= 2 \times 60 = 120\) s, so distance \(= 25 \times 120 = \) <span class="answer">3000 m (3 km)</span></li>
+  </ol>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">2. Car Q from the table</h3>
+  <p>Using the table above, find car Q's average speed over 5 s, and the distance it covered in the first and in the last second.</p>
+  <ol>
+    <li>Average speed \(= 75 \div 5 = \) <span class="answer">15 m/s</span></li>
+    <li>First second: \(5 - 0 = \) <span class="answer">5 m</span></li>
+    <li>Last second: \(75 - 50 = \) <span class="answer">25 m</span></li>
+  </ol>
+  <p>Car Q's speed changed from about 5 m/s to about 25 m/s, so 15 m/s is only its average.</p>
+</div>
+
+<h2>Common mistakes</h2>
+<ul class="mistakes" style="margin-top:1rem">
+  <li><strong>Judging by the total only.</strong> Two cars can cover the same total distance in the same time. Check the distance in each equal interval.</li>
+  <li><strong>Thinking “uniform” means “fast”.</strong> A tortoise walking at a steady 0.1 m/s is in uniform motion. Uniform means unchanging, not quick.</li>
+  <li><strong>Ignoring stops.</strong> A stop is part of the motion. A car that stops at a signal is in non-uniform motion.</li>
+</ul>
+
+<h2>Quick check</h2>
+<div class="quiz">
+  <fieldset class="q" data-answer="a">
+    <legend>1. A cyclist covers 4 m, 4 m, 4 m and 4 m in four seconds, one after another. Her motion is…</legend>
+    <div class="opts">
+      <button data-opt="a">uniform</button>
+      <button data-opt="b">non-uniform</button>
+      <button data-opt="c">at rest</button>
+      <button data-opt="d">impossible to tell</button>
+    </div>
+    <p class="why" hidden>Equal distances in equal time intervals means uniform motion.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="b">
+    <legend>2. Which of these is most likely to be non-uniform motion?</legend>
+    <div class="opts">
+      <button data-opt="a">A satellite moving at steady speed along a straight path</button>
+      <button data-opt="b">A car in heavy city traffic</button>
+      <button data-opt="c">A conveyor belt at a constant rate</button>
+      <button data-opt="d">Light travelling through space</button>
+    </div>
+    <p class="why" hidden>In traffic, a car speeds up, slows down and stops, so it covers unequal distances in equal times.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="b">
+    <legend>3. On a distance–time graph, uniform motion appears as…</legend>
+    <div class="opts">
+      <button data-opt="a">a curve</button>
+      <button data-opt="b">a straight line</button>
+      <button data-opt="c">a circle</button>
+      <button data-opt="d">a horizontal line at zero</button>
+    </div>
+    <p class="why" hidden>The same distance is added in every second, so the points lie on a straight line.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="c">
+    <legend>4. Two runners both finish 100 m in 20 s. Which statement is true?</legend>
+    <div class="opts">
+      <button data-opt="a">Both must have run uniformly</button>
+      <button data-opt="b">Neither can have run uniformly</button>
+      <button data-opt="c">They have the same average speed, but either could have run non-uniformly</button>
+      <button data-opt="d">The faster starter must win</button>
+    </div>
+    <p class="why" hidden>Average speed is 100 ÷ 20 = 5 m/s for both. That says nothing about how their speed changed during the race.</p>
+  </fieldset>
+  <p class="score" aria-live="polite"></p>
+</div>
+<nav class="next-prev" aria-label="Lessons">
+  <a href="speed-and-velocity.html">← Speed and velocity</a>
+  <a href="acceleration.html">Next: Acceleration →</a>
+</nav>
+</main>
+
+<footer class="foot">Follows Chapter 1 of the Maharashtra State Board Std 9 Science and Technology textbook. Explanations and examples are original.</footer>
+</div>
+
+<script src="../../assets/js/sim-kit.js"></script>
+<script src="../../assets/js/sims/uniform.js"></script>
+<script src="../../assets/js/quiz.js"></script>
+<script>
+  (function () {
+    var simEl = document.getElementById("sim-main");
+    var sim = UniformSim.mount(simEl, { profile: "speedup", speedA: 10, t: 6 });
+    window.lessonSim = sim;
+    // Buttons in the lesson that set up the simulation: data-sim='{...settings}'
+    document.querySelectorAll("main [data-sim]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        sim.set(JSON.parse(b.dataset.sim));
+        sim.play();
+        simEl.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+      });
+    });
+  })();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/contrib/auto-render.min.js"></script>
+<script>
+  renderMathInElement(document.body, {
+    delimiters: [{ left: "$$", right: "$$", display: true }, { left: "\\(", right: "\\)", display: false }],
+    output: window.KATEX_OUTPUT || "htmlAndMathml",
+    throwOnError: false
+  });
+</script>
+
+</body>
+</html>

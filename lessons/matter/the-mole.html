@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Mole · Visual Physics</title>
+<meta name="description" content="Weigh out water, carbon, iron or glucose and count the moles, molecules and atoms in your sample.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.css">
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+<div class="wrap">
+
+<header class="site-head">
+  <a class="brand" href="../../index.html">Visual <span>Physics</span></a>
+  <span class="crumb">Std 9 · Ch. 4 Measurement of Matter</span>
+</header>
+
+<main>
+<p class="eyebrow">Measurement of Matter · Lesson 3</p>
+<h1>The Mole</h1>
+<p class="lede">A shopkeeper sells eggs by the dozen and paper by the ream. Chemists count atoms the same way, but their “dozen” is 602 200 000 000 000 000 000 000.</p>
+<p class="downloads"><a class="btn" href="../../slides/the-mole.pptx" download>Download slides (.pptx)</a> <span>12 slides with teacher notes</span></p>
+
+<div id="sim-main"></div>
+
+<section class="prose">
+  <h2>A counting unit for particles</h2>
+  <p>Atoms and molecules are so small that even a spoonful of water contains an enormous number of them. Chemists count them in groups called <strong>moles</strong>.</p>
+  <div class="note"><strong>One mole</strong> of a substance contains as many particles (atoms, molecules or ions) as there are atoms in exactly 12 g of carbon-12. That number is <strong>Avogadro's number</strong>: \(N_A = 6.022 \times 10^{23}\).</div>
+
+  <h2>Molar mass</h2>
+  <p>The mass of one mole of a substance, in grams, is its <strong>molar mass (M)</strong>, measured in g/mol. It has the same number value as the molecular mass in u:</p>
+  <ul class="mistakes">
+    <li>Water: molecular mass 18 u, so 1 mol of water is 18 g.</li>
+    <li>Carbon: atomic mass 12 u, so 1 mol of carbon is 12 g.</li>
+    <li>Glucose: 180 u, so 1 mol of glucose is 180 g.</li>
+  </ul>
+  <p>So one mole of every substance contains the same number of particles, but has a different mass, because the particles have different masses.</p>
+
+  <h2>The two mole formulae</h2>
+  <div class="eq">$$n = \frac{m}{M} \qquad\qquad N = n \times N_A$$</div>
+  <p>Here \(n\) is the number of moles, \(m\) the mass of the sample in grams, \(M\) the molar mass and \(N\) the number of particles. To count atoms rather than molecules, multiply by the number of atoms in each molecule.</p>
+</section>
+<h2>Try it</h2>
+<p class="prose" style="margin-top:1rem">Each bag in the simulation holds one mole. Compare the masses of one bag of each substance.</p>
+<ul class="tries">
+  <li><span><strong>36 g of water.</strong> How many moles?</span>
+    <button class="btn" data-sim='{"sub":"H2O","m":36}'>Show</button></li>
+  <li><span><strong>12 g of carbon.</strong> Exactly one mole.</span>
+    <button class="btn" data-sim='{"sub":"C","m":12}'>Show</button></li>
+  <li><span><strong>4.4 g of carbon dioxide.</strong> Less than one bag.</span>
+    <button class="btn" data-sim='{"sub":"CO2","m":4.4}'>Show</button></li>
+  <li><span><strong>180 g of glucose.</strong> A big mass for one mole.</span>
+    <button class="btn" data-sim='{"sub":"C6H12O6","m":180}'>Show</button></li>
+</ul>
+<p class="prose" style="margin-top:1rem;font-size:.875rem;color:var(--muted)">What you should see: 36 g of water is 2 mol, or 1.20 × 10²⁴ molecules. 12 g of carbon is exactly 1 mol, 6.02 × 10²³ atoms. 4.4 g of carbon dioxide is 0.1 mol. 180 g of glucose is also just 1 mol, because each glucose molecule is 10 times heavier than a water molecule.</p>
+
+<h2>Worked examples</h2>
+<div class="example">
+  <h3 style="margin-top:0">1. Moles of water</h3>
+  <p>How many moles and how many molecules are there in 36 g of water?</p>
+  <ol>
+    <li>\(M = 18\) g/mol, so \(n = 36 / 18 = \) <span class="answer">2 mol</span></li>
+    <li>\(N = 2 \times 6.022 \times 10^{23} = \) <span class="answer">1.204 × 10²⁴ molecules</span></li>
+  </ol>
+  <button class="btn" data-sim='{"sub":"H2O","m":36}'>Weigh it out</button>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">2. Atoms in carbon dioxide</h3>
+  <p>How many molecules and how many atoms are in 4.4 g of carbon dioxide?</p>
+  <ol>
+    <li>\(M = 44\) g/mol, so \(n = 4.4 / 44 = 0.1\) mol</li>
+    <li>Molecules \(= 0.1 \times 6.022 \times 10^{23} = \) <span class="answer">6.022 × 10²² molecules</span></li>
+    <li>Each CO₂ has 3 atoms: \(3 \times 6.022 \times 10^{22} = \) <span class="answer">1.807 × 10²³ atoms</span></li>
+  </ol>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">3. From particles to mass</h3>
+  <p>What is the mass of 3.011 × 10²³ atoms of sodium? (Na = 23)</p>
+  <ol>
+    <li>\(n = \dfrac{3.011 \times 10^{23}}{6.022 \times 10^{23}} = 0.5\) mol</li>
+    <li>\(m = n \times M = 0.5 \times 23 = \) <span class="answer">11.5 g</span></li>
+  </ol>
+</div>
+
+<h2>Common mistakes</h2>
+<ul class="mistakes" style="margin-top:1rem">
+  <li><strong>Multiplying instead of dividing.</strong> Moles = mass ÷ molar mass. 36 g of water is 36 ÷ 18 = 2 mol, not 36 × 18.</li>
+  <li><strong>Counting molecules as atoms.</strong> 1 mol of H₂O has 6.022 × 10²³ molecules but 3 times as many atoms.</li>
+  <li><strong>u and g/mol are different numbers.</strong> They have the same value: 18 u per molecule, 18 g per mole.</li>
+  <li><strong>Dropping the power of ten.</strong> Write Avogadro's number in full: 6.022 × 10²³.</li>
+</ul>
+
+<h2>Quick check</h2>
+<div class="quiz">
+  <fieldset class="q" data-answer="b">
+    <legend>1. How many moles are in 88 g of carbon dioxide (CO₂ = 44 g/mol)?</legend>
+    <div class="opts">
+      <button data-opt="a">0.5 mol</button>
+      <button data-opt="b">2 mol</button>
+      <button data-opt="c">44 mol</button>
+      <button data-opt="d">88 mol</button>
+    </div>
+    <p class="why" hidden>88 ÷ 44 = 2 mol.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="a">
+    <legend>2. One mole of any substance contains…</legend>
+    <div class="opts">
+      <button data-opt="a">6.022 × 10²³ particles</button>
+      <button data-opt="b">12 g</button>
+      <button data-opt="c">22.4 particles</button>
+      <button data-opt="d">1 g</button>
+    </div>
+    <p class="why" hidden>That is Avogadro's number.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="a">
+    <legend>3. What is the mass of 0.5 mol of water?</legend>
+    <div class="opts">
+      <button data-opt="a">9 g</button>
+      <button data-opt="b">18 g</button>
+      <button data-opt="c">36 g</button>
+      <button data-opt="d">0.5 g</button>
+    </div>
+    <p class="why" hidden>0.5 × 18 = 9 g.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="b">
+    <legend>4. Which contains more atoms: 1 mol of water or 1 mol of carbon?</legend>
+    <div class="opts">
+      <button data-opt="a">1 mol of carbon</button>
+      <button data-opt="b">1 mol of water</button>
+      <button data-opt="c">Both the same</button>
+      <button data-opt="d">Cannot tell</button>
+    </div>
+    <p class="why" hidden>Both have 6.022 × 10²³ particles, but each water molecule has 3 atoms.</p>
+  </fieldset>
+  <p class="score" aria-live="polite"></p>
+</div>
+<nav class="next-prev" aria-label="Lessons">
+  <a href="atoms-and-molecular-mass.html">← Atoms, molecules and molecular mass</a>
+  <a href="valency-and-formulae.html">Next: Valency and chemical formulae →</a>
+</nav>
+</main>
+
+<footer class="foot">Follows Chapter 4 of the Maharashtra State Board Std 9 Science and Technology textbook. Explanations and examples are original.</footer>
+</div>
+
+<script src="../../assets/js/sim-kit.js"></script>
+<script src="../../assets/js/chem-kit.js"></script>
+<script src="../../assets/js/sims/mole.js"></script>
+<script src="../../assets/js/quiz.js"></script>
+<script>
+  (function () {
+    var simEl = document.getElementById("sim-main");
+    var sim = MoleSim.mount(simEl, { sub: "H2O", m: 36 });
+    window.lessonSim = sim;
+    // Buttons in the lesson that set up the simulation: data-sim='{...settings}'
+    document.querySelectorAll("main [data-sim]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        sim.set(JSON.parse(b.dataset.sim));
+        sim.play();
+        simEl.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+      });
+    });
+  })();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/contrib/auto-render.min.js"></script>
+<script>
+  renderMathInElement(document.body, {
+    delimiters: [{ left: "$$", right: "$$", display: true }, { left: "\\(", right: "\\)", display: false }],
+    output: window.KATEX_OUTPUT || "htmlAndMathml",
+    throwOnError: false
+  });
+</script>
+
+</body>
+</html>

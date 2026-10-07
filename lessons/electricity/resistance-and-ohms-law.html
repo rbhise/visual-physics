@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Resistance and Ohm's Law · Visual Physics</title>
+<meta name="description" content="Run the Ohm's law experiment: add cells, record ammeter and voltmeter readings, plot the graph, and test copper, nichrome, glass and rubber.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.css">
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+<div class="wrap">
+
+<header class="site-head">
+  <a class="brand" href="../../index.html">Visual <span>Physics</span></a>
+  <span class="crumb">Std 9 · Ch. 3 Current Electricity</span>
+</header>
+
+<main>
+<p class="eyebrow">Current Electricity · Lesson 2</p>
+<h1>Resistance and Ohm's Law</h1>
+<p class="lede">The same cell gives a big current through a copper wire and almost none through a rubber band. The difference is resistance, and Ohm's law tells us exactly how it controls the current.</p>
+<p class="downloads"><a class="btn" href="../../slides/resistance-and-ohms-law.pptx" download>Download slides (.pptx)</a> <span>12 slides with teacher notes</span></p>
+
+<div id="sim-main"></div>
+
+<section class="prose">
+  <h2>What resistance is</h2>
+  <p>As free electrons drift through a wire, they keep colliding with the atoms of the metal. These collisions oppose their flow. This opposition is called <strong>resistance (R)</strong>, measured in <strong>ohms (Ω)</strong>.</p>
+
+  <h2>Ohm's law</h2>
+  <div class="note"><strong>If the physical state of a conductor (such as its temperature) stays the same, the current through it is directly proportional to the potential difference across it.</strong></div>
+  <div class="eq" style="margin-top:1rem">$$V = IR \qquad\text{or}\qquad R = \frac{V}{I}$$</div>
+  <p>A conductor has a resistance of 1 ohm if a potential difference of 1 volt across it drives a current of 1 ampere: \(1\ \Omega = 1\ \text{V/A}\).</p>
+
+  <h2>The experiment</h2>
+  <p>The simulation reproduces the textbook experiment. A nichrome wire XY is joined to cells through a plug key and an <span class="c-vy">ammeter</span> in series; a <span class="c-path">voltmeter</span> is joined across XY. Record a reading with 1, 2, 3 and 4 cells. The points lie on a <strong>straight line through the origin</strong>, so \(I \propto V\), and \(V \div I\) is the same every time: that constant is the resistance.</p>
+
+  <h2>What decides resistance</h2>
+  <p>For a wire of length \(L\) and cross-sectional area \(A\):</p>
+  <div class="eq">$$R = \rho\,\frac{L}{A}$$</div>
+  <ul class="mistakes">
+    <li><strong>Length:</strong> double the length, double the resistance.</li>
+    <li><strong>Thickness:</strong> a thicker wire (larger \(A\)) has less resistance. Doubling the diameter makes \(A\) four times larger, so \(R\) drops to a quarter.</li>
+    <li><strong>Material:</strong> each material has its own <strong>resistivity</strong> \(\rho\), measured in ohm metre (Ω m).</li>
+    <li><strong>Temperature:</strong> for most metals, resistance rises as they get hotter.</li>
+  </ul>
+</section>
+
+<h2>Conductors and insulators</h2>
+<div class="table-wrap">
+<table class="compare">
+  <thead><tr><th>Material</th><th>Resistivity (Ω m)</th><th>Type and use</th></tr></thead>
+  <tbody>
+    <tr><th>Copper</th><td>1.7 × 10⁻⁸</td><td>Conductor: connecting wires</td></tr>
+    <tr><th>Aluminium</th><td>2.7 × 10⁻⁸</td><td>Conductor: overhead power lines</td></tr>
+    <tr><th>Nichrome</th><td>1.1 × 10⁻⁶</td><td>Conductor with high resistance: heater and iron elements</td></tr>
+    <tr><th>Glass</th><td>about 10¹⁰ to 10¹⁴</td><td>Insulator</td></tr>
+    <tr><th>Rubber</th><td>about 10¹³</td><td>Insulator: gloves, cable covering</td></tr>
+  </tbody>
+</table>
+</div>
+<p class="prose" style="margin-top:1rem"><strong>Conductors</strong> have very low resistance, so current flows through them easily. <strong>Insulators</strong> have extremely high resistance, so practically no current flows. Wires are made of copper and covered in plastic or rubber, so current flows along the wire but cannot leak out.</p>
+<h2>Try it</h2>
+<p class="prose" style="margin-top:1rem">Each button records a full set of readings for 1 to 4 cells.</p>
+<ul class="tries">
+  <li><span><strong>Nichrome, 1 m, 0.3 mm.</strong> Read the resistance from V ÷ I.</span>
+    <button class="btn" data-sim='{"mat":"nichrome","L":1,"d":0.3,"sweep":true}'>Run the experiment</button></li>
+  <li><span><strong>Twice as long.</strong> Nichrome, 2 m, 0.3 mm.</span>
+    <button class="btn" data-sim='{"mat":"nichrome","L":2,"d":0.3,"sweep":true}'>Run the experiment</button></li>
+  <li><span><strong>Twice as thick.</strong> Nichrome, 1 m, 0.6 mm.</span>
+    <button class="btn" data-sim='{"mat":"nichrome","L":1,"d":0.6,"sweep":true}'>Run the experiment</button></li>
+  <li><span><strong>Rubber.</strong> An insulator in place of the wire.</span>
+    <button class="btn" data-sim='{"mat":"rubber","L":1,"d":0.3,"sweep":true}'>Run the experiment</button></li>
+</ul>
+<p class="prose" style="margin-top:1rem;font-size:.875rem;color:var(--muted)">What you should see: the 1 m nichrome wire gives about 15.6 Ω, and each extra cell adds the same current, so the points line up. The 2 m wire has twice the resistance (31.1 Ω), so its line is half as steep. The 0.6 mm wire has a quarter of the resistance (3.9 Ω), so its line is four times as steep. Rubber lets practically no current through.</p>
+
+<h2>Worked examples</h2>
+<div class="example">
+  <h3 style="margin-top:0">1. An electric iron</h3>
+  <p>An electric iron draws a current of 4 A from the 230 V mains. Find the resistance of its element.</p>
+  <ol>
+    <li>\(R = V / I = 230 / 4 = \) <span class="answer">57.5 Ω</span></li>
+  </ol>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">2. A resistor and a cell</h3>
+  <p>A 5 Ω resistor is joined across a 1.5 V cell. What current flows?</p>
+  <ol>
+    <li>\(I = V / R = 1.5 / 5 = \) <span class="answer">0.3 A</span></li>
+  </ol>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">3. Resistance of a nichrome wire</h3>
+  <p>Find the resistance of a nichrome wire 1 m long and 0.3 mm in diameter. (ρ = 1.1 × 10⁻⁶ Ω m)</p>
+  <ol>
+    <li>Radius \(r = 0.15\) mm \(= 1.5 \times 10^{-4}\) m, so \(A = \pi r^2 = 3.14 \times (1.5 \times 10^{-4})^2 \approx 7.07 \times 10^{-8}\) m²</li>
+    <li>\(R = \rho L / A = \dfrac{1.1 \times 10^{-6} \times 1}{7.07 \times 10^{-8}} \approx \) <span class="answer">15.6 Ω</span></li>
+  </ol>
+  <button class="btn" data-sim='{"mat":"nichrome","L":1,"d":0.3,"sweep":true}'>Check it in the simulation</button>
+</div>
+
+<h2>Common mistakes</h2>
+<ul class="mistakes" style="margin-top:1rem">
+  <li><strong>Using the diameter as the radius.</strong> A = πr². Halve the diameter first, and convert mm to m.</li>
+  <li><strong>Thinking Ohm's law always holds.</strong> It needs a constant physical state. A bulb filament heats up, so its resistance changes.</li>
+  <li><strong>Doubling thickness halves R.</strong> Doubling the diameter makes the area four times larger, so R falls to a quarter.</li>
+  <li><strong>Mixing up resistance and resistivity.</strong> Resistance (Ω) belongs to one wire. Resistivity (Ω m) belongs to the material.</li>
+</ul>
+
+<h2>Quick check</h2>
+<div class="quiz">
+  <fieldset class="q" data-answer="b">
+    <legend>1. A potential difference of 12 V drives a current of 0.5 A through a resistor. Its resistance is…</legend>
+    <div class="opts">
+      <button data-opt="a">6 Ω</button>
+      <button data-opt="b">24 Ω</button>
+      <button data-opt="c">12.5 Ω</button>
+      <button data-opt="d">0.04 Ω</button>
+    </div>
+    <p class="why" hidden>\(R = V / I = 12 / 0.5 = 24\ \Omega\).</p>
+  </fieldset>
+  <fieldset class="q" data-answer="b">
+    <legend>2. On a graph of current against potential difference for a wire obeying Ohm's law, the points lie on…</legend>
+    <div class="opts">
+      <button data-opt="a">a curve</button>
+      <button data-opt="b">a straight line through the origin</button>
+      <button data-opt="c">a horizontal line</button>
+      <button data-opt="d">a circle</button>
+    </div>
+    <p class="why" hidden>Current is directly proportional to potential difference.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="c">
+    <legend>3. If a wire is replaced by one of the same material, twice as long and equally thick, its resistance…</legend>
+    <div class="opts">
+      <button data-opt="a">halves</button>
+      <button data-opt="b">stays the same</button>
+      <button data-opt="c">doubles</button>
+      <button data-opt="d">becomes four times</button>
+    </div>
+    <p class="why" hidden>\(R \propto L\).</p>
+  </fieldset>
+  <fieldset class="q" data-answer="c">
+    <legend>4. Which material is used for the heating element of an electric iron?</legend>
+    <div class="opts">
+      <button data-opt="a">Copper</button>
+      <button data-opt="b">Rubber</button>
+      <button data-opt="c">Nichrome</button>
+      <button data-opt="d">Glass</button>
+    </div>
+    <p class="why" hidden>Nichrome has a high resistivity and does not burn easily when hot.</p>
+  </fieldset>
+  <p class="score" aria-live="polite"></p>
+</div>
+<nav class="next-prev" aria-label="Lessons">
+  <a href="current-and-potential-difference.html">← Current and potential difference</a>
+  <a href="series-and-parallel.html">Next: Resistors in series and parallel →</a>
+</nav>
+</main>
+
+<footer class="foot">Follows Chapter 3 of the Maharashtra State Board Std 9 Science and Technology textbook. Explanations and examples are original.</footer>
+</div>
+
+<script src="../../assets/js/sim-kit.js"></script>
+<script src="../../assets/js/circuit-kit.js"></script>
+<script src="../../assets/js/sims/ohm.js"></script>
+<script src="../../assets/js/quiz.js"></script>
+<script>
+  (function () {
+    var simEl = document.getElementById("sim-main");
+    var sim = OhmSim.mount(simEl, { mat: "nichrome", L: 1, d: 0.3, cells: 4, sweep: true });
+    window.lessonSim = sim;
+    // Buttons in the lesson that set up the simulation: data-sim='{...settings}'
+    document.querySelectorAll("main [data-sim]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        sim.set(JSON.parse(b.dataset.sim));
+        sim.play();
+        simEl.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+      });
+    });
+  })();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/contrib/auto-render.min.js"></script>
+<script>
+  renderMathInElement(document.body, {
+    delimiters: [{ left: "$$", right: "$$", display: true }, { left: "\\(", right: "\\)", display: false }],
+    output: window.KATEX_OUTPUT || "htmlAndMathml",
+    throwOnError: false
+  });
+</script>
+
+</body>
+</html>

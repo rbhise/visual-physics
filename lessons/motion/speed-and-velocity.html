@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Speed and Velocity · Visual Physics</title>
+<meta name="description" content="Ride a cyclist along a straight road, a round trip and a circular track to see why speed and velocity are different.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.css">
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+<div class="wrap">
+
+<header class="site-head">
+  <a class="brand" href="../../index.html">Visual <span>Physics</span></a>
+  <span class="crumb">Std 9 · Ch. 1 Laws of Motion</span>
+</header>
+
+<main>
+<p class="eyebrow">Laws of Motion · Lesson 2</p>
+<h1>Speed and Velocity</h1>
+<p class="lede">Two cyclists both ride at 5 m/s, one heading north and one heading east. Their speeds are equal. Their velocities are not.</p>
+<p class="downloads"><a class="btn" href="../../slides/speed-and-velocity.pptx" download>Download slides (.pptx)</a> <span>13 slides with teacher notes</span></p>
+
+<div id="sim-speed"></div>
+
+<section class="prose">
+  <h2>Speed: how fast</h2>
+  <p><strong>Speed</strong> is the distance travelled by an object in unit time. It tells you how fast something moves, but not which way.</p>
+  <div class="eq">$$\text{speed} = \frac{\text{distance}}{\text{time}}$$</div>
+  <p>The SI unit is metres per second (m/s). Speed has size only, so like distance it is a <em>scalar</em>.</p>
+  <p>Real journeys speed up and slow down, so we usually talk about <strong>average speed</strong>: the total distance divided by the total time taken.</p>
+
+  <h2>Velocity: how fast, and which way</h2>
+  <p><strong>Velocity</strong> is the displacement that occurs in unit time. Because displacement has a direction, so does velocity: it is a <em>vector</em>.</p>
+  <div class="eq">$$\text{velocity} = \frac{\text{displacement}}{\text{time}}$$</div>
+  <p>The unit is also m/s, but a velocity is only complete with its direction: "5 m/s north", not just "5 m/s". In the simulation, the ink arrow labelled <em>v</em> on the cyclist is the velocity. Its length shows the speed and it points the way the cyclist is moving.</p>
+
+  <div class="note"><strong>Velocity changes in three ways:</strong> when the speed changes, when the direction changes, or when both change. A cyclist going round a circular track at a steady speed still has a changing velocity, because the direction turns all the time.</div>
+</section>
+
+<h2>Changing units: km/h and m/s</h2>
+<p class="prose" style="margin-top:1rem">Speeds on roads are given in kilometres per hour. Since 1 km = 1000 m and 1 h = 3600 s:</p>
+<div class="eq" style="max-width:42rem;margin-top:1rem">$$1\ \text{km/h} = \frac{1000\ \text{m}}{3600\ \text{s}} = \frac{5}{18}\ \text{m/s}$$</div>
+<div class="table-wrap">
+<table class="compare">
+  <thead><tr><th>To convert</th><th>Do this</th><th>Example</th></tr></thead>
+  <tbody>
+    <tr><th>km/h to m/s</th><td>Multiply by 5/18</td><td>72 km/h × 5/18 = 20 m/s</td></tr>
+    <tr><th>m/s to km/h</th><td>Multiply by 18/5 (or 3.6)</td><td>10 m/s × 3.6 = 36 km/h</td></tr>
+  </tbody>
+</table>
+</div>
+
+<h2>Speed or velocity?</h2>
+<div class="table-wrap">
+<table class="compare">
+  <thead><tr><th></th><th>Speed</th><th>Velocity</th></tr></thead>
+  <tbody>
+    <tr><th>Defined as</th><td>Distance ÷ time</td><td>Displacement ÷ time</td></tr>
+    <tr><th>Direction</th><td>Not included (scalar)</td><td>Included (vector)</td></tr>
+    <tr><th>Unit</th><td>m/s</td><td>m/s, with a direction</td></tr>
+    <tr><th>Average over a round trip</th><td>More than zero</td><td>Zero</td></tr>
+    <tr><th>Changes when</th><td>The object speeds up or slows down</td><td>The speed or the direction changes</td></tr>
+  </tbody>
+</table>
+</div>
+
+<h2>Try it</h2>
+<p class="prose" style="margin-top:1rem">Each button rides at 8 m/s. Watch the arrow labelled <em>v</em> and the averages in the bottom row.</p>
+<ul class="tries">
+  <li><span><strong>Straight road.</strong> Does the velocity arrow ever change?</span>
+    <button class="btn" data-route="straight">Ride straight</button></li>
+  <li><span><strong>There and back.</strong> Compare average speed with average velocity at the finish.</span>
+    <button class="btn" data-route="backforth">Ride there and back</button></li>
+  <li><span><strong>Circular track.</strong> The speed never changes. What does the arrow do?</span>
+    <button class="btn" data-route="track">Ride a lap</button></li>
+</ul>
+<p class="prose" style="margin-top:1rem;font-size:.875rem;color:var(--muted)">What you should see: on the straight road the arrow keeps the same length and direction, and average speed equals average velocity. After the round trip, average speed is 8 m/s but average velocity is 0. On the track the arrow keeps its length but swings round, so the velocity changes even though the speed does not.</p>
+
+<h2>Worked examples</h2>
+<div class="example">
+  <h3 style="margin-top:0">1. A bus journey</h3>
+  <p>A bus covers 90 km in 1.5 hours. Find its average speed in km/h and in m/s.</p>
+  <ol>
+    <li>Average speed \(= \dfrac{90\ \text{km}}{1.5\ \text{h}} = \) <span class="answer">60 km/h</span></li>
+    <li>In m/s: \(60 \times \dfrac{5}{18} = \) <span class="answer">16.7 m/s</span></li>
+  </ol>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">2. Back to Riya's walk</h3>
+  <p>In Lesson 1, Riya walked 40 m east and then 30 m north to a shop. The walk took 50 s. Find her average speed and average velocity.</p>
+  <ol>
+    <li>Distance = 70 m, so average speed \(= 70 / 50 = \) <span class="answer">1.4 m/s</span></li>
+    <li>Displacement = 50 m, 37° north of east, so average velocity \(= 50 / 50 = \) <span class="answer">1 m/s, 37° north of east</span></li>
+  </ol>
+  <p>Average velocity is smaller than average speed, because the displacement cuts the corner.</p>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">3. Laps of a track</h3>
+  <p>A cyclist rides once around a circular track 200 m long in 40 s. Find the average speed and average velocity for the lap.</p>
+  <ol>
+    <li>Average speed \(= 200 / 40 = \) <span class="answer">5 m/s</span></li>
+    <li>She finishes where she started, so displacement = 0 and average velocity = <span class="answer">0 m/s</span></li>
+  </ol>
+  <button class="btn" data-route="track">See a lap in the simulation</button>
+</div>
+
+<h2>Common mistakes</h2>
+<ul class="mistakes" style="margin-top:1rem">
+  <li><strong>Mixing units.</strong> Don't divide metres by hours. Convert first, using 1 km/h = 5/18 m/s.</li>
+  <li><strong>Using displacement for speed.</strong> Speed uses distance, the whole path. Velocity uses displacement.</li>
+  <li><strong>"Constant speed means constant velocity."</strong> Only on a straight line. Turning changes the velocity.</li>
+  <li><strong>Leaving out the direction.</strong> A velocity without a direction is just a speed.</li>
+</ul>
+
+<h2>Quick check</h2>
+<div class="quiz">
+  <fieldset class="q" data-answer="c">
+    <legend>1. An auto-rickshaw goes round a roundabout at a steady 20 km/h. Its velocity is…</legend>
+    <div class="opts">
+      <button data-opt="a">constant, because the speed is steady</button>
+      <button data-opt="b">zero</button>
+      <button data-opt="c">changing, because its direction is changing</button>
+    </div>
+    <p class="why" hidden>Velocity includes direction. Turning changes the direction, so the velocity changes even at a steady speed.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="b">
+    <legend>2. A train moves at 54 km/h. What is that in m/s?</legend>
+    <div class="opts">
+      <button data-opt="a">5.4 m/s</button>
+      <button data-opt="b">15 m/s</button>
+      <button data-opt="c">194 m/s</button>
+      <button data-opt="d">30 m/s</button>
+    </div>
+    <p class="why" hidden>\(54 \times 5/18 = 15\) m/s.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="a">
+    <legend>3. A runner completes one full lap of a 400 m track in 100 s. Her average velocity is…</legend>
+    <div class="opts">
+      <button data-opt="a">0 m/s</button>
+      <button data-opt="b">4 m/s</button>
+      <button data-opt="c">40 m/s</button>
+    </div>
+    <p class="why" hidden>She ends where she began, so her displacement is zero. Her average speed is 4 m/s, but her average velocity is 0.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="d">
+    <legend>4. Which statement is always true?</legend>
+    <div class="opts">
+      <button data-opt="a">Average velocity is larger than average speed</button>
+      <button data-opt="b">Speed and velocity are always equal</button>
+      <button data-opt="c">Speed has a direction</button>
+      <button data-opt="d">The size of the average velocity is never larger than the average speed</button>
+    </div>
+    <p class="why" hidden>Displacement is never more than distance, and both are divided by the same time.</p>
+  </fieldset>
+  <p class="score" aria-live="polite"></p>
+</div>
+
+<nav class="next-prev" aria-label="Lessons">
+  <a href="distance-and-displacement.html">← Distance and displacement</a>
+  <a href="uniform-and-non-uniform-motion.html">Next: Uniform and non-uniform motion →</a>
+</nav>
+</main>
+
+<footer class="foot">Follows Chapter 1 of the Maharashtra State Board Std 9 Science and Technology textbook. Explanations and examples are original.</footer>
+</div>
+
+<script src="../../assets/js/sims/speed.js"></script>
+<script src="../../assets/js/quiz.js"></script>
+<script>
+  (function () {
+    var simEl = document.getElementById("sim-speed");
+    var sim = SpeedSim.mount(simEl, { route: "track", speed: 5, startAt: 40 });
+    document.querySelectorAll("main [data-route]").forEach(function (b) {
+      if (simEl.contains(b)) return;
+      b.addEventListener("click", function () {
+        sim.speed(8);
+        sim.route(b.dataset.route, true);
+        simEl.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+      });
+    });
+  })();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/contrib/auto-render.min.js"></script>
+<script>
+  renderMathInElement(document.body, {
+    delimiters: [{ left: "$$", right: "$$", display: true }, { left: "\\(", right: "\\)", display: false }],
+    output: window.KATEX_OUTPUT || "htmlAndMathml",
+    throwOnError: false
+  });
+</script>
+</body>
+</html>

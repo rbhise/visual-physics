@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kinetic and Potential Energy · Visual Physics</title>
+<meta name="description" content="Drop a ball into sand from different heights or roll it in at different speeds, and measure its energy by the dent it makes.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.css">
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+<div class="wrap">
+
+<header class="site-head">
+  <a class="brand" href="../../index.html">Visual <span>Physics</span></a>
+  <span class="crumb">Std 9 · Ch. 2 Work and Energy</span>
+</header>
+
+<main>
+<p class="eyebrow">Work and Energy · Lesson 2</p>
+<h1>Kinetic and Potential Energy</h1>
+<p class="lede">A cricket ball hit for six, water stored behind a dam, a stretched catapult: each can do work. That ability is energy.</p>
+<p class="downloads"><a class="btn" href="../../slides/kinetic-and-potential-energy.pptx" download>Download slides (.pptx)</a> <span>12 slides with teacher notes</span></p>
+
+<div id="sim-main"></div>
+
+<section class="prose">
+  <h2>Energy</h2>
+  <p>The capacity of a body to do work is called its <strong>energy</strong>. Energy is measured in the same unit as work: the <strong>joule (J)</strong>. It comes in many forms: mechanical, heat, light, sound, chemical, electrical and nuclear. This lesson looks at the two forms of mechanical energy.</p>
+
+  <h2>Kinetic energy: energy of motion</h2>
+  <p>A moving object can do work when it hits something. A moving ball pushes into sand; a moving hammer drives in a nail. The energy an object has because of its motion is its <strong>kinetic energy</strong>.</p>
+  <div class="eq">$$\text{K.E.} = \tfrac12 m v^2$$</div>
+  <p><strong>Where it comes from:</strong> push an object of mass \(m\) from rest with a force \(F\) through a distance \(s\). The work done is \(W = Fs = (ma)s\). From \(v^2 = u^2 + 2as\) with \(u = 0\), \(s = v^2/2a\). So \(W = ma \times v^2/2a = \tfrac12 mv^2\). All that work is stored as kinetic energy.</p>
+  <div class="note"><strong>Speed matters most.</strong> Double the mass and the kinetic energy doubles. Double the speed and it becomes <em>four</em> times as large, because speed is squared.</div>
+
+  <h2>Potential energy: energy of position</h2>
+  <p>A raised object can do work when it falls. The energy an object has because of its position or shape is its <strong>potential energy</strong>. A stretched rubber band, a wound-up spring and a drawn bow all store potential energy in their shape.</p>
+  <p>To lift a mass \(m\) through a height \(h\) at steady speed, you push up with a force equal to its weight, \(mg\). The work done, force × height, is stored as gravitational potential energy:</p>
+  <div class="eq">$$\text{P.E.} = mgh$$</div>
+  <p>The potential energy depends only on the height, not on the path taken to get there: carrying a bag up a ramp or up a ladder to the same height stores the same energy.</p>
+</section>
+<h2>Try it</h2>
+<p class="prose" style="margin-top:1rem">The dent in the sand shows how much energy the ball brings. A bigger dent means more energy.</p>
+<ul class="tries">
+  <li><span><strong>Drop from 1 m.</strong> A 2 kg ball.</span>
+    <button class="btn" data-sim='{"mode":"drop","m":2,"h":1}'>Release</button></li>
+  <li><span><strong>Drop from 4 m.</strong> Same ball, four times as high.</span>
+    <button class="btn" data-sim='{"mode":"drop","m":2,"h":4}'>Release</button></li>
+  <li><span><strong>Roll at 3 m/s.</strong> A 2 kg ball.</span>
+    <button class="btn" data-sim='{"mode":"roll","m":2,"v":3}'>Release</button></li>
+  <li><span><strong>Roll at 6 m/s.</strong> Same ball, twice as fast.</span>
+    <button class="btn" data-sim='{"mode":"roll","m":2,"v":6}'>Release</button></li>
+</ul>
+<p class="prose" style="margin-top:1rem;font-size:.875rem;color:var(--muted)">What you should see: from 1 m the ball has 19.6 J; from 4 m it has 78.4 J, four times as much, and the dent is four times as deep. Rolling at 3 m/s it has 9 J; at 6 m/s it has 36 J. Doubling the speed gives four times the energy.</p>
+
+<h2>Worked examples</h2>
+<div class="example">
+  <h3 style="margin-top:0">1. A rolling ball</h3>
+  <p>Find the kinetic energy of a 0.5 kg ball rolling at 4 m/s.</p>
+  <ol>
+    <li>\(\text{K.E.} = \tfrac12 \times 0.5 \times 4^2 = \tfrac12 \times 0.5 \times 16 = \) <span class="answer">4 J</span></li>
+  </ol>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">2. A car slowing down</h3>
+  <p>A 1500 kg car travels at 20 m/s. Find its kinetic energy. What is its kinetic energy if it slows to 10 m/s?</p>
+  <ol>
+    <li>At 20 m/s: \(\tfrac12 \times 1500 \times 400 = \) <span class="answer">300 000 J (300 kJ)</span></li>
+    <li>At 10 m/s: \(\tfrac12 \times 1500 \times 100 = \) <span class="answer">75 000 J (75 kJ)</span></li>
+  </ol>
+  <p>Halving the speed leaves only a quarter of the kinetic energy.</p>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">3. Water on the roof</h3>
+  <p>A water tank on a roof holds 1000 kg of water, 12 m above the ground. How much potential energy does the water have? (g = 9.8 m/s²)</p>
+  <ol>
+    <li>\(\text{P.E.} = mgh = 1000 \times 9.8 \times 12 = \) <span class="answer">117 600 J</span></li>
+  </ol>
+  <p>This stored energy is why water flows out of the taps downstairs without a pump.</p>
+</div>
+
+<h2>Common mistakes</h2>
+<ul class="mistakes" style="margin-top:1rem">
+  <li><strong>Forgetting to square v.</strong> K.E. = ½mv². At 4 m/s, use 16, not 4.</li>
+  <li><strong>Grams instead of kilograms.</strong> Convert to kg before using either formula: 500 g = 0.5 kg.</li>
+  <li><strong>Thinking the path matters for P.E.</strong> Only the height changes the potential energy, not the route.</li>
+  <li><strong>Doubling speed doubles K.E.</strong> Doubling speed makes K.E. four times as large.</li>
+</ul>
+
+<h2>Quick check</h2>
+<div class="quiz">
+  <fieldset class="q" data-answer="c">
+    <legend>1. A 2 kg ball moves at 3 m/s. Its kinetic energy is…</legend>
+    <div class="opts">
+      <button data-opt="a">3 J</button>
+      <button data-opt="b">6 J</button>
+      <button data-opt="c">9 J</button>
+      <button data-opt="d">18 J</button>
+    </div>
+    <p class="why" hidden>\(\tfrac12 \times 2 \times 9 = 9\) J.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="c">
+    <legend>2. If the speed of a moving object is doubled, its kinetic energy becomes…</legend>
+    <div class="opts">
+      <button data-opt="a">the same</button>
+      <button data-opt="b">twice as large</button>
+      <button data-opt="c">four times as large</button>
+      <button data-opt="d">half</button>
+    </div>
+    <p class="why" hidden>K.E. depends on \(v^2\), and \(2^2 = 4\).</p>
+  </fieldset>
+  <fieldset class="q" data-answer="c">
+    <legend>3. A 5 kg box is placed on a shelf 2 m high. Its potential energy is (g = 9.8 m/s²)…</legend>
+    <div class="opts">
+      <button data-opt="a">10 J</button>
+      <button data-opt="b">49 J</button>
+      <button data-opt="c">98 J</button>
+      <button data-opt="d">196 J</button>
+    </div>
+    <p class="why" hidden>\(mgh = 5 \times 9.8 \times 2 = 98\) J.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="b">
+    <legend>4. Which of these has potential energy because of its shape?</legend>
+    <div class="opts">
+      <button data-opt="a">A moving bus</button>
+      <button data-opt="b">A stretched catapult</button>
+      <button data-opt="c">A rolling marble</button>
+      <button data-opt="d">A flowing river</button>
+    </div>
+    <p class="why" hidden>Stretching changes its shape and stores energy in it.</p>
+  </fieldset>
+  <p class="score" aria-live="polite"></p>
+</div>
+<nav class="next-prev" aria-label="Lessons">
+  <a href="work.html">← Work</a>
+  <a href="conservation-of-energy.html">Next: Conservation of energy →</a>
+</nav>
+</main>
+
+<footer class="foot">Follows Chapter 2 of the Maharashtra State Board Std 9 Science and Technology textbook, with ideas from NCERT Class 9 Science (Exploration). Explanations and examples are original.</footer>
+</div>
+
+<script src="../../assets/js/sim-kit.js"></script>
+<script src="../../assets/js/sims/energy.js"></script>
+<script src="../../assets/js/quiz.js"></script>
+<script>
+  (function () {
+    var simEl = document.getElementById("sim-main");
+    var sim = EnergySim.mount(simEl, { mode: "drop", m: 2, h: 3 });
+    window.lessonSim = sim;
+    // Buttons in the lesson that set up the simulation: data-sim='{...settings}'
+    document.querySelectorAll("main [data-sim]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        sim.set(JSON.parse(b.dataset.sim));
+        sim.play();
+        simEl.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+      });
+    });
+  })();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/contrib/auto-render.min.js"></script>
+<script>
+  renderMathInElement(document.body, {
+    delimiters: [{ left: "$$", right: "$$", display: true }, { left: "\\(", right: "\\)", display: false }],
+    output: window.KATEX_OUTPUT || "htmlAndMathml",
+    throwOnError: false
+  });
+</script>
+
+</body>
+</html>

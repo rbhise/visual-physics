@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Electricity at Home · Visual Physics</title>
+<meta name="description" content="Switch on appliances in a house circuit, overload the fuse, and see how the earth wire protects you from a faulty iron.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.css">
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+<div class="wrap">
+
+<header class="site-head">
+  <a class="brand" href="../../index.html">Visual <span>Physics</span></a>
+  <span class="crumb">Std 9 · Ch. 3 Current Electricity</span>
+</header>
+
+<main>
+<p class="eyebrow">Current Electricity · Lesson 4</p>
+<h1>Electricity at Home</h1>
+<p class="lede">Every switch board at home hides three wires, a fuse and a clever arrangement that lets each appliance work on its own. Here is how it works, and how it keeps you safe.</p>
+<p class="downloads"><a class="btn" href="../../slides/household-electricity.pptx" download>Download slides (.pptx)</a> <span>12 slides with teacher notes</span></p>
+
+<div id="sim-main"></div>
+
+<section class="prose">
+  <h2>The household supply</h2>
+  <p>Electricity reaches homes in India at about <strong>230 V</strong> (often quoted as 220 V). It arrives through a meter and a main fuse or circuit breaker, and is then carried around the house by three wires:</p>
+</section>
+<div class="eq-grid">
+  <div class="eq"><h3 style="font-size:1rem;margin:0 0 .25rem" class="c-vy">Live wire</h3><p>Red or brown insulation. Carries the current to the appliance at high potential.</p></div>
+  <div class="eq"><h3 style="font-size:1rem;margin:0 0 .25rem">Neutral wire</h3><p>Black or blue insulation. Completes the circuit back to the supply.</p></div>
+  <div class="eq"><h3 style="font-size:1rem;margin:0 0 .25rem" class="c-vx">Earth wire</h3><p>Green or yellow insulation. Joined to a metal plate buried deep in the ground. A safety wire.</p></div>
+</div>
+<section class="prose">
+  <h2>Appliances in parallel</h2>
+  <p>Every appliance is connected between the live and neutral wires, so they are all <strong>in parallel</strong>. Each one gets the full 230 V, each has its own switch, and switching one off does not affect the others. The current drawn by an appliance of power \(P\) is</p>
+  <div class="eq">$$I = \frac{P}{V}$$</div>
+  <p>The currents of all the appliances that are on add up to the total current in the main wires.</p>
+
+  <h2>The fuse and the MCB</h2>
+  <p>A <strong>fuse</strong> is a short piece of thin wire with a low melting point, placed in the live wire. If the current goes above its rating (for example when too many appliances are on, or wires touch and cause a short circuit), the fuse wire heats up and melts, cutting off the supply before the house wiring can overheat and cause a fire. Modern homes use an <strong>MCB</strong> (miniature circuit breaker), a switch that trips automatically and can simply be switched on again.</p>
+
+  <h2>Why metal appliances are earthed</h2>
+  <p>The metal body of an iron, refrigerator or washing machine is joined to the earth wire. If a fault lets the live wire touch the body, a very large current flows straight to earth and the fuse blows at once. Without an earth wire, the body would stay at 230 V, and anyone touching it would get a severe shock.</p>
+</section>
+
+<h2>Safety precautions</h2>
+<ul class="mistakes" style="margin-top:1rem;max-width:42rem">
+  <li>Keep switches and sockets out of the reach of small children.</li>
+  <li>Switch off and unplug an appliance before cleaning or repairing it.</li>
+  <li>Never touch switches or appliances with wet hands. Wear rubber-soled footwear when working with electricity.</li>
+  <li>Never overload a socket with many appliances through adapters.</li>
+  <li>If someone gets a shock, do not touch them with bare hands. Switch off the main supply, or push them away from the wire using something dry and insulating, like a wooden stick.</li>
+</ul>
+<h2>Try it</h2>
+<p class="prose" style="margin-top:1rem">Switch appliances on and off in the simulation, or use these set-ups.</p>
+<ul class="tries">
+  <li><span><strong>An ordinary evening.</strong> Lights, fan and TV on a 15 A circuit.</span>
+    <button class="btn" data-sim='{"on":["lights","fan","tv"],"fuse":15,"fault":false,"earth":true}'>Set up</button></li>
+  <li><span><strong>Overload.</strong> Geyser, AC and iron together on 15 A.</span>
+    <button class="btn" data-sim='{"on":["geyser","ac","iron"],"fuse":15,"fault":false,"earth":true}'>Set up</button></li>
+  <li><span><strong>Fault, with earth.</strong> The iron's body touches the live wire.</span>
+    <button class="btn" data-sim='{"on":["lights","iron"],"fuse":15,"fault":true,"earth":true}'>Set up</button></li>
+  <li><span><strong>Fault, no earth.</strong> The same fault, but the earth wire is missing.</span>
+    <button class="btn" data-sim='{"on":["lights","iron"],"fuse":15,"fault":true,"earth":false}'>Set up</button></li>
+</ul>
+<p class="prose" style="margin-top:1rem;font-size:.875rem;color:var(--muted)">What you should see: lights, fan and TV draw only 0.93 A in total. The geyser, AC and iron together draw 19.6 A, more than 15 A, so the fuse blows. With the earth wire connected, the fault sends a huge current to earth and the fuse cuts the supply at once. Without it, the fuse does not blow and the iron's body sits at 230 V: a hidden danger.</p>
+
+<h2>Worked examples</h2>
+<div class="example">
+  <h3 style="margin-top:0">1. Current drawn by an iron</h3>
+  <p>A 1000 W electric iron is used on the 230 V mains. What current does it draw?</p>
+  <ol>
+    <li>\(I = P / V = 1000 / 230 \approx \) <span class="answer">4.35 A</span></li>
+  </ol>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">2. Will the fuse blow?</h3>
+  <p>A circuit protected by a 15 A fuse supplies a 2000 W geyser, a 1500 W air conditioner and a 1000 W iron at the same time. Will the fuse blow?</p>
+  <ol>
+    <li>Total power \(= 2000 + 1500 + 1000 = 4500\) W</li>
+    <li>Total current \(= 4500 / 230 \approx 19.6\) A</li>
+    <li>19.6 A is more than 15 A, so <span class="answer">yes, the fuse blows</span></li>
+  </ol>
+  <button class="btn" data-sim='{"on":["geyser","ac","iron"],"fuse":15,"fault":false,"earth":true}'>Check it in the simulation</button>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">3. How many bulbs?</h3>
+  <p>How many 100 W bulbs can be run together on a circuit with a 5 A fuse at 230 V?</p>
+  <ol>
+    <li>Largest safe power \(= V \times I = 230 \times 5 = 1150\) W</li>
+    <li>\(1150 / 100 = 11.5\), so at most <span class="answer">11 bulbs</span></li>
+  </ol>
+</div>
+
+<h2>Common mistakes</h2>
+<ul class="mistakes" style="margin-top:1rem">
+  <li><strong>Switch in the neutral wire.</strong> Switches and fuses go in the live wire, so that switching off disconnects the high potential.</li>
+  <li><strong>A thicker fuse wire “for safety”.</strong> A fuse rated too high will not melt in time. Always use the correct rating.</li>
+  <li><strong>Thinking the earth wire carries current normally.</strong> It carries current only when there is a fault.</li>
+  <li><strong>Touching a shock victim.</strong> The current would pass through you too. Switch off the supply first.</li>
+</ul>
+
+<h2>Quick check</h2>
+<div class="quiz">
+  <fieldset class="q" data-answer="c">
+    <legend>1. What colour is the insulation of the earth wire?</legend>
+    <div class="opts">
+      <button data-opt="a">Red or brown</button>
+      <button data-opt="b">Black or blue</button>
+      <button data-opt="c">Green or yellow</button>
+      <button data-opt="d">White</button>
+    </div>
+    <p class="why" hidden>The earth wire is green or yellow.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="b">
+    <legend>2. Household appliances are connected…</legend>
+    <div class="opts">
+      <button data-opt="a">in series</button>
+      <button data-opt="b">in parallel</button>
+      <button data-opt="c">only to the earth wire</button>
+      <button data-opt="d">between live and earth</button>
+    </div>
+    <p class="why" hidden>In parallel, each appliance gets the full supply voltage and works independently.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="b">
+    <legend>3. A 2300 W geyser runs on 230 V. The current it draws is…</legend>
+    <div class="opts">
+      <button data-opt="a">0.1 A</button>
+      <button data-opt="b">10 A</button>
+      <button data-opt="c">100 A</button>
+      <button data-opt="d">2530 A</button>
+    </div>
+    <p class="why" hidden>\(I = 2300 / 230 = 10\) A.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="b">
+    <legend>4. What does a fuse do when the current becomes too large?</legend>
+    <div class="opts">
+      <button data-opt="a">It increases the voltage</button>
+      <button data-opt="b">It melts and breaks the circuit</button>
+      <button data-opt="c">It sends current to earth</button>
+      <button data-opt="d">It stores the extra current</button>
+    </div>
+    <p class="why" hidden>The thin fuse wire heats up and melts, cutting off the supply.</p>
+  </fieldset>
+  <p class="score" aria-live="polite"></p>
+</div>
+<nav class="next-prev" aria-label="Lessons">
+  <a href="series-and-parallel.html">← Resistors in series and parallel</a>
+  <a href="../../index.html">All lessons →</a>
+</nav>
+</main>
+
+<footer class="foot">Follows Chapter 3 of the Maharashtra State Board Std 9 Science and Technology textbook. Explanations and examples are original.</footer>
+</div>
+
+<script src="../../assets/js/sim-kit.js"></script>
+<script src="../../assets/js/circuit-kit.js"></script>
+<script src="../../assets/js/sims/household.js"></script>
+<script src="../../assets/js/quiz.js"></script>
+<script>
+  (function () {
+    var simEl = document.getElementById("sim-main");
+    var sim = HouseSim.mount(simEl, { on: ["lights", "fan", "tv"], fuse: 15 });
+    window.lessonSim = sim;
+    // Buttons in the lesson that set up the simulation: data-sim='{...settings}'
+    document.querySelectorAll("main [data-sim]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        sim.set(JSON.parse(b.dataset.sim));
+        sim.play();
+        simEl.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+      });
+    });
+  })();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/contrib/auto-render.min.js"></script>
+<script>
+  renderMathInElement(document.body, {
+    delimiters: [{ left: "$$", right: "$$", display: true }, { left: "\\(", right: "\\)", display: false }],
+    output: window.KATEX_OUTPUT || "htmlAndMathml",
+    throwOnError: false
+  });
+</script>
+
+</body>
+</html>

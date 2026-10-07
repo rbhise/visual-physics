@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Distance–Time and Velocity–Time Graphs · Visual Physics</title>
+<meta name="description" content="Play a journey and watch its distance–time and velocity–time graphs draw themselves. Learn to read slopes and areas.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.css">
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+<div class="wrap">
+
+<header class="site-head">
+  <a class="brand" href="../../index.html">Visual <span>Physics</span></a>
+  <span class="crumb">Std 9 · Ch. 1 Laws of Motion</span>
+</header>
+
+<main>
+<p class="eyebrow">Laws of Motion · Lesson 5</p>
+<h1>Distance–Time and Velocity–Time Graphs</h1>
+<p class="lede">A graph tells the whole story of a journey at a glance: when it was fast, when it slowed down, when it stopped. You just need to know how to read it.</p>
+<p class="downloads"><a class="btn" href="../../slides/motion-graphs.pptx" download>Download slides (.pptx)</a> <span>12 slides with teacher notes</span></p>
+
+<div id="sim-main"></div>
+
+<section class="prose">
+  <h2>Distance–time graphs</h2>
+  <p>Time goes along the horizontal axis and distance up the vertical axis. Each point tells you how far the object has gone at that moment.</p>
+  <p>The <strong>slope</strong> (steepness) of a distance–time graph is the <strong>speed</strong>: the distance gained divided by the time taken. In the simulation, the <span class="c-vy">dashed coral line</span> touches the graph at the current moment and its slope is shown in the readout.</p>
+  <ul class="mistakes">
+    <li><strong>Straight sloping line:</strong> uniform motion. A steeper line means a higher speed.</li>
+    <li><strong>Flat line:</strong> the distance is not changing, so the object is at rest.</li>
+    <li><strong>Curve getting steeper:</strong> speeding up. <strong>Curve getting flatter:</strong> slowing down.</li>
+  </ul>
+
+  <h2>Velocity–time graphs</h2>
+  <p>Now velocity goes up the vertical axis. The <strong>slope</strong> of a velocity–time graph is the <strong>acceleration</strong>, and the <strong>area under the graph</strong> is the <strong>distance travelled</strong>.</p>
+  <ul class="mistakes">
+    <li><strong>Flat line above zero:</strong> uniform velocity, zero acceleration.</li>
+    <li><strong>Straight line sloping up:</strong> uniform positive acceleration.</li>
+    <li><strong>Straight line sloping down:</strong> uniform negative acceleration (deceleration).</li>
+    <li><strong>Flat line at zero:</strong> at rest.</li>
+  </ul>
+  <div class="note"><strong>Why the area is the distance:</strong> for uniform velocity the area is a rectangle, velocity × time, which is exactly the distance. In the simulation, the <span class="c-vx">teal area</span> always equals the distance in the readout.</div>
+</section>
+
+<h2>Shapes at a glance</h2>
+<div class="table-wrap">
+<table class="compare">
+  <thead><tr><th>Motion</th><th>Distance–time graph</th><th>Velocity–time graph</th></tr></thead>
+  <tbody>
+    <tr><th>At rest</th><td>Flat line</td><td>Flat line on zero</td></tr>
+    <tr><th>Uniform speed</th><td>Straight sloping line</td><td>Flat line above zero</td></tr>
+    <tr><th>Speeding up uniformly</th><td>Curve getting steeper</td><td>Straight line sloping up</td></tr>
+    <tr><th>Slowing down uniformly</th><td>Curve getting flatter</td><td>Straight line sloping down</td></tr>
+  </tbody>
+</table>
+</div>
+<h2>Try it</h2>
+<p class="prose" style="margin-top:1rem">Play a journey, or drag across the graphs to move through it. Compare the two graphs at the same moment.</p>
+<ul class="tries">
+  <li><span><strong>Steady speed.</strong> What shape is each graph?</span>
+    <button class="btn" data-sim='{"journey":"steady"}'>Play</button></li>
+  <li><span><strong>Speeding up.</strong> Which graph is curved, and which is straight?</span>
+    <button class="btn" data-sim='{"journey":"speedup"}'>Play</button></li>
+  <li><span><strong>Stop at a signal.</strong> Find the part where the car is at rest on both graphs.</span>
+    <button class="btn" data-sim='{"journey":"signal"}'>Play</button></li>
+  <li><span><strong>A train between stations.</strong> Read the acceleration from the velocity graph.</span>
+    <button class="btn" data-sim='{"journey":"train"}'>Play</button></li>
+</ul>
+<p class="prose" style="margin-top:1rem;font-size:.875rem;color:var(--muted)">What you should see: at steady speed the distance graph is a straight line and the velocity graph is flat. Speeding up, the distance graph curves upward while the velocity graph is a straight sloping line. At the signal, the distance graph goes flat and the velocity graph drops to zero for 2 s. For the train, the area under the velocity graph is 84 m, the same as the final distance.</p>
+
+<h2>Worked examples</h2>
+<div class="example">
+  <h3 style="margin-top:0">1. Reading a distance–time graph</h3>
+  <p>A cyclist's distance–time graph is a straight line from (0 s, 0 m) to (5 s, 30 m). Describe her motion and find her speed.</p>
+  <ol>
+    <li>A straight sloping line means <span class="answer">uniform motion</span></li>
+    <li>Speed = slope \(= \dfrac{30 - 0}{5 - 0} = \) <span class="answer">6 m/s</span></li>
+  </ol>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">2. A train between two stations</h3>
+  <p>A train starts from rest and reaches 12 m/s in 3 s. It runs at 12 m/s for 4 s, then slows uniformly to rest in 3 s. Find its acceleration in each part and the total distance.</p>
+  <ol>
+    <li>Speeding up: \(a = (12 - 0)/3 = \) <span class="answer">4 m/s²</span></li>
+    <li>Steady part: \(a = \) <span class="answer">0</span></li>
+    <li>Slowing down: \(a = (0 - 12)/3 = \) <span class="answer">−4 m/s²</span></li>
+    <li>Distance = area = \(\tfrac12(3)(12) + 4(12) + \tfrac12(3)(12) = 18 + 48 + 18 = \) <span class="answer">84 m</span></li>
+  </ol>
+  <button class="btn" data-sim='{"journey":"train"}'>Play the train journey</button>
+</div>
+
+<h2>Common mistakes</h2>
+<ul class="mistakes" style="margin-top:1rem">
+  <li><strong>Reading the graph as a map.</strong> A distance–time graph is not a picture of the road. A curve does not mean the road bends.</li>
+  <li><strong>Mixing up the two flat lines.</strong> Flat on a distance–time graph means at rest. Flat on a velocity–time graph means steady speed.</li>
+  <li><strong>Taking the slope of a v–t graph as velocity.</strong> The slope of a velocity–time graph is acceleration. The slope of a distance–time graph is speed.</li>
+  <li><strong>Forgetting triangles.</strong> When working out area, split the shape into rectangles and triangles (½ × base × height).</li>
+</ul>
+
+<h2>Quick check</h2>
+<div class="quiz">
+  <fieldset class="q" data-answer="b">
+    <legend>1. A distance–time graph is a flat horizontal line. The object is…</legend>
+    <div class="opts">
+      <button data-opt="a">moving at constant speed</button>
+      <button data-opt="b">at rest</button>
+      <button data-opt="c">speeding up</button>
+      <button data-opt="d">slowing down</button>
+    </div>
+    <p class="why" hidden>The distance does not change with time, so the object is not moving.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="c">
+    <legend>2. What does the slope of a velocity–time graph tell you?</legend>
+    <div class="opts">
+      <button data-opt="a">Distance</button>
+      <button data-opt="b">Speed</button>
+      <button data-opt="c">Acceleration</button>
+      <button data-opt="d">Time</button>
+    </div>
+    <p class="why" hidden>Slope = change in velocity ÷ time taken, which is acceleration.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="c">
+    <legend>3. A velocity–time graph is a flat line at 5 m/s from 0 to 4 s. How far does the object travel?</legend>
+    <div class="opts">
+      <button data-opt="a">1.25 m</button>
+      <button data-opt="b">9 m</button>
+      <button data-opt="c">20 m</button>
+      <button data-opt="d">5 m</button>
+    </div>
+    <p class="why" hidden>Area = 5 × 4 = 20 m.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="a">
+    <legend>4. A distance–time graph curves and gets steeper and steeper. The object is…</legend>
+    <div class="opts">
+      <button data-opt="a">speeding up</button>
+      <button data-opt="b">slowing down</button>
+      <button data-opt="c">at rest</button>
+      <button data-opt="d">moving uniformly</button>
+    </div>
+    <p class="why" hidden>A steeper slope means a higher speed, so the speed is increasing.</p>
+  </fieldset>
+  <p class="score" aria-live="polite"></p>
+</div>
+<nav class="next-prev" aria-label="Lessons">
+  <a href="acceleration.html">← Acceleration</a>
+  <a href="equations-of-motion.html">Next: Equations of motion →</a>
+</nav>
+</main>
+
+<footer class="foot">Follows Chapter 1 of the Maharashtra State Board Std 9 Science and Technology textbook. Explanations and examples are original.</footer>
+</div>
+
+<script src="../../assets/js/sim-kit.js"></script>
+<script src="../../assets/js/sims/graphs.js"></script>
+<script src="../../assets/js/quiz.js"></script>
+<script>
+  (function () {
+    var simEl = document.getElementById("sim-main");
+    var sim = GraphSim.mount(simEl, { journey: "train", t: 6 });
+    window.lessonSim = sim;
+    // Buttons in the lesson that set up the simulation: data-sim='{...settings}'
+    document.querySelectorAll("main [data-sim]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        sim.set(JSON.parse(b.dataset.sim));
+        sim.play();
+        simEl.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+      });
+    });
+  })();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/contrib/auto-render.min.js"></script>
+<script>
+  renderMathInElement(document.body, {
+    delimiters: [{ left: "$$", right: "$$", display: true }, { left: "\\(", right: "\\)", display: false }],
+    output: window.KATEX_OUTPUT || "htmlAndMathml",
+    throwOnError: false
+  });
+</script>
+</body>
+</html>

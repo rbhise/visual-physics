@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Acids, Bases, Indicators and pH · Visual Physics</title>
+<meta name="description" content="Test ten everyday solutions with litmus, phenolphthalein, methyl orange, turmeric and universal indicator, and place them on the pH scale.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.css">
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+<div class="wrap">
+
+<header class="site-head">
+  <a class="brand" href="../../index.html">Visual <span>Physics</span></a>
+  <span class="crumb">Std 9 · Ch. 5 Acids, Bases and Salts</span>
+</header>
+
+<main>
+<p class="eyebrow">Acids, Bases and Salts · Lesson 1</p>
+<h1>Acids, Bases, Indicators and pH</h1>
+<p class="lede">Lemon juice tastes sour, soap feels slippery, and a turmeric stain turns red when you wash it with soap. All three are clues to the same chemistry: acids and bases.</p>
+<p class="downloads"><a class="btn" href="../../slides/indicators-and-ph.pptx" download>Download slides (.pptx)</a> <span>12 slides with teacher notes</span></p>
+
+<div id="sim-main"></div>
+
+<section class="prose">
+  <h2>Acids and bases</h2>
+  <p>According to the Swedish chemist Arrhenius:</p>
+  <ul class="mistakes">
+    <li>An <strong>acid</strong> is a substance that gives <strong>H⁺ ions</strong> when dissolved in water. Example: \(\text{HCl} \rightarrow \text{H}^+ + \text{Cl}^-\)</li>
+    <li>A <strong>base</strong> is a substance that gives <strong>OH⁻ ions</strong> when dissolved in water. Example: \(\text{NaOH} \rightarrow \text{Na}^+ + \text{OH}^-\)</li>
+  </ul>
+  <p>Bases that dissolve in water are called <strong>alkalis</strong>. Acids taste sour; bases taste bitter and feel soapy. <em>Never taste or touch laboratory chemicals.</em></p>
+
+  <h2>Strong and weak</h2>
+  <p>A <strong>strong acid</strong> such as hydrochloric, sulphuric or nitric acid breaks up almost completely into ions in water. A <strong>weak acid</strong> such as acetic acid (in vinegar) or citric acid (in lemons) breaks up only partly. In the same way, sodium hydroxide and potassium hydroxide are strong bases, while ammonia solution is a weak base.</p>
+
+  <h2>Indicators</h2>
+  <p>An <strong>indicator</strong> is a substance that shows a different colour in acidic and basic solutions. Choose an indicator in the simulation and compare the tubes.</p>
+</section>
+
+<div class="table-wrap">
+<table class="compare">
+  <thead><tr><th>Indicator</th><th>In acid</th><th>In neutral</th><th>In base</th></tr></thead>
+  <tbody>
+    <tr><th>Litmus</th><td>Red</td><td>Purple</td><td>Blue</td></tr>
+    <tr><th>Phenolphthalein</th><td>Colourless</td><td>Colourless</td><td>Pink</td></tr>
+    <tr><th>Methyl orange</th><td>Red (strong acids)</td><td>Yellow</td><td>Yellow</td></tr>
+    <tr><th>Turmeric</th><td>Yellow</td><td>Yellow</td><td>Red-brown</td></tr>
+  </tbody>
+</table>
+</div>
+<p class="prose" style="margin-top:1rem">Natural indicators can be made at home from turmeric, beetroot, red cabbage, or hibiscus and rose petals.</p>
+
+<section class="prose">
+  <h2>The pH scale</h2>
+  <p>The <strong>pH scale</strong> measures how acidic or basic a solution is, usually on a range from 0 to 14:</p>
+  <ul class="mistakes">
+    <li><strong>pH less than 7:</strong> acidic. The lower the pH, the stronger the acid.</li>
+    <li><strong>pH = 7:</strong> neutral, like pure water.</li>
+    <li><strong>pH more than 7:</strong> basic. The higher the pH, the stronger the base.</li>
+  </ul>
+  <div class="note"><strong>Each step on the scale is a factor of ten.</strong> A solution of pH 4 has ten times as many H⁺ ions as one of pH 5, and a thousand times as many as pure water (pH 7). The readout shows this for every tube.</div>
+</section>
+<h2>Try it</h2>
+<p class="prose" style="margin-top:1rem">Switch indicators and look for the tubes that change colour.</p>
+<ul class="tries">
+  <li><span><strong>Litmus.</strong> Which tubes turn blue?</span>
+    <button class="btn" data-sim='{"ind":"litmus","pick":7}'>Use litmus</button></li>
+  <li><span><strong>Phenolphthalein.</strong> Which tubes turn pink?</span>
+    <button class="btn" data-sim='{"ind":"phenol","pick":6}'>Use phenolphthalein</button></li>
+  <li><span><strong>Turmeric.</strong> Test the soap solution.</span>
+    <button class="btn" data-sim='{"ind":"turmeric","pick":7}'>Use turmeric</button></li>
+  <li><span><strong>Universal indicator.</strong> See the whole scale at once.</span>
+    <button class="btn" data-sim='{"ind":"universal","pick":1}'>Use universal</button></li>
+</ul>
+<p class="prose" style="margin-top:1rem;font-size:.875rem;color:var(--muted)">What you should see: with litmus, the first four tubes are red, milk and water are purple, and the last four are blue. Phenolphthalein stays colourless until baking soda and beyond, which turn pink. Turmeric turns red-brown only in the basic tubes. Universal indicator gives a different colour for almost every tube, from red (pH 1) to violet (pH 13).</p>
+
+<h2>Worked examples</h2>
+<div class="example">
+  <h3 style="margin-top:0">1. Reading the scale</h3>
+  <p>Solution A has pH 3, solution B has pH 9 and solution C has pH 7. Classify each.</p>
+  <ol>
+    <li>A: pH below 7, so <span class="answer">acidic</span></li>
+    <li>B: pH above 7, so <span class="answer">basic</span></li>
+    <li>C: <span class="answer">neutral</span></li>
+  </ol>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">2. Ten times, a hundred times</h3>
+  <p>Vinegar has a pH of about 3 and tomato juice about 4. How many times more H⁺ ions does vinegar have?</p>
+  <ol>
+    <li>They differ by 1 pH unit, so vinegar has <span class="answer">10 times</span> as many H⁺ ions.</li>
+    <li>Compared with pure water (pH 7), vinegar has \(10^{7-3} = \) <span class="answer">10 000 times</span> as many.</li>
+  </ol>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">3. Choosing an indicator</h3>
+  <p>A student has a colourless solution and phenolphthalein. After adding a few drops, the solution stays colourless. Can she say the solution is acidic?</p>
+  <ol>
+    <li>Phenolphthalein is colourless in both acidic and neutral solutions.</li>
+    <li>So <span class="answer">no</span>: the solution is either acidic or neutral. Litmus or universal indicator would tell them apart.</li>
+  </ol>
+</div>
+
+<h2>Common mistakes</h2>
+<ul class="mistakes" style="margin-top:1rem">
+  <li><strong>“pH 6 is twice as acidic as pH 12.”</strong> pH is not a simple ruler. Each step is a factor of ten.</li>
+  <li><strong>Lower pH means weaker acid.</strong> It is the other way: the lower the pH, the stronger the acid.</li>
+  <li><strong>Phenolphthalein shows acids.</strong> It turns pink only in bases. It is colourless in acids and neutral solutions.</li>
+  <li><strong>All bases are alkalis.</strong> Only bases that dissolve in water are alkalis.</li>
+</ul>
+
+<h2>Quick check</h2>
+<div class="quiz">
+  <fieldset class="q" data-answer="b">
+    <legend>1. An acid, when dissolved in water, gives…</legend>
+    <div class="opts">
+      <button data-opt="a">OH⁻ ions</button>
+      <button data-opt="b">H⁺ ions</button>
+      <button data-opt="c">Na⁺ ions</button>
+      <button data-opt="d">no ions</button>
+    </div>
+    <p class="why" hidden>Arrhenius acids release H⁺ ions in water.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="b">
+    <legend>2. What colour does red litmus turn in soap solution?</legend>
+    <div class="opts">
+      <button data-opt="a">Stays red</button>
+      <button data-opt="b">Blue</button>
+      <button data-opt="c">Pink</button>
+      <button data-opt="d">Colourless</button>
+    </div>
+    <p class="why" hidden>Soap solution is basic, so it turns red litmus blue.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="d">
+    <legend>3. A solution has pH 12. It is…</legend>
+    <div class="opts">
+      <button data-opt="a">strongly acidic</button>
+      <button data-opt="b">neutral</button>
+      <button data-opt="c">weakly acidic</button>
+      <button data-opt="d">strongly basic</button>
+    </div>
+    <p class="why" hidden>pH well above 7 means strongly basic.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="c">
+    <legend>4. How many times more H⁺ ions does a solution of pH 2 have than one of pH 4?</legend>
+    <div class="opts">
+      <button data-opt="a">2 times</button>
+      <button data-opt="b">10 times</button>
+      <button data-opt="c">100 times</button>
+      <button data-opt="d">1000 times</button>
+    </div>
+    <p class="why" hidden>Two pH steps: 10 × 10 = 100.</p>
+  </fieldset>
+  <p class="score" aria-live="polite"></p>
+</div>
+<nav class="next-prev" aria-label="Lessons">
+  <a href="../matter/valency-and-formulae.html">← Valency and chemical formulae</a>
+  <a href="neutralisation-and-salts.html">Next: Neutralisation and salts →</a>
+</nav>
+</main>
+
+<footer class="foot">Follows Chapter 5 of the Maharashtra State Board Std 9 Science and Technology textbook. Explanations and examples are original.</footer>
+</div>
+
+<script src="../../assets/js/sim-kit.js"></script>
+<script src="../../assets/js/chem-kit.js"></script>
+<script src="../../assets/js/sims/ph.js"></script>
+<script src="../../assets/js/quiz.js"></script>
+<script>
+  (function () {
+    var simEl = document.getElementById("sim-main");
+    var sim = PhSim.mount(simEl, { ind: "litmus", pick: 2 });
+    window.lessonSim = sim;
+    // Buttons in the lesson that set up the simulation: data-sim='{...settings}'
+    document.querySelectorAll("main [data-sim]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        sim.set(JSON.parse(b.dataset.sim));
+        sim.play();
+        simEl.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+      });
+    });
+  })();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/contrib/auto-render.min.js"></script>
+<script>
+  renderMathInElement(document.body, {
+    delimiters: [{ left: "$$", right: "$$", display: true }, { left: "\\(", right: "\\)", display: false }],
+    output: window.KATEX_OUTPUT || "htmlAndMathml",
+    throwOnError: false
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ultrasound and SONAR · Visual Physics</title>
+<meta name="description" content="Sail a ship over the ocean, send ultrasonic pulses to the sea bed and time their echoes to map the depth below.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.css">
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+<div class="wrap">
+
+<header class="site-head">
+  <a class="brand" href="../../index.html">Visual <span>Physics</span></a>
+  <span class="crumb">Std 9 · Ch. 12 Study of Sound</span>
+</header>
+
+<main>
+<p class="eyebrow">Study of Sound · Lesson 4</p>
+<h1>Ultrasound and SONAR</h1>
+<p class="lede">Bats fly in pitch darkness, and ships measure oceans thousands of metres deep, using sounds too high for you to hear. The trick is the echo.</p>
+<p class="downloads"><a class="btn" href="../../slides/ultrasound-and-sonar.pptx" download>Download slides (.pptx)</a> <span>12 slides with teacher notes</span></p>
+
+<div id="sim-main"></div>
+
+<section class="prose">
+  <h2>What we can hear</h2>
+  <p>The human ear can hear sounds with frequencies from about <strong>20 Hz to 20 000 Hz</strong> (20 kHz). This is the <strong>audible range</strong>, and it shrinks as people grow older.</p>
+  <ul class="mistakes">
+    <li><strong>Infrasound:</strong> below 20 Hz. Made by earthquakes, volcanoes, whales and elephants. Some animals sense the infrasound of an earthquake before it strikes.</li>
+    <li><strong>Ultrasound:</strong> above 20 000 Hz. Bats, dolphins and some insects make and hear it; dogs can hear up to about 45 kHz, which is why a 'silent' dog whistle works.</li>
+  </ul>
+</section>
+
+<div class="table-wrap">
+<table class="compare">
+  <thead><tr><th>Range</th><th>Frequency</th><th>Wavelength in air (344 m/s)</th></tr></thead>
+  <tbody>
+    <tr><th>Infrasound</th><td>below 20 Hz</td><td>longer than 17.2 m</td></tr>
+    <tr><th>Audible</th><td>20 Hz to 20 kHz</td><td>17.2 m down to 1.72 cm</td></tr>
+    <tr><th>Ultrasound</th><td>above 20 kHz</td><td>shorter than 1.72 cm</td></tr>
+  </tbody>
+</table>
+</div>
+
+<section class="prose">
+  <h2>Why ultrasound is useful</h2>
+  <p>Ultrasound has a very short wavelength. It travels in a narrow beam with little spreading, and it reflects well even from small objects. Its echoes can therefore show where things are and what shape they have.</p>
+
+  <h2>SONAR</h2>
+  <p><strong>SONAR</strong> stands for <strong>SO</strong>und <strong>N</strong>avigation <strong>A</strong>nd <strong>R</strong>anging. A transmitter under a ship sends a pulse of ultrasound downwards. The pulse reflects from the sea bed (or a submarine, a shipwreck or a shoal of fish), and a receiver picks up the echo. If the echo returns after time \(t\) and sound travels at speed \(v\) in sea water,</p>
+  <div class="eq">$$\text{depth} = \frac{v \times t}{2}$$</div>
+  <p>SONAR is used to measure the depth of the sea, map the sea bed, find submarines and wrecks, and locate shoals of fish.</p>
+
+  <h2>Ultrasound in medicine and industry</h2>
+  <ul class="mistakes">
+    <li><strong>Sonography:</strong> ultrasound echoes from organs build up a picture of the inside of the body, such as the liver, kidneys or an unborn baby. It uses no harmful radiation.</li>
+    <li><strong>Echocardiography</strong> shows the heart beating.</li>
+    <li><strong>Industry:</strong> ultrasound finds hidden cracks in metal and cleans small parts such as watch mechanisms.</li>
+  </ul>
+</section>
+<h2>Try it</h2>
+<p class="prose" style="margin-top:1rem">Move the ship or press a button.</p>
+<ul class="tries">
+  <li><span><strong>Deep water.</strong> Time the echo over the deepest part.</span>
+    <button class="btn" data-sim='{"x":47,"v":1500}'>Over the trench</button></li>
+  <li><span><strong>Shallow water.</strong> How much quicker is the echo?</span>
+    <button class="btn" data-sim='{"x":5,"v":1500}'>Near the coast</button></li>
+  <li><span><strong>Change the water.</strong> Warmer, saltier water carries sound faster.</span>
+    <button class="btn" data-sim='{"x":47,"v":1550}'>1550 m/s</button></li>
+  <li><span><strong>Map it.</strong> Let the ship sail and ping all the way.</span>
+    <button class="btn" data-sim='{"x":0,"v":1500,"sweep":true}'>Map the sea bed</button></li>
+</ul>
+<p class="prose" style="margin-top:1rem;font-size:.875rem;color:var(--muted)">What you should see: Over the 3000 m trench the echo takes 4.00 s; near the coast (600 m) only 0.80 s. At 1550 m/s the same 3000 m depth gives an echo after 3.87 s, so a ship must know the speed of sound in its water. The mapping run plots a dot for every echo, tracing the sea bed.</p>
+
+<h2>Worked examples</h2>
+<div class="example">
+  <h3 style="margin-top:0">1. How deep?</h3>
+  <p>A ship's SONAR receives the echo from the sea bed 4 s after sending the pulse. Sound travels at 1500 m/s in sea water. How deep is the sea?</p>
+  <ol>
+    <li>The pulse goes down and back: total distance \(= 1500 \times 4 = 6000\) m</li>
+    <li>Depth \(= 6000 \div 2 = \) <span class="answer">3000 m</span></li>
+  </ol>
+  <button class="btn" data-sim='{"x":47,"v":1500}'>Check it</button>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">2. Predicting the echo</h3>
+  <p>The sea is 1800 m deep. How long after a SONAR pulse (1500 m/s) does the echo return?</p>
+  <ol>
+    <li>\(t = 2d / v = 2 \times 1800 / 1500 = \) <span class="answer">2.4 s</span></li>
+  </ol>
+  <button class="btn" data-sim='{"x":70,"v":1500}'>Check it</button>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">3. A bat's squeak</h3>
+  <p>A bat squeaks at 50 000 Hz. Find the wavelength in air (340 m/s). Can you hear it?</p>
+  <ol>
+    <li>\(\lambda = v / \nu = 340 / 50\,000 = \) <span class="answer">0.0068 m = 6.8 mm</span></li>
+    <li>50 000 Hz is above 20 000 Hz: <span class="answer">ultrasound, not audible</span> to us</li>
+  </ol>
+  <p>A wavelength of a few millimetres lets the bat detect objects as small as a moth.</p>
+</div>
+
+<h2>Common mistakes</h2>
+<ul class="mistakes" style="margin-top:1rem">
+  <li><strong>Depth = v × t.</strong> The pulse goes down and back. Divide by 2.</li>
+  <li><strong>“Ultrasound is very loud sound.”</strong> Ultra means beyond: its frequency is above our hearing, whatever its loudness.</li>
+  <li><strong>Using 340 m/s under water.</strong> Sound is much faster in sea water, about 1500 m/s.</li>
+  <li><strong>“Infrasound is ultrasound.”</strong> Infrasound is below 20 Hz; ultrasound is above 20 000 Hz.</li>
+</ul>
+
+<h2>Quick check</h2>
+<div class="quiz">
+  <fieldset class="q" data-answer="b">
+    <legend>1. The audible range of a healthy young person is about…</legend>
+    <div class="opts">
+      <button data-opt="a">2 Hz to 2000 Hz</button>
+      <button data-opt="b">20 Hz to 20 000 Hz</button>
+      <button data-opt="c">200 Hz to 200 000 Hz</button>
+      <button data-opt="d">20 kHz to 200 kHz</button>
+    </div>
+    <p class="why" hidden>We hear from about 20 Hz to 20 kHz.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="c">
+    <legend>2. A SONAR echo returns after 2 s. Sound travels at 1500 m/s in the sea. The depth is…</legend>
+    <div class="opts">
+      <button data-opt="a">3000 m</button>
+      <button data-opt="b">750 m</button>
+      <button data-opt="c">1500 m</button>
+      <button data-opt="d">6000 m</button>
+    </div>
+    <p class="why" hidden>Depth = 1500 × 2 ÷ 2 = 1500 m.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="c">
+    <legend>3. Which of these produces infrasound?</legend>
+    <div class="opts">
+      <button data-opt="a">A bat</button>
+      <button data-opt="b">A dog whistle</button>
+      <button data-opt="c">An elephant</button>
+      <button data-opt="d">A violin</button>
+    </div>
+    <p class="why" hidden>Elephants communicate with infrasound below 20 Hz.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="b">
+    <legend>4. Why is ultrasound used to look inside the body?</legend>
+    <div class="opts">
+      <button data-opt="a">It is very loud</button>
+      <button data-opt="b">Its short wavelength gives echoes that show small structures, without harmful radiation</button>
+      <button data-opt="c">It travels faster than light</button>
+      <button data-opt="d">It cannot be reflected</button>
+    </div>
+    <p class="why" hidden>Ultrasound's short wavelength gives detailed echoes, and it is safe.</p>
+  </fieldset>
+  <p class="score" aria-live="polite"></p>
+</div>
+<nav class="next-prev" aria-label="Lessons">
+  <a href="echo-and-reverberation.html">← Echo and reverberation</a>
+  <a href="../../index.html">All lessons →</a>
+</nav>
+</main>
+
+<footer class="foot">Follows Chapter 12 of the Maharashtra State Board Std 9 Science and Technology textbook. Explanations and examples are original.</footer>
+</div>
+
+<script src="../../assets/js/sim-kit.js"></script>
+<script src="../../assets/js/sims/sonar.js"></script>
+<script src="../../assets/js/quiz.js"></script>
+<script>
+  (function () {
+    var simEl = document.getElementById("sim-main");
+    var sim = SonarSim.mount(simEl, { x: 25, v: 1500 });
+    window.lessonSim = sim;
+    // Buttons in the lesson that set up the simulation: data-sim='{...settings}'
+    document.querySelectorAll("main [data-sim]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        sim.set(JSON.parse(b.dataset.sim));
+        sim.play();
+        simEl.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+      });
+    });
+  })();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/contrib/auto-render.min.js"></script>
+<script>
+  renderMathInElement(document.body, {
+    delimiters: [{ left: "$$", right: "$$", display: true }, { left: "\\(", right: "\\)", display: false }],
+    output: window.KATEX_OUTPUT || "htmlAndMathml",
+    throwOnError: false
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sound Waves · Visual Physics</title>
+<meta name="description" content="Watch a speaker push air into compressions and rarefactions, change the frequency and amplitude, and see how wavelength, pitch and loudness follow.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.css">
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+<div class="wrap">
+
+<header class="site-head">
+  <a class="brand" href="../../index.html">Visual <span>Physics</span></a>
+  <span class="crumb">Std 9 · Ch. 12 Study of Sound</span>
+</header>
+
+<main>
+<p class="eyebrow">Study of Sound · Lesson 1</p>
+<h1>Sound Waves</h1>
+<p class="lede">Touch your throat while you hum and you feel it buzz. Every sound starts with something vibrating, and the vibration travels to your ear through the air as a wave.</p>
+<p class="downloads"><a class="btn" href="../../slides/sound-waves.pptx" download>Download slides (.pptx)</a> <span>12 slides with teacher notes</span></p>
+
+<div id="sim-main"></div>
+
+<section class="prose">
+  <h2>Sound comes from vibration</h2>
+  <p>A struck tuning fork, a plucked guitar string, the skin of a drum and your vocal cords all <strong>vibrate</strong>: they move rapidly back and forth. A vibrating object pushes on the particles of the air next to it, those push on their neighbours, and the disturbance passes along. That travelling disturbance is <strong>sound</strong>.</p>
+
+  <h2>Sound needs a medium</h2>
+  <p>The material that carries sound (air, water, a wall, a rail) is called the <strong>medium</strong>. If an electric bell rings inside a glass jar and the air is slowly pumped out, the ringing grows fainter and finally cannot be heard, even though you can see the hammer still striking. With no particles to pass the vibration on, sound cannot travel through a <strong>vacuum</strong>. That is why astronauts on a spacewalk talk by radio.</p>
+
+  <h2>Longitudinal waves</h2>
+  <p>In air, each particle moves back and forth <strong>along</strong> the direction in which the sound travels. Where particles crowd together the air is squeezed: a <strong>compression</strong> (C). Where they spread apart it is thinned: a <strong>rarefaction</strong> (R). A wave in which the particles move along the direction of travel is a <strong>longitudinal wave</strong>. On a stretched string or rope the particles move up and down, at right angles to the direction of travel: a <strong>transverse wave</strong> with crests and troughs.</p>
+  <div class="note">The particles do not travel with the sound. Each one only vibrates about its own place; what travels is the pattern, and with it the energy.</div>
+
+  <h2>Describing a wave</h2>
+  <ul class="mistakes">
+    <li><strong>Wavelength (λ):</strong> the distance between two neighbouring compressions (or rarefactions). Unit: metre.</li>
+    <li><strong>Frequency (ν):</strong> the number of vibrations each second. Unit: hertz (Hz); 1 Hz = one vibration per second.</li>
+    <li><strong>Time period (T):</strong> the time for one vibration. \(T = 1/\nu\).</li>
+    <li><strong>Amplitude (A):</strong> the largest change from the undisturbed state, such as the greatest squeezing of the air.</li>
+  </ul>
+  <p>In one time period the wave moves forward by one wavelength, so its speed is</p>
+  <div class="eq">$$v = \frac{\lambda}{T} = \nu \lambda$$</div>
+
+  <h2>Pitch and loudness</h2>
+  <p><strong>Pitch</strong> depends on frequency: a higher frequency gives a higher, shriller note (a whistle, a bird's song); a lower frequency gives a deeper note (a lion's roar, a drum). <strong>Loudness</strong> depends on amplitude: the larger the amplitude, the more energy the wave carries and the louder the sound.</p>
+</section>
+<h2>Try it</h2>
+<p class="prose" style="margin-top:1rem">Use the sliders and watch both the particles and the graph.</p>
+<ul class="tries">
+  <li><span><strong>Raise the pitch.</strong> What happens to the wavelength?</span>
+    <button class="btn" data-sim='{"f":850,"amp":3,"mode":"long","vacuum":false}'>High frequency</button></li>
+  <li><span><strong>Make it louder.</strong> Does the wavelength change?</span>
+    <button class="btn" data-sim='{"f":340,"amp":5,"mode":"long","vacuum":false}'>Loud</button></li>
+  <li><span><strong>A string.</strong> How do the particles move now?</span>
+    <button class="btn" data-sim='{"f":340,"amp":3,"mode":"trans","vacuum":false}'>Show a string</button></li>
+  <li><span><strong>Pump out the air.</strong> What is left?</span>
+    <button class="btn" data-sim='{"f":340,"amp":3,"mode":"long","vacuum":true}'>Vacuum</button></li>
+</ul>
+<p class="prose" style="margin-top:1rem;font-size:.875rem;color:var(--muted)">What you should see: At 850 Hz the compressions are much closer together: λ falls to 0.40 m. A larger amplitude makes the compressions denser and the graph taller, but λ stays 1.00 m. On the string the beads move up and down. In the vacuum there is nothing to carry the vibration.</p>
+
+<h2>Worked examples</h2>
+<div class="example">
+  <h3 style="margin-top:0">1. Wavelength from frequency</h3>
+  <p>A tuning fork vibrates at 500 Hz. Sound travels at 340 m/s in air. Find the wavelength and the time period.</p>
+  <ol>
+    <li>\(\lambda = v / \nu = 340 / 500 = \) <span class="answer">0.68 m</span></li>
+    <li>\(T = 1 / \nu = 1 / 500 = \) <span class="answer">0.002 s</span> (2 milliseconds)</li>
+  </ol>
+  <button class="btn" data-sim='{"f":500,"amp":3,"mode":"long","vacuum":false}'>Show 500 Hz</button>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">2. Frequency from wavelength</h3>
+  <p>A sound in air (340 m/s) has a wavelength of 1.7 m. What is its frequency? Is it high or low pitched?</p>
+  <ol>
+    <li>\(\nu = v / \lambda = 340 / 1.7 = \) <span class="answer">200 Hz</span></li>
+    <li>That is a <span class="answer">low</span>, deep note.</li>
+  </ol>
+  <button class="btn" data-sim='{"f":200,"amp":3,"mode":"long","vacuum":false}'>Show 200 Hz</button>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">3. How far in 3 seconds?</h3>
+  <p>A sound wave has a frequency of 850 Hz and a wavelength of 0.4 m. How far does it travel in 3 s?</p>
+  <ol>
+    <li>\(v = \nu \lambda = 850 \times 0.4 = 340\) m/s</li>
+    <li>Distance \(= v \times t = 340 \times 3 = \) <span class="answer">1020 m</span></li>
+  </ol>
+</div>
+
+<h2>Common mistakes</h2>
+<ul class="mistakes" style="margin-top:1rem">
+  <li><strong>“The air travels to your ear.”</strong> Each particle only vibrates in place. The disturbance travels.</li>
+  <li><strong>“Higher pitch travels faster.”</strong> In one medium all frequencies travel at the same speed; a higher ν just means a shorter λ.</li>
+  <li><strong>Mixing up pitch and loudness.</strong> Pitch goes with frequency; loudness goes with amplitude.</li>
+  <li><strong>“Sound can cross space.”</strong> Sound needs a medium. It cannot travel through a vacuum.</li>
+</ul>
+
+<h2>Quick check</h2>
+<div class="quiz">
+  <fieldset class="q" data-answer="b">
+    <legend>1. In a longitudinal sound wave, the particles of air…</legend>
+    <div class="opts">
+      <button data-opt="a">travel with the wave from source to ear</button>
+      <button data-opt="b">vibrate back and forth along the direction of travel</button>
+      <button data-opt="c">move up and down</button>
+      <button data-opt="d">stay perfectly still</button>
+    </div>
+    <p class="why" hidden>Particles vibrate about their places along the line in which the wave travels.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="b">
+    <legend>2. A sound has a frequency of 680 Hz in air (340 m/s). Its wavelength is…</legend>
+    <div class="opts">
+      <button data-opt="a">2 m</button>
+      <button data-opt="b">0.5 m</button>
+      <button data-opt="c">231 200 m</button>
+      <button data-opt="d">1.5 m</button>
+    </div>
+    <p class="why" hidden>λ = v ÷ ν = 340 ÷ 680 = 0.5 m.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="c">
+    <legend>3. Which property of a sound decides its loudness?</legend>
+    <div class="opts">
+      <button data-opt="a">Frequency</button>
+      <button data-opt="b">Wavelength</button>
+      <button data-opt="c">Amplitude</button>
+      <button data-opt="d">Speed</button>
+    </div>
+    <p class="why" hidden>Larger amplitude means more energy and a louder sound.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="b">
+    <legend>4. Why can't astronauts hear each other directly on the Moon?</legend>
+    <div class="opts">
+      <button data-opt="a">The Moon is too cold</button>
+      <button data-opt="b">There is no air to carry sound</button>
+      <button data-opt="c">Their helmets are soundproof</button>
+      <button data-opt="d">Sound is too slow there</button>
+    </div>
+    <p class="why" hidden>The Moon has no atmosphere, and sound cannot travel through a vacuum.</p>
+  </fieldset>
+  <p class="score" aria-live="polite"></p>
+</div>
+<nav class="next-prev" aria-label="Lessons">
+  <a href="../light/mirror-formula.html">← The mirror formula</a>
+  <a href="speed-of-sound.html">Next: The speed of sound →</a>
+</nav>
+</main>
+
+<footer class="foot">Follows Chapter 12 of the Maharashtra State Board Std 9 Science and Technology textbook. Explanations and examples are original.</footer>
+</div>
+
+<script src="../../assets/js/sim-kit.js"></script>
+<script src="../../assets/js/sims/wave.js"></script>
+<script src="../../assets/js/quiz.js"></script>
+<script>
+  (function () {
+    var simEl = document.getElementById("sim-main");
+    var sim = WaveSim.mount(simEl, { f: 340, amp: 3, mode: "long" });
+    window.lessonSim = sim;
+    // Buttons in the lesson that set up the simulation: data-sim='{...settings}'
+    document.querySelectorAll("main [data-sim]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        sim.set(JSON.parse(b.dataset.sim));
+        sim.play();
+        simEl.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+      });
+    });
+  })();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/contrib/auto-render.min.js"></script>
+<script>
+  renderMathInElement(document.body, {
+    delimiters: [{ left: "$$", right: "$$", display: true }, { left: "\\(", right: "\\)", display: false }],
+    output: window.KATEX_OUTPUT || "htmlAndMathml",
+    throwOnError: false
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Laws of Chemical Combination · Visual Physics</title>
+<meta name="description" content="React hydrogen, carbon or magnesium with oxygen in a closed flask on a balance, and discover the laws of conservation of mass and constant proportions.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.css">
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+<div class="wrap">
+
+<header class="site-head">
+  <a class="brand" href="../../index.html">Visual <span>Physics</span></a>
+  <span class="crumb">Std 9 · Ch. 4 Measurement of Matter</span>
+</header>
+
+<main>
+<p class="eyebrow">Measurement of Matter · Lesson 1</p>
+<h1>Laws of Chemical Combination</h1>
+<p class="lede">Burn a candle and it seems to vanish; rust an iron nail and it gets heavier. Careful weighing shows that in every reaction, not a single gram is created or lost.</p>
+<p class="downloads"><a class="btn" href="../../slides/laws-of-chemical-combination.pptx" download>Download slides (.pptx)</a> <span>12 slides with teacher notes</span></p>
+
+<div id="sim-main"></div>
+
+<section class="prose">
+  <h2>Law of conservation of mass</h2>
+  <div class="note"><strong>In a chemical reaction, the total mass of the reactants equals the total mass of the products. Mass is neither created nor destroyed.</strong></div>
+  <p style="margin-top:1rem">A burning candle only seems to lose mass because its products, carbon dioxide and water vapour, escape into the air. In a <strong>closed flask</strong>, nothing can escape, and the balance shows the same reading before and after. Press <em>React</em> in the simulation and watch the reading.</p>
+
+  <h2>Law of constant proportions</h2>
+  <div class="note"><strong>A chemical compound always contains the same elements combined in the same proportion by mass, wherever it comes from and however it is made.</strong></div>
+  <p style="margin-top:1rem">Pure water from a river, from rain or made in a laboratory always contains hydrogen and oxygen in the mass ratio <strong>1 : 8</strong>. Carbon dioxide is always carbon and oxygen in the ratio <strong>3 : 8</strong>. If you take more of one element than this ratio needs, the extra is simply left over.</p>
+
+  <h2>Dalton's atomic theory</h2>
+  <p>In 1808 John Dalton explained both laws with a simple idea:</p>
+  <ul class="mistakes">
+    <li>All matter is made of tiny particles called <strong>atoms</strong>.</li>
+    <li>Atoms of one element are identical in mass and properties; atoms of different elements differ.</li>
+    <li>Atoms cannot be created or destroyed in a chemical reaction; they are only rearranged. <em>(This explains conservation of mass.)</em></li>
+    <li>Atoms combine in small whole-number ratios to form compounds. <em>(This explains constant proportions.)</em></li>
+  </ul>
+  <p>We now know atoms are made of even smaller particles, but Dalton's main ideas still hold for chemical reactions. In the simulation, each dot is one mole of atoms, so you can count them before and after: the same atoms are there, just regrouped.</p>
+</section>
+<h2>Try it</h2>
+<p class="prose" style="margin-top:1rem">Watch the balance reading and the leftover readout.</p>
+<ul class="tries">
+  <li><span><strong>Just right.</strong> 4 g of hydrogen with 32 g of oxygen.</span>
+    <button class="btn" data-sim='{"rx":"water","a":4,"b":32}'>React</button></li>
+  <li><span><strong>Too much oxygen.</strong> 4 g of hydrogen with 48 g of oxygen.</span>
+    <button class="btn" data-sim='{"rx":"water","a":4,"b":48}'>React</button></li>
+  <li><span><strong>Burning carbon.</strong> 12 g of carbon with 32 g of oxygen.</span>
+    <button class="btn" data-sim='{"rx":"co2","a":12,"b":32}'>React</button></li>
+  <li><span><strong>Burning magnesium.</strong> 48 g of magnesium with 16 g of oxygen.</span>
+    <button class="btn" data-sim='{"rx":"mgo","a":48,"b":16}'>React</button></li>
+</ul>
+<p class="prose" style="margin-top:1rem;font-size:.875rem;color:var(--muted)">What you should see: 4 g of hydrogen and 32 g of oxygen make exactly 36 g of water with nothing left. With 48 g of oxygen, 16 g of oxygen is left over, but the water is still 1 : 8. Carbon and oxygen give 44 g of carbon dioxide (3 : 8). 48 g of magnesium needs 32 g of oxygen, so with only 16 g, 24 g of magnesium is left over. The balance never changes.</p>
+
+<h2>Worked examples</h2>
+<div class="example">
+  <h3 style="margin-top:0">1. Making water</h3>
+  <p>4 g of hydrogen reacts completely with 32 g of oxygen. What mass of water forms?</p>
+  <ol>
+    <li>By conservation of mass: \(4 + 32 = \) <span class="answer">36 g of water</span></li>
+  </ol>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">2. Too much oxygen</h3>
+  <p>12 g of carbon is burnt in 40 g of oxygen. Carbon and oxygen always combine in the ratio 3 : 8 by mass. What forms, and what is left over?</p>
+  <ol>
+    <li>12 g of carbon needs \(12 \times \tfrac{8}{3} = 32\) g of oxygen.</li>
+    <li>Carbon dioxide formed \(= 12 + 32 = \) <span class="answer">44 g</span></li>
+    <li>Oxygen left over \(= 40 - 32 = \) <span class="answer">8 g</span></li>
+  </ol>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">3. Checking constant proportions</h3>
+  <p>Two samples of water are analysed. Sample A: 2 g hydrogen and 16 g oxygen. Sample B: 5 g hydrogen and 40 g oxygen. Do they obey the law of constant proportions?</p>
+  <ol>
+    <li>A: \(2 : 16 = 1 : 8\). B: \(5 : 40 = 1 : 8\).</li>
+    <li>Same ratio, so <span class="answer">yes, both are pure water</span></li>
+  </ol>
+</div>
+
+<h2>Common mistakes</h2>
+<ul class="mistakes" style="margin-top:1rem">
+  <li><strong>“The candle lost mass.”</strong> Its products are gases that escape. In a closed container the total mass stays the same.</li>
+  <li><strong>Adding all the masses when one is in excess.</strong> Only the amount that reacts in the fixed ratio becomes product; the rest is left over.</li>
+  <li><strong>Ratio by number of atoms.</strong> Constant proportions is about mass. Water has 2 H atoms to 1 O atom, but 1 : 8 by mass.</li>
+  <li><strong>Mixtures follow the law too.</strong> Only compounds have fixed proportions. A mixture like salt water can have any ratio.</li>
+</ul>
+
+<h2>Quick check</h2>
+<div class="quiz">
+  <fieldset class="q" data-answer="b">
+    <legend>1. 10 g of calcium carbonate is heated in a closed tube. It forms 5.6 g of calcium oxide and some carbon dioxide. How much carbon dioxide forms?</legend>
+    <div class="opts">
+      <button data-opt="a">15.6 g</button>
+      <button data-opt="b">4.4 g</button>
+      <button data-opt="c">5.6 g</button>
+      <button data-opt="d">10 g</button>
+    </div>
+    <p class="why" hidden>Mass is conserved: 10 − 5.6 = 4.4 g.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="b">
+    <legend>2. The law of constant proportions says that a compound always has…</legend>
+    <div class="opts">
+      <button data-opt="a">the same mass</button>
+      <button data-opt="b">the same elements in the same proportion by mass</button>
+      <button data-opt="c">the same number of molecules</button>
+      <button data-opt="d">equal masses of each element</button>
+    </div>
+    <p class="why" hidden>The ratio by mass of its elements is fixed.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="c">
+    <legend>3. Water always contains hydrogen and oxygen in the mass ratio…</legend>
+    <div class="opts">
+      <button data-opt="a">2 : 1</button>
+      <button data-opt="b">1 : 2</button>
+      <button data-opt="c">1 : 8</button>
+      <button data-opt="d">1 : 16</button>
+    </div>
+    <p class="why" hidden>2 g of hydrogen combines with 16 g of oxygen: 1 : 8.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="b">
+    <legend>4. Which point of Dalton's theory explains conservation of mass?</legend>
+    <div class="opts">
+      <button data-opt="a">Atoms of one element are identical</button>
+      <button data-opt="b">Atoms are neither created nor destroyed in a reaction</button>
+      <button data-opt="c">Atoms combine in whole-number ratios</button>
+      <button data-opt="d">Atoms are very small</button>
+    </div>
+    <p class="why" hidden>If atoms are only rearranged, the total mass cannot change.</p>
+  </fieldset>
+  <p class="score" aria-live="polite"></p>
+</div>
+<nav class="next-prev" aria-label="Lessons">
+  <a href="../../index.html">← All lessons</a>
+  <a href="atoms-and-molecular-mass.html">Next: Atoms, molecules and molecular mass →</a>
+</nav>
+</main>
+
+<footer class="foot">Follows Chapter 4 of the Maharashtra State Board Std 9 Science and Technology textbook. Explanations and examples are original.</footer>
+</div>
+
+<script src="../../assets/js/sim-kit.js"></script>
+<script src="../../assets/js/chem-kit.js"></script>
+<script src="../../assets/js/sims/laws.js"></script>
+<script src="../../assets/js/quiz.js"></script>
+<script>
+  (function () {
+    var simEl = document.getElementById("sim-main");
+    var sim = ReactionSim.mount(simEl, { rx: "water" });
+    window.lessonSim = sim;
+    // Buttons in the lesson that set up the simulation: data-sim='{...settings}'
+    document.querySelectorAll("main [data-sim]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        sim.set(JSON.parse(b.dataset.sim));
+        sim.play();
+        simEl.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+      });
+    });
+  })();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/contrib/auto-render.min.js"></script>
+<script>
+  renderMathInElement(document.body, {
+    delimiters: [{ left: "$$", right: "$$", display: true }, { left: "\\(", right: "\\)", display: false }],
+    output: window.KATEX_OUTPUT || "htmlAndMathml",
+    throwOnError: false
+  });
+</script>
+
+</body>
+</html>

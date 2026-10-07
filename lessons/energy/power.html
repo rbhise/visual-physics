@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Power · Visual Physics</title>
+<meta name="description" content="Race two hoists lifting loads to the same height, then work out your household electricity use in kilowatt hours.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.css">
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+<div class="wrap">
+
+<header class="site-head">
+  <a class="brand" href="../../index.html">Visual <span>Physics</span></a>
+  <span class="crumb">Std 9 · Ch. 2 Work and Energy</span>
+</header>
+
+<main>
+<p class="eyebrow">Work and Energy · Lesson 4</p>
+<h1>Power</h1>
+<p class="lede">Two students carry identical bags up the same staircase. One runs, one walks. They do the same work, but one is more powerful.</p>
+<p class="downloads"><a class="btn" href="../../slides/power.pptx" download>Download slides (.pptx)</a> <span>12 slides with teacher notes</span></p>
+
+<div id="sim-main"></div>
+
+<section class="prose">
+  <h2>The rate of doing work</h2>
+  <p><strong>Power</strong> is the rate at which work is done, or the rate at which energy is transferred:</p>
+  <div class="eq">$$P = \frac{W}{t}$$</div>
+  <p>The SI unit of power is the <strong>watt (W)</strong>: 1 watt is 1 joule of work done in 1 second, \(1\ \text{W} = 1\ \text{J/s}\).</p>
+  <ul class="mistakes">
+    <li>1 kilowatt (kW) = 1000 W</li>
+    <li>1 horsepower (hp) = 746 W, a unit still used for engines and pumps</li>
+  </ul>
+  <p>In the simulation, both hoists lift their loads through the same height. The work depends on the load and the height; the power also depends on how quickly the lift happens.</p>
+</section>
+
+<section class="prose">
+  <h2>The commercial unit of energy</h2>
+  <p>The joule is too small for household electricity. Electricity boards charge by the <strong>kilowatt hour (kWh)</strong>, the "unit" on your bill: the energy used by a 1 kW appliance running for 1 hour.</p>
+  <div class="eq">$$1\ \text{kWh} = 1000\ \text{W} \times 3600\ \text{s} = 3.6 \times 10^6\ \text{J}$$</div>
+  <p>Energy in kWh = power in kW × time in hours.</p>
+</section>
+
+<div class="sim calc" id="kwh-calc" style="max-width:42rem">
+  <div class="sim-panel">
+    <div><div class="seg-label">Appliance</div><div class="preset-list" id="kwh-app"></div></div>
+    <div class="ctl"><label for="kwh-hours">Hours used per day <output id="kwh-hours-out"></output></label><input type="range" id="kwh-hours" min="0.5" max="12" step="0.5" value="4"></div>
+    <div class="ctl"><label for="kwh-rate">Price per unit (₹) <output id="kwh-rate-out"></output></label><input type="range" id="kwh-rate" min="4" max="15" step="0.5" value="8"></div>
+  </div>
+  <div class="sim-readout two-rows" style="--cols:3">
+    <div><span>Power (kW)</span><b id="kwh-kw">–</b></div>
+    <div><span>Units per day (kWh)</span><b id="kwh-day">–</b></div>
+    <div><span>Units in 30 days</span><b id="kwh-month" class="c-path">–</b></div>
+    <div><span>Energy per day (MJ)</span><b id="kwh-mj">–</b></div>
+    <div><span>Cost per day (₹)</span><b id="kwh-cday">–</b></div>
+    <div><span>Cost in 30 days (₹)</span><b id="kwh-cmonth" class="c-vy">–</b></div>
+  </div>
+</div>
+<h2>Try it</h2>
+<p class="prose" style="margin-top:1rem">Both hoists lift through 10 m. Compare their work and power.</p>
+<ul class="tries">
+  <li><span><strong>Same load, different times.</strong> 50 kg each; A takes 10 s, B takes 20 s.</span>
+    <button class="btn" data-sim='{"h":10,"mA":50,"tA":10,"mB":50,"tB":20}'>Lift</button></li>
+  <li><span><strong>Different loads, same time.</strong> A lifts 40 kg, B lifts 80 kg, both in 10 s.</span>
+    <button class="btn" data-sim='{"h":10,"mA":40,"tA":10,"mB":80,"tB":10}'>Lift</button></li>
+  <li><span><strong>Equal power.</strong> A lifts 40 kg in 10 s; B lifts 80 kg in 20 s.</span>
+    <button class="btn" data-sim='{"h":10,"mA":40,"tA":10,"mB":80,"tB":20}'>Lift</button></li>
+</ul>
+<p class="prose" style="margin-top:1rem;font-size:.875rem;color:var(--muted)">What you should see: with the same load, both do 4900 J of work, but A finishes in half the time, so A's power (490 W) is twice B's (245 W). With different loads in the same time, B does twice the work and has twice the power. In the last case B does twice the work in twice the time, so both develop 392 W.</p>
+
+<h2>Worked examples</h2>
+<div class="example">
+  <h3 style="margin-top:0">1. Climbing the stairs</h3>
+  <p>Raju, whose mass is 50 kg, runs up a staircase 12 m high in 20 s. Find the work he does and his power. (g = 9.8 m/s²)</p>
+  <ol>
+    <li>Work = \(mgh = 50 \times 9.8 \times 12 = \) <span class="answer">5880 J</span></li>
+    <li>Power = \(5880 \div 20 = \) <span class="answer">294 W</span></li>
+  </ol>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">2. A water pump</h3>
+  <p>A pump lifts 200 kg of water into a tank 15 m high in 60 s. Find its power in watts and in horsepower.</p>
+  <ol>
+    <li>Work = \(200 \times 9.8 \times 15 = 29\,400\) J</li>
+    <li>Power = \(29\,400 \div 60 = \) <span class="answer">490 W</span></li>
+    <li>In horsepower: \(490 \div 746 \approx \) <span class="answer">0.66 hp</span></li>
+  </ol>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">3. The geyser bill</h3>
+  <p>A 1500 W geyser runs for 40 minutes every day. How many units does it use in 30 days, and what does that cost at ₹8 per unit?</p>
+  <ol>
+    <li>Power = 1.5 kW; time per day = 40/60 h. Units per day \(= 1.5 \times \tfrac{2}{3} = 1\) kWh.</li>
+    <li>In 30 days: <span class="answer">30 kWh</span></li>
+    <li>Cost \(= 30 \times 8 = \) <span class="answer">₹240</span></li>
+  </ol>
+</div>
+
+<h2>Common mistakes</h2>
+<ul class="mistakes" style="margin-top:1rem">
+  <li><strong>Mixing up work and power.</strong> Work is in joules. Power is joules per second, in watts.</li>
+  <li><strong>Minutes instead of seconds.</strong> In P = W/t, use seconds to get watts. For kWh, use hours.</li>
+  <li><strong>Watts instead of kilowatts.</strong> For kWh, divide watts by 1000 first: 1500 W = 1.5 kW.</li>
+  <li><strong>“A kWh is a unit of power.”</strong> The kilowatt hour is a unit of energy: power × time.</li>
+</ul>
+
+<h2>Quick check</h2>
+<div class="quiz">
+  <fieldset class="q" data-answer="a">
+    <legend>1. A motor does 6000 J of work in 30 s. Its power is…</legend>
+    <div class="opts">
+      <button data-opt="a">200 W</button>
+      <button data-opt="b">180 000 W</button>
+      <button data-opt="c">6030 W</button>
+      <button data-opt="d">0.005 W</button>
+    </div>
+    <p class="why" hidden>\(P = 6000 / 30 = 200\) W.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="c">
+    <legend>2. How many joules are there in 1 kWh?</legend>
+    <div class="opts">
+      <button data-opt="a">1000 J</button>
+      <button data-opt="b">3600 J</button>
+      <button data-opt="c">3.6 × 10⁶ J</button>
+      <button data-opt="d">746 J</button>
+    </div>
+    <p class="why" hidden>\(1000\ \text{W} \times 3600\ \text{s} = 3.6 \times 10^6\) J.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="b">
+    <legend>3. 1 horsepower is equal to…</legend>
+    <div class="opts">
+      <button data-opt="a">100 W</button>
+      <button data-opt="b">746 W</button>
+      <button data-opt="c">1000 W</button>
+      <button data-opt="d">3600 W</button>
+    </div>
+    <p class="why" hidden>1 hp = 746 W.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="b">
+    <legend>4. Two girls of equal mass climb the same stairs. One takes 10 s, the other 15 s. Which statement is true?</legend>
+    <div class="opts">
+      <button data-opt="a">They do different work</button>
+      <button data-opt="b">The faster girl has more power</button>
+      <button data-opt="c">They have the same power</button>
+      <button data-opt="d">The slower girl has more power</button>
+    </div>
+    <p class="why" hidden>The work is the same, but the faster girl does it in less time, so her power is greater.</p>
+  </fieldset>
+  <p class="score" aria-live="polite"></p>
+</div>
+<nav class="next-prev" aria-label="Lessons">
+  <a href="conservation-of-energy.html">← Conservation of energy</a>
+  <a href="simple-machines.html">Next: Simple machines →</a>
+</nav>
+</main>
+
+<footer class="foot">Follows Chapter 2 of the Maharashtra State Board Std 9 Science and Technology textbook, with ideas from NCERT Class 9 Science (Exploration). Explanations and examples are original.</footer>
+</div>
+
+<script src="../../assets/js/sim-kit.js"></script>
+<script src="../../assets/js/sims/power.js"></script>
+<script src="../../assets/js/quiz.js"></script>
+<script>
+  (function () {
+    var simEl = document.getElementById("sim-main");
+    var sim = PowerSim.mount(simEl, { h: 10, mA: 50, tA: 10, mB: 50, tB: 20 });
+    window.lessonSim = sim;
+    // Buttons in the lesson that set up the simulation: data-sim='{...settings}'
+    document.querySelectorAll("main [data-sim]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        sim.set(JSON.parse(b.dataset.sim));
+        sim.play();
+        simEl.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+      });
+    });
+  })();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/contrib/auto-render.min.js"></script>
+<script>
+  renderMathInElement(document.body, {
+    delimiters: [{ left: "$$", right: "$$", display: true }, { left: "\\(", right: "\\)", display: false }],
+    output: window.KATEX_OUTPUT || "htmlAndMathml",
+    throwOnError: false
+  });
+</script>
+<script>
+  // Household electricity calculator
+  (function () {
+    var apps = [["LED bulb", 9], ["Ceiling fan", 75], ["Television", 100], ["Refrigerator", 150], ["Iron", 1000], ["Air conditioner", 1500], ["Geyser", 2000]];
+    var pick = 1, box = document.getElementById("kwh-app");
+    box.innerHTML = apps.map(function (a, i) { return '<button type="button" class="chip" data-i="' + i + '" aria-pressed="' + (i === pick) + '">' + a[0] + " (" + a[1] + " W)</button>"; }).join("");
+    var hours = document.getElementById("kwh-hours"), rate = document.getElementById("kwh-rate");
+    function set(id, v) { document.getElementById(id).textContent = v; }
+    function update() {
+      var kw = apps[pick][1] / 1000, h = +hours.value, r = +rate.value, day = kw * h;
+      set("kwh-hours-out", h + " h"); set("kwh-rate-out", "₹" + r);
+      set("kwh-kw", kw.toFixed(3)); set("kwh-day", day.toFixed(2)); set("kwh-month", (day * 30).toFixed(1));
+      set("kwh-mj", (day * 3.6).toFixed(2)); set("kwh-cday", (day * r).toFixed(2)); set("kwh-cmonth", (day * 30 * r).toFixed(0));
+      box.querySelectorAll("button").forEach(function (b) { b.setAttribute("aria-pressed", +b.dataset.i === pick); });
+    }
+    box.addEventListener("click", function (e) { var b = e.target.closest("button"); if (b) { pick = +b.dataset.i; update(); } });
+    hours.addEventListener("input", update); rate.addEventListener("input", update);
+    update();
+  })();
+</script>
+</body>
+</html>

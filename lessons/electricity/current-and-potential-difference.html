@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Current and Potential Difference · Visual Physics</title>
+<meta name="description" content="Watch electrons drift round a circuit, count the charge that passes, and compare a cell with a pump between two water tanks.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.css">
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+<div class="wrap">
+
+<header class="site-head">
+  <a class="brand" href="../../index.html">Visual <span>Physics</span></a>
+  <span class="crumb">Std 9 · Ch. 3 Current Electricity</span>
+</header>
+
+<main>
+<p class="eyebrow">Current Electricity · Lesson 1</p>
+<h1>Current and Potential Difference</h1>
+<p class="lede">Flick a switch and a bulb lights at once. Nothing races round the wire at high speed; instead, countless electrons start drifting together. What pushes them, and how do we measure their flow?</p>
+<p class="downloads"><a class="btn" href="../../slides/current-and-potential-difference.pptx" download>Download slides (.pptx)</a> <span>12 slides with teacher notes</span></p>
+
+<div id="sim-main"></div>
+
+<section class="prose">
+  <h2>Electric charge</h2>
+  <p>Electrons carry a tiny negative charge. Charge is measured in <strong>coulombs (C)</strong>. The charge on one electron is \(1.6 \times 10^{-19}\) C, so one coulomb is the charge of about \(6.25 \times 10^{18}\) electrons.</p>
+  <p>In a metal wire, some electrons are only weakly held by their atoms. These <strong>free electrons</strong> can move through the wire.</p>
+
+  <h2>Potential and potential difference</h2>
+  <p>Water flows from a higher level to a lower level, and keeps flowing only while there is a difference in level. Electric charge behaves in a similar way: it flows between two points when there is a difference in their <strong>electric potential</strong>.</p>
+  <p>The <strong>potential difference</strong> between two points is the work done to carry a unit positive charge from one point to the other:</p>
+  <div class="eq">$$V = \frac{W}{Q}$$</div>
+  <p>Its unit is the <strong>volt (V)</strong>: \(1\ \text{V} = 1\ \text{J/C}\). Smaller and larger units are the millivolt (1 mV = 10⁻³ V) and the kilovolt (1 kV = 10³ V). A cell keeps a potential difference between its terminals, just as a pump keeps one tank higher than the other. Switch to the <em>Water analogy</em> view to see this.</p>
+
+  <h2>Electric current</h2>
+  <p><strong>Electric current</strong> is the charge passing through a conductor in unit time:</p>
+  <div class="eq">$$I = \frac{Q}{t}$$</div>
+  <p>Its unit is the <strong>ampere (A)</strong>: 1 A = 1 C of charge passing each second. Smaller units: the milliampere (1 mA = 10⁻³ A) and the microampere (1 µA = 10⁻⁶ A). In the simulation, start the clock: the readout counts the charge passing and divides by the time.</p>
+
+  <h2>Which way does current flow?</h2>
+  <p>Electrons are negative, so they drift from the negative terminal of the cell, through the circuit, to the positive terminal. Before electrons were discovered, scientists had already agreed that current flows from <strong>positive to negative</strong>. We still use this <strong>conventional current</strong>, opposite to the electron flow.</p>
+  <div class="note"><strong>In the simulation:</strong> <span class="c-vx">teal dots</span> are electrons (− to +). <span class="c-vy">Coral arrows</span> show conventional current (+ to −).</div>
+</section>
+
+<h2>Circuit symbols</h2>
+<p class="prose" style="margin-top:1rem">Circuit diagrams use standard symbols so that anyone can read them. An <strong>ammeter</strong> is always joined in series, so the current passes through it. A <strong>voltmeter</strong> is joined in parallel, across the two points whose potential difference it measures.</p>
+<div class="table-wrap">
+<table class="compare symbols">
+  <thead><tr><th>Symbol</th><th>Component</th><th>What it does</th></tr></thead>
+  <tbody>
+    <tr><td class="sym"><svg viewBox="0 0 64 28" width="64" height="28" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 14h24M38 14h24"/><path d="M26 4v20"/><path d="M38 9v10" stroke-width="4"/></svg></td><th>Cell</th><td>Gives a potential difference. Long plate +, short plate −.</td></tr>
+    <tr><td class="sym"><svg viewBox="0 0 64 28" width="64" height="28" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 14h12M50 14h12"/><path d="M14 4v20M30 4v20"/><path d="M22 9v10M38 9v10" stroke-width="4"/><path d="M38 14h12" stroke-dasharray="2 3"/></svg></td><th>Battery</th><td>Two or more cells joined together.</td></tr>
+    <tr><td class="sym"><svg viewBox="0 0 64 28" width="64" height="28" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 14h18M44 14h18"/><circle cx="22" cy="14" r="2.5" fill="currentColor"/><circle cx="42" cy="14" r="2.5" fill="currentColor"/><path d="M22 14l18-8"/></svg></td><th>Plug key or switch</th><td>Opens or closes the circuit.</td></tr>
+    <tr><td class="sym"><svg viewBox="0 0 64 28" width="64" height="28" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 14h20M42 14h20"/><circle cx="32" cy="14" r="10"/><path d="M25 7l14 14M39 7L25 21"/></svg></td><th>Bulb</th><td>Glows when current flows.</td></tr>
+    <tr><td class="sym"><svg viewBox="0 0 64 28" width="64" height="28" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 14h14l3-7 6 14 6-14 6 14 6-14 3 7h14"/></svg></td><th>Resistor</th><td>Opposes the current by a fixed amount.</td></tr>
+    <tr><td class="sym"><svg viewBox="0 0 64 28" width="64" height="28" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 14h14l3-7 6 14 6-14 6 14 6-14 3 7h14"/><path d="M14 24L50 4"/><path d="M50 4l-6 1M50 4l-2 6"/></svg></td><th>Variable resistor (rheostat)</th><td>Resistance can be changed.</td></tr>
+    <tr><td class="sym"><svg viewBox="0 0 64 28" width="64" height="28" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 14h18M44 14h18"/><circle cx="32" cy="14" r="11"/><path d="M27 20l5-12 5 12M29 16h6"/></svg></td><th>Ammeter</th><td>Measures current. Joined in series.</td></tr>
+    <tr><td class="sym"><svg viewBox="0 0 64 28" width="64" height="28" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 14h18M44 14h18"/><circle cx="32" cy="14" r="11"/><path d="M27 8l5 12 5-12"/></svg></td><th>Voltmeter</th><td>Measures potential difference. Joined in parallel.</td></tr>
+  </tbody>
+</table>
+</div>
+<h2>Try it</h2>
+<p class="prose" style="margin-top:1rem">Start the clock in each case and compare the charge that passes.</p>
+<ul class="tries">
+  <li><span><strong>One cell.</strong> 1.5 V across the bulb.</span>
+    <button class="btn" data-sim='{"mode":"circuit","cells":1,"closed":true}'>Set up</button></li>
+  <li><span><strong>Four cells.</strong> 6 V across the same bulb.</span>
+    <button class="btn" data-sim='{"mode":"circuit","cells":4,"closed":true}'>Set up</button></li>
+  <li><span><strong>Switch open.</strong> Four cells, but the circuit is broken.</span>
+    <button class="btn" data-sim='{"mode":"circuit","cells":4,"closed":false}'>Set up</button></li>
+  <li><span><strong>Water with no pump.</strong> What happens to the flow?</span>
+    <button class="btn" data-sim='{"mode":"water","pump":false}'>Set up</button></li>
+</ul>
+<p class="prose" style="margin-top:1rem;font-size:.875rem;color:var(--muted)">What you should see: with one cell the current is 0.25 A, so 2.5 C passes in 10 s. With four cells the current is 1 A: four times the charge every second, and a brighter bulb. With the switch open, nothing flows however many cells you use. Without the pump, the water levels even out and the flow stops.</p>
+
+<h2>Worked examples</h2>
+<div class="example">
+  <h3 style="margin-top:0">1. Charge from current</h3>
+  <p>A current of 0.3 A flows through a torch bulb for 10 minutes. How much charge passes through it?</p>
+  <ol>
+    <li>\(t = 10 \times 60 = 600\) s</li>
+    <li>\(Q = I \times t = 0.3 \times 600 = \) <span class="answer">180 C</span></li>
+  </ol>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">2. Potential difference from work</h3>
+  <p>12 J of work is done in moving 4 C of charge between two points. Find the potential difference between them.</p>
+  <ol>
+    <li>\(V = W / Q = 12 / 4 = \) <span class="answer">3 V</span></li>
+  </ol>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">3. Counting electrons</h3>
+  <p>How many electrons make up a charge of 1 C? How many pass each second when the current is 2 A?</p>
+  <ol>
+    <li>\(n = \dfrac{1}{1.6 \times 10^{-19}} = \) <span class="answer">6.25 × 10¹⁸ electrons</span></li>
+    <li>2 A means 2 C every second: \(2 \times 6.25 \times 10^{18} = \) <span class="answer">1.25 × 10¹⁹ electrons per second</span></li>
+  </ol>
+</div>
+
+<h2>Common mistakes</h2>
+<ul class="mistakes" style="margin-top:1rem">
+  <li><strong>Minutes instead of seconds.</strong> I = Q/t needs t in seconds to give amperes.</li>
+  <li><strong>Mixing up current and potential difference.</strong> Potential difference is the push (volts); current is the flow (amperes).</li>
+  <li><strong>Electrons flow from + to −.</strong> Electrons drift from − to +. Conventional current is the one taken from + to −.</li>
+  <li><strong>Ammeter across a component.</strong> An ammeter goes in series; a voltmeter goes in parallel.</li>
+</ul>
+
+<h2>Quick check</h2>
+<div class="quiz">
+  <fieldset class="q" data-answer="b">
+    <legend>1. A charge of 60 C passes through a wire in 2 minutes. The current is…</legend>
+    <div class="opts">
+      <button data-opt="a">30 A</button>
+      <button data-opt="b">0.5 A</button>
+      <button data-opt="c">120 A</button>
+      <button data-opt="d">2 A</button>
+    </div>
+    <p class="why" hidden>\(I = 60 / 120 = 0.5\) A. Remember 2 minutes = 120 s.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="b">
+    <legend>2. 1 volt is the same as…</legend>
+    <div class="opts">
+      <button data-opt="a">1 C/s</button>
+      <button data-opt="b">1 J/C</button>
+      <button data-opt="c">1 A × 1 s</button>
+      <button data-opt="d">1 J/s</button>
+    </div>
+    <p class="why" hidden>Potential difference is work per unit charge: 1 V = 1 J/C.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="b">
+    <legend>3. Conventional current flows…</legend>
+    <div class="opts">
+      <button data-opt="a">from − to + outside the cell</button>
+      <button data-opt="b">from + to − outside the cell</button>
+      <button data-opt="c">in the same direction as electrons</button>
+      <button data-opt="d">only inside the cell</button>
+    </div>
+    <p class="why" hidden>Conventional current is taken from the positive terminal round to the negative terminal, opposite to the electrons.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="b">
+    <legend>4. How should a voltmeter be connected to measure the potential difference across a bulb?</legend>
+    <div class="opts">
+      <button data-opt="a">In series with the bulb</button>
+      <button data-opt="b">In parallel with the bulb</button>
+      <button data-opt="c">Instead of the cell</button>
+      <button data-opt="d">It does not matter</button>
+    </div>
+    <p class="why" hidden>A voltmeter is joined across (in parallel with) the component.</p>
+  </fieldset>
+  <p class="score" aria-live="polite"></p>
+</div>
+<nav class="next-prev" aria-label="Lessons">
+  <a href="../../index.html">← All lessons</a>
+  <a href="resistance-and-ohms-law.html">Next: Resistance and Ohm's law →</a>
+</nav>
+</main>
+
+<footer class="foot">Follows Chapter 3 of the Maharashtra State Board Std 9 Science and Technology textbook. Explanations and examples are original.</footer>
+</div>
+
+<script src="../../assets/js/sim-kit.js"></script>
+<script src="../../assets/js/circuit-kit.js"></script>
+<script src="../../assets/js/sims/current.js"></script>
+<script src="../../assets/js/quiz.js"></script>
+<script>
+  (function () {
+    var simEl = document.getElementById("sim-main");
+    var sim = CurrentSim.mount(simEl, { mode: "circuit", cells: 2 });
+    window.lessonSim = sim;
+    // Buttons in the lesson that set up the simulation: data-sim='{...settings}'
+    document.querySelectorAll("main [data-sim]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        sim.set(JSON.parse(b.dataset.sim));
+        sim.play();
+        simEl.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+      });
+    });
+  })();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/contrib/auto-render.min.js"></script>
+<script>
+  renderMathInElement(document.body, {
+    delimiters: [{ left: "$$", right: "$$", display: true }, { left: "\\(", right: "\\)", display: false }],
+    output: window.KATEX_OUTPUT || "htmlAndMathml",
+    throwOnError: false
+  });
+</script>
+
+</body>
+</html>

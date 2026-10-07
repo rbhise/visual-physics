@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Mirror Formula and Magnification · Visual Physics</title>
+<meta name="description" content="Use the Cartesian sign convention, the mirror formula 1/v + 1/u = 1/f and magnification m = −v/u, and check every answer on a live ray diagram.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.css">
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+<div class="wrap">
+
+<header class="site-head">
+  <a class="brand" href="../../index.html">Visual <span>Physics</span></a>
+  <span class="crumb">Std 9 · Ch. 11 Reflection of Light</span>
+</header>
+
+<main>
+<p class="eyebrow">Reflection of Light · Lesson 4</p>
+<h1>The Mirror Formula and Magnification</h1>
+<p class="lede">Ray diagrams tell you roughly where an image is. The mirror formula tells you exactly, as long as you keep track of which way each distance is measured.</p>
+<p class="downloads"><a class="btn" href="../../slides/mirror-formula.pptx" download>Download slides (.pptx)</a> <span>12 slides with teacher notes</span></p>
+
+<div id="sim-main"></div>
+
+<section class="prose">
+  <h2>The Cartesian sign convention</h2>
+  <p>Treat the principal axis as the x-axis of a graph with the <strong>pole P as the origin</strong>, and always draw the object on the left of the mirror, so light travels from left to right.</p>
+  <ul class="mistakes">
+    <li>Distances are measured <strong>from the pole</strong>.</li>
+    <li>Distances to the <strong>right</strong> of P (the direction light travels) are <strong>positive</strong>; distances to the <strong>left</strong> are <strong>negative</strong>. So the object distance \(u\) is always negative.</li>
+    <li>Heights <strong>above</strong> the axis are positive; heights <strong>below</strong> are negative.</li>
+    <li>The focal length of a <strong>concave</strong> mirror is <strong>negative</strong> (F is in front, on the left); that of a <strong>convex</strong> mirror is <strong>positive</strong> (F is behind).</li>
+  </ul>
+
+  <h2>The mirror formula</h2>
+  <p>The object distance \(u\), image distance \(v\) and focal length \(f\) are linked by</p>
+  <div class="eq">$$\frac{1}{v} + \frac{1}{u} = \frac{1}{f}$$</div>
+  <p>Put in every value with its sign. A negative \(v\) means the image is in front of the mirror (real); a positive \(v\) means it is behind (virtual).</p>
+
+  <h2>Magnification</h2>
+  <p><strong>Magnification</strong> \(m\) compares the height of the image \(h_2\) with the height of the object \(h_1\):</p>
+  <div class="eq">$$m = \frac{h_2}{h_1} = -\frac{v}{u}$$</div>
+  <ul class="mistakes">
+    <li>\(m\) <strong>negative</strong>: image inverted (and real). \(m\) <strong>positive</strong>: image erect (and virtual).</li>
+    <li>\(|m| > 1\): magnified. \(|m| = 1\): same size. \(|m| < 1\): diminished.</li>
+  </ul>
+</section>
+<h2>Try it</h2>
+<p class="prose" style="margin-top:1rem">The simulation shows signed values. Check that the numbers fit the formula.</p>
+<ul class="tries">
+  <li><span><strong>Beyond C.</strong> Concave, f = 12 cm, object 30 cm away.</span>
+    <button class="btn" data-sim='{"type":"concave","f":12,"h":3,"u":30}'>Set it up</button></li>
+  <li><span><strong>Inside F.</strong> Concave, f = 20 cm, object 10 cm away.</span>
+    <button class="btn" data-sim='{"type":"concave","f":20,"h":3,"u":10}'>Set it up</button></li>
+  <li><span><strong>Convex.</strong> f = 20 cm, object 20 cm away.</span>
+    <button class="btn" data-sim='{"type":"convex","f":20,"h":3,"u":20}'>Set it up</button></li>
+  <li><span><strong>Watch the signs.</strong> Walk the object in and watch v and m change sign.</span>
+    <button class="btn" data-sim='{"type":"concave","f":10,"h":3,"sweep":true}'>Play</button></li>
+</ul>
+<p class="prose" style="margin-top:1rem;font-size:.875rem;color:var(--muted)">What you should see: u is always negative. For the concave mirror, v and m are negative while the image is real, become infinite at F, and turn positive once the object is inside F. For the convex mirror v and m are always positive and m stays below 1.</p>
+
+<h2>Worked examples</h2>
+<div class="example">
+  <h3 style="margin-top:0">1. A real image</h3>
+  <p>A 6 cm tall candle stands 30 cm in front of a concave mirror of focal length 12 cm. Find the position, size and nature of the image.</p>
+  <ol>
+    <li>Signs: \(u = -30\) cm, \(f = -12\) cm.</li>
+    <li>\(\dfrac{1}{v} = \dfrac{1}{f} - \dfrac{1}{u} = -\dfrac{1}{12} + \dfrac{1}{30} = \dfrac{-5 + 2}{60} = -\dfrac{3}{60}\), so \(v = \) <span class="answer">−20 cm</span> (20 cm in front of the mirror)</li>
+    <li>\(m = -\dfrac{v}{u} = -\dfrac{-20}{-30} = -0.67\); \(h_2 = m h_1 = -0.67 \times 6 = \) <span class="answer">−4 cm</span></li>
+    <li>The image is <span class="answer">real, inverted and diminished</span>; a screen 20 cm from the mirror would show it.</li>
+  </ol>
+  <button class="btn" data-sim='{"type":"concave","f":12,"h":3,"u":30}'>Check it in the simulation</button>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">2. A shaving mirror</h3>
+  <p>A man holds his face 10 cm from a concave mirror of focal length 20 cm. Where is the image and how much is it magnified?</p>
+  <ol>
+    <li>\(u = -10\) cm, \(f = -20\) cm.</li>
+    <li>\(\dfrac{1}{v} = -\dfrac{1}{20} + \dfrac{1}{10} = \dfrac{-1 + 2}{20} = \dfrac{1}{20}\), so \(v = \) <span class="answer">+20 cm</span> (behind the mirror)</li>
+    <li>\(m = -\dfrac{20}{-10} = \) <span class="answer">+2</span>: virtual, erect, twice as large</li>
+  </ol>
+  <button class="btn" data-sim='{"type":"concave","f":20,"h":3,"u":10}'>Check it in the simulation</button>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">3. A convex mirror</h3>
+  <p>A car is 20 m behind a convex rear-view mirror of focal length 20 cm. To keep the numbers simple, first find the image of an object 20 cm away, then think about the car.</p>
+  <ol>
+    <li>Object at 20 cm: \(u = -20\), \(f = +20\). \(\dfrac{1}{v} = \dfrac{1}{20} + \dfrac{1}{20} = \dfrac{1}{10}\), so \(v = \) <span class="answer">+10 cm</span>, \(m = -\dfrac{10}{-20} = +0.5\)</li>
+    <li>For the car, \(u = -2000\) cm: \(\dfrac{1}{v} = \dfrac{1}{20} + \dfrac{1}{2000} = \dfrac{101}{2000}\), so \(v \approx\) <span class="answer">+19.8 cm</span>, just inside F, and \(m \approx +0.01\): a tiny upright image</li>
+  </ol>
+  <button class="btn" data-sim='{"type":"convex","f":20,"h":3,"u":20}'>Check it in the simulation</button>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">4. Finding f</h3>
+  <p>An object 12 cm in front of a convex mirror forms an image 6 cm behind it. Find the focal length.</p>
+  <ol>
+    <li>\(u = -12\) cm, \(v = +6\) cm.</li>
+    <li>\(\dfrac{1}{f} = \dfrac{1}{6} + \dfrac{1}{-12} = \dfrac{2 - 1}{12} = \dfrac{1}{12}\), so \(f = \) <span class="answer">+12 cm</span> (positive, as it must be for a convex mirror)</li>
+  </ol>
+  <button class="btn" data-sim='{"type":"convex","f":12,"h":3,"u":12}'>Check it in the simulation</button>
+</div>
+
+<h2>Common mistakes</h2>
+<ul class="mistakes" style="margin-top:1rem">
+  <li><strong>Leaving out the signs.</strong> Write u, v and f with their signs before you calculate; u is always negative.</li>
+  <li><strong>Taking f positive for a concave mirror.</strong> Concave: f negative. Convex: f positive.</li>
+  <li><strong>Forgetting to flip at the end.</strong> The formula gives 1/v. Turn the fraction over to get v.</li>
+  <li><strong>Reading m without its sign.</strong> A negative m means the image is inverted; positive means erect.</li>
+</ul>
+
+<h2>Quick check</h2>
+<div class="quiz">
+  <fieldset class="q" data-answer="b">
+    <legend>1. In the Cartesian sign convention, the object distance u is…</legend>
+    <div class="opts">
+      <button data-opt="a">always positive</button>
+      <button data-opt="b">always negative</button>
+      <button data-opt="c">positive for convex mirrors</button>
+      <button data-opt="d">zero</button>
+    </div>
+    <p class="why" hidden>The object is on the left of the pole, against the direction of positive distances.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="a">
+    <legend>2. A concave mirror has f = −10 cm. An object is at u = −30 cm. The image distance v is…</legend>
+    <div class="opts">
+      <button data-opt="a">−15 cm</button>
+      <button data-opt="b">+15 cm</button>
+      <button data-opt="c">−7.5 cm</button>
+      <button data-opt="d">−30 cm</button>
+    </div>
+    <p class="why" hidden>1/v = −1/10 + 1/30 = −2/30, so v = −15 cm.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="b">
+    <legend>3. The magnification of an image is +2. The image is…</legend>
+    <div class="opts">
+      <button data-opt="a">real, inverted, magnified</button>
+      <button data-opt="b">virtual, erect, magnified</button>
+      <button data-opt="c">virtual, erect, diminished</button>
+      <button data-opt="d">real, erect, same size</button>
+    </div>
+    <p class="why" hidden>Positive m means erect (virtual); |m| > 1 means magnified.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="c">
+    <legend>4. An object 15 cm from a convex mirror forms an image 7.5 cm behind it. The magnification is…</legend>
+    <div class="opts">
+      <button data-opt="a">−0.5</button>
+      <button data-opt="b">+2</button>
+      <button data-opt="c">+0.5</button>
+      <button data-opt="d">−2</button>
+    </div>
+    <p class="why" hidden>m = −v/u = −(+7.5)/(−15) = +0.5.</p>
+  </fieldset>
+  <p class="score" aria-live="polite"></p>
+</div>
+<nav class="next-prev" aria-label="Lessons">
+  <a href="spherical-mirrors.html">← Spherical mirrors</a>
+  <a href="../sound/sound-waves.html">Next: Sound waves →</a>
+</nav>
+</main>
+
+<footer class="foot">Follows Chapter 11 of the Maharashtra State Board Std 9 Science and Technology textbook. Explanations and examples are original.</footer>
+</div>
+
+<script src="../../assets/js/sim-kit.js"></script>
+<script src="../../assets/js/sims/spherical.js"></script>
+<script src="../../assets/js/quiz.js"></script>
+<script>
+  (function () {
+    var simEl = document.getElementById("sim-main");
+    var sim = MirrorSim.mount(simEl, { type: "concave", u: 30, f: 12, h: 3, signs: true });
+    window.lessonSim = sim;
+    // Buttons in the lesson that set up the simulation: data-sim='{...settings}'
+    document.querySelectorAll("main [data-sim]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        sim.set(JSON.parse(b.dataset.sim));
+        sim.play();
+        simEl.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+      });
+    });
+  })();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/contrib/auto-render.min.js"></script>
+<script>
+  renderMathInElement(document.body, {
+    delimiters: [{ left: "$$", right: "$$", display: true }, { left: "\\(", right: "\\)", display: false }],
+    output: window.KATEX_OUTPUT || "htmlAndMathml",
+    throwOnError: false
+  });
+</script>
+
+</body>
+</html>

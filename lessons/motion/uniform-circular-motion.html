@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Uniform Circular Motion · Visual Physics</title>
+<meta name="description" content="Send an object round a polygon and a circle at constant speed, then let go and watch it fly off along the tangent.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.css">
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+<div class="wrap">
+
+<header class="site-head">
+  <a class="brand" href="../../index.html">Visual <span>Physics</span></a>
+  <span class="crumb">Std 9 · Ch. 1 Laws of Motion</span>
+</header>
+
+<main>
+<p class="eyebrow">Laws of Motion · Lesson 7</p>
+<h1>Uniform Circular Motion</h1>
+<p class="lede">A merry-go-round turns at a steady rate, so every horse keeps the same speed. Yet each horse's velocity changes every moment. Here is why.</p>
+<p class="downloads"><a class="btn" href="../../slides/uniform-circular-motion.pptx" download>Download slides (.pptx)</a> <span>12 slides with teacher notes</span></p>
+
+<div id="sim-main"></div>
+
+<section class="prose">
+  <h2>Constant speed, changing direction</h2>
+  <p>When an object moves along a circular path at <strong>constant speed</strong>, its motion is called <strong>uniform circular motion</strong>. Examples include the tip of a clock's second hand, a stone whirled on a string, and a satellite going round the Earth.</p>
+  <p>The speed stays the same, but the direction of motion changes at every point on the circle. Since velocity includes direction, <strong>the velocity keeps changing</strong>. A changing velocity means the object is accelerating, so uniform circular motion is accelerated motion.</p>
+
+  <h2>From polygon to circle</h2>
+  <p>Pick <em>Square</em> in the simulation. The object goes straight along each side and changes direction only at the four corners. With 8 sides it turns 8 times, and with 16 sides 16 times. A circle is like a polygon with an enormous number of tiny sides, so the direction changes at every single point.</p>
+
+  <h2>Which way is the velocity?</h2>
+  <p>At any point, the velocity points along the <strong>tangent</strong> to the circle: at right angles to the radius, in the direction of motion. Press <em>Let go</em> and the object leaves the circle along that tangent, in a straight line.</p>
+  <div class="note"><strong>You have seen this:</strong> mud flying off a spinning bicycle wheel, sparks leaving a grinding wheel, and a coin sliding off a turning disc all leave along the tangent, not straight outwards.</div>
+
+  <h2>Finding the speed</h2>
+  <p>In one full round the object travels the circumference, \(2\pi r\). If one round takes time \(t\):</p>
+  <div class="eq">$$v = \frac{2\pi r}{t}$$</div>
+</section>
+<h2>Try it</h2>
+<p class="prose" style="margin-top:1rem">Watch the earlier velocity arrows (faded) and the direction in the readout.</p>
+<ul class="tries">
+  <li><span><strong>A square path.</strong> How many times does the direction change in one round?</span>
+    <button class="btn" data-sim='{"sides":4,"r":15,"T":6}'>Play</button></li>
+  <li><span><strong>Sixteen sides.</strong> The turns get smaller and more frequent.</span>
+    <button class="btn" data-sim='{"sides":16,"r":15,"T":6}'>Play</button></li>
+  <li><span><strong>A circle.</strong> Is there any moment when the direction stays the same?</span>
+    <button class="btn" data-sim='{"sides":0,"r":15,"T":6}'>Play</button></li>
+</ul>
+<p class="prose" style="margin-top:1rem;font-size:.875rem;color:var(--muted)">What you should see: on the square the arrow points one way along each side and swings round at each corner. With more sides the swings get smaller and more frequent. On the circle the arrow turns smoothly all the time, while the speed stays at 15.71 m/s (2π × 15 ÷ 6). Press Let go at any moment and the object carries on along the tangent.</p>
+
+<h2>Worked examples</h2>
+<div class="example">
+  <h3 style="margin-top:0">1. A cycling track</h3>
+  <p>A cyclist rides round a circular track of radius 35 m, completing one round in 44 s. Find her speed. (Take π = 22/7.)</p>
+  <ol>
+    <li>\(v = \dfrac{2\pi r}{t} = \dfrac{2 \times \tfrac{22}{7} \times 35}{44} = \dfrac{220}{44} = \) <span class="answer">5 m/s</span></li>
+  </ol>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">2. The second hand of a clock</h3>
+  <p>The second hand of a wall clock is 10 cm long. Find the speed of its tip.</p>
+  <ol>
+    <li>\(r = 10\) cm = 0.1 m, and one round takes \(t = 60\) s.</li>
+    <li>\(v = \dfrac{2 \times 3.14 \times 0.1}{60} \approx \) <span class="answer">0.0105 m/s (about 1 cm/s)</span></li>
+  </ol>
+  <p>The tip moves at a steady speed, but its velocity changes direction every moment.</p>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">3. A merry-go-round</h3>
+  <p>A child sits 3 m from the centre of a merry-go-round that makes one round every 6 s. Find the child's speed, and the distance and displacement after one full round.</p>
+  <ol>
+    <li>\(v = \dfrac{2 \times 3.14 \times 3}{6} = \) <span class="answer">3.14 m/s</span></li>
+    <li>Distance in one round = circumference = <span class="answer">18.84 m</span></li>
+    <li>Back at the starting point, so displacement = <span class="answer">0</span></li>
+  </ol>
+</div>
+
+<h2>Common mistakes</h2>
+<ul class="mistakes" style="margin-top:1rem">
+  <li><strong>“Constant speed, so no acceleration.”</strong> The direction keeps changing, so the velocity changes. Uniform circular motion is accelerated motion.</li>
+  <li><strong>“It flies straight outwards when released.”</strong> It leaves along the tangent, the direction it was moving at that instant.</li>
+  <li><strong>Using the diameter for r.</strong> r is the radius. If you are given the diameter, halve it first.</li>
+  <li><strong>Using the wrong time.</strong> In v = 2πr/t, t is the time for one complete round.</li>
+</ul>
+
+<h2>Quick check</h2>
+<div class="quiz">
+  <fieldset class="q" data-answer="b">
+    <legend>1. In uniform circular motion, which of these stays constant?</legend>
+    <div class="opts">
+      <button data-opt="a">Velocity</button>
+      <button data-opt="b">Speed</button>
+      <button data-opt="c">Direction of motion</button>
+      <button data-opt="d">Both speed and velocity</button>
+    </div>
+    <p class="why" hidden>The speed is constant, but the direction, and so the velocity, keeps changing.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="c">
+    <legend>2. A stone whirled on a string is released. Which way does it move at first?</legend>
+    <div class="opts">
+      <button data-opt="a">Towards the centre</button>
+      <button data-opt="b">Straight outwards along the radius</button>
+      <button data-opt="c">Along the tangent to the circle</button>
+      <button data-opt="d">Straight down</button>
+    </div>
+    <p class="why" hidden>It carries on in the direction it was moving at that instant: along the tangent.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="b">
+    <legend>3. An object goes round a circle of radius 7 m in 11 s. Its speed is (π = 22/7)…</legend>
+    <div class="opts">
+      <button data-opt="a">2 m/s</button>
+      <button data-opt="b">4 m/s</button>
+      <button data-opt="c">7 m/s</button>
+      <button data-opt="d">44 m/s</button>
+    </div>
+    <p class="why" hidden>\(v = 2 \times \tfrac{22}{7} \times 7 \div 11 = 44 \div 11 = 4\) m/s.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="b">
+    <legend>4. Why is uniform circular motion called accelerated motion?</legend>
+    <div class="opts">
+      <button data-opt="a">Because the speed increases</button>
+      <button data-opt="b">Because the velocity changes as the direction changes</button>
+      <button data-opt="c">Because the radius changes</button>
+      <button data-opt="d">Because it never stops</button>
+    </div>
+    <p class="why" hidden>Acceleration is a change in velocity, and a change in direction is a change in velocity.</p>
+  </fieldset>
+  <p class="score" aria-live="polite"></p>
+</div>
+<nav class="next-prev" aria-label="Lessons">
+  <a href="equations-of-motion.html">← Equations of motion</a>
+  <a href="newtons-laws.html">Next: Newton's laws of motion →</a>
+</nav>
+</main>
+
+<footer class="foot">Follows Chapter 1 of the Maharashtra State Board Std 9 Science and Technology textbook. Explanations and examples are original.</footer>
+</div>
+
+<script src="../../assets/js/sim-kit.js"></script>
+<script src="../../assets/js/sims/circular.js"></script>
+<script src="../../assets/js/quiz.js"></script>
+<script>
+  (function () {
+    var simEl = document.getElementById("sim-main");
+    var sim = CircleSim.mount(simEl, { r: 15, T: 6, sides: 0, t: 1 });
+    window.lessonSim = sim;
+    // Buttons in the lesson that set up the simulation: data-sim='{...settings}'
+    document.querySelectorAll("main [data-sim]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        sim.set(JSON.parse(b.dataset.sim));
+        sim.play();
+        simEl.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+      });
+    });
+  })();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/contrib/auto-render.min.js"></script>
+<script>
+  renderMathInElement(document.body, {
+    delimiters: [{ left: "$$", right: "$$", display: true }, { left: "\\(", right: "\\)", display: false }],
+    output: window.KATEX_OUTPUT || "htmlAndMathml",
+    throwOnError: false
+  });
+</script>
+</body>
+</html>

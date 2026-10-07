@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Acceleration · Visual Physics</title>
+<meta name="description" content="Drive a car with positive, negative or zero acceleration and watch its velocity–time graph.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.css">
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+<div class="wrap">
+
+<header class="site-head">
+  <a class="brand" href="../../index.html">Visual <span>Physics</span></a>
+  <span class="crumb">Std 9 · Ch. 1 Laws of Motion</span>
+</header>
+
+<main>
+<p class="eyebrow">Laws of Motion · Lesson 4</p>
+<h1>Acceleration</h1>
+<p class="lede">A scooter pulls away from a signal and a bus brakes at a stop. Both have a changing velocity. Acceleration measures how quickly that change happens.</p>
+<p class="downloads"><a class="btn" href="../../slides/acceleration.pptx" download>Download slides (.pptx)</a> <span>12 slides with teacher notes</span></p>
+
+<div id="sim-main"></div>
+
+<section class="prose">
+  <h2>The rate of change of velocity</h2>
+  <p><strong>Acceleration</strong> is the rate of change of velocity. If an object's velocity changes from an initial value \(u\) to a final value \(v\) in time \(t\):</p>
+  <div class="eq">$$a = \frac{v - u}{t}$$</div>
+  <p>Velocity is measured in m/s and time in s, so acceleration is measured in <strong>m/s per second</strong>, written <strong>m/s²</strong>. An acceleration of 2 m/s² means the velocity grows by 2 m/s every second.</p>
+  <p>In the simulation, the <span class="c-path">violet arrow</span> is the car's velocity and the <span class="c-vy">coral arrow</span> is its acceleration. The dashed step on the graph shows the change in velocity in one second, which is the acceleration.</p>
+
+  <h2>Three kinds of acceleration</h2>
+</section>
+<div class="eq-grid">
+  <div class="eq"><h3 style="font-size:1rem;margin:0 0 .25rem">Positive</h3><p>Velocity increases. The acceleration points the same way as the motion. Example: a ball rolling down a slope.</p></div>
+  <div class="eq"><h3 style="font-size:1rem;margin:0 0 .25rem">Negative</h3><p>Velocity decreases. The acceleration points opposite to the motion. This is also called <strong>deceleration</strong> or retardation. Example: a bus braking.</p></div>
+  <div class="eq"><h3 style="font-size:1rem;margin:0 0 .25rem">Zero</h3><p>Velocity does not change. The object moves uniformly in a straight line, or stays at rest.</p></div>
+</div>
+<section class="prose">
+  <div class="note" style="margin-top:1.25rem"><strong>Uniform acceleration</strong> means the velocity changes by equal amounts in equal intervals of time. A ball rolling down a smooth slope is a good example. On a velocity–time graph it gives a straight sloping line.</div>
+</section>
+<h2>Try it</h2>
+<p class="prose" style="margin-top:1rem">Choose a starting velocity and an acceleration, or use these set-ups. Watch the spacing of the dots and the slope of the graph.</p>
+<ul class="tries">
+  <li><span><strong>Positive acceleration.</strong> Start at 2 m/s and add 2 m/s every second.</span>
+    <button class="btn" data-sim='{"u":2,"a":2}'>Drive</button></li>
+  <li><span><strong>Negative acceleration.</strong> Start at 16 m/s and brake at 2 m/s².</span>
+    <button class="btn" data-sim='{"u":16,"a":-2}'>Drive</button></li>
+  <li><span><strong>Zero acceleration.</strong> Hold a steady 8 m/s.</span>
+    <button class="btn" data-sim='{"u":8,"a":0}'>Drive</button></li>
+</ul>
+<p class="prose" style="margin-top:1rem;font-size:.875rem;color:var(--muted)">What you should see: with positive acceleration the dots spread out and the graph rises; after 8 s the car reaches 18 m/s. Braking at 2 m/s² from 16 m/s, the dots bunch up and the car stops after exactly 8 s. With zero acceleration the dots are evenly spaced and the graph is flat.</p>
+
+<h2>Worked examples</h2>
+<div class="example">
+  <h3 style="margin-top:0">1. A scooter at a green light</h3>
+  <p>A scooter starts from rest and reaches 12 m/s in 4 s. Find its acceleration.</p>
+  <ol>
+    <li>Starting from rest: \(u = 0\), and \(v = 12\) m/s, \(t = 4\) s.</li>
+    <li>\(a = \dfrac{12 - 0}{4} = \) <span class="answer">3 m/s²</span></li>
+  </ol>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">2. A bus pulling in</h3>
+  <p>A bus slows down from 20 m/s to 5 m/s in 5 s as it approaches a stop. Find its acceleration.</p>
+  <ol>
+    <li>\(u = 20\) m/s, \(v = 5\) m/s, \(t = 5\) s.</li>
+    <li>\(a = \dfrac{5 - 20}{5} = \) <span class="answer">−3 m/s²</span></li>
+  </ol>
+  <p>The minus sign shows negative acceleration: the bus is decelerating at 3 m/s².</p>
+  <button class="btn" data-sim='{"u":20,"a":-3}'>See a 3 m/s² deceleration</button>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">3. Units first</h3>
+  <p>A car speeds up from 18 km/h to 54 km/h in 5 s. Find its acceleration in m/s².</p>
+  <ol>
+    <li>Convert using 5/18: \(u = 18 \times \tfrac{5}{18} = 5\) m/s and \(v = 54 \times \tfrac{5}{18} = 15\) m/s.</li>
+    <li>\(a = \dfrac{15 - 5}{5} = \) <span class="answer">2 m/s²</span></li>
+  </ol>
+</div>
+
+<h2>Common mistakes</h2>
+<ul class="mistakes" style="margin-top:1rem">
+  <li><strong>Using v − u the wrong way round.</strong> Always final minus initial. Swapping them flips the sign and turns speeding up into slowing down.</li>
+  <li><strong>Forgetting the units are m/s².</strong> Acceleration is a change of velocity (m/s) per second, so its unit is m/s², not m/s.</li>
+  <li><strong>Mixing km/h with seconds.</strong> Convert velocities to m/s before dividing by time in seconds.</li>
+  <li><strong>Thinking “at rest” means “no acceleration”.</strong> A ball thrown upward is momentarily at rest at the top, but gravity is still accelerating it.</li>
+</ul>
+
+<h2>Quick check</h2>
+<div class="quiz">
+  <fieldset class="q" data-answer="a">
+    <legend>1. A cyclist's velocity goes from 2 m/s to 8 m/s in 3 s. Her acceleration is…</legend>
+    <div class="opts">
+      <button data-opt="a">2 m/s²</button>
+      <button data-opt="b">3 m/s²</button>
+      <button data-opt="c">6 m/s²</button>
+      <button data-opt="d">10 m/s²</button>
+    </div>
+    <p class="why" hidden>\(a = (8 - 2) / 3 = 2\) m/s².</p>
+  </fieldset>
+  <fieldset class="q" data-answer="c">
+    <legend>2. A train moving at a steady 72 km/h along a straight track has an acceleration of…</legend>
+    <div class="opts">
+      <button data-opt="a">72 m/s²</button>
+      <button data-opt="b">20 m/s²</button>
+      <button data-opt="c">0 m/s²</button>
+      <button data-opt="d">it cannot be found</button>
+    </div>
+    <p class="why" hidden>Its velocity does not change, so the acceleration is zero.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="b">
+    <legend>3. Negative acceleration means that…</legend>
+    <div class="opts">
+      <button data-opt="a">the object is moving backwards</button>
+      <button data-opt="b">the velocity is decreasing</button>
+      <button data-opt="c">the object is at rest</button>
+      <button data-opt="d">the speed is very large</button>
+    </div>
+    <p class="why" hidden>Negative acceleration (deceleration) means the velocity is decreasing, for example when braking.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="b">
+    <legend>4. What is the SI unit of acceleration?</legend>
+    <div class="opts">
+      <button data-opt="a">m/s</button>
+      <button data-opt="b">m/s²</button>
+      <button data-opt="c">m²/s</button>
+      <button data-opt="d">km/h</button>
+    </div>
+    <p class="why" hidden>Change in velocity (m/s) divided by time (s) gives m/s².</p>
+  </fieldset>
+  <p class="score" aria-live="polite"></p>
+</div>
+<nav class="next-prev" aria-label="Lessons">
+  <a href="uniform-and-non-uniform-motion.html">← Uniform and non-uniform motion</a>
+  <a href="motion-graphs.html">Next: Distance–time and velocity–time graphs →</a>
+</nav>
+</main>
+
+<footer class="foot">Follows Chapter 1 of the Maharashtra State Board Std 9 Science and Technology textbook. Explanations and examples are original.</footer>
+</div>
+
+<script src="../../assets/js/sim-kit.js"></script>
+<script src="../../assets/js/sims/accel.js"></script>
+<script src="../../assets/js/quiz.js"></script>
+<script>
+  (function () {
+    var simEl = document.getElementById("sim-main");
+    var sim = AccelSim.mount(simEl, { u: 2, a: 2, t: 5 });
+    window.lessonSim = sim;
+    // Buttons in the lesson that set up the simulation: data-sim='{...settings}'
+    document.querySelectorAll("main [data-sim]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        sim.set(JSON.parse(b.dataset.sim));
+        sim.play();
+        simEl.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+      });
+    });
+  })();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/contrib/auto-render.min.js"></script>
+<script>
+  renderMathInElement(document.body, {
+    delimiters: [{ left: "$$", right: "$$", display: true }, { left: "\\(", right: "\\)", display: false }],
+    output: window.KATEX_OUTPUT || "htmlAndMathml",
+    throwOnError: false
+  });
+</script>
+</body>
+</html>

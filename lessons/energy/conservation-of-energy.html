@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Conservation of Energy · Visual Physics</title>
+<meta name="description" content="Watch potential and kinetic energy trade places in free fall, a pendulum and a smooth slide, while their total stays the same.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.css">
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+<div class="wrap">
+
+<header class="site-head">
+  <a class="brand" href="../../index.html">Visual <span>Physics</span></a>
+  <span class="crumb">Std 9 · Ch. 2 Work and Energy</span>
+</header>
+
+<main>
+<p class="eyebrow">Work and Energy · Lesson 3</p>
+<h1>Conservation of Energy</h1>
+<p class="lede">Energy never appears from nothing and never vanishes. It only changes form. Watch it happen as a ball falls, a pendulum swings and a child slides.</p>
+<p class="downloads"><a class="btn" href="../../slides/conservation-of-energy.pptx" download>Download slides (.pptx)</a> <span>12 slides with teacher notes</span></p>
+
+<div id="sim-main"></div>
+
+<section class="prose">
+  <h2>Energy changes form</h2>
+  <p>Energy is constantly being transformed from one form into another:</p>
+  <ul class="mistakes">
+    <li>A solar panel turns light energy into electrical energy.</li>
+    <li>A battery turns chemical energy into electrical energy; a fan turns that into kinetic energy.</li>
+    <li>At a hydroelectric dam, the potential energy of stored water becomes kinetic energy, then electrical energy.</li>
+    <li>Plants turn light energy into chemical energy stored in food.</li>
+  </ul>
+
+  <h2>The law of conservation of energy</h2>
+  <div class="note"><strong>Energy can neither be created nor destroyed. It can only be converted from one form into another. The total energy stays the same.</strong></div>
+
+  <h2>Free fall: following the energy</h2>
+  <p>Drop a ball of mass \(m\) from height \(h\). Ignore air resistance. Look at three points:</p>
+  <ul class="mistakes">
+    <li><strong>A, at the top:</strong> the ball is at rest. P.E. = \(mgh\), K.E. = 0. Total = \(mgh\).</li>
+    <li><strong>B, after falling a distance \(x\):</strong> P.E. = \(mg(h - x)\). Its speed satisfies \(v^2 = 2gx\), so K.E. = \(\tfrac12 m (2gx) = mgx\). Total = \(mg(h - x) + mgx = mgh\).</li>
+    <li><strong>C, just before hitting the ground:</strong> P.E. = 0. Now \(v^2 = 2gh\), so K.E. = \(mgh\). Total = \(mgh\).</li>
+  </ul>
+  <p>The potential energy lost is exactly the kinetic energy gained. In the simulation, the <span class="c-vx">total bar</span> never changes.</p>
+
+  <h2>Pendulums and slides</h2>
+  <p>A swinging pendulum keeps trading the two forms: all potential energy at the ends of the swing, all kinetic energy at the bottom. A child on a smooth slide reaches the bottom with speed \(v = \sqrt{2gh}\), whatever the slide's shape and whatever the child's mass, because \(\tfrac12 mv^2 = mgh\) and the \(m\) cancels.</p>
+  <div class="note"><strong>What about friction?</strong> A real pendulum slowly stops. Its mechanical energy is not destroyed: friction and air resistance turn it into heat and sound. The total energy is still conserved.</div>
+</section>
+<h2>Try it</h2>
+<p class="prose" style="margin-top:1rem">Watch the three energy bars. The total bar should stay the same height.</p>
+<ul class="tries">
+  <li><span><strong>Free fall.</strong> A 2 kg ball dropped from 5 m.</span>
+    <button class="btn" data-sim='{"mode":"fall","m":2,"h":5}'>Release</button></li>
+  <li><span><strong>Pendulum.</strong> Released 2 m above its lowest point.</span>
+    <button class="btn" data-sim='{"mode":"pendulum","m":2,"h":2}'>Release</button></li>
+  <li><span><strong>Light child on a slide.</strong> 1 kg from 4 m.</span>
+    <button class="btn" data-sim='{"mode":"slide","m":1,"h":4}'>Release</button></li>
+  <li><span><strong>Heavy child on the slide.</strong> 5 kg from 4 m.</span>
+    <button class="btn" data-sim='{"mode":"slide","m":5,"h":4}'>Release</button></li>
+</ul>
+<p class="prose" style="margin-top:1rem;font-size:.875rem;color:var(--muted)">What you should see: in free fall the total stays at 98 J while potential energy drains into kinetic energy; the ball lands at about 9.9 m/s. The pendulum swings back and forth with the bars trading places. On the slide, both the 1 kg and the 5 kg child reach the bottom at 8.85 m/s; the heavier child simply has five times the energy.</p>
+
+<h2>Worked examples</h2>
+<div class="example">
+  <h3 style="margin-top:0">1. A ball in free fall</h3>
+  <p>A 2 kg ball is dropped from a height of 5 m. Find its potential and kinetic energy at the top, halfway down and just before it lands. (g = 9.8 m/s²)</p>
+  <ol>
+    <li>Top: P.E. \(= 2 \times 9.8 \times 5 = 98\) J, K.E. = 0. Total <span class="answer">98 J</span></li>
+    <li>Halfway (2.5 m): P.E. \(= 49\) J, K.E. \(= 98 - 49 = 49\) J. Total <span class="answer">98 J</span></li>
+    <li>Just before landing: P.E. = 0, K.E. = <span class="answer">98 J</span>, so \(v = \sqrt{2 \times 98 / 2} \approx 9.9\) m/s</li>
+  </ol>
+  <button class="btn" data-sim='{"mode":"fall","m":2,"h":5}'>Drop it in the simulation</button>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">2. A playground slide</h3>
+  <p>A child starts at rest at the top of a smooth slide 2.5 m high. How fast is she going at the bottom?</p>
+  <ol>
+    <li>Potential energy lost = kinetic energy gained: \(mgh = \tfrac12 mv^2\)</li>
+    <li>\(v = \sqrt{2gh} = \sqrt{2 \times 9.8 \times 2.5} = \sqrt{49} = \) <span class="answer">7 m/s</span></li>
+  </ol>
+  <p>Her mass cancels out, so an adult on the same smooth slide would also reach 7 m/s.</p>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">3. A swinging pendulum</h3>
+  <p>A pendulum bob is pulled aside so that it rises 0.2 m above its lowest point, then released. Find its speed at the lowest point.</p>
+  <ol>
+    <li>\(v = \sqrt{2gh} = \sqrt{2 \times 9.8 \times 0.2} = \sqrt{3.92} \approx \) <span class="answer">1.98 m/s</span></li>
+  </ol>
+</div>
+
+<h2>Common mistakes</h2>
+<ul class="mistakes" style="margin-top:1rem">
+  <li><strong>“Energy is used up.”</strong> Energy changes form; it is never destroyed. “Used up” means it turned into a form we cannot easily use, like heat.</li>
+  <li><strong>Heavier objects slide faster.</strong> Without friction, speed at the bottom is √(2gh), the same for any mass.</li>
+  <li><strong>Adding the same energy twice.</strong> At any point, P.E. + K.E. equals the starting energy. Do not add the starting P.E. again.</li>
+  <li><strong>Ignoring units of height.</strong> Use metres in mgh. A 50 cm height is 0.5 m.</li>
+</ul>
+
+<h2>Quick check</h2>
+<div class="quiz">
+  <fieldset class="q" data-answer="b">
+    <legend>1. A ball is dropped from a height. Just before it hits the ground, its energy is mostly…</legend>
+    <div class="opts">
+      <button data-opt="a">potential</button>
+      <button data-opt="b">kinetic</button>
+      <button data-opt="c">chemical</button>
+      <button data-opt="d">zero</button>
+    </div>
+    <p class="why" hidden>All the potential energy it had at the top has turned into kinetic energy.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="b">
+    <legend>2. At the highest point of its swing, a pendulum bob has…</legend>
+    <div class="opts">
+      <button data-opt="a">maximum kinetic energy</button>
+      <button data-opt="b">maximum potential energy</button>
+      <button data-opt="c">no energy</button>
+      <button data-opt="d">maximum speed</button>
+    </div>
+    <p class="why" hidden>It stops for an instant, so K.E. = 0 and all its energy is potential.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="c">
+    <legend>3. A 1 kg ball falls from 10 m. Its kinetic energy just before landing is (g = 9.8 m/s²)…</legend>
+    <div class="opts">
+      <button data-opt="a">9.8 J</button>
+      <button data-opt="b">10 J</button>
+      <button data-opt="c">98 J</button>
+      <button data-opt="d">980 J</button>
+    </div>
+    <p class="why" hidden>K.E. = P.E. lost = \(1 \times 9.8 \times 10 = 98\) J.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="b">
+    <legend>4. A real pendulum slowly stops swinging. Its energy has…</legend>
+    <div class="opts">
+      <button data-opt="a">been destroyed</button>
+      <button data-opt="b">turned into heat and sound</button>
+      <button data-opt="c">become potential energy forever</button>
+      <button data-opt="d">turned into mass</button>
+    </div>
+    <p class="why" hidden>Air resistance and friction convert mechanical energy into heat and sound. Total energy is conserved.</p>
+  </fieldset>
+  <p class="score" aria-live="polite"></p>
+</div>
+<nav class="next-prev" aria-label="Lessons">
+  <a href="kinetic-and-potential-energy.html">← Kinetic and potential energy</a>
+  <a href="power.html">Next: Power →</a>
+</nav>
+</main>
+
+<footer class="foot">Follows Chapter 2 of the Maharashtra State Board Std 9 Science and Technology textbook, with ideas from NCERT Class 9 Science (Exploration). Explanations and examples are original.</footer>
+</div>
+
+<script src="../../assets/js/sim-kit.js"></script>
+<script src="../../assets/js/sims/conserve.js"></script>
+<script src="../../assets/js/quiz.js"></script>
+<script>
+  (function () {
+    var simEl = document.getElementById("sim-main");
+    var sim = ConserveSim.mount(simEl, { mode: "fall", m: 2, h: 5 });
+    window.lessonSim = sim;
+    // Buttons in the lesson that set up the simulation: data-sim='{...settings}'
+    document.querySelectorAll("main [data-sim]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        sim.set(JSON.parse(b.dataset.sim));
+        sim.play();
+        simEl.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+      });
+    });
+  })();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/contrib/auto-render.min.js"></script>
+<script>
+  renderMathInElement(document.body, {
+    delimiters: [{ left: "$$", right: "$$", display: true }, { left: "\\(", right: "\\)", display: false }],
+    output: window.KATEX_OUTPUT || "htmlAndMathml",
+    throwOnError: false
+  });
+</script>
+
+</body>
+</html>

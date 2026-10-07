@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Simple Machines · Visual Physics</title>
+<meta name="description" content="Balance levers of all three classes and push loads up a ramp to see how simple machines trade force for distance.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.css">
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+<div class="wrap">
+
+<header class="site-head">
+  <a class="brand" href="../../index.html">Visual <span>Physics</span></a>
+  <span class="crumb">Std 9 · Ch. 2 Work and Energy</span>
+</header>
+
+<main>
+<p class="eyebrow">Work and Energy · Lesson 5</p>
+<h1>Simple Machines</h1>
+<p class="lede">With a long enough crowbar you can lift a rock you could never pick up by hand. Simple machines do not create energy; they trade force for distance.</p>
+<p class="downloads"><a class="btn" href="../../slides/simple-machines.pptx" download>Download slides (.pptx)</a> <span>12 slides with teacher notes</span></p>
+
+<div id="sim-main"></div>
+
+<section class="prose">
+  <p class="note"><strong>Going further.</strong> This lesson goes beyond the Maharashtra Std 9 textbook and follows the new NCERT Class 9 book, which adds simple machines to the work and energy chapter.</p>
+
+  <h2>What a simple machine does</h2>
+  <p>A <strong>simple machine</strong> makes a task easier by changing the size or the direction of the force you need. The force you apply is the <strong>effort</strong>; the weight or resistance you overcome is the <strong>load</strong>.</p>
+  <div class="eq">$$\text{Mechanical advantage (MA)} = \frac{\text{load}}{\text{effort}}$$</div>
+  <p>An MA of 4 means the machine lets you move a load four times heavier than your effort. But there is no free energy: <strong>work out can never be more than work in</strong>. With less force you must push through a longer distance. In the simulation, the work by the effort always equals the work on the load (we ignore friction).</p>
+
+  <h2>Levers</h2>
+  <p>A lever is a rigid bar that turns about a fixed point, the <strong>fulcrum</strong>. The distance from the fulcrum to the load is the <em>load arm</em>; to the effort, the <em>effort arm</em>. A lever balances when</p>
+  <div class="eq">$$\text{effort} \times \text{effort arm} = \text{load} \times \text{load arm}$$</div>
+  <p>so \(\text{MA} = \dfrac{\text{effort arm}}{\text{load arm}}\). A long effort arm gives a big advantage.</p>
+</section>
+
+<h2>Three classes of lever</h2>
+<div class="eq-grid">
+  <div class="eq"><h3 style="font-size:1rem;margin:0 0 .25rem">Class I</h3><p>Fulcrum between effort and load. Seesaw, crowbar, scissors. MA can be more or less than 1.</p></div>
+  <div class="eq"><h3 style="font-size:1rem;margin:0 0 .25rem">Class II</h3><p>Load between fulcrum and effort. Wheelbarrow, nutcracker, bottle opener. MA is always more than 1.</p></div>
+  <div class="eq"><h3 style="font-size:1rem;margin:0 0 .25rem">Class III</h3><p>Effort between fulcrum and load. Tongs, tweezers, your forearm. MA is less than 1, but the load moves farther and faster.</p></div>
+</div>
+
+<section class="prose">
+  <h2>Inclined planes and pulleys</h2>
+  <p>An <strong>inclined plane</strong> (ramp) of length \(L\) rising to height \(h\) lets you push a load up instead of lifting it. Without friction, effort × \(L\) = load × \(h\), so \(\text{MA} = L/h\). A longer, gentler ramp needs less force.</p>
+  <p>A <strong>single fixed pulley</strong>, like the one on a well, has MA = 1: it does not reduce the force but lets you pull down instead of lifting up. A <strong>movable pulley</strong> that moves with the load shares the weight between two strands of rope, giving an ideal MA of 2.</p>
+</section>
+<h2>Try it</h2>
+<p class="prose" style="margin-top:1rem">Each set-up shows a real tool. Compare the effort with the load.</p>
+<ul class="tries">
+  <li><span><strong>Crowbar (class I).</strong> A 600 N rock, load arm 0.5 m, effort arm 3 m.</span>
+    <button class="btn" data-sim='{"mode":"c1","load":600,"aL":0.5,"aE":3}'>Show</button></li>
+  <li><span><strong>Wheelbarrow (class II).</strong> 600 N of bricks, load arm 0.5 m, handles 1.5 m from the wheel.</span>
+    <button class="btn" data-sim='{"mode":"c2","load":600,"aL":0.5,"aE":1.5}'>Show</button></li>
+  <li><span><strong>Tongs (class III).</strong> A 100 N load at 2 m, effort at 0.5 m.</span>
+    <button class="btn" data-sim='{"mode":"c3","load":100,"aL":2,"aE":0.5}'>Show</button></li>
+  <li><span><strong>Loading ramp.</strong> 600 N pushed up a 6 m ramp that rises 1.5 m.</span>
+    <button class="btn" data-sim='{"mode":"ramp","load":600,"L":6,"h":1.5}'>Show</button></li>
+</ul>
+<p class="prose" style="margin-top:1rem;font-size:.875rem;color:var(--muted)">What you should see: the crowbar needs only 100 N (MA 6), the wheelbarrow 200 N (MA 3). The tongs need 400 N to hold a 100 N load (MA 0.25), but the load end moves four times as far as your hand. The ramp needs 150 N instead of 600 N (MA 4), over 6 m instead of 1.5 m. Work in always equals work out.</p>
+
+<h2>Worked examples</h2>
+<div class="example">
+  <h3 style="margin-top:0">1. A crowbar</h3>
+  <p>A crowbar is used to lift a 600 N stone. The fulcrum is 0.2 m from the stone and 1.2 m from where the effort is applied. Find the effort and the mechanical advantage.</p>
+  <ol>
+    <li>effort × 1.2 = 600 × 0.2, so effort \(= 120 \div 1.2 = \) <span class="answer">100 N</span></li>
+    <li>MA \(= 600 \div 100 = \) <span class="answer">6</span></li>
+  </ol>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">2. A loading ramp</h3>
+  <p>A shopkeeper pushes an 800 N sack up a smooth ramp 4 m long onto a platform 1 m high. Find the effort, the MA and the work done.</p>
+  <ol>
+    <li>effort × 4 = 800 × 1, so effort = <span class="answer">200 N</span></li>
+    <li>MA \(= L/h = 4/1 = \) <span class="answer">4</span></li>
+    <li>Work \(= 200 \times 4 = 800 \times 1 = \) <span class="answer">800 J</span>, the same as lifting it straight up</li>
+  </ol>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">3. Balancing a seesaw</h3>
+  <p>A 20 kg child sits 1.5 m from the middle of a seesaw. Where must a 30 kg child sit to balance it?</p>
+  <ol>
+    <li>Weights: 196 N and 294 N. For balance, \(196 \times 1.5 = 294 \times d\).</li>
+    <li>\(d = 294 \div 294 = \) <span class="answer">1 m</span> from the middle, on the other side</li>
+  </ol>
+  <p>The heavier child sits closer to the fulcrum.</p>
+</div>
+
+<h2>Common mistakes</h2>
+<ul class="mistakes" style="margin-top:1rem">
+  <li><strong>“Machines create energy.”</strong> A machine can reduce the force, but never the work. Less force means more distance.</li>
+  <li><strong>Measuring arms from the end of the bar.</strong> Load arm and effort arm are measured from the fulcrum.</li>
+  <li><strong>MA upside down.</strong> MA = load ÷ effort. A machine that helps you has MA greater than 1.</li>
+  <li><strong>Thinking class III levers are useless.</strong> They need more effort, but they give speed and reach: think of tweezers or a fishing rod.</li>
+</ul>
+
+<h2>Quick check</h2>
+<div class="quiz">
+  <fieldset class="q" data-answer="b">
+    <legend>1. A machine lifts a 500 N load with an effort of 125 N. Its mechanical advantage is…</legend>
+    <div class="opts">
+      <button data-opt="a">0.25</button>
+      <button data-opt="b">4</button>
+      <button data-opt="c">375</button>
+      <button data-opt="d">625</button>
+    </div>
+    <p class="why" hidden>MA = 500 ÷ 125 = 4.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="b">
+    <legend>2. In a wheelbarrow, the load lies between the wheel (fulcrum) and the handles. It is a…</legend>
+    <div class="opts">
+      <button data-opt="a">class I lever</button>
+      <button data-opt="b">class II lever</button>
+      <button data-opt="c">class III lever</button>
+      <button data-opt="d">pulley</button>
+    </div>
+    <p class="why" hidden>Load in the middle means class II.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="a">
+    <legend>3. A smooth ramp is 5 m long and 1 m high. What effort pushes a 400 N box up it?</legend>
+    <div class="opts">
+      <button data-opt="a">80 N</button>
+      <button data-opt="b">400 N</button>
+      <button data-opt="c">2000 N</button>
+      <button data-opt="d">100 N</button>
+    </div>
+    <p class="why" hidden>effort × 5 = 400 × 1, so effort = 80 N.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="b">
+    <legend>4. Which statement about simple machines is true?</legend>
+    <div class="opts">
+      <button data-opt="a">They reduce the work needed</button>
+      <button data-opt="b">They can reduce the force needed</button>
+      <button data-opt="c">They make energy</button>
+      <button data-opt="d">They always have MA less than 1</button>
+    </div>
+    <p class="why" hidden>They trade force for distance. The work stays the same (or more, with friction).</p>
+  </fieldset>
+  <p class="score" aria-live="polite"></p>
+</div>
+<nav class="next-prev" aria-label="Lessons">
+  <a href="power.html">← Power</a>
+  <a href="../../index.html">All lessons →</a>
+</nav>
+</main>
+
+<footer class="foot">Simple machines are not part of the Maharashtra Std 9 syllabus; this lesson follows NCERT Class 9 Science (Exploration), Chapter 7. Explanations and examples are original.</footer>
+</div>
+
+<script src="../../assets/js/sim-kit.js"></script>
+<script src="../../assets/js/sims/machines.js"></script>
+<script src="../../assets/js/quiz.js"></script>
+<script>
+  (function () {
+    var simEl = document.getElementById("sim-main");
+    var sim = MachineSim.mount(simEl, { mode: "c1", load: 600, aL: 0.5, aE: 3 });
+    window.lessonSim = sim;
+    // Buttons in the lesson that set up the simulation: data-sim='{...settings}'
+    document.querySelectorAll("main [data-sim]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        sim.set(JSON.parse(b.dataset.sim));
+        sim.play();
+        simEl.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+      });
+    });
+  })();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/contrib/auto-render.min.js"></script>
+<script>
+  renderMathInElement(document.body, {
+    delimiters: [{ left: "$$", right: "$$", display: true }, { left: "\\(", right: "\\)", display: false }],
+    output: window.KATEX_OUTPUT || "htmlAndMathml",
+    throwOnError: false
+  });
+</script>
+
+</body>
+</html>

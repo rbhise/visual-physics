@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Atoms, Molecules and Molecular Mass · Visual Physics</title>
+<meta name="description" content="Build molecules from atoms and add up their molecular mass using atomic mass units.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.css">
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+<div class="wrap">
+
+<header class="site-head">
+  <a class="brand" href="../../index.html">Visual <span>Physics</span></a>
+  <span class="crumb">Std 9 · Ch. 4 Measurement of Matter</span>
+</header>
+
+<main>
+<p class="eyebrow">Measurement of Matter · Lesson 2</p>
+<h1>Atoms, Molecules and Molecular Mass</h1>
+<p class="lede">A single atom of carbon weighs about 2 × 10⁻²⁶ kg, far too small for any balance. So chemists compare atoms with each other instead, using a special unit.</p>
+<p class="downloads"><a class="btn" href="../../slides/atoms-and-molecular-mass.pptx" download>Download slides (.pptx)</a> <span>12 slides with teacher notes</span></p>
+
+<div id="sim-main"></div>
+
+<section class="prose">
+  <h2>Atoms and molecules</h2>
+  <p>An <strong>atom</strong> is the smallest particle of an element that takes part in a chemical reaction. A <strong>molecule</strong> is the smallest particle of a substance that can exist independently and still has all the properties of that substance.</p>
+  <ul class="mistakes">
+    <li>Some elements exist as single atoms, like helium (He).</li>
+    <li>Many elements exist as molecules of the same atoms: oxygen O₂, hydrogen H₂, nitrogen N₂.</li>
+    <li>Compounds are molecules of different atoms: water H₂O, carbon dioxide CO₂, ammonia NH₃.</li>
+  </ul>
+
+  <h2>The atomic mass unit</h2>
+  <p>Atoms are too light to weigh directly, so their masses are compared with the carbon-12 atom. The <strong>unified atomic mass unit (u)</strong>, also called the dalton (Da), is one-twelfth of the mass of a carbon-12 atom:</p>
+  <div class="eq">$$1\ \text{u} = \tfrac{1}{12} \times \text{mass of one C-12 atom} \approx 1.66 \times 10^{-27}\ \text{kg}$$</div>
+  <p>The <strong>relative atomic mass</strong> of an element tells how many times heavier its atom is than 1 u. Carbon is 12 u, oxygen 16 u, hydrogen about 1 u.</p>
+
+  <h2>Molecular mass</h2>
+  <p>The <strong>molecular mass</strong> of a substance is the sum of the atomic masses of all the atoms in one molecule. Multiply each atomic mass by the number of those atoms, then add.</p>
+  <div class="eq">$$\text{H}_2\text{O}: \quad 2 \times 1 + 1 \times 16 = 18\ \text{u}$$</div>
+</section>
+
+<h2>Atomic masses you will need</h2>
+<div class="table-wrap">
+<table class="compare">
+  <thead><tr><th>Element</th><th>Symbol</th><th>Atomic mass (u)</th><th>Element</th><th>Symbol</th><th>Atomic mass (u)</th></tr></thead>
+  <tbody>
+    <tr><td>Hydrogen</td><td>H</td><td>1</td><td>Sodium</td><td>Na</td><td>23</td></tr>
+    <tr><td>Carbon</td><td>C</td><td>12</td><td>Magnesium</td><td>Mg</td><td>24</td></tr>
+    <tr><td>Nitrogen</td><td>N</td><td>14</td><td>Sulphur</td><td>S</td><td>32</td></tr>
+    <tr><td>Oxygen</td><td>O</td><td>16</td><td>Chlorine</td><td>Cl</td><td>35.5</td></tr>
+    <tr><td>Aluminium</td><td>Al</td><td>27</td><td>Calcium</td><td>Ca</td><td>40</td></tr>
+  </tbody>
+</table>
+</div>
+<h2>Try it</h2>
+<p class="prose" style="margin-top:1rem">Pick a molecule and check the sum in the table beside it.</p>
+<ul class="tries">
+  <li><span><strong>Carbon dioxide.</strong> One carbon, two oxygen.</span>
+    <button class="btn" data-sim='{"formula":"CO2"}'>Show</button></li>
+  <li><span><strong>Sulphuric acid.</strong> Seven atoms of three elements.</span>
+    <button class="btn" data-sim='{"formula":"H2SO4"}'>Show</button></li>
+  <li><span><strong>Calcium carbonate.</strong> The main part of marble and limestone.</span>
+    <button class="btn" data-sim='{"formula":"CaCO3"}'>Show</button></li>
+  <li><span><strong>Glucose.</strong> 24 atoms in one molecule.</span>
+    <button class="btn" data-sim='{"formula":"C6H12O6"}'>Show</button></li>
+</ul>
+<p class="prose" style="margin-top:1rem;font-size:.875rem;color:var(--muted)">What you should see: CO₂ is 12 + 32 = 44 u. H₂SO₄ is 2 + 32 + 64 = 98 u. CaCO₃ is 40 + 12 + 48 = 100 u. Glucose is 72 + 12 + 96 = 180 u. Try building your own too: add atoms one at a time.</p>
+
+<h2>Worked examples</h2>
+<div class="example">
+  <h3 style="margin-top:0">1. Ammonia</h3>
+  <p>Find the molecular mass of ammonia, NH₃.</p>
+  <ol>
+    <li>\(1 \times 14 + 3 \times 1 = \) <span class="answer">17 u</span></li>
+  </ol>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">2. Sulphuric acid</h3>
+  <p>Find the molecular mass of sulphuric acid, H₂SO₄.</p>
+  <ol>
+    <li>H: \(2 \times 1 = 2\); S: \(1 \times 32 = 32\); O: \(4 \times 16 = 64\)</li>
+    <li>Total \(= 2 + 32 + 64 = \) <span class="answer">98 u</span></li>
+  </ol>
+  <button class="btn" data-sim='{"formula":"H2SO4"}'>Build it in the simulation</button>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">3. Glucose</h3>
+  <p>Find the molecular mass of glucose, C₆H₁₂O₆.</p>
+  <ol>
+    <li>\(6 \times 12 + 12 \times 1 + 6 \times 16 = 72 + 12 + 96 = \) <span class="answer">180 u</span></li>
+  </ol>
+</div>
+
+<h2>Common mistakes</h2>
+<ul class="mistakes" style="margin-top:1rem">
+  <li><strong>Forgetting the subscript.</strong> In H₂SO₄ there are 4 oxygen atoms: 4 × 16, not 16.</li>
+  <li><strong>Subscripts apply to the next atom only.</strong> In CaCO₃, the 3 belongs to O only. Carbon has 1 atom.</li>
+  <li><strong>Writing grams for one molecule.</strong> Molecular mass is in u. Grams come in with the mole (next lesson).</li>
+  <li><strong>Mixing up atom and molecule.</strong> O is an oxygen atom; O₂ is an oxygen molecule made of two atoms.</li>
+</ul>
+
+<h2>Quick check</h2>
+<div class="quiz">
+  <fieldset class="q" data-answer="b">
+    <legend>1. The molecular mass of carbon dioxide (CO₂) is…</legend>
+    <div class="opts">
+      <button data-opt="a">28 u</button>
+      <button data-opt="b">44 u</button>
+      <button data-opt="c">32 u</button>
+      <button data-opt="d">12 u</button>
+    </div>
+    <p class="why" hidden>12 + 2 × 16 = 44 u.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="b">
+    <legend>2. 1 u is defined as…</legend>
+    <div class="opts">
+      <button data-opt="a">the mass of one hydrogen atom exactly</button>
+      <button data-opt="b">one-twelfth of the mass of a carbon-12 atom</button>
+      <button data-opt="c">the mass of one proton</button>
+      <button data-opt="d">1 gram</button>
+    </div>
+    <p class="why" hidden>The unified atomic mass unit is based on carbon-12.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="c">
+    <legend>3. How many atoms are in one molecule of glucose, C₆H₁₂O₆?</legend>
+    <div class="opts">
+      <button data-opt="a">3</button>
+      <button data-opt="b">6</button>
+      <button data-opt="c">24</button>
+      <button data-opt="d">180</button>
+    </div>
+    <p class="why" hidden>6 + 12 + 6 = 24 atoms.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="c">
+    <legend>4. The molecular mass of calcium carbonate (CaCO₃) is (Ca = 40)…</legend>
+    <div class="opts">
+      <button data-opt="a">68 u</button>
+      <button data-opt="b">84 u</button>
+      <button data-opt="c">100 u</button>
+      <button data-opt="d">108 u</button>
+    </div>
+    <p class="why" hidden>40 + 12 + 3 × 16 = 100 u.</p>
+  </fieldset>
+  <p class="score" aria-live="polite"></p>
+</div>
+<nav class="next-prev" aria-label="Lessons">
+  <a href="laws-of-chemical-combination.html">← Laws of chemical combination</a>
+  <a href="the-mole.html">Next: The mole →</a>
+</nav>
+</main>
+
+<footer class="foot">Follows Chapter 4 of the Maharashtra State Board Std 9 Science and Technology textbook. Explanations and examples are original.</footer>
+</div>
+
+<script src="../../assets/js/sim-kit.js"></script>
+<script src="../../assets/js/chem-kit.js"></script>
+<script src="../../assets/js/sims/molecule.js"></script>
+<script src="../../assets/js/quiz.js"></script>
+<script>
+  (function () {
+    var simEl = document.getElementById("sim-main");
+    var sim = MoleculeSim.mount(simEl, { formula: "H2O" });
+    window.lessonSim = sim;
+    // Buttons in the lesson that set up the simulation: data-sim='{...settings}'
+    document.querySelectorAll("main [data-sim]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        sim.set(JSON.parse(b.dataset.sim));
+        sim.play();
+        simEl.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+      });
+    });
+  })();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/contrib/auto-render.min.js"></script>
+<script>
+  renderMathInElement(document.body, {
+    delimiters: [{ left: "$$", right: "$$", display: true }, { left: "\\(", right: "\\)", display: false }],
+    output: window.KATEX_OUTPUT || "htmlAndMathml",
+    throwOnError: false
+  });
+</script>
+
+</body>
+</html>

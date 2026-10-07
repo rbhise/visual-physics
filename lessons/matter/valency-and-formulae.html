@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Valency and Chemical Formulae · Visual Physics</title>
+<meta name="description" content="Pick a positive and a negative ion and write the formula of the compound by cross-multiplying their valencies.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.css">
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+<div class="wrap">
+
+<header class="site-head">
+  <a class="brand" href="../../index.html">Visual <span>Physics</span></a>
+  <span class="crumb">Std 9 · Ch. 4 Measurement of Matter</span>
+</header>
+
+<main>
+<p class="eyebrow">Measurement of Matter · Lesson 4</p>
+<h1>Valency and Chemical Formulae</h1>
+<p class="lede">Why is water H₂O but table salt NaCl, and why does aluminium oxide need two aluminium atoms for every three oxygen? The answer is each element's combining capacity.</p>
+<p class="downloads"><a class="btn" href="../../slides/valency-and-formulae.pptx" download>Download slides (.pptx)</a> <span>12 slides with teacher notes</span></p>
+
+<div id="sim-main"></div>
+
+<section class="prose">
+  <h2>Valency</h2>
+  <p>The <strong>valency</strong> of an element is its combining capacity: the number of hydrogen atoms (or other atoms of valency 1) that one of its atoms can combine with. It depends on how many electrons the atom gives away, takes in or shares.</p>
+  <ul class="mistakes">
+    <li>Hydrogen, sodium, potassium and chlorine have valency 1.</li>
+    <li>Oxygen, magnesium and calcium have valency 2.</li>
+    <li>Aluminium and nitrogen (in ammonia) have valency 3. Carbon usually has valency 4.</li>
+  </ul>
+  <p>Some elements show <strong>variable valency</strong>. Iron can have valency 2, as in iron(II) chloride FeCl₂, or 3, as in iron(III) chloride FeCl₃. Copper can be 1 or 2.</p>
+
+  <h2>Radicals</h2>
+  <p>Some groups of atoms stay together and act as a single unit with their own valency. These are <strong>radicals</strong> (polyatomic ions): ammonium NH₄⁺, hydroxide OH⁻, nitrate NO₃⁻, sulphate SO₄²⁻, carbonate CO₃²⁻ and phosphate PO₄³⁻.</p>
+
+  <h2>Writing a formula: the criss-cross method</h2>
+  <ol class="mistakes">
+    <li>Write the symbols, positive part first: Al and O.</li>
+    <li>Write each valency above its symbol: Al 3, O 2.</li>
+    <li>Cross over: the valency of one becomes the subscript of the other: Al₂O₃.</li>
+    <li>Divide by any common factor to get the simplest ratio: Mg₂O₂ becomes MgO.</li>
+    <li>Put a radical in brackets if you need more than one of it: Ca(OH)₂, not CaOH₂.</li>
+  </ol>
+  <p>The simulation shows each step. The total positive valency then equals the total negative valency: in Al₂O₃, \(2 \times 3 = 3 \times 2 = 6\).</p>
+</section>
+
+<h2>Common ions and their valencies</h2>
+<div class="table-wrap">
+<table class="compare">
+  <thead><tr><th>Valency</th><th>Positive ions</th><th>Negative ions</th></tr></thead>
+  <tbody>
+    <tr><th>1</th><td>Na⁺, K⁺, NH₄⁺, H⁺</td><td>Cl⁻, OH⁻, NO₃⁻</td></tr>
+    <tr><th>2</th><td>Mg²⁺, Ca²⁺, Cu²⁺, Fe²⁺</td><td>O²⁻, SO₄²⁻, CO₃²⁻</td></tr>
+    <tr><th>3</th><td>Al³⁺, Fe³⁺</td><td>PO₄³⁻</td></tr>
+  </tbody>
+</table>
+</div>
+<h2>Try it</h2>
+<p class="prose" style="margin-top:1rem">Choose the two ions and follow the arrows.</p>
+<ul class="tries">
+  <li><span><strong>Aluminium oxide.</strong> Valencies 3 and 2.</span>
+    <button class="btn" data-sim='{"cat":"Al","an":"O"}'>Show</button></li>
+  <li><span><strong>Magnesium oxide.</strong> Both valency 2: simplify.</span>
+    <button class="btn" data-sim='{"cat":"Mg","an":"O"}'>Show</button></li>
+  <li><span><strong>Calcium hydroxide.</strong> A radical needs brackets.</span>
+    <button class="btn" data-sim='{"cat":"Ca","an":"OH"}'>Show</button></li>
+  <li><span><strong>Ammonium sulphate.</strong> Two radicals.</span>
+    <button class="btn" data-sim='{"cat":"NH4","an":"SO4"}'>Show</button></li>
+</ul>
+<p class="prose" style="margin-top:1rem;font-size:.875rem;color:var(--muted)">What you should see: aluminium oxide is Al₂O₃ (102 u). Magnesium oxide first gives Mg₂O₂, which simplifies to MgO. Calcium hydroxide is Ca(OH)₂: the brackets show two whole OH groups. Ammonium sulphate is (NH₄)₂SO₄ (132 u).</p>
+
+<h2>Worked examples</h2>
+<div class="example">
+  <h3 style="margin-top:0">1. Aluminium oxide</h3>
+  <p>Write the formula of aluminium oxide and find its formula mass. (Al = 27, O = 16)</p>
+  <ol>
+    <li>Valencies: Al 3, O 2. Cross over: <span class="answer">Al₂O₃</span></li>
+    <li>Mass \(= 2 \times 27 + 3 \times 16 = 54 + 48 = \) <span class="answer">102 u</span></li>
+  </ol>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">2. Calcium hydroxide</h3>
+  <p>Write the formula of calcium hydroxide.</p>
+  <ol>
+    <li>Valencies: Ca 2, OH 1. Cross over: Ca₁(OH)₂</li>
+    <li>Drop the 1 and keep the brackets: <span class="answer">Ca(OH)₂</span>, mass \(40 + 2 \times 17 = 74\) u</li>
+  </ol>
+  <button class="btn" data-sim='{"cat":"Ca","an":"OH"}'>See it in the simulation</button>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">3. Iron chlorides</h3>
+  <p>Write the formulae of iron(II) chloride and iron(III) chloride.</p>
+  <ol>
+    <li>Iron(II) has valency 2: <span class="answer">FeCl₂</span></li>
+    <li>Iron(III) has valency 3: <span class="answer">FeCl₃</span></li>
+  </ol>
+  <p>The Roman numeral in the name tells you which valency the iron has.</p>
+</div>
+
+<h2>Common mistakes</h2>
+<ul class="mistakes" style="margin-top:1rem">
+  <li><strong>Forgetting to simplify.</strong> Mg₂O₂ is not a formula; divide by 2 to get MgO.</li>
+  <li><strong>Missing brackets.</strong> CaOH₂ would mean one O and two H. Write Ca(OH)₂ for two hydroxide groups.</li>
+  <li><strong>Negative part first.</strong> Write the metal or positive ion first: NaCl, not ClNa.</li>
+  <li><strong>Ignoring variable valency.</strong> Check the name: iron(III) oxide is Fe₂O₃, iron(II) oxide is FeO.</li>
+</ul>
+
+<h2>Quick check</h2>
+<div class="quiz">
+  <fieldset class="q" data-answer="b">
+    <legend>1. The formula of magnesium chloride is…</legend>
+    <div class="opts">
+      <button data-opt="a">MgCl</button>
+      <button data-opt="b">MgCl₂</button>
+      <button data-opt="c">Mg₂Cl</button>
+      <button data-opt="d">Mg₂Cl₂</button>
+    </div>
+    <p class="why" hidden>Mg has valency 2, Cl has valency 1: MgCl₂.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="b">
+    <legend>2. What is the valency of oxygen?</legend>
+    <div class="opts">
+      <button data-opt="a">1</button>
+      <button data-opt="b">2</button>
+      <button data-opt="c">3</button>
+      <button data-opt="d">4</button>
+    </div>
+    <p class="why" hidden>Oxygen combines with two hydrogen atoms in H₂O.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="b">
+    <legend>3. Which is the correct formula for sodium sulphate?</legend>
+    <div class="opts">
+      <button data-opt="a">NaSO₄</button>
+      <button data-opt="b">Na₂SO₄</button>
+      <button data-opt="c">Na(SO₄)₂</button>
+      <button data-opt="d">Na₂(SO₄)₂</button>
+    </div>
+    <p class="why" hidden>Na valency 1, SO₄ valency 2: Na₂SO₄.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="c">
+    <legend>4. A group of atoms that acts as one unit with its own valency is called a…</legend>
+    <div class="opts">
+      <button data-opt="a">molecule</button>
+      <button data-opt="b">mole</button>
+      <button data-opt="c">radical</button>
+      <button data-opt="d">mixture</button>
+    </div>
+    <p class="why" hidden>Examples are NH₄⁺, OH⁻ and SO₄²⁻.</p>
+  </fieldset>
+  <p class="score" aria-live="polite"></p>
+</div>
+<nav class="next-prev" aria-label="Lessons">
+  <a href="the-mole.html">← The mole</a>
+  <a href="../acids/indicators-and-ph.html">Next chapter: Acids, bases and indicators →</a>
+</nav>
+</main>
+
+<footer class="foot">Follows Chapter 4 of the Maharashtra State Board Std 9 Science and Technology textbook. Explanations and examples are original.</footer>
+</div>
+
+<script src="../../assets/js/sim-kit.js"></script>
+<script src="../../assets/js/chem-kit.js"></script>
+<script src="../../assets/js/sims/valency.js"></script>
+<script src="../../assets/js/quiz.js"></script>
+<script>
+  (function () {
+    var simEl = document.getElementById("sim-main");
+    var sim = FormulaSim.mount(simEl, { cat: "Al", an: "O" });
+    window.lessonSim = sim;
+    // Buttons in the lesson that set up the simulation: data-sim='{...settings}'
+    document.querySelectorAll("main [data-sim]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        sim.set(JSON.parse(b.dataset.sim));
+        sim.play();
+        simEl.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+      });
+    });
+  })();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/contrib/auto-render.min.js"></script>
+<script>
+  renderMathInElement(document.body, {
+    delimiters: [{ left: "$$", right: "$$", display: true }, { left: "\\(", right: "\\)", display: false }],
+    output: window.KATEX_OUTPUT || "htmlAndMathml",
+    throwOnError: false
+  });
+</script>
+
+</body>
+</html>

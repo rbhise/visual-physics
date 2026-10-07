@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Projectile Motion · Visual Physics</title>
+<meta name="description" content="Launch a projectile, watch its horizontal and vertical motion separately, and learn the equations for range, height and flight time.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.css">
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+<div class="wrap">
+
+<header class="site-head">
+  <a class="brand" href="../../index.html">Visual <span>Physics</span></a>
+  <span class="crumb">Unit 1 · Kinematics</span>
+</header>
+
+<main>
+<p class="eyebrow">Kinematics · Grade 11–12</p>
+<h1>Projectile Motion</h1>
+<p class="lede">Anything thrown, kicked or launched follows a curved path. That curve is two simple motions happening at the same time.</p>
+
+<div id="sim-projectile"></div>
+
+<section class="prose">
+  <h2>The big idea</h2>
+  <p>Once a projectile leaves your hand, the only force on it (ignoring air resistance) is gravity, and gravity pulls straight down. Nothing pushes it sideways, so its <span class="c-vx">horizontal velocity never changes</span>. Its <span class="c-vy">vertical velocity changes at a steady rate</span> of \(g = 9.81\ \text{m/s}^2\) downward.</p>
+  <p>Turn on <em>Components</em> in the simulation and launch. The teal arrow stays exactly the same length for the whole flight. The coral arrow shrinks to zero at the top, then grows pointing down.</p>
+  <div class="note"><strong>Treat x and y as two separate problems.</strong> The only thing they share is time, \(t\).</div>
+</section>
+
+<h2>The equations</h2>
+<p class="prose" style="margin-top:1rem">First split the launch velocity \(v_0\) at angle \(\theta\) into components:</p>
+<div class="eq" style="max-width:42rem;margin-top:1rem">$$v_{0x} = v_0\cos\theta \qquad v_{0y} = v_0\sin\theta$$</div>
+<div class="eq-grid">
+  <div class="eq x">
+    <h3 class="c-vx">Horizontal: constant velocity</h3>
+    $$a_x = 0$$
+    $$v_x = v_0\cos\theta$$
+    $$x = v_0\cos\theta\;t$$
+  </div>
+  <div class="eq y">
+    <h3 class="c-vy">Vertical: constant acceleration</h3>
+    $$a_y = -g$$
+    $$v_y = v_0\sin\theta - g\,t$$
+    $$y = h + v_0\sin\theta\;t - \tfrac12 g t^2$$
+  </div>
+</div>
+
+<h3>Shortcuts for landing at launch height (\(h = 0\))</h3>
+<div class="eq-grid">
+  <div class="eq">$$T = \frac{2v_0\sin\theta}{g}$$ <p style="font-size:.875rem;color:var(--muted)">Time of flight</p></div>
+  <div class="eq">$$R = \frac{v_0^2\sin 2\theta}{g}$$ <p style="font-size:.875rem;color:var(--muted)">Range</p></div>
+  <div class="eq">$$H = \frac{v_0^2\sin^2\theta}{2g}$$ <p style="font-size:.875rem;color:var(--muted)">Maximum height</p></div>
+</div>
+<p class="prose" style="margin-top:1rem">These only work when the projectile lands at the same height it was launched from. For a cliff or a table, use the full \(y\) equation and solve for \(t\).</p>
+
+<h2>Try it</h2>
+<p class="prose" style="margin-top:1rem">Each button sets up the simulation and runs the launches for you. Predict the result first, then watch.</p>
+<ul class="tries">
+  <li><span><strong>Same speed, 30° and 60°.</strong> Which one lands farther?</span>
+    <button class="btn" data-seq='[{"v0":20,"angle":30,"h":0,"planet":"Earth"},{"v0":20,"angle":60,"h":0,"planet":"Earth"}]'>Run 30° then 60°</button></li>
+  <li><span><strong>Hunt for the longest throw.</strong> 30°, 45° and 60° at 20 m/s from the ground.</span>
+    <button class="btn" data-seq='[{"v0":20,"angle":30,"h":0,"planet":"Earth"},{"v0":20,"angle":45,"h":0,"planet":"Earth"},{"v0":20,"angle":60,"h":0,"planet":"Earth"}]'>Run all three</button></li>
+  <li><span><strong>From a 30 m cliff.</strong> Is 45° still the best angle?</span>
+    <button class="btn" data-seq='[{"v0":15,"angle":45,"h":30,"planet":"Earth"},{"v0":15,"angle":30,"h":30,"planet":"Earth"}]'>Run 45° then 30°</button></li>
+  <li><span><strong>The same throw on the Moon.</strong> Gravity is about one-sixth as strong.</span>
+    <button class="btn" data-seq='[{"v0":15,"angle":45,"h":0,"planet":"Earth"},{"v0":15,"angle":45,"h":0,"planet":"Moon"}]'>Run Earth then Moon</button></li>
+</ul>
+<p class="prose" style="margin-top:1rem;font-size:.875rem;color:var(--muted)">What you should see: 30° and 60° tie, because \(\sin 60^\circ = \sin 120^\circ\). 45° wins on flat ground. From the cliff, the lower 30° throw goes farther (43.6 m against 40.1 m) because the ball has extra time to fall.</p>
+
+<h2>Worked examples</h2>
+<div class="example">
+  <h3 style="margin-top:0">1. A soccer kick</h3>
+  <p>A ball is kicked from the ground at 20 m/s, 35° above the horizontal. Find its flight time, range and maximum height.</p>
+  <ol>
+    <li>Components: \(v_{0x} = 20\cos 35^\circ = 16.38\) m/s and \(v_{0y} = 20\sin 35^\circ = 11.47\) m/s.</li>
+    <li>Flight time: \(T = \dfrac{2(11.47)}{9.81} = \) <span class="answer">2.34 s</span></li>
+    <li>Range: \(R = v_{0x}T = 16.38 \times 2.34 = \) <span class="answer">38.3 m</span></li>
+    <li>Maximum height: \(H = \dfrac{11.47^2}{2(9.81)} = \) <span class="answer">6.71 m</span></li>
+  </ol>
+  <button class="btn" data-seq='[{"v0":20,"angle":35,"h":0,"planet":"Earth"}]'>Check it in the simulation</button>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">2. Thrown off a cliff</h3>
+  <p>A stone is thrown horizontally at 15 m/s from the top of a 20 m cliff. How long is it in the air, and how far from the base does it land?</p>
+  <ol>
+    <li>Thrown horizontally means \(\theta = 0\), so \(v_{0y} = 0\) and \(v_{0x} = 15\) m/s.</li>
+    <li>Vertical: \(0 = 20 - \tfrac12(9.81)t^2\), so \(t = \sqrt{2(20)/9.81} = \) <span class="answer">2.02 s</span></li>
+    <li>Horizontal: \(x = 15 \times 2.02 = \) <span class="answer">30.3 m</span></li>
+  </ol>
+  <button class="btn" data-seq='[{"v0":15,"angle":0,"h":20,"planet":"Earth"}]'>Check it in the simulation</button>
+</div>
+
+<h2>Common mistakes</h2>
+<ul class="mistakes" style="margin-top:1rem">
+  <li><strong>Using \(v_0\) in the x or y equation.</strong> Always use the component, \(v_0\cos\theta\) or \(v_0\sin\theta\).</li>
+  <li><strong>Saying the velocity is zero at the top.</strong> Only \(v_y\) is zero. The ball is still moving sideways at \(v_0\cos\theta\).</li>
+  <li><strong>Using the range shortcut from a cliff.</strong> \(R = v_0^2\sin 2\theta / g\) assumes the ball lands at launch height.</li>
+  <li><strong>Mixing up signs.</strong> Pick up as positive and keep it that way. Then \(a_y = -9.81\ \text{m/s}^2\) for the whole flight, on the way up too.</li>
+</ul>
+
+<h2>Quick check</h2>
+<div class="quiz">
+  <fieldset class="q" data-answer="b">
+    <legend>1. At the highest point of its path, a projectile's velocity is…</legend>
+    <div class="opts">
+      <button data-opt="a">zero</button>
+      <button data-opt="b">horizontal, equal to \(v_0\cos\theta\)</button>
+      <button data-opt="c">vertical</button>
+      <button data-opt="d">equal to \(v_0\)</button>
+    </div>
+    <p class="why" hidden>At the top, \(v_y = 0\) but \(v_x\) never changes, so the velocity points sideways.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="c">
+    <legend>2. Two balls leave the ground at the same speed, one at 30° and one at 60°. Which lands farther away?</legend>
+    <div class="opts">
+      <button data-opt="a">The 30° ball</button>
+      <button data-opt="b">The 60° ball</button>
+      <button data-opt="c">They land at the same spot</button>
+    </div>
+    <p class="why" hidden>Range depends on \(\sin 2\theta\), and \(\sin 60^\circ = \sin 120^\circ\). Complementary angles give equal ranges.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="a">
+    <legend>3. From the same height, one ball is dropped and another is thrown horizontally at the same instant. Which hits the ground first?</legend>
+    <div class="opts">
+      <button data-opt="a">They land at the same time</button>
+      <button data-opt="b">The dropped ball</button>
+      <button data-opt="c">The thrown ball</button>
+    </div>
+    <p class="why" hidden>Both start with \(v_{0y} = 0\) and fall with the same \(g\). Horizontal speed has no effect on the vertical motion.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="d">
+    <legend>4. On flat ground, you double the launch speed and keep the angle the same. The range becomes…</legend>
+    <div class="opts">
+      <button data-opt="a">the same</button>
+      <button data-opt="b">2 times larger</button>
+      <button data-opt="c">\(\sqrt{2}\) times larger</button>
+      <button data-opt="d">4 times larger</button>
+    </div>
+    <p class="why" hidden>\(R \propto v_0^2\), so \(2^2 = 4\). Try 10 m/s and 20 m/s in the simulation.</p>
+  </fieldset>
+  <p class="score" aria-live="polite"></p>
+</div>
+</main>
+
+<footer class="foot">This lesson ignores air resistance, which is a good model for heavy, slow objects over short distances.</footer>
+</div>
+
+<script src="../../assets/js/sims/projectile.js"></script>
+<script src="../../assets/js/quiz.js"></script>
+<script>
+  // Simulation plus the "Try it" buttons that run launches in sequence
+  (function () {
+    var queue = [];
+    var sim = ProjectileSim.mount(document.getElementById("sim-projectile"), {
+      v0: 20, angle: 45, h: 0,
+      onLand: function () { if (queue.length) setTimeout(function () { sim.set(queue.shift(), true); }, 400); }
+    });
+    document.querySelectorAll("[data-seq]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        queue = JSON.parse(b.dataset.seq);
+        sim.clearTrails();
+        sim.set(queue.shift(), true);
+        document.getElementById("sim-projectile").scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+      });
+    });
+  })();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/contrib/auto-render.min.js"></script>
+<script>
+  renderMathInElement(document.body, {
+    delimiters: [{ left: "$$", right: "$$", display: true }, { left: "\\(", right: "\\)", display: false }],
+    output: window.KATEX_OUTPUT || "htmlAndMathml",
+    throwOnError: false
+  });
+</script>
+</body>
+</html>

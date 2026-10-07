@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Reflection and Plane Mirrors · Visual Physics</title>
+<meta name="description" content="Bounce rays off a mirror to see the laws of reflection, compare smooth and rough surfaces, and find out how tall a mirror you need to see yourself head to toe.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.css">
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+<div class="wrap">
+
+<header class="site-head">
+  <a class="brand" href="../../index.html">Visual <span>Physics</span></a>
+  <span class="crumb">Std 9 · Ch. 11 Reflection of Light</span>
+</header>
+
+<main>
+<p class="eyebrow">Reflection of Light · Lesson 1</p>
+<h1>Reflection and Plane Mirrors</h1>
+<p class="lede">You see this page because light bounces off it and into your eyes. A mirror bounces light so neatly that it makes an image of the world behind the glass.</p>
+<p class="downloads"><a class="btn" href="../../slides/reflection-and-plane-mirrors.pptx" download>Download slides (.pptx)</a> <span>12 slides with teacher notes</span></p>
+
+<div id="sim-main"></div>
+
+<section class="prose">
+  <h2>Light and reflection</h2>
+  <p>Light is a form of energy that gives us the sensation of vision. It travels in straight lines, and we draw its path as a <strong>ray</strong>: a line with an arrow showing the direction. When light falls on a surface and bounces back, we call it <strong>reflection</strong>.</p>
+  <p>A <strong>mirror</strong> is a very smooth, shiny surface that reflects almost all the light falling on it. An ordinary mirror is a sheet of glass with a thin coat of silver or aluminium on the back. A flat mirror is called a <strong>plane mirror</strong>.</p>
+
+  <h2>The laws of reflection</h2>
+  <p>Draw a line at right angles to the mirror at the point where a ray strikes it. This line is the <strong>normal</strong>. The angle between the incoming (incident) ray and the normal is the <strong>angle of incidence, i</strong>. The angle between the reflected ray and the normal is the <strong>angle of reflection, r</strong>.</p>
+  <ul class="mistakes">
+    <li><strong>First law:</strong> the incident ray, the reflected ray and the normal all lie in the same plane, and the incident and reflected rays are on opposite sides of the normal.</li>
+    <li><strong>Second law:</strong> the angle of reflection equals the angle of incidence, \(\angle r = \angle i\).</li>
+  </ul>
+
+  <h2>Regular and irregular reflection</h2>
+  <p>On a smooth mirror, rays that arrive parallel leave parallel. This is <strong>regular reflection</strong>, and it is why a mirror shows a clear image. On a rough surface such as paper or a wall, the normal points a different way at every tiny bump, so parallel rays scatter in many directions. This is <strong>irregular</strong> (or diffuse) reflection. Each ray still obeys \(i = r\); only the normals differ. Diffuse reflection is what lets you see a page from any angle.</p>
+
+  <h2>The image in a plane mirror</h2>
+  <p>Rays from an object reflect off the mirror and spread out towards your eye. Your brain traces them back in straight lines, so they seem to come from a point behind the mirror. The image formed by a plane mirror is:</p>
+  <ul class="mistakes">
+    <li><strong>virtual:</strong> the rays do not really meet there, so it cannot be caught on a screen;</li>
+    <li><strong>erect</strong> (upright) and the <strong>same size</strong> as the object;</li>
+    <li>as far <strong>behind</strong> the mirror as the object is in front of it;</li>
+    <li><strong>laterally inverted:</strong> left and right are swapped. Hold up your right hand and your image raises its left.</li>
+  </ul>
+  <div class="note"><strong>How tall a mirror?</strong> To see yourself from head to toe you need a mirror only <strong>half your height</strong>, hung so its top is halfway between your eyes and the top of your head. Distance does not matter.</div>
+</section>
+<h2>Try it</h2>
+<p class="prose" style="margin-top:1rem">Switch between the three views and use the sliders.</p>
+<ul class="tries">
+  <li><span><strong>Sweep the angle.</strong> Does r ever differ from i?</span>
+    <button class="btn" data-sim='{"mode":"laws","i":0,"rough":false,"sweep":true}'>Sweep i</button></li>
+  <li><span><strong>Rough surface.</strong> What happens to the parallel rays?</span>
+    <button class="btn" data-sim='{"mode":"laws","i":35,"rough":true}'>Make it rough</button></li>
+  <li><span><strong>Move the object.</strong> Where is the image each time?</span>
+    <button class="btn" data-sim='{"mode":"image","d":10,"sweep":true}'>Move it</button></li>
+  <li><span><strong>Full-length mirror.</strong> Change the distance from the mirror.</span>
+    <button class="btn" data-sim='{"mode":"height","ph":170,"pd":120}'>Show</button></li>
+</ul>
+<p class="prose" style="margin-top:1rem;font-size:.875rem;color:var(--muted)">What you should see: r always equals i. On the rough surface the three reflected rays fly off in different directions. The image stays exactly as far behind the mirror as the object is in front. For a 170 cm person the green part of the mirror is 85 cm long, at any distance.</p>
+
+<h2>Worked examples</h2>
+<div class="example">
+  <h3 style="margin-top:0">1. Angle from the surface</h3>
+  <p>A ray strikes a plane mirror making an angle of 25° with the mirror's surface. Find the angle of incidence, the angle of reflection, and the angle between the incident and reflected rays.</p>
+  <ol>
+    <li>The normal is at 90° to the surface, so \(i = 90° - 25° = \) <span class="answer">65°</span></li>
+    <li>By the second law, \(r = i = \) <span class="answer">65°</span></li>
+    <li>Angle between the rays \(= i + r = \) <span class="answer">130°</span></li>
+  </ol>
+  <button class="btn" data-sim='{"mode":"laws","i":65,"rough":false}'>Show i = 65°</button>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">2. Walking towards a mirror</h3>
+  <p>Asha stands 3 m in front of a plane mirror. How far is she from her image? She walks 1 m towards the mirror. How far is she from her image now?</p>
+  <ol>
+    <li>The image is 3 m behind the mirror, so the distance is \(3 + 3 = \) <span class="answer">6 m</span></li>
+    <li>Now she is 2 m from the mirror and her image is 2 m behind it: <span class="answer">4 m</span></li>
+  </ol>
+  <p>Moving 1 m closer brought her 2 m closer to her image.</p>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">3. A mirror for the hall</h3>
+  <p>Rohan is 176 cm tall and his eyes are 166 cm above the floor. What is the shortest mirror in which he can see his whole body, and how high should its bottom edge be?</p>
+  <ol>
+    <li>Mirror length \(= 176 \div 2 = \) <span class="answer">88 cm</span></li>
+    <li>Bottom edge: halfway between his feet and his eyes, \(166 \div 2 = \) <span class="answer">83 cm</span> above the floor</li>
+  </ol>
+  <button class="btn" data-sim='{"mode":"height","ph":176,"pd":100}'>Check it</button>
+</div>
+
+<h2>Common mistakes</h2>
+<ul class="mistakes" style="margin-top:1rem">
+  <li><strong>Measuring the angle from the mirror.</strong> Angles of incidence and reflection are always measured from the normal.</li>
+  <li><strong>“The image is on the mirror.”</strong> It is behind the mirror, as far behind as the object is in front.</li>
+  <li><strong>“Rough surfaces break the laws.”</strong> Every ray still obeys i = r; the normals just point different ways.</li>
+  <li><strong>“You need a mirror as tall as you are.”</strong> Half your height is enough, at any distance.</li>
+</ul>
+
+<h2>Quick check</h2>
+<div class="quiz">
+  <fieldset class="q" data-answer="b">
+    <legend>1. A ray hits a mirror with an angle of incidence of 40°. The angle of reflection is…</legend>
+    <div class="opts">
+      <button data-opt="a">50°</button>
+      <button data-opt="b">40°</button>
+      <button data-opt="c">80°</button>
+      <button data-opt="d">90°</button>
+    </div>
+    <p class="why" hidden>The angle of reflection always equals the angle of incidence.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="c">
+    <legend>2. Why can you read a book from almost any direction?</legend>
+    <div class="opts">
+      <button data-opt="a">The page reflects regularly</button>
+      <button data-opt="b">The page gives out its own light</button>
+      <button data-opt="c">The rough page reflects light irregularly in all directions</button>
+      <button data-opt="d">Light bends around the page</button>
+    </div>
+    <p class="why" hidden>Diffuse (irregular) reflection sends light from each point of the page in many directions.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="a">
+    <legend>3. A candle is 15 cm in front of a plane mirror. Its image is…</legend>
+    <div class="opts">
+      <button data-opt="a">15 cm behind the mirror, virtual</button>
+      <button data-opt="b">30 cm behind the mirror, real</button>
+      <button data-opt="c">on the mirror's surface</button>
+      <button data-opt="d">15 cm in front of the mirror, real</button>
+    </div>
+    <p class="why" hidden>A plane mirror forms a virtual image as far behind the mirror as the object is in front.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="b">
+    <legend>4. The word AMBULANCE is written reversed on the front of an ambulance because…</legend>
+    <div class="opts">
+      <button data-opt="a">it looks modern</button>
+      <button data-opt="b">of lateral inversion in the driver's rear-view mirror</button>
+      <button data-opt="c">the mirror turns words upside down</button>
+      <button data-opt="d">it is a rule of spelling</button>
+    </div>
+    <p class="why" hidden>A mirror swaps left and right, so the reversed word reads correctly in the mirror.</p>
+  </fieldset>
+  <p class="score" aria-live="polite"></p>
+</div>
+<nav class="next-prev" aria-label="Lessons">
+  <a href="../../index.html">← All lessons</a>
+  <a href="images-in-inclined-mirrors.html">Next: Images in inclined mirrors →</a>
+</nav>
+</main>
+
+<footer class="foot">Follows Chapter 11 of the Maharashtra State Board Std 9 Science and Technology textbook. Explanations and examples are original.</footer>
+</div>
+
+<script src="../../assets/js/sim-kit.js"></script>
+<script src="../../assets/js/sims/plane.js"></script>
+<script src="../../assets/js/quiz.js"></script>
+<script>
+  (function () {
+    var simEl = document.getElementById("sim-main");
+    var sim = PlaneSim.mount(simEl, { mode: "laws", i: 40 });
+    window.lessonSim = sim;
+    // Buttons in the lesson that set up the simulation: data-sim='{...settings}'
+    document.querySelectorAll("main [data-sim]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        sim.set(JSON.parse(b.dataset.sim));
+        sim.play();
+        simEl.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+      });
+    });
+  })();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/contrib/auto-render.min.js"></script>
+<script>
+  renderMathInElement(document.body, {
+    delimiters: [{ left: "$$", right: "$$", display: true }, { left: "\\(", right: "\\)", display: false }],
+    output: window.KATEX_OUTPUT || "htmlAndMathml",
+    throwOnError: false
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Echo and Reverberation · Visual Physics</title>
+<meta name="description" content="Clap in front of a wall and time the echo. Move the wall closer until the echo merges with the clap, and see why halls are lined with curtains.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.css">
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+<div class="wrap">
+
+<header class="site-head">
+  <a class="brand" href="../../index.html">Visual <span>Physics</span></a>
+  <span class="crumb">Std 9 · Ch. 12 Study of Sound</span>
+</header>
+
+<main>
+<p class="eyebrow">Study of Sound · Lesson 3</p>
+<h1>Echo and Reverberation</h1>
+<p class="lede">Shout across a valley and the hills shout back. Clap in a small room and you hear nothing extra. Both are reflections of sound; the difference is timing.</p>
+<p class="downloads"><a class="btn" href="../../slides/echo-and-reverberation.pptx" download>Download slides (.pptx)</a> <span>12 slides with teacher notes</span></p>
+
+<div id="sim-main"></div>
+
+<section class="prose">
+  <h2>Sound reflects</h2>
+  <p>Sound bounces off hard surfaces such as walls, cliffs and buildings, just as light bounces off a mirror, and it obeys the same <strong>laws of reflection</strong>: the angle of incidence equals the angle of reflection, and the incident sound, the reflected sound and the normal lie in one plane. You can check this with two long tubes pointed at a wall: the ticking of a watch at one tube is heard loudest through the other when the two make equal angles with the normal.</p>
+
+  <h2>Echo</h2>
+  <p>An <strong>echo</strong> is a sound heard again after it reflects from a distant surface. Our ears hold on to a sound for about <strong>0.1 s</strong>. If the reflected sound returns sooner than that, it blends with the original and we do not hear it separately.</p>
+  <p>The sound travels to the wall and back, a distance \(2d\), in time \(t\):</p>
+  <div class="eq">$$2d = v\,t \quad\Rightarrow\quad d = \frac{v\,t}{2}$$</div>
+  <p>For a distinct echo \(t\) must be at least 0.1 s. In air at 20 °C (344 m/s) that needs \(d \ge 344 \times 0.1 \div 2 = 17.2\) m.</p>
+
+  <h2>Reverberation</h2>
+  <p>In a closed hall, sound reflects again and again from the walls, ceiling and floor. The many reflections overlap and make the sound linger after the source stops. This is <strong>reverberation</strong>. A little makes music sound full; too much makes speech blurred and hard to follow. Halls reduce it with sound-absorbing materials: <strong>curtains, carpets, padded seats, fibreboard and acoustic panels</strong> on the walls and ceiling.</p>
+
+  <h2>Using reflected sound</h2>
+  <ul class="mistakes">
+    <li><strong>Megaphones and horns</strong> are flared tubes: repeated reflections send the sound forward in one direction instead of spreading it.</li>
+    <li><strong>Stethoscope:</strong> the sound of the heartbeat reflects along the tube to the doctor's ears.</li>
+    <li><strong>Curved ceilings and sound boards:</strong> a curved ceiling, or a curved board behind a speaker on stage, reflects sound evenly to every part of the hall.</li>
+  </ul>
+</section>
+<h2>Try it</h2>
+<p class="prose" style="margin-top:1rem">Press Clap, then change the distance.</p>
+<ul class="tries">
+  <li><span><strong>A far cliff.</strong> When does the echo arrive?</span>
+    <button class="btn" data-sim='{"d":100,"temp":20,"soft":false}'>100 m away</button></li>
+  <li><span><strong>The limit.</strong> Is there a separate echo?</span>
+    <button class="btn" data-sim='{"d":17.2,"temp":20,"soft":false}'>17.2 m away</button></li>
+  <li><span><strong>A classroom.</strong> What happens to the echo now?</span>
+    <button class="btn" data-sim='{"d":8,"temp":20,"soft":false}'>8 m away</button></li>
+  <li><span><strong>Add curtains.</strong> How strong is the reflection?</span>
+    <button class="btn" data-sim='{"d":34,"temp":20,"soft":true}'>Curtains</button></li>
+</ul>
+<p class="prose" style="margin-top:1rem;font-size:.875rem;color:var(--muted)">What you should see: From 100 m the echo returns after 0.58 s, well clear of the shaded 0.1 s band. At 17.2 m it arrives exactly at the edge of the band. At 8 m it falls inside the band (0.047 s) and merges with the clap. With curtains the reflected sound is only a faint trace.</p>
+
+<h2>Worked examples</h2>
+<div class="example">
+  <h3 style="margin-top:0">1. The shortest distance</h3>
+  <p>What is the least distance from a wall at which you can hear a distinct echo in air at 20 °C?</p>
+  <ol>
+    <li>\(v = 332 + 0.6 \times 20 = 344\) m/s; \(t\) must be at least 0.1 s</li>
+    <li>\(d = v t / 2 = 344 \times 0.1 / 2 = \) <span class="answer">17.2 m</span></li>
+  </ol>
+  <button class="btn" data-sim='{"d":17.2,"temp":20,"soft":false}'>Check it</button>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">2. Distance from the echo time</h3>
+  <p>A boy claps facing a building and hears the echo 0.5 s later. The air is at 20 °C. How far is the building?</p>
+  <ol>
+    <li>\(d = v t / 2 = 344 \times 0.5 / 2 = \) <span class="answer">86 m</span></li>
+  </ol>
+  <button class="btn" data-sim='{"d":86,"temp":20,"soft":false}'>Check it</button>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">3. Speed from an echo</h3>
+  <p>A girl stands 165 m from a cliff and claps. The echo comes back after 1 s. Find the speed of sound.</p>
+  <ol>
+    <li>The sound travels \(2 \times 165 = 330\) m in 1 s</li>
+    <li>\(v = 330 \div 1 = \) <span class="answer">330 m/s</span> (a cold day, just below 0 °C)</li>
+  </ol>
+</div>
+
+<h2>Common mistakes</h2>
+<ul class="mistakes" style="margin-top:1rem">
+  <li><strong>Forgetting to halve.</strong> The sound goes there and back: d = vt ÷ 2.</li>
+  <li><strong>“Every reflection is an echo.”</strong> Only one that returns 0.1 s or more after the original is heard separately.</li>
+  <li><strong>“17.2 m always.”</strong> That value is for 344 m/s; in colder air the minimum distance is a little less.</li>
+  <li><strong>“Reverberation is always bad.”</strong> A little makes music sound full; too much blurs speech.</li>
+</ul>
+
+<h2>Quick check</h2>
+<div class="quiz">
+  <fieldset class="q" data-answer="b">
+    <legend>1. For a distinct echo, the reflected sound must reach us at least…</legend>
+    <div class="opts">
+      <button data-opt="a">0.01 s after the original</button>
+      <button data-opt="b">0.1 s after the original</button>
+      <button data-opt="c">1 s after the original</button>
+      <button data-opt="d">at the same time</button>
+    </div>
+    <p class="why" hidden>Our ears retain a sound for about 0.1 s.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="b">
+    <legend>2. An echo is heard 2 s after a shout. The speed of sound is 340 m/s. How far away is the reflecting cliff?</legend>
+    <div class="opts">
+      <button data-opt="a">680 m</button>
+      <button data-opt="b">340 m</button>
+      <button data-opt="c">170 m</button>
+      <button data-opt="d">1360 m</button>
+    </div>
+    <p class="why" hidden>d = 340 × 2 ÷ 2 = 340 m.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="c">
+    <legend>3. Which of these reduces reverberation in a hall?</legend>
+    <div class="opts">
+      <button data-opt="a">Bare concrete walls</button>
+      <button data-opt="b">Glass windows</button>
+      <button data-opt="c">Heavy curtains and carpets</button>
+      <button data-opt="d">A curved ceiling</button>
+    </div>
+    <p class="why" hidden>Soft, porous materials absorb sound instead of reflecting it.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="b">
+    <legend>4. Why does a stethoscope work?</legend>
+    <div class="opts">
+      <button data-opt="a">It amplifies sound electronically</button>
+      <button data-opt="b">Sound reflects repeatedly along its tube</button>
+      <button data-opt="c">It turns sound into light</button>
+      <button data-opt="d">Sound is faster in rubber</button>
+    </div>
+    <p class="why" hidden>Multiple reflections carry the heartbeat sound along the tube.</p>
+  </fieldset>
+  <p class="score" aria-live="polite"></p>
+</div>
+<nav class="next-prev" aria-label="Lessons">
+  <a href="speed-of-sound.html">← The speed of sound</a>
+  <a href="ultrasound-and-sonar.html">Next: Ultrasound and SONAR →</a>
+</nav>
+</main>
+
+<footer class="foot">Follows Chapter 12 of the Maharashtra State Board Std 9 Science and Technology textbook. Explanations and examples are original.</footer>
+</div>
+
+<script src="../../assets/js/sim-kit.js"></script>
+<script src="../../assets/js/sims/echo.js"></script>
+<script src="../../assets/js/quiz.js"></script>
+<script>
+  (function () {
+    var simEl = document.getElementById("sim-main");
+    var sim = EchoSim.mount(simEl, { d: 34, temp: 20 });
+    window.lessonSim = sim;
+    // Buttons in the lesson that set up the simulation: data-sim='{...settings}'
+    document.querySelectorAll("main [data-sim]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        sim.set(JSON.parse(b.dataset.sim));
+        sim.play();
+        simEl.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+      });
+    });
+  })();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/contrib/auto-render.min.js"></script>
+<script>
+  renderMathInElement(document.body, {
+    delimiters: [{ left: "$$", right: "$$", display: true }, { left: "\\(", right: "\\)", display: false }],
+    output: window.KATEX_OUTPUT || "htmlAndMathml",
+    throwOnError: false
+  });
+</script>
+
+</body>
+</html>

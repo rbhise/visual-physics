@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Newton's Laws of Motion · Visual Physics</title>
+<meta name="description" content="Push a crate on smooth ice with balanced and unbalanced forces, and learn Newton's three laws of motion.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.css">
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+<div class="wrap">
+
+<header class="site-head">
+  <a class="brand" href="../../index.html">Visual <span>Physics</span></a>
+  <span class="crumb">Std 9 · Ch. 1 Laws of Motion</span>
+</header>
+
+<main>
+<p class="eyebrow">Laws of Motion · Lesson 8</p>
+<h1>Newton's Laws of Motion</h1>
+<p class="lede">Why does a bus passenger lurch forward when the driver brakes? Why does a gun kick back when it fires? Three laws, written by Isaac Newton in 1687, explain both.</p>
+<p class="downloads"><a class="btn" href="../../slides/newtons-laws.pptx" download>Download slides (.pptx)</a> <span>13 slides with teacher notes</span></p>
+
+<div id="sim-main"></div>
+
+<section class="prose">
+  <h2>Balanced and unbalanced forces</h2>
+  <p>A force is a push or a pull. When several forces act on an object, what matters is their combined effect, the <strong>net force</strong>.</p>
+  <ul class="mistakes">
+    <li><strong>Balanced forces</strong> cancel out, so the net force is zero. In a tug of war where both teams pull equally hard, the rope does not move.</li>
+    <li><strong>Unbalanced forces</strong> leave a net force. The object's motion changes: it starts, stops, speeds up, slows down or turns.</li>
+  </ul>
+  <p>The crate in the simulation slides on smooth ice, so there is no friction. Only the two pushes act along the ice.</p>
+
+  <h2>First law: inertia</h2>
+  <div class="note"><strong>An object continues to remain at rest or in a state of uniform motion along a straight line unless an external unbalanced force acts on it.</strong></div>
+  <p style="margin-top:1rem">This tendency to keep doing what it is already doing is called <strong>inertia</strong>. The more mass an object has, the more inertia it has.</p>
+  <ul class="mistakes">
+    <li><strong>Inertia of rest:</strong> flick a card from under a coin on a glass, and the coin drops into the glass instead of moving with the card.</li>
+    <li><strong>Inertia of motion:</strong> when a bus brakes suddenly, passengers lurch forward because their bodies keep moving.</li>
+    <li><strong>Inertia of direction:</strong> when a car turns sharply, passengers feel pushed to the side because their bodies try to keep going straight.</li>
+  </ul>
+
+  <h2>Second law: force and momentum</h2>
+  <p>The <strong>momentum</strong> of an object is its mass times its velocity, \(P = mv\), measured in kg·m/s. Newton's second law says that <strong>the rate of change of momentum is proportional to the applied force</strong>, and the change happens in the direction of the force. For a fixed mass this becomes:</p>
+  <div class="eq">$$F = ma$$</div>
+  <p>The unit of force is the <strong>newton (N)</strong>: the force that gives a 1 kg mass an acceleration of 1 m/s². So \(1\ \text{N} = 1\ \text{kg·m/s}^2\).</p>
+  <p>A cricketer catching a fast ball pulls his hands back. The ball's momentum still drops to zero, but over a longer time, so the force on his hands is smaller.</p>
+
+  <h2>Third law: action and reaction</h2>
+  <div class="note"><strong>Every action force has an equal and opposite reaction force, and the two act at the same time.</strong></div>
+  <p style="margin-top:1rem">The two forces act on <em>different</em> objects, so they never cancel each other out.</p>
+  <ul class="mistakes">
+    <li>A balloon pushes air out backwards; the air pushes the balloon forwards.</li>
+    <li>A gun pushes the bullet forwards; the bullet pushes the gun back, so the gun recoils.</li>
+    <li>A rocket pushes hot gases down; the gases push the rocket up.</li>
+    <li>When you walk, your foot pushes the ground backwards; the ground pushes you forwards.</li>
+  </ul>
+</section>
+<h2>Try it</h2>
+<p class="prose" style="margin-top:1rem">Each set-up uses a 20 kg crate. Look at the net force and what happens to the velocity.</p>
+<ul class="tries">
+  <li><span><strong>Tug of war.</strong> 50 N each way, crate at rest.</span>
+    <button class="btn" data-sim='{"F1":50,"F2":50,"m":20,"v0":0}'>Start</button></li>
+  <li><span><strong>Push from rest.</strong> 40 N to the right only.</span>
+    <button class="btn" data-sim='{"F1":40,"F2":0,"m":20,"v0":0}'>Start</button></li>
+  <li><span><strong>Balanced while moving.</strong> 30 N each way, crate already sliding at 2 m/s.</span>
+    <button class="btn" data-sim='{"F1":30,"F2":30,"m":20,"v0":2}'>Start</button></li>
+  <li><span><strong>Push against the motion.</strong> 20 N to the left on a crate sliding right at 3 m/s.</span>
+    <button class="btn" data-sim='{"F1":0,"F2":20,"m":20,"v0":3}'>Start</button></li>
+</ul>
+<p class="prose" style="margin-top:1rem;font-size:.875rem;color:var(--muted)">What you should see: in the tug of war nothing moves. Pushing from rest, the crate accelerates at 2 m/s² and reaches 20 m/s after 10 s. Balanced while moving, it keeps sliding at exactly 2 m/s, because no net force means no change in velocity. Pushing against the motion, it slows at 1 m/s², stops after 3 s, then speeds up to the left.</p>
+
+<h2>Worked examples</h2>
+<div class="example">
+  <h3 style="margin-top:0">1. Pushing a crate</h3>
+  <p>Two people push a 20 kg crate on smooth ice: one with 40 N to the right, the other with 10 N to the left. Find the acceleration.</p>
+  <ol>
+    <li>Net force \(= 40 - 10 = 30\) N to the right.</li>
+    <li>\(a = F/m = 30/20 = \) <span class="answer">1.5 m/s² to the right</span></li>
+  </ol>
+  <button class="btn" data-sim='{"F1":40,"F2":10,"m":20,"v0":0}'>Check it in the simulation</button>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">2. A car pulling away</h3>
+  <p>What force is needed to give a 1200 kg car an acceleration of 1.5 m/s²?</p>
+  <ol>
+    <li>\(F = ma = 1200 \times 1.5 = \) <span class="answer">1800 N</span></li>
+  </ol>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">3. Catching a cricket ball</h3>
+  <p>A 0.15 kg ball arrives at 20 m/s. A fielder stops it in 0.1 s. Find the force on his hands. What if he pulls his hands back so that stopping takes 0.3 s?</p>
+  <ol>
+    <li>Change in momentum \(= 0.15 \times 20 - 0 = 3\) kg·m/s.</li>
+    <li>Force = change in momentum ÷ time \(= 3 / 0.1 = \) <span class="answer">30 N</span></li>
+    <li>With 0.3 s: \(3 / 0.3 = \) <span class="answer">10 N</span>, a third of the force.</li>
+  </ol>
+</div>
+
+<h2>Common mistakes</h2>
+<ul class="mistakes" style="margin-top:1rem">
+  <li><strong>“Action and reaction cancel.”</strong> They act on different objects. The gun is pushed back and the bullet forwards; neither force cancels the other.</li>
+  <li><strong>“A moving object needs a force to keep moving.”</strong> With no friction it keeps moving by itself. Forces are needed to change motion, not to keep it going.</li>
+  <li><strong>Ignoring direction.</strong> Forces in opposite directions subtract. Find the net force before using F = ma.</li>
+  <li><strong>Mixing grams and kilograms.</strong> F = ma needs mass in kg. A 150 g ball is 0.15 kg.</li>
+</ul>
+
+<h2>Quick check</h2>
+<div class="quiz">
+  <fieldset class="q" data-answer="b">
+    <legend>1. A book lies still on a table. The forces on it are…</legend>
+    <div class="opts">
+      <button data-opt="a">unbalanced</button>
+      <button data-opt="b">balanced</button>
+      <button data-opt="c">zero because nothing touches it</button>
+      <button data-opt="d">only gravity</button>
+    </div>
+    <p class="why" hidden>Gravity pulls it down and the table pushes it up equally. The net force is zero, so it stays at rest.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="a">
+    <legend>2. When a bus starts suddenly, standing passengers fall backwards. This is due to…</legend>
+    <div class="opts">
+      <button data-opt="a">inertia of rest</button>
+      <button data-opt="b">inertia of motion</button>
+      <button data-opt="c">the third law</button>
+      <button data-opt="d">friction of the floor</button>
+    </div>
+    <p class="why" hidden>Their bodies tend to stay at rest while the bus moves forward beneath them.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="b">
+    <legend>3. A net force of 12 N acts on a 4 kg trolley. Its acceleration is…</legend>
+    <div class="opts">
+      <button data-opt="a">48 m/s²</button>
+      <button data-opt="b">3 m/s²</button>
+      <button data-opt="c">0.33 m/s²</button>
+      <button data-opt="d">16 m/s²</button>
+    </div>
+    <p class="why" hidden>\(a = F/m = 12/4 = 3\) m/s².</p>
+  </fieldset>
+  <fieldset class="q" data-answer="b">
+    <legend>4. A swimmer pushes water backwards with her hands. The reaction force…</legend>
+    <div class="opts">
+      <button data-opt="a">pushes the water forwards</button>
+      <button data-opt="b">pushes the swimmer forwards</button>
+      <button data-opt="c">cancels the action</button>
+      <button data-opt="d">acts only after the action stops</button>
+    </div>
+    <p class="why" hidden>The water pushes back on the swimmer with an equal and opposite force, at the same time.</p>
+  </fieldset>
+  <p class="score" aria-live="polite"></p>
+</div>
+<nav class="next-prev" aria-label="Lessons">
+  <a href="uniform-circular-motion.html">← Uniform circular motion</a>
+  <a href="conservation-of-momentum.html">Next: Conservation of momentum →</a>
+</nav>
+</main>
+
+<footer class="foot">Follows Chapter 1 of the Maharashtra State Board Std 9 Science and Technology textbook. Explanations and examples are original.</footer>
+</div>
+
+<script src="../../assets/js/sim-kit.js"></script>
+<script src="../../assets/js/sims/forces.js"></script>
+<script src="../../assets/js/quiz.js"></script>
+<script>
+  (function () {
+    var simEl = document.getElementById("sim-main");
+    var sim = ForceSim.mount(simEl, { F1: 40, F2: 0, m: 20, v0: 0 });
+    window.lessonSim = sim;
+    // Buttons in the lesson that set up the simulation: data-sim='{...settings}'
+    document.querySelectorAll("main [data-sim]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        sim.set(JSON.parse(b.dataset.sim));
+        sim.play();
+        simEl.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+      });
+    });
+  })();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/contrib/auto-render.min.js"></script>
+<script>
+  renderMathInElement(document.body, {
+    delimiters: [{ left: "$$", right: "$$", display: true }, { left: "\\(", right: "\\)", display: false }],
+    output: window.KATEX_OUTPUT || "htmlAndMathml",
+    throwOnError: false
+  });
+</script>
+</body>
+</html>
