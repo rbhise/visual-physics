@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Laser Maze · Visual Physics</title>
+<meta name="description" content="Turn the mirrors to steer a laser beam to the target. Eight levels of reflection puzzles.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.css">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body class="gamepage ch-light">
+<div class="wrap">
+
+<header class="site-head">
+  <a class="brand" href="../index.html"><svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><path d="M3 27 Q14 -1 29 27" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-dasharray="2.5 3.5"/><circle cx="21" cy="10" r="4.2" fill="var(--vy)"/></svg> Visual <span>Physics</span></a>
+  <nav class="site-nav" aria-label="Main"><a href="../index.html#chapters">Chapters</a><a href="../index.html#games">Games</a></nav>
+</header>
+
+<main>
+<div class="title-band">
+<p class="eyebrow">Game for Reflection of Light</p>
+<h1>Laser Maze</h1>
+<p class="lede">Turn the mirrors to bend the laser beam around the blocks and onto the target. Each mirror sits at 45°, so every reflection turns the beam through a right angle.</p>
+</div>
+
+<div id="game"></div>
+
+<section class="prose">
+  <h2>How to play</h2>
+  <ul class="mistakes">
+    <li><strong>Tap a mirror</strong> to turn it between / and \. The beam updates at once.</li>
+    <li>Keyboard: click the grid, use the <strong>arrow keys</strong> to choose a mirror and press <strong>Space</strong> to turn it.</li>
+    <li>Solve each level in as few moves as you can, then press <strong>Next level</strong>.</li>
+  </ul>
+  <h2>The physics behind it</h2>
+  <p>At every mirror the beam obeys the laws of reflection: the angle of incidence equals the angle of reflection, both measured from the normal (the dashed line). Because each mirror is at 45° to the beam, \(i = r = 45^\circ\) and the beam turns through \(45^\circ + 45^\circ = 90^\circ\). A periscope uses exactly this trick with two mirrors.</p>
+</section>
+<div class="game-callout"><p><strong>Learn it first:</strong> the laws of reflection, with a ray you can sweep.</p><a class="btn" href="../lessons/light/reflection-and-plane-mirrors.html">Reflection lesson →</a></div>
+
+
+<nav class="next-prev" aria-label="Games">
+  <a href="hit-the-target.html">← Hit the Target</a>
+  <a href="formula-race.html">Next game: Formula Race →</a>
+</nav>
+</main>
+
+<footer class="foot">Free to use for learning. Best scores are saved only in your own browser.</footer>
+</div>
+
+<script src="../assets/js/sim-kit.js"></script>
+<script src="../assets/js/games/laser.js"></script>
+<script>
+  window.game = LaserGame.mount(document.getElementById("game"));
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/contrib/auto-render.min.js"></script>
+<script>
+  renderMathInElement(document.body, {
+    delimiters: [{ left: "$$", right: "$$", display: true }, { left: "\\(", right: "\\)", display: false }],
+    output: window.KATEX_OUTPUT || "htmlAndMathml",
+    throwOnError: false
+  });
+</script>
+</body>
+</html>

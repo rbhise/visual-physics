@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Light We Can and Cannot See · Visual Physics</title>
+<meta name="description" content="Slide along the electromagnetic spectrum from gamma rays to radio waves, find the frequency of each wavelength, and see which kinds of radiation get through the atmosphere.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.css">
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body class="lesson ch-space">
+<div class="wrap">
+
+<header class="site-head">
+  <a class="brand" href="../../index.html"><svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><path d="M3 27 Q14 -1 29 27" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-dasharray="2.5 3.5"/><circle cx="21" cy="10" r="4.2" fill="var(--vy)"/></svg> Visual <span>Physics</span></a>
+  <nav class="site-nav" aria-label="Main"><a href="../../index.html#chapters">Chapters</a><a href="../../index.html#games">Games</a></nav>
+</header>
+
+<main>
+<div class="title-band">
+<p class="eyebrow">Observing Space: Telescopes, lesson 1</p>
+<h1>Light We Can and Cannot See</h1>
+<p class="lede">Stars and galaxies send us far more than the light our eyes can see. To study them, astronomers collect radiation of every wavelength, from gamma rays to radio waves.</p>
+<p class="downloads"><a class="btn" href="../../slides/electromagnetic-spectrum.pptx" download>Download slides (.pptx)</a> <span>12 slides with teacher notes</span></p>
+</div>
+
+<div id="sim-main"></div>
+
+<section class="prose">
+  <h2>Electromagnetic waves</h2>
+  <p>Light is an <strong>electromagnetic wave</strong>. Unlike sound, it does not need a medium: it crosses the empty space between the stars and us. All electromagnetic waves travel through a vacuum at the same speed,</p>
+  <div class="eq">$$c = 3 \times 10^8 \ \text{m/s}$$</div>
+  <p>As with sound, speed, frequency and wavelength are linked:</p>
+  <div class="eq">$$c = \nu \lambda$$</div>
+  <p>So a shorter wavelength means a higher frequency.</p>
+
+  <h2>The spectrum</h2>
+  <p>Arranged by wavelength, electromagnetic waves form the <strong>electromagnetic spectrum</strong>. Our eyes detect only a narrow part of it, <strong>visible light</strong>, with wavelengths from about <strong>400 nm (violet) to 800 nm (red)</strong>. (1 nm = 10⁻⁹ m.) The rest is invisible to us, but each kind can be detected with the right instrument.</p>
+</section>
+
+<div class="table-wrap">
+<table class="compare">
+  <thead><tr><th>Type</th><th>Wavelength (approximate)</th><th>Sent out in space by</th></tr></thead>
+  <tbody>
+    <tr><th>Gamma rays</th><td>shorter than 0.01 nm</td><td>exploding stars</td></tr>
+    <tr><th>X-rays</th><td>0.01 nm to 10 nm</td><td>very hot gas, matter falling into black holes</td></tr>
+    <tr><th>Ultraviolet</th><td>10 nm to 400 nm</td><td>hot young stars</td></tr>
+    <tr><th>Visible light</th><td>400 nm to 800 nm</td><td>stars like the Sun</td></tr>
+    <tr><th>Infrared</th><td>800 nm to 1 mm</td><td>cool stars, dust clouds, planets</td></tr>
+    <tr><th>Microwaves</th><td>1 mm to about 30 cm</td><td>the afterglow of the Big Bang</td></tr>
+    <tr><th>Radio waves</th><td>longer than about 30 cm</td><td>galaxies, pulsars, gas clouds</td></tr>
+  </tbody>
+</table>
+</div>
+
+<section class="prose">
+  <h2>Why use them all?</h2>
+  <p>The same object can look completely different at different wavelengths. Dust clouds that hide newborn stars in visible light glow in infrared; the hottest gas shines in X-rays; cold hydrogen gas between the stars is seen only in radio. Observing at many wavelengths gives the whole picture.</p>
+  <p>Our atmosphere lets only <strong>visible light</strong>, <strong>radio waves</strong> and a little infrared reach the ground. Gamma rays, X-rays and most ultraviolet and infrared radiation are absorbed high up. That is good for life on Earth, but it means telescopes for those wavelengths must go above the atmosphere (lesson 3).</p>
+</section>
+<h2>Try it</h2>
+<p class="prose" style="margin-top:1rem">Use the buttons, then slide along the spectrum.</p>
+<ul class="tries">
+  <li><span><strong>Visible light.</strong> What is its frequency?</span>
+    <button class="btn" data-sim='{"lam":5e-7}'>Green light</button></li>
+  <li><span><strong>X-rays.</strong> Do they reach the ground?</span>
+    <button class="btn" data-sim='{"lam":1e-9}'>1 nm X-rays</button></li>
+  <li><span><strong>Radio.</strong> An FM radio station.</span>
+    <button class="btn" data-sim='{"lam":3}'>3 m radio</button></li>
+  <li><span><strong>Infrared.</strong> Far infrared from cold dust.</span>
+    <button class="btn" data-sim='{"lam":1e-4}'>100 µm infrared</button></li>
+</ul>
+<p class="prose" style="margin-top:1rem;font-size:.875rem;color:var(--muted)">What you should see: Green light (500 nm) has ν = 6 × 10¹⁴ Hz and gets through the air. 1 nm X-rays have a frequency of 3 × 10¹⁷ Hz and are absorbed high up. A 3 m radio wave has ν = 10⁸ Hz (100 MHz) and reaches the ground easily. 100 µm infrared is absorbed by water vapour in the air.</p>
+
+<h2>Worked examples</h2>
+<div class="example">
+  <h3 style="margin-top:0">1. Frequency of green light</h3>
+  <p>Green light has a wavelength of 500 nm. Find its frequency.</p>
+  <ol>
+    <li>\(\lambda = 500 \times 10^{-9} = 5 \times 10^{-7}\) m</li>
+    <li>\(\nu = c / \lambda = 3 \times 10^8 / 5 \times 10^{-7} = \) <span class="answer">6 × 10¹⁴ Hz</span></li>
+  </ol>
+  <button class="btn" data-sim='{"lam":5e-7}'>Check it</button>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">2. An FM radio station</h3>
+  <p>A radio station broadcasts at 100 MHz (1 MHz = 10⁶ Hz). What is the wavelength?</p>
+  <ol>
+    <li>\(\lambda = c / \nu = 3 \times 10^8 / 1 \times 10^8 = \) <span class="answer">3 m</span></li>
+  </ol>
+  <button class="btn" data-sim='{"lam":3}'>Check it</button>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">3. How many times longer?</h3>
+  <p>Compare a 1 m radio wave with a 1 nm X-ray.</p>
+  <ol>
+    <li>\(1 \text{ m} \div 10^{-9} \text{ m} = 10^9\)</li>
+    <li>The radio wave is <span class="answer">a billion times longer</span>, yet both travel at \(3 \times 10^8\) m/s.</li>
+  </ol>
+</div>
+
+<h2>Common mistakes</h2>
+<ul class="mistakes" style="margin-top:1rem">
+  <li><strong>“Radio waves are sound.”</strong> Radio waves are electromagnetic, like light. A radio set turns them into sound.</li>
+  <li><strong>“X-rays travel faster.”</strong> All electromagnetic waves travel at the same speed in a vacuum.</li>
+  <li><strong>Mixing up the direction.</strong> Shorter wavelength means higher frequency.</li>
+  <li><strong>“Space is dark except for visible stars.”</strong> Space is full of radiation our eyes cannot detect.</li>
+</ul>
+
+<h2>Quick check</h2>
+<div class="quiz">
+  <fieldset class="q" data-answer="b">
+    <legend>1. The range of wavelengths of visible light is about…</legend>
+    <div class="opts">
+      <button data-opt="a">4 nm to 8 nm</button>
+      <button data-opt="b">400 nm to 800 nm</button>
+      <button data-opt="c">400 µm to 800 µm</button>
+      <button data-opt="d">4 m to 8 m</button>
+    </div>
+    <p class="why" hidden>Visible light runs from about 400 nm (violet) to 800 nm (red).</p>
+  </fieldset>
+  <fieldset class="q" data-answer="d">
+    <legend>2. Which of these travels fastest through empty space?</legend>
+    <div class="opts">
+      <button data-opt="a">X-rays</button>
+      <button data-opt="b">Radio waves</button>
+      <button data-opt="c">Visible light</button>
+      <button data-opt="d">All at the same speed</button>
+    </div>
+    <p class="why" hidden>All electromagnetic waves travel at 3 × 10⁸ m/s in a vacuum.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="b">
+    <legend>3. A radio wave has a frequency of 3 × 10⁹ Hz. Its wavelength is…</legend>
+    <div class="opts">
+      <button data-opt="a">1 m</button>
+      <button data-opt="b">0.1 m</button>
+      <button data-opt="c">10 m</button>
+      <button data-opt="d">0.01 m</button>
+    </div>
+    <p class="why" hidden>λ = 3 × 10⁸ ÷ 3 × 10⁹ = 0.1 m.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="c">
+    <legend>4. Which radiation from space reaches the ground easily?</legend>
+    <div class="opts">
+      <button data-opt="a">X-rays and gamma rays</button>
+      <button data-opt="b">Ultraviolet</button>
+      <button data-opt="c">Visible light and radio waves</button>
+      <button data-opt="d">All of them</button>
+    </div>
+    <p class="why" hidden>The atmosphere has 'windows' for visible light and radio waves.</p>
+  </fieldset>
+  <p class="score" aria-live="polite"></p>
+</div>
+<nav class="next-prev" aria-label="Lessons">
+  <a href="../sound/ultrasound-and-sonar.html">← Ultrasound and SONAR</a>
+  <a href="optical-telescopes.html">Next: Optical telescopes →</a>
+</nav>
+</main>
+
+<footer class="foot">Follows Chapter 18 of the Maharashtra State Board Std 9 Science and Technology textbook. Explanations and examples are original.</footer>
+</div>
+
+<script src="../../assets/js/sim-kit.js"></script>
+<script src="../../assets/js/sims/spectrum.js"></script>
+<script src="../../assets/js/quiz.js"></script>
+<script>
+  (function () {
+    var simEl = document.getElementById("sim-main");
+    var sim = SpectrumSim.mount(simEl, { lam: 5e-7 });
+    window.lessonSim = sim;
+    // Buttons in the lesson that set up the simulation: data-sim='{...settings}'
+    document.querySelectorAll("main [data-sim]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        sim.set(JSON.parse(b.dataset.sim));
+        sim.play();
+        simEl.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+      });
+    });
+  })();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/contrib/auto-render.min.js"></script>
+<script>
+  renderMathInElement(document.body, {
+    delimiters: [{ left: "$$", right: "$$", display: true }, { left: "\\(", right: "\\)", display: false }],
+    output: window.KATEX_OUTPUT || "htmlAndMathml",
+    throwOnError: false
+  });
+</script>
+
+</body>
+</html>

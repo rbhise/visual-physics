@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Hit the Target · Visual Physics</title>
+<meta name="description" content="Choose the launch angle and speed and land the ball on the target. Three shots per target; walls appear from level 4.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.css">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body class="gamepage ch-motion">
+<div class="wrap">
+
+<header class="site-head">
+  <a class="brand" href="../index.html"><svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><path d="M3 27 Q14 -1 29 27" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-dasharray="2.5 3.5"/><circle cx="21" cy="10" r="4.2" fill="var(--vy)"/></svg> Visual <span>Physics</span></a>
+  <nav class="site-nav" aria-label="Main"><a href="../index.html#chapters">Chapters</a><a href="../index.html#games">Games</a></nav>
+</header>
+
+<main>
+<div class="title-band">
+<p class="eyebrow">Game for Laws of Motion</p>
+<h1>Hit the Target</h1>
+<p class="lede">Set the angle and the speed, press Fire, and land the ball on the green target. You get three shots for each target, and the fewer you need, the more you score.</p>
+</div>
+
+<div id="game"></div>
+
+<section class="prose">
+  <h2>How to play</h2>
+  <ul class="mistakes">
+    <li>Move the <strong>angle</strong> and <strong>speed</strong> sliders, then press <strong>Fire!</strong> (or press Enter on a slider).</li>
+    <li>A hit on the first shot scores 100, the second 60, the third 30, plus a level bonus. Miss all three and the game is over.</li>
+    <li>From level 4 a wall stands in the way: you will need a steeper shot.</li>
+    <li>Stuck? <strong>Hint</strong> works out the range for your settings, at a cost of 20 points.</li>
+  </ul>
+  <h2>The physics behind it</h2>
+  <p>On level ground a ball launched at speed \(u\) and angle \(\theta\) lands a distance</p>
+  <div class="eq">$$R = \frac{u^2 \sin 2\theta}{g}$$</div>
+  <p>away, with \(g = 9.8\) m/s². The range is greatest at 45°, and two angles that add up to 90° (say 30° and 60°) give the same range. The steeper one goes higher, which is how you get over the walls.</p>
+</section>
+<div class="game-callout"><p><strong>Learn it first:</strong> the projectile motion lesson explains every part of the shot.</p><a class="btn" href="../lessons/kinematics/projectile-motion.html">Projectile motion →</a></div>
+
+
+<nav class="next-prev" aria-label="Games">
+  <a href="../index.html">← All lessons</a>
+  <a href="laser-maze.html">Next game: Laser Maze →</a>
+</nav>
+</main>
+
+<footer class="foot">Free to use for learning. Best scores are saved only in your own browser.</footer>
+</div>
+
+<script src="../assets/js/sim-kit.js"></script>
+<script src="../assets/js/games/target.js"></script>
+<script>
+  window.game = TargetGame.mount(document.getElementById("game"));
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/contrib/auto-render.min.js"></script>
+<script>
+  renderMathInElement(document.body, {
+    delimiters: [{ left: "$$", right: "$$", display: true }, { left: "\\(", right: "\\)", display: false }],
+    output: window.KATEX_OUTPUT || "htmlAndMathml",
+    throwOnError: false
+  });
+</script>
+</body>
+</html>

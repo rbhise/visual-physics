@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Telescopes in Space · Visual Physics</title>
+<meta name="description" content="Send five kinds of radiation down through the atmosphere, place a telescope at sea level, on a mountain or in space, and see which it can detect.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.css">
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body class="lesson ch-space">
+<div class="wrap">
+
+<header class="site-head">
+  <a class="brand" href="../../index.html"><svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><path d="M3 27 Q14 -1 29 27" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-dasharray="2.5 3.5"/><circle cx="21" cy="10" r="4.2" fill="var(--vy)"/></svg> Visual <span>Physics</span></a>
+  <nav class="site-nav" aria-label="Main"><a href="../../index.html#chapters">Chapters</a><a href="../../index.html#games">Games</a></nav>
+</header>
+
+<main>
+<div class="title-band">
+<p class="eyebrow">Observing Space: Telescopes, lesson 3</p>
+<h1>Telescopes in Space</h1>
+<p class="lede">Stars twinkle, which is pretty but a nuisance for astronomers. The twinkling, the clouds and the X-rays that never reach the ground are all down to one thing: the air above us.</p>
+<p class="downloads"><a class="btn" href="../../slides/telescopes-in-space.pptx" download>Download slides (.pptx)</a> <span>12 slides with teacher notes</span></p>
+</div>
+
+<div id="sim-main"></div>
+
+<section class="prose">
+  <h2>Problems with the atmosphere</h2>
+  <ul class="mistakes">
+    <li><strong>It absorbs radiation.</strong> Gamma rays, X-rays and most ultraviolet are absorbed high up (ultraviolet largely by the ozone layer); much infrared is absorbed lower down by water vapour. Even visible light is dimmed.</li>
+    <li><strong>It moves.</strong> Layers of warm and cool air keep shifting and bend starlight this way and that. Stars twinkle and telescope images blur.</li>
+    <li><strong>Weather and light.</strong> Clouds block the view, the bright daytime sky hides the stars, and city lights brighten the night sky.</li>
+  </ul>
+  <p>Radio waves pass through the air, clouds and all, and can be observed by day, so radio telescopes like the GMRT work well on the ground.</p>
+
+  <h2>Going higher</h2>
+  <p>One answer is to build observatories on high, dry mountains, above much of the air and water vapour. India's observatory at <strong>Hanle in Ladakh</strong> is about 4500 m above sea level. The complete answer is to put the telescope <strong>above the atmosphere</strong>, in orbit around the Earth. There it can observe every wavelength, day and night, with no blurring.</p>
+
+  <h2>Some space telescopes</h2>
+</section>
+
+<div class="table-wrap">
+<table class="compare">
+  <thead><tr><th>Telescope</th><th>Launched</th><th>Observes</th><th>Note</th></tr></thead>
+  <tbody>
+    <tr><th>Hubble Space Telescope</th><td>1990</td><td>Visible, ultraviolet, near infrared</td><td>2.4 m mirror (Cassegrain design), about 550 km up</td></tr>
+    <tr><th>Chandra X-ray Observatory</th><td>1999</td><td>X-rays</td><td>Named after the Indian-born astrophysicist Subrahmanyan Chandrasekhar</td></tr>
+    <tr><th>Astrosat</th><td>2015</td><td>Ultraviolet, X-rays, visible</td><td>India's first space observatory, launched by ISRO</td></tr>
+    <tr><th>James Webb Space Telescope</th><td>2021</td><td>Infrared</td><td>6.5 m mirror, far beyond the Moon's orbit</td></tr>
+  </tbody>
+</table>
+</div>
+
+<section class="prose" style="margin-top:1rem">
+  <p>Space telescopes are expensive and hard to repair, so ground telescopes are still used wherever the atmosphere allows: for visible light from mountain tops and for radio waves almost anywhere.</p>
+</section>
+<h2>Try it</h2>
+<p class="prose" style="margin-top:1rem">Choose a kind of radiation and a place for the telescope.</p>
+<ul class="tries">
+  <li><span><strong>Visible at sea level.</strong> Watch the star image.</span>
+    <button class="btn" data-sim='{"band":"visible","site":"ground"}'>Sea level</button></li>
+  <li><span><strong>Visible from space.</strong> Compare the image.</span>
+    <button class="btn" data-sim='{"band":"visible","site":"space"}'>In space</button></li>
+  <li><span><strong>X-rays from the ground.</strong> What arrives?</span>
+    <button class="btn" data-sim='{"band":"xray","site":"ground"}'>X-rays, ground</button></li>
+  <li><span><strong>Infrared on a mountain.</strong> Does going higher help?</span>
+    <button class="btn" data-sim='{"band":"ir","site":"mountain"}'>IR, mountain</button></li>
+</ul>
+<p class="prose" style="margin-top:1rem;font-size:.875rem;color:var(--muted)">What you should see: At sea level the star image shimmers and blurs; from space it is a sharp, steady point. X-rays are stopped about 80 km up, so a ground telescope detects nothing. Much infrared is absorbed by water vapour low down, so a high, dry mountain does much better than sea level, though space is best.</p>
+
+<h2>Worked examples</h2>
+<div class="example">
+  <h3 style="margin-top:0">1. Choosing a site</h3>
+  <p>An astronomer wants to study X-rays from hot gas around a black hole. Where must her telescope be, and why?</p>
+  <ol>
+    <li>X-rays are absorbed high in the atmosphere, about 80 km up.</li>
+    <li>The telescope must be <span class="answer">in space</span>, for example Chandra or Astrosat.</li>
+  </ol>
+  <button class="btn" data-sim='{"band":"xray","site":"space"}'>Check it</button>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">2. The GMRT's collecting area</h3>
+  <p>Each GMRT dish is 45 m wide. Find the total collecting area of its 30 dishes.</p>
+  <ol>
+    <li>One dish: \(\pi r^2 = 3.14 \times 22.5^2 \approx 1590\) m²</li>
+    <li>Thirty dishes: \(30 \times 1590 \approx\) <span class="answer">47 700 m²</span>, about seven football fields</li>
+  </ol>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">3. Signals from Hubble</h3>
+  <p>Hubble orbits about 550 km above the ground. How long do its radio signals take to reach a station directly below?</p>
+  <ol>
+    <li>Radio waves travel at \(3 \times 10^8\) m/s</li>
+    <li>\(t = 550\,000 \div 3 \times 10^8 \approx\) <span class="answer">0.0018 s</span> (under 2 milliseconds)</li>
+  </ol>
+</div>
+
+<h2>Common mistakes</h2>
+<ul class="mistakes" style="margin-top:1rem">
+  <li><strong>“Space telescopes are closer to the stars.”</strong> 550 km is nothing compared with the distance to a star; the gain is getting above the air.</li>
+  <li><strong>“Stars really flicker.”</strong> Twinkling is caused by moving air in our atmosphere.</li>
+  <li><strong>“Radio telescopes must be in space.”</strong> Radio waves pass through the atmosphere, even clouds.</li>
+  <li><strong>“Ground telescopes are useless now.”</strong> They are cheaper, bigger and easy to repair, so they are still widely used.</li>
+</ul>
+
+<h2>Quick check</h2>
+<div class="quiz">
+  <fieldset class="q" data-answer="b">
+    <legend>1. Which of these is the main reason X-ray telescopes are put in space?</legend>
+    <div class="opts">
+      <button data-opt="a">Space is darker</button>
+      <button data-opt="b">The atmosphere absorbs X-rays</button>
+      <button data-opt="c">X-rays travel faster in space</button>
+      <button data-opt="d">They are lighter to build</button>
+    </div>
+    <p class="why" hidden>X-rays never reach the ground.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="b">
+    <legend>2. Why do stars twinkle?</legend>
+    <div class="opts">
+      <button data-opt="a">They flicker on and off</button>
+      <button data-opt="b">Moving layers of air bend their light</button>
+      <button data-opt="c">Clouds pass in front of them</button>
+      <button data-opt="d">Their light is very weak</button>
+    </div>
+    <p class="why" hidden>Shifting air in our atmosphere bends starlight in changing directions.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="b">
+    <legend>3. Astrosat was launched by…</legend>
+    <div class="opts">
+      <button data-opt="a">NASA</button>
+      <button data-opt="b">ISRO</button>
+      <button data-opt="c">the European Space Agency</button>
+      <button data-opt="d">Japan</button>
+    </div>
+    <p class="why" hidden>Astrosat is India's first dedicated space observatory, launched by ISRO in 2015.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="c">
+    <legend>4. Which kind of telescope works well on the ground, even through clouds?</legend>
+    <div class="opts">
+      <button data-opt="a">X-ray</button>
+      <button data-opt="b">Ultraviolet</button>
+      <button data-opt="c">Radio</button>
+      <button data-opt="d">Gamma-ray</button>
+    </div>
+    <p class="why" hidden>Radio waves pass through the atmosphere and clouds.</p>
+  </fieldset>
+  <p class="score" aria-live="polite"></p>
+</div>
+<nav class="next-prev" aria-label="Lessons">
+  <a href="optical-telescopes.html">← Optical and radio telescopes</a>
+  <a href="../../index.html">All lessons →</a>
+</nav>
+</main>
+
+<footer class="foot">Follows Chapter 18 of the Maharashtra State Board Std 9 Science and Technology textbook. Explanations and examples are original.</footer>
+</div>
+
+<script src="../../assets/js/sim-kit.js"></script>
+<script src="../../assets/js/sims/skyview.js"></script>
+<script src="../../assets/js/quiz.js"></script>
+<script>
+  (function () {
+    var simEl = document.getElementById("sim-main");
+    var sim = SkyViewSim.mount(simEl, { band: "visible", site: "ground" });
+    window.lessonSim = sim;
+    // Buttons in the lesson that set up the simulation: data-sim='{...settings}'
+    document.querySelectorAll("main [data-sim]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        sim.set(JSON.parse(b.dataset.sim));
+        sim.play();
+        simEl.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+      });
+    });
+  })();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/contrib/auto-render.min.js"></script>
+<script>
+  renderMathInElement(document.body, {
+    delimiters: [{ left: "$$", right: "$$", display: true }, { left: "\\(", right: "\\)", display: false }],
+    output: window.KATEX_OUTPUT || "htmlAndMathml",
+    throwOnError: false
+  });
+</script>
+
+</body>
+</html>

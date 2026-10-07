@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Optical and Radio Telescopes · Visual Physics</title>
+<meta name="description" content="Trace starlight through a refracting telescope, a Newtonian and a Cassegrain reflector and a radio dish, and see how a wider telescope gathers more light.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.css">
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body class="lesson ch-space">
+<div class="wrap">
+
+<header class="site-head">
+  <a class="brand" href="../../index.html"><svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><path d="M3 27 Q14 -1 29 27" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-dasharray="2.5 3.5"/><circle cx="21" cy="10" r="4.2" fill="var(--vy)"/></svg> Visual <span>Physics</span></a>
+  <nav class="site-nav" aria-label="Main"><a href="../../index.html#chapters">Chapters</a><a href="../../index.html#games">Games</a></nav>
+</header>
+
+<main>
+<div class="title-band">
+<p class="eyebrow">Observing Space: Telescopes, lesson 2</p>
+<h1>Optical and Radio Telescopes</h1>
+<p class="lede">In 1609 Galileo pointed a small telescope at the sky and saw mountains on the Moon and moons around Jupiter. Every telescope since has done the same two jobs: gather more light than the eye, and show finer detail.</p>
+<p class="downloads"><a class="btn" href="../../slides/optical-telescopes.pptx" download>Download slides (.pptx)</a> <span>12 slides with teacher notes</span></p>
+</div>
+
+<div id="sim-main"></div>
+
+<section class="prose">
+  <h2>Why a telescope?</h2>
+  <p>A distant star or galaxy is so faint that the little light entering the pupil of your eye (about 7 mm wide at night) is not enough to see it. A telescope collects light over a much larger area and brings it to a focus. A wider telescope also shows finer detail. The width of its main lens or mirror is called its <strong>aperture, D</strong>.</p>
+  <div class="note"><strong>Light gathered depends on area.</strong> Area goes as the square of the width, so a telescope 10 times wider than your pupil collects \(10^2 = 100\) times as much light. Doubling the aperture gathers four times the light.</div>
+
+  <h2>Refracting telescopes</h2>
+  <p>A <strong>refracting telescope</strong> uses lenses. A large convex lens at the front, the <strong>objective</strong>, refracts the parallel rays from a star to a focus. A small lens near the eye, the <strong>eyepiece</strong>, magnifies the image. Galileo's telescope was of this kind.</p>
+  <p>Big lenses cause problems: glass is heavy and a lens can only be held at its edge, so it sags; different colours focus at slightly different points, giving coloured fringes; and the glass must be perfect all the way through. The largest refractor ever built is only about 1 m wide.</p>
+
+  <h2>Reflecting telescopes</h2>
+  <p>A <strong>reflecting telescope</strong> uses a concave mirror instead of the objective lens. Mirrors can be supported from behind, need a perfect surface on one side only, and reflect all colours to the same focus. So every large modern telescope is a reflector.</p>
+  <ul class="mistakes">
+    <li><strong>Newtonian:</strong> designed by Isaac Newton. A concave mirror at the back reflects the light towards a focus; a small <strong>plane mirror</strong> at 45° turns it out through the side of the tube to the eyepiece.</li>
+    <li><strong>Cassegrain:</strong> a small <strong>convex mirror</strong> reflects the light back down the tube through a hole in the centre of the concave mirror, to an eyepiece or camera at the back. The tube can be much shorter.</li>
+  </ul>
+
+  <h2>Radio telescopes</h2>
+  <p>A <strong>radio telescope</strong> is a large dish shaped like a parabola, often made of metal mesh. Like a concave mirror, it reflects the radio waves falling on it to a <strong>receiver at its focus</strong>, and computers turn the signals into images. Radio waves are very long, so radio dishes must be huge. India's <strong>Giant Metrewave Radio Telescope (GMRT)</strong> near Narayangaon, about 80 km from Pune, has 30 dishes, each 45 m wide, spread over 25 km and working together.</p>
+</section>
+<h2>Try it</h2>
+<p class="prose" style="margin-top:1rem">Choose each design and follow the rays.</p>
+<ul class="tries">
+  <li><span><strong>Refracting.</strong> Where is the focus?</span>
+    <button class="btn" data-sim='{"type":"refractor","D":10}'>Refractor</button></li>
+  <li><span><strong>Newtonian.</strong> Which way does the light leave the tube?</span>
+    <button class="btn" data-sim='{"type":"newtonian","D":20}'>Newtonian</button></li>
+  <li><span><strong>Cassegrain.</strong> Where does the eyepiece go?</span>
+    <button class="btn" data-sim='{"type":"cassegrain","D":20}'>Cassegrain</button></li>
+  <li><span><strong>A radio dish.</strong> Where is the receiver?</span>
+    <button class="btn" data-sim='{"type":"radio"}'>Radio dish</button></li>
+</ul>
+<p class="prose" style="margin-top:1rem;font-size:.875rem;color:var(--muted)">What you should see: In the refractor the objective focuses the light near the back and the eyepiece sends a narrow parallel beam to the eye. The Newtonian sends the light out through the side. The Cassegrain sends it back through a hole in the main mirror to the eye at the back. The dish brings radio waves to the receiver at its focus.</p>
+
+<h2>Worked examples</h2>
+<div class="example">
+  <h3 style="margin-top:0">1. A small telescope</h3>
+  <p>A telescope has an aperture of 14 cm. How many times more light does it gather than your eye (pupil 7 mm)?</p>
+  <ol>
+    <li>Ratio of widths \(= 14 \div 0.7 = 20\)</li>
+    <li>Light gathered \(\propto D^2\): \(20^2 = \) <span class="answer">400 times</span></li>
+  </ol>
+  <button class="btn" data-sim='{"type":"newtonian","D":14}'>Check it</button>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">2. Doubling the aperture</h3>
+  <p>An observatory replaces a 50 cm mirror with a 100 cm one. How much more light does it collect?</p>
+  <ol>
+    <li>Width doubles, so area grows by \(2^2 = \) <span class="answer">4 times</span></li>
+  </ol>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">3. The Hubble Space Telescope</h3>
+  <p>Hubble's main mirror is 2.4 m wide. Roughly how many times more light does it gather than your eye?</p>
+  <ol>
+    <li>\(240 \div 0.7 \approx 343\)</li>
+    <li>\(343^2 \approx\) <span class="answer">1.2 lakh (about 120 000) times</span></li>
+  </ol>
+  <button class="btn" data-sim='{"type":"cassegrain","D":240}'>Check it</button>
+</div>
+
+<h2>Common mistakes</h2>
+<ul class="mistakes" style="margin-top:1rem">
+  <li><strong>“A telescope is just a magnifier.”</strong> Its first job is to collect light, so faint objects become visible.</li>
+  <li><strong>“Twice as wide, twice the light.”</strong> Light gathered depends on area: twice as wide means four times the light.</li>
+  <li><strong>Mixing up the two reflectors.</strong> Newtonian: plane mirror, eyepiece at the side. Cassegrain: convex mirror, eyepiece at the back.</li>
+  <li><strong>“Radio telescopes listen to sounds.”</strong> They detect radio waves, which are electromagnetic, not sound.</li>
+</ul>
+
+<h2>Quick check</h2>
+<div class="quiz">
+  <fieldset class="q" data-answer="b">
+    <legend>1. Which telescope uses a concave mirror and a plane mirror?</legend>
+    <div class="opts">
+      <button data-opt="a">Galilean refractor</button>
+      <button data-opt="b">Newtonian reflector</button>
+      <button data-opt="c">Cassegrain reflector</button>
+      <button data-opt="d">Radio telescope</button>
+    </div>
+    <p class="why" hidden>Newton's design turns the light out of the side with a flat mirror at 45°.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="b">
+    <legend>2. Why are all very large telescopes reflectors?</legend>
+    <div class="opts">
+      <button data-opt="a">Mirrors are cheaper to transport</button>
+      <button data-opt="b">Large lenses sag and give coloured fringes; mirrors can be supported from behind</button>
+      <button data-opt="c">Lenses cannot focus starlight</button>
+      <button data-opt="d">Mirrors magnify more</button>
+    </div>
+    <p class="why" hidden>Mirrors avoid the weight and colour problems of big lenses.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="c">
+    <legend>3. A telescope's aperture is tripled. The light it gathers becomes…</legend>
+    <div class="opts">
+      <button data-opt="a">3 times</button>
+      <button data-opt="b">6 times</button>
+      <button data-opt="c">9 times</button>
+      <button data-opt="d">27 times</button>
+    </div>
+    <p class="why" hidden>Light gathered goes as D², and 3² = 9.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="a">
+    <legend>4. Where is the GMRT?</legend>
+    <div class="opts">
+      <button data-opt="a">Near Pune, Maharashtra</button>
+      <button data-opt="b">In Ladakh</button>
+      <button data-opt="c">In space</button>
+      <button data-opt="d">In Chennai</button>
+    </div>
+    <p class="why" hidden>The Giant Metrewave Radio Telescope is near Narayangaon, about 80 km from Pune.</p>
+  </fieldset>
+  <p class="score" aria-live="polite"></p>
+</div>
+<nav class="next-prev" aria-label="Lessons">
+  <a href="electromagnetic-spectrum.html">← Light we can and cannot see</a>
+  <a href="telescopes-in-space.html">Next: Telescopes in space →</a>
+</nav>
+</main>
+
+<footer class="foot">Follows Chapter 18 of the Maharashtra State Board Std 9 Science and Technology textbook. Explanations and examples are original.</footer>
+</div>
+
+<script src="../../assets/js/sim-kit.js"></script>
+<script src="../../assets/js/sims/telescope.js"></script>
+<script src="../../assets/js/quiz.js"></script>
+<script>
+  (function () {
+    var simEl = document.getElementById("sim-main");
+    var sim = TelescopeSim.mount(simEl, { type: "refractor", D: 10 });
+    window.lessonSim = sim;
+    // Buttons in the lesson that set up the simulation: data-sim='{...settings}'
+    document.querySelectorAll("main [data-sim]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        sim.set(JSON.parse(b.dataset.sim));
+        sim.play();
+        simEl.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+      });
+    });
+  })();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/contrib/auto-render.min.js"></script>
+<script>
+  renderMathInElement(document.body, {
+    delimiters: [{ left: "$$", right: "$$", display: true }, { left: "\\(", right: "\\)", display: false }],
+    output: window.KATEX_OUTPUT || "htmlAndMathml",
+    throwOnError: false
+  });
+</script>
+
+</body>
+</html>

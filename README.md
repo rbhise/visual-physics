@@ -18,10 +18,13 @@ lessons/matter/                    Std 9 Chapter 4 lessons (4 pages, chemistry)
 lessons/acids/                     Std 9 Chapter 5 lessons (2 pages, chemistry)
 lessons/light/                     Std 9 Chapter 11 lessons (4 pages)
 lessons/sound/                     Std 9 Chapter 12 lessons (4 pages)
+lessons/space/                     Std 9 Chapter 18 lessons (3 pages)
 assets/js/chem-kit.js              Atomic masses and drawing helpers for chemistry
 assets/js/circuit-kit.js           Drawing helpers for circuit simulations
 lessons/kinematics/projectile-motion.html
 slides/                            Ready-made PowerPoint decks, one per lesson
+games/                             Small games (Hit the Target, Laser Maze, Formula Race)
+assets/js/games/                   Code for the games
 ```
 
 ## Publish on GitHub Pages

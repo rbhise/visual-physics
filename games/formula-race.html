@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Formula Race · Visual Physics</title>
+<meta name="description" content="Pick the correct chemical formula for each compound in 60 seconds. Practise the criss-cross method against the clock.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.css">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body class="gamepage ch-matter">
+<div class="wrap">
+
+<header class="site-head">
+  <a class="brand" href="../index.html"><svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><path d="M3 27 Q14 -1 29 27" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-dasharray="2.5 3.5"/><circle cx="21" cy="10" r="4.2" fill="var(--vy)"/></svg> Visual <span>Physics</span></a>
+  <nav class="site-nav" aria-label="Main"><a href="../index.html#chapters">Chapters</a><a href="../index.html#games">Games</a></nav>
+</header>
+
+<main>
+<div class="title-band">
+<p class="eyebrow">Game for Measurement of Matter</p>
+<h1>Formula Race</h1>
+<p class="lede">Two ions, four formulae, one right answer. How many compounds can you get right in 60 seconds?</p>
+</div>
+
+<div id="game"></div>
+
+<section class="prose">
+  <h2>How to play</h2>
+  <ul class="mistakes">
+    <li>Press <strong>Start the race</strong>. Click the right formula, or press <strong>1–4</strong> on the keyboard.</li>
+    <li>Each correct answer scores 10, plus a bonus for every answer in a row. A wrong answer shows the right one and breaks your streak.</li>
+    <li>At the end you get a list of the compounds to revise. <strong>Practice</strong> mode has no timer.</li>
+  </ul>
+  <h2>The chemistry behind it</h2>
+  <p>Write the positive ion first. Cross the valencies over: each one becomes the other ion's subscript. Simplify if both numbers share a factor, and put brackets around a radical such as OH or SO₄ when it needs a subscript. For example, Ca²⁺ and OH⁻ give Ca(OH)₂; Al³⁺ and O²⁻ give Al₂O₃.</p>
+</section>
+<div class="game-callout"><p><strong>Learn it first:</strong> build formulae step by step with the criss-cross simulation.</p><a class="btn" href="../lessons/matter/valency-and-formulae.html">Valency lesson →</a></div>
+
+
+<nav class="next-prev" aria-label="Games">
+  <a href="laser-maze.html">← Laser Maze</a>
+  <a href="../index.html">All lessons →</a>
+</nav>
+</main>
+
+<footer class="foot">Free to use for learning. Best scores are saved only in your own browser.</footer>
+</div>
+
+<script src="../assets/js/games/formula.js"></script>
+<script>
+  window.game = FormulaGame.mount(document.getElementById("game"));
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/contrib/auto-render.min.js"></script>
+<script>
+  renderMathInElement(document.body, {
+    delimiters: [{ left: "$$", right: "$$", display: true }, { left: "\\(", right: "\\)", display: false }],
+    output: window.KATEX_OUTPUT || "htmlAndMathml",
+    throwOnError: false
+  });
+</script>
+</body>
+</html>

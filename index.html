@@ -4,101 +4,147 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Visual Physics</title>
-<meta name="description" content="High school physics explained with interactive simulations and animations.">
+<meta name="description" content="Std 9 physics and chemistry with simulations you can play with, worked examples, quizzes, games and ready-made slides.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=JetBrains+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
+<body class="home">
 <div class="wrap">
 <header class="site-head">
-  <a class="brand" href="index.html">Visual <span>Physics</span></a>
-  <span class="crumb">High school physics</span>
+  <a class="brand" href="index.html"><svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><path d="M3 27 Q14 -1 29 27" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-dasharray="2.5 3.5"/><circle cx="21" cy="10" r="4.2" fill="var(--vy)"/></svg> Visual <span>Physics</span></a>
+  <nav class="site-nav" aria-label="Main"><a href="#chapters">Chapters</a><a href="#games">Games</a></nav>
 </header>
 
 <main>
-  <p class="eyebrow">Std 9 · Science and Technology · Physics and Chemistry</p>
-  <h1>See the physics move.</h1>
-  <p class="lede">Every lesson has a simulation you can control. Change one thing, press play, and watch what happens before you touch an equation. Lessons follow the Maharashtra State Board Std 9 textbook, with extra topics from the NCERT Class 9 book.</p>
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Physics you can throw, bounce and switch on.</h1>
+      <p class="lede">Every lesson starts with a simulation you control. Change one thing, watch what happens, and the equations make sense. Follows the Maharashtra State Board Std 9 Science and Technology textbook.</p>
+      <div class="hero-cta">
+        <a class="btn primary" href="lessons/motion/distance-and-displacement.html">Start with lesson 1</a>
+        <a class="btn" href="#games">Play a game</a>
+      </div>
+      <p class="hero-facts"><span><b>36</b> lessons</span><span><b>35</b> slide decks</span><span><b>3</b> games</span></p>
+    </div>
+    <figure class="toy">
+      <canvas id="toy" role="img" aria-label="A ball on a launcher and floating rings. Drag the ball back and let go to throw it through the rings."></canvas>
+      <figcaption><span id="toy-readout">Real projectile motion: g = 9.8 m/s²</span><span class="toy-side">Rings hit: <b id="toy-hits">0</b> <button type="button" class="btn small" id="toy-throw">Throw for me</button></span></figcaption>
+    </figure>
+  </section>
 
-  <ul class="units">
-    <li class="unit">
-      <h3>Ch. 1 Laws of Motion</h3>
-      <ul>
-        <li><a href="lessons/motion/distance-and-displacement.html">Distance and displacement</a></li>
-        <li><a href="lessons/motion/speed-and-velocity.html">Speed and velocity</a></li>
-        <li><a href="lessons/motion/uniform-and-non-uniform-motion.html">Uniform and non-uniform motion</a></li>
-        <li><a href="lessons/motion/acceleration.html">Acceleration</a></li>
-        <li><a href="lessons/motion/motion-graphs.html">Distance–time and velocity–time graphs</a></li>
-        <li><a href="lessons/motion/equations-of-motion.html">Equations of motion</a></li>
-        <li><a href="lessons/motion/uniform-circular-motion.html">Uniform circular motion</a></li>
-        <li><a href="lessons/motion/newtons-laws.html">Newton's laws, balanced and unbalanced forces</a></li>
-        <li><a href="lessons/motion/conservation-of-momentum.html">Conservation of momentum</a></li>
-      </ul>
+  <section id="chapters">
+    <h2>Pick a chapter</h2>
+    <p class="section-lede">Each colour is one chapter of the textbook. Inside every lesson: a simulation, worked examples, common mistakes, a quick quiz and slides to download.</p>
+    <ul class="chapters">
+    <li class="chap ch-motion">
+      <a class="chap-top" href="lessons/motion/distance-and-displacement.html">
+        <svg class="glyph" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 41 Q22 -2 43 41" stroke-dasharray="3 4"/><circle cx="31" cy="17" r="5" fill="currentColor" stroke="none"/><path d="M3 41h42"/></svg>
+        <span class="chap-meta">Chapter 1<span>Physics, 9 lessons</span></span>
+        <span class="chap-name">Laws of Motion</span>
+      </a>
+      <p class="chap-blurb">Displacement, velocity, graphs, Newton’s laws and momentum.</p>
+      <ul><li><a href="lessons/motion/distance-and-displacement.html">Distance and displacement</a></li><li><a href="lessons/motion/speed-and-velocity.html">Speed and velocity</a></li><li><a href="lessons/motion/uniform-and-non-uniform-motion.html">Uniform and non-uniform motion</a></li><li><a href="lessons/motion/acceleration.html">Acceleration</a></li></ul><details><summary>5 more lessons</summary><ul><li><a href="lessons/motion/motion-graphs.html">Distance–time and velocity–time graphs</a></li><li><a href="lessons/motion/equations-of-motion.html">Equations of motion</a></li><li><a href="lessons/motion/uniform-circular-motion.html">Uniform circular motion</a></li><li><a href="lessons/motion/newtons-laws.html">Newton&#x27;s laws, balanced and unbalanced forces</a></li><li><a href="lessons/motion/conservation-of-momentum.html">Conservation of momentum</a></li></ul></details>
     </li>
-    <li class="unit">
-      <h3>Ch. 2 Work and Energy</h3>
-      <ul>
-        <li><a href="lessons/energy/work.html">Work</a></li>
-        <li><a href="lessons/energy/kinetic-and-potential-energy.html">Kinetic and potential energy</a></li>
-        <li><a href="lessons/energy/conservation-of-energy.html">Conservation of energy and free fall</a></li>
-        <li><a href="lessons/energy/power.html">Power</a></li>
-        <li><a href="lessons/energy/simple-machines.html">Simple machines</a> <span class="soon">NCERT</span></li>
-      </ul>
+    <li class="chap ch-energy">
+      <a class="chap-top" href="lessons/energy/work.html">
+        <svg class="glyph" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M24 5v0M24 5 35 33"/><circle cx="35.5" cy="34" r="5.5" fill="currentColor" stroke="none"/><path d="M13 33a14 14 0 0 1 2-13" stroke-dasharray="2 4"/><path d="M14 5h20"/></svg>
+        <span class="chap-meta">Chapter 2<span>Physics, 5 lessons</span></span>
+        <span class="chap-name">Work and Energy</span>
+      </a>
+      <p class="chap-blurb">Work, kinetic and potential energy, power and machines.</p>
+      <ul><li><a href="lessons/energy/work.html">Work</a></li><li><a href="lessons/energy/kinetic-and-potential-energy.html">Kinetic and potential energy</a></li><li><a href="lessons/energy/conservation-of-energy.html">Conservation of energy and free fall</a></li><li><a href="lessons/energy/power.html">Power</a></li></ul><details><summary>1 more lesson</summary><ul><li><a href="lessons/energy/simple-machines.html">Simple machines</a></li></ul></details>
     </li>
-    <li class="unit">
-      <h3>Ch. 3 Current Electricity</h3>
-      <ul>
-        <li><a href="lessons/electricity/current-and-potential-difference.html">Current and potential difference</a></li>
-        <li><a href="lessons/electricity/resistance-and-ohms-law.html">Resistance, Ohm's law, conductors and insulators</a></li>
-        <li><a href="lessons/electricity/series-and-parallel.html">Resistors in series and parallel</a></li>
-        <li><a href="lessons/electricity/household-electricity.html">Electricity at home and safety</a></li>
-      </ul>
+    <li class="chap ch-electricity">
+      <a class="chap-top" href="lessons/electricity/current-and-potential-difference.html">
+        <svg class="glyph" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 24h8l3-8 5 16 5-16 5 16 5-16 3 8h8"/></svg>
+        <span class="chap-meta">Chapter 3<span>Physics, 4 lessons</span></span>
+        <span class="chap-name">Current Electricity</span>
+      </a>
+      <p class="chap-blurb">Current, voltage, Ohm’s law and wiring a home safely.</p>
+      <ul><li><a href="lessons/electricity/current-and-potential-difference.html">Current and potential difference</a></li><li><a href="lessons/electricity/resistance-and-ohms-law.html">Resistance, Ohm&#x27;s law, conductors and insulators</a></li><li><a href="lessons/electricity/series-and-parallel.html">Resistors in series and parallel</a></li><li><a href="lessons/electricity/household-electricity.html">Electricity at home and safety</a></li></ul>
     </li>
-    <li class="unit">
-      <h3>Ch. 4 Measurement of Matter <span class="soon">chemistry</span></h3>
-      <ul>
-        <li><a href="lessons/matter/laws-of-chemical-combination.html">Laws of chemical combination</a></li>
-        <li><a href="lessons/matter/atoms-and-molecular-mass.html">Atoms, molecules and molecular mass</a></li>
-        <li><a href="lessons/matter/the-mole.html">The mole</a></li>
-        <li><a href="lessons/matter/valency-and-formulae.html">Valency and chemical formulae</a></li>
-      </ul>
+    <li class="chap ch-matter">
+      <a class="chap-top" href="lessons/matter/laws-of-chemical-combination.html">
+        <svg class="glyph" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="24" cy="26" r="8" fill="currentColor" stroke="none"/><circle cx="10" cy="15" r="5"/><circle cx="38" cy="15" r="5"/><path d="M14 18l4 3M34 18l-4 3"/></svg>
+        <span class="chap-meta">Chapter 4<span>Chemistry, 4 lessons</span></span>
+        <span class="chap-name">Measurement of Matter</span>
+      </a>
+      <p class="chap-blurb">Chemical laws, atoms, the mole and writing formulae.</p>
+      <ul><li><a href="lessons/matter/laws-of-chemical-combination.html">Laws of chemical combination</a></li><li><a href="lessons/matter/atoms-and-molecular-mass.html">Atoms, molecules and molecular mass</a></li><li><a href="lessons/matter/the-mole.html">The mole</a></li><li><a href="lessons/matter/valency-and-formulae.html">Valency and chemical formulae</a></li></ul>
     </li>
-    <li class="unit">
-      <h3>Ch. 5 Acids, Bases and Salts <span class="soon">chemistry</span></h3>
-      <ul>
-        <li><a href="lessons/acids/indicators-and-ph.html">Acids, bases, indicators and pH</a></li>
-        <li><a href="lessons/acids/neutralisation-and-salts.html">Neutralisation and salts</a></li>
-      </ul>
+    <li class="chap ch-acids">
+      <a class="chap-top" href="lessons/acids/indicators-and-ph.html">
+        <svg class="glyph" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 5h10M21 5v13L10 38a3 3 0 0 0 3 5h22a3 3 0 0 0 3-5L27 18V5"/><path d="M14 31h20" stroke-dasharray="3 3"/></svg>
+        <span class="chap-meta">Chapter 5<span>Chemistry, 2 lessons</span></span>
+        <span class="chap-name">Acids, Bases and Salts</span>
+      </a>
+      <p class="chap-blurb">Indicators, the pH scale and neutralisation.</p>
+      <ul><li><a href="lessons/acids/indicators-and-ph.html">Acids, bases, indicators and pH</a></li><li><a href="lessons/acids/neutralisation-and-salts.html">Neutralisation and salts</a></li></ul>
     </li>
-    <li class="unit">
-      <h3>Ch. 11 Reflection of Light</h3>
-      <ul>
-        <li><a href="lessons/light/reflection-and-plane-mirrors.html">Reflection and plane mirrors</a></li>
-        <li><a href="lessons/light/images-in-inclined-mirrors.html">Images in inclined mirrors</a></li>
-        <li><a href="lessons/light/spherical-mirrors.html">Spherical mirrors and ray diagrams</a></li>
-        <li><a href="lessons/light/mirror-formula.html">The mirror formula and magnification</a></li>
-      </ul>
+    <li class="chap ch-light">
+      <a class="chap-top" href="lessons/light/reflection-and-plane-mirrors.html">
+        <svg class="glyph" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 42h36"/><path d="M8 8l16 32 16-32"/><path d="M24 40V14" stroke-dasharray="2 4"/></svg>
+        <span class="chap-meta">Chapter 11<span>Physics, 4 lessons</span></span>
+        <span class="chap-name">Reflection of Light</span>
+      </a>
+      <p class="chap-blurb">Plane and curved mirrors, ray diagrams and the mirror formula.</p>
+      <ul><li><a href="lessons/light/reflection-and-plane-mirrors.html">Reflection and plane mirrors</a></li><li><a href="lessons/light/images-in-inclined-mirrors.html">Images in inclined mirrors</a></li><li><a href="lessons/light/spherical-mirrors.html">Spherical mirrors and ray diagrams</a></li><li><a href="lessons/light/mirror-formula.html">The mirror formula and magnification</a></li></ul>
     </li>
-    <li class="unit">
-      <h3>Ch. 12 Study of Sound</h3>
-      <ul>
-        <li><a href="lessons/sound/sound-waves.html">Sound waves</a></li>
-        <li><a href="lessons/sound/speed-of-sound.html">The speed of sound</a></li>
-        <li><a href="lessons/sound/echo-and-reverberation.html">Echo and reverberation</a></li>
-        <li><a href="lessons/sound/ultrasound-and-sonar.html">Ultrasound and SONAR</a></li>
-      </ul>
+    <li class="chap ch-sound">
+      <a class="chap-top" href="lessons/sound/sound-waves.html">
+        <svg class="glyph" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10" cy="24" r="4" fill="currentColor" stroke="none"/><path d="M19 15a12 12 0 0 1 0 18M26 9a20 20 0 0 1 0 30M33 4a27 27 0 0 1 0 40"/></svg>
+        <span class="chap-meta">Chapter 12<span>Physics, 4 lessons</span></span>
+        <span class="chap-name">Study of Sound</span>
+      </a>
+      <p class="chap-blurb">Waves, the speed of sound, echoes and SONAR.</p>
+      <ul><li><a href="lessons/sound/sound-waves.html">Sound waves</a></li><li><a href="lessons/sound/speed-of-sound.html">The speed of sound</a></li><li><a href="lessons/sound/echo-and-reverberation.html">Echo and reverberation</a></li><li><a href="lessons/sound/ultrasound-and-sonar.html">Ultrasound and SONAR</a></li></ul>
     </li>
-    <li class="unit"><h3>Ch. 18 Observing Space: Telescopes</h3><ul><li>How a telescope works</li></ul><p class="soon">Coming soon</p></li>
-    <li class="unit">
-      <h3>Going further</h3>
+    <li class="chap ch-space">
+      <a class="chap-top" href="lessons/space/electromagnetic-spectrum.html">
+        <svg class="glyph" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="24" cy="24" r="10"/><ellipse cx="24" cy="24" rx="21" ry="6" transform="rotate(-20 24 24)"/><circle cx="40" cy="8" r="1.6" fill="currentColor" stroke="none"/><circle cx="7" cy="40" r="1.2" fill="currentColor" stroke="none"/></svg>
+        <span class="chap-meta">Chapter 18<span>Physics, 3 lessons</span></span>
+        <span class="chap-name">Observing Space: Telescopes</span>
+      </a>
+      <p class="chap-blurb">The spectrum and the telescopes that read it.</p>
+      <ul><li><a href="lessons/space/electromagnetic-spectrum.html">Light we can and cannot see</a></li><li><a href="lessons/space/optical-telescopes.html">Optical and radio telescopes</a></li><li><a href="lessons/space/telescopes-in-space.html">Telescopes in space</a></li></ul>
+    </li>
+    <li class="chap ch-further">
+      <a class="chap-top" href="lessons/kinematics/projectile-motion.html">
+        <svg class="glyph" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="24" cy="24" r="18"/><circle cx="24" cy="24" r="10"/><circle cx="24" cy="24" r="3" fill="currentColor" stroke="none"/></svg>
+        <span class="chap-meta">Beyond the textbook<span>Extra, 1 lesson</span></span>
+        <span class="chap-name">Going further</span>
+      </a>
+      <p class="chap-blurb">Beyond the textbook: launch a ball and follow its curve.</p>
       <ul><li><a href="lessons/kinematics/projectile-motion.html">Projectile motion</a></li></ul>
     </li>
-  </ul>
+    </ul>
+  </section>
+
+  <section id="games" class="games-band">
+    <h2>Games</h2>
+    <p class="section-lede">Short challenges that use what the lessons teach. Your best scores stay in your browser.</p>
+    <ul class="games">
+      <li class="game ch-motion"><a href="games/hit-the-target.html"><svg viewBox="0 0 90 64" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 58 Q40 -6 74 52" stroke-dasharray="4 5"/><path d="M70 58h12M76 58V40l9 4-9 4"/><circle cx="6" cy="58" r="5" fill="currentColor" stroke="none"/></svg><b>Hit the Target</b><span>Pick the angle and speed to land the ball on the flag. Walls appear from level 4.</span></a></li>
+      <li class="game ch-light"><a href="games/laser-maze.html"><svg viewBox="0 0 90 64" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 14h30l0 32h30" class="beam"/><path d="M28 6l16 16M28 38l16 16" /><circle cx="76" cy="46" r="7"/><circle cx="76" cy="46" r="2.5" fill="currentColor" stroke="none"/></svg><b>Laser Maze</b><span>Turn mirrors to steer a laser to its target. Eight levels.</span></a></li>
+      <li class="game ch-matter"><a href="games/formula-race.html"><svg viewBox="0 0 90 64" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><text x="8" y="40" font-size="17" font-family="JetBrains Mono, monospace" fill="currentColor" stroke="none">Ca(OH)₂</text><path d="M8 50h70" stroke-dasharray="70" /></svg><b>Formula Race</b><span>Pick the right chemical formula. You have 60 seconds.</span></a></li>
+    </ul>
+  </section>
+
+  <section class="how">
+    <h2>How a lesson works</h2>
+    <ol class="steps">
+      <li><b>Play</b><span>Move the sliders and press play. See the idea before the formula.</span></li>
+      <li><b>Read</b><span>Short explanations in the textbook's words, with the equations.</span></li>
+      <li><b>Try</b><span>Buttons set up the simulation for each worked example so you can check the answer.</span></li>
+      <li><b>Check</b><span>A four-question quiz, then download the slides for class.</span></li>
+    </ol>
+  </section>
 </main>
 
-<footer class="foot">Free to use for learning.</footer>
+<footer class="foot">Free to use for learning. Lessons follow the Maharashtra State Board Std 9 Science and Technology textbook, with extra topics from the NCERT Class 9 book.</footer>
 </div>
+<script src="assets/js/hero.js"></script>
 </body>
 </html>
