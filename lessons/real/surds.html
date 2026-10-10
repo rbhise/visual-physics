@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Surds and Rationalising · Visual Science &amp; Maths</title>
+<meta name="description" content="Order of a surd, simplest form, like and unlike surds, comparing surds, operations on surds, and rationalising the denominator with a conjugate.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.css">
+<link rel="stylesheet" href="../../assets/css/style.css?v=20261010">
+</head>
+<body class="lesson ch-real">
+<div class="wrap">
+
+<header class="site-head">
+  <a class="brand" href="../../index.html"><svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><path d="M3 27 Q14 -1 29 27" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-dasharray="2.5 3.5"/><circle cx="21" cy="10" r="4.2" fill="var(--vy)"/></svg> Visual <span>Science &amp; Maths</span></a>
+  <nav class="site-nav" aria-label="Main"><a href="../../index.html#maths">Chapters</a><a href="../../index.html#games">Games</a></nav>
+</header>
+
+<main>
+<div class="title-band">
+<p class="eyebrow">Real Numbers, lesson 3</p>
+<h1>Surds and Rationalising</h1>
+<p class="lede">√72 looks messy, but a square of area 72 is just 36 small squares of area 2, so √72 = 6√2. Surds follow a few simple rules, and a clever multiplication clears them out of any denominator.</p>
+<p class="downloads"><a class="btn" href="../../slides/surds.pptx" download>Download slides (.pptx)</a> <span>12 slides with teacher notes</span></p>
+</div>
+
+<div id="sim-main"></div>
+
+<section class="prose">
+  <h2>Surds and their order</h2>
+  <div class="note"><strong>Surd.</strong> Let \(n\) be a positive integer greater than 1 and \(a\) a positive rational number. If \(\sqrt[n]{a}\) is irrational, it is called a <strong>surd</strong>, and \(n\) is the <strong>order</strong> of the surd.</div>
+  <p>\(\sqrt[3]{7}\) is a surd of order 3, and \(\sqrt{5}\) is a surd of order 2. A surd of order 2 is called a <strong>quadratic surd</strong>; in this chapter we study only quadratic surds. \(\sqrt{49}\) is <em>not</em> a surd, because \(\sqrt{49} = 7\) is rational.</p>
+
+  <h2>Simplest form</h2>
+  <p>Take out the largest perfect-square factor: \(\sqrt{ab} = \sqrt{a} \times \sqrt{b}\).</p>
+  <div class="eq">$$\sqrt{72} = \sqrt{36 \times 2} = \sqrt{36} \times \sqrt{2} = 6\sqrt{2}$$</div>
+  <p>The simulation shows why: a square of area 72 is made of \(6 \times 6\) small squares of area 2. Each small square has side \(\sqrt{2}\), so the big side is \(6\sqrt{2}\).</p>
+
+  <h2>Like and unlike surds</h2>
+  <p>Surds are <strong>like</strong> (similar) surds if, in simplest form, they have the same number under the root. \(\sqrt{20} = 2\sqrt{5}\) and \(3\sqrt{5}\) are like surds. \(\sqrt{2}\) and \(\sqrt{3}\) are unlike surds.</p>
+
+  <h2>Comparing surds</h2>
+  <p>For positive numbers, the one with the bigger square is bigger. To compare \(4\sqrt{3}\) and \(3\sqrt{5}\), square them: \((4\sqrt{3})^2 = 16 \times 3 = 48\) and \((3\sqrt{5})^2 = 9 \times 5 = 45\). As \(48 &gt; 45\), \(4\sqrt{3} &gt; 3\sqrt{5}\).</p>
+
+  <h2>Operations on surds</h2>
+  <div class="table-wrap"><table class="compare">
+    <tr><th>Operation</th><th>Rule</th><th>Example</th></tr>
+    <tr><td>Add, subtract</td><td>only like surds combine</td><td>\(3\sqrt{2} + 5\sqrt{2} = 8\sqrt{2}\)</td></tr>
+    <tr><td>Multiply</td><td>\(\sqrt{a} \times \sqrt{b} = \sqrt{ab}\)</td><td>\(\sqrt{6} \times \sqrt{15} = \sqrt{90} = 3\sqrt{10}\)</td></tr>
+    <tr><td>Divide</td><td>\(\sqrt{a} \div \sqrt{b} = \sqrt{\tfrac{a}{b}}\)</td><td>\(\sqrt{45} \div \sqrt{5} = \sqrt{9} = 3\)</td></tr>
+  </table></div>
+  <p>Simplify first, then combine: \(\sqrt{50} - \sqrt{18} = 5\sqrt{2} - 3\sqrt{2} = 2\sqrt{2}\). But \(\sqrt{2} + \sqrt{3}\) cannot be simplified.</p>
+
+  <h2>Rationalising the denominator</h2>
+  <div class="note"><strong>Rationalising factor.</strong> If the product of two surds is a rational number, each is called a rationalising factor of the other. \(\sqrt{3} \times \sqrt{3} = 3\), so \(\sqrt{3}\) is a rationalising factor of \(\sqrt{3}\). (\(\sqrt{12}\) is one too, since \(\sqrt{3} \times \sqrt{12} = 6\); \(\sqrt{3}\) is the simplest.)</div>
+  <p>To rationalise a denominator, multiply the numerator <em>and</em> the denominator by a rationalising factor of the denominator. The value does not change: \(\dfrac{2}{\sqrt{7}} = \dfrac{2 \times \sqrt{7}}{\sqrt{7} \times \sqrt{7}} = \dfrac{2\sqrt{7}}{7}\).</p>
+
+  <h2>Binomial quadratic surds and the conjugate</h2>
+  <p>\(\sqrt{6} + \sqrt{2}\) and \(5 + 2\sqrt{6}\) are <strong>binomial quadratic surds</strong>. The pair \(a + \sqrt{b}\) and \(a - \sqrt{b}\) are <strong>conjugate</strong> pairs. Their product is rational, because</p>
+  <div class="eq">$$(\sqrt{a} + \sqrt{b})(\sqrt{a} - \sqrt{b}) = (\sqrt{a})^2 - (\sqrt{b})^2 = a - b$$</div>
+  <p>So the conjugate is a rationalising factor: \(\dfrac{1}{\sqrt{6} + \sqrt{2}} = \dfrac{\sqrt{6} - \sqrt{2}}{(\sqrt{6})^2 - (\sqrt{2})^2} = \dfrac{\sqrt{6} - \sqrt{2}}{4}\).</p>
+</section>
+<h2>Try it</h2>
+<p class="prose" style="margin-top:1rem">Pick a view. In “Rationalise”, press the button to see each step.</p>
+<ul class="tries">
+  <li><span><strong>√72.</strong> 36 squares of area 2.</span>
+    <button class="btn" data-sim='{"mode":"simplify","n":72}'>Simplify</button></li>
+  <li><span><strong>√48.</strong> Largest square factor?</span>
+    <button class="btn" data-sim='{"mode":"simplify","n":48}'>Simplify</button></li>
+  <li><span><strong>√64.</strong> Is it a surd?</span>
+    <button class="btn" data-sim='{"mode":"simplify","n":64}'>Simplify</button></li>
+  <li><span><strong>4√3 or 3√5?</strong> Compare the squares.</span>
+    <button class="btn" data-sim='{"mode":"compare","a":4,"b":3,"c":3,"d":5}'>Compare</button></li>
+  <li><span><strong>6/√8.</strong> Simplify √8 first.</span>
+    <button class="btn" data-sim='{"mode":"rat","pick":2}'>Rationalise</button></li>
+  <li><span><strong>1/(√6 + √2).</strong> Use the conjugate.</span>
+    <button class="btn" data-sim='{"mode":"rat","pick":3}'>Rationalise</button></li>
+  <li><span><strong>3/(5 + 2√6).</strong> The denominator becomes 1.</span>
+    <button class="btn" data-sim='{"mode":"rat","pick":4}'>Rationalise</button></li>
+</ul>
+<p class="prose" style="margin-top:1rem;font-size:.875rem;color:var(--muted)">What you should see: √72 = 6√2 and √48 = 4√3. √64 = 8 is rational, so it is not a surd. 48 &gt; 45, so 4√3 &gt; 3√5. 6/√8 = 6/(2√2) = 3√2/2. 1/(√6 + √2) = (√6 − √2)/4. 3/(5 + 2√6) = 15 − 6√6, because 25 − 24 = 1.</p>
+
+<h2>Worked examples</h2>
+<div class="example">
+  <h3 style="margin-top:0">1. Simplify, then add</h3>
+  <p>Simplify \(\sqrt{50} + \sqrt{32} - \sqrt{8}\).</p>
+  <ol>
+    <li>\(\sqrt{50} = \sqrt{25 \times 2} = 5\sqrt{2}\), \(\sqrt{32} = \sqrt{16 \times 2} = 4\sqrt{2}\), \(\sqrt{8} = \sqrt{4 \times 2} = 2\sqrt{2}\).</li>
+    <li>They are like surds: \(5\sqrt{2} + 4\sqrt{2} - 2\sqrt{2}\).</li>
+    <li><span class="answer">\(7\sqrt{2}\)</span></li>
+  </ol>
+  <button class="btn" data-sim='{"mode":"simplify","n":50}'>Check it in the simulation</button>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">2. Compare two surds</h3>
+  <p>Which is greater, \(5\sqrt{2}\) or \(3\sqrt{6}\)?</p>
+  <ol>
+    <li>\((5\sqrt{2})^2 = 25 \times 2 = 50\).</li>
+    <li>\((3\sqrt{6})^2 = 9 \times 6 = 54\).</li>
+    <li>\(50 &lt; 54\), so <span class="answer">\(3\sqrt{6}\) is greater</span>.</li>
+  </ol>
+  <button class="btn" data-sim='{"mode":"compare","a":5,"b":2,"c":3,"d":6}'>Check it</button>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">3. Surds on top and bottom</h3>
+  <p>Rationalise the denominator of \(\dfrac{\sqrt{7} - \sqrt{3}}{\sqrt{7} + \sqrt{3}}\).</p>
+  <ol>
+    <li>Multiply top and bottom by the conjugate \(\sqrt{7} - \sqrt{3}\).</li>
+    <li>Denominator: \((\sqrt{7})^2 - (\sqrt{3})^2 = 7 - 3 = 4\).</li>
+    <li>Numerator: \((\sqrt{7} - \sqrt{3})^2 = 7 - 2\sqrt{21} + 3 = 10 - 2\sqrt{21}\).</li>
+    <li>\(\dfrac{10 - 2\sqrt{21}}{4} = \) <span class="answer">\(\dfrac{5 - \sqrt{21}}{2}\)</span></li>
+  </ol>
+  <button class="btn" data-sim='{"mode":"rat","pick":5}'>Check it in the simulation</button>
+</div>
+
+<h2>Common mistakes</h2>
+<ul class="mistakes" style="margin-top:1rem">
+  <li><strong>Splitting a root over a sum.</strong> √(9 + 16) = √25 = 5, not √9 + √16 = 7. Only products split: √(ab) = √a × √b.</li>
+  <li><strong>Adding unlike surds.</strong> √2 + √3 is not √5. Only like surds combine, like apples with apples.</li>
+  <li><strong>Multiplying by the same binomial.</strong> For 2 + √3 use the conjugate 2 − √3. Multiplying by 2 + √3 leaves a surd behind.</li>
+  <li><strong>Changing only the denominator.</strong> Multiply the numerator and the denominator by the same factor, or the value changes.</li>
+</ul>
+
+<h2>Quick check</h2>
+<div class="quiz">
+  <fieldset class="q" data-answer="b">
+    <legend>1. The order of the surd \(\sqrt[3]{10}\) is…</legend>
+    <div class="opts">
+      <button data-opt="a">2</button>
+      <button data-opt="b">3</button>
+      <button data-opt="c">10</button>
+      <button data-opt="d">\(\tfrac{1}{3}\)</button>
+    </div>
+    <p class="why" hidden>The order is the root taken: the cube root, so 3.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="b">
+    <legend>2. The simplest form of \(\sqrt{98}\) is…</legend>
+    <div class="opts">
+      <button data-opt="a">\(2\sqrt{7}\)</button>
+      <button data-opt="b">\(7\sqrt{2}\)</button>
+      <button data-opt="c">\(49\sqrt{2}\)</button>
+      <button data-opt="d">\(14\sqrt{7}\)</button>
+    </div>
+    <p class="why" hidden>98 = 49 × 2, so √98 = √49 × √2 = 7√2.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="a">
+    <legend>3. Which is greater?</legend>
+    <div class="opts">
+      <button data-opt="a">\(2\sqrt{7}\)</button>
+      <button data-opt="b">\(3\sqrt{3}\)</button>
+      <button data-opt="c">they are equal</button>
+      <button data-opt="d">they cannot be compared</button>
+    </div>
+    <p class="why" hidden>(2√7)² = 28 and (3√3)² = 27. 28 &gt; 27.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="c">
+    <legend>4. A rationalising factor of \(4 + \sqrt{3}\) is…</legend>
+    <div class="opts">
+      <button data-opt="a">\(4 + \sqrt{3}\)</button>
+      <button data-opt="b">\(\sqrt{3}\)</button>
+      <button data-opt="c">\(4 - \sqrt{3}\)</button>
+      <button data-opt="d">\(\sqrt{4}\)</button>
+    </div>
+    <p class="why" hidden>The conjugate: (4 + √3)(4 − √3) = 16 − 3 = 13, a rational number.</p>
+  </fieldset>
+  <p class="score" aria-live="polite"></p>
+</div>
+<nav class="next-prev" aria-label="Lessons">
+  <a href="irrational-and-real-numbers.html">← Irrational and real numbers</a>
+  <a href="../poly/polynomials-and-degree.html">Next chapter: Polynomials →</a>
+</nav>
+</main>
+
+<footer class="foot">Follows Chapter 2 of the Maharashtra State Board Std 9 Mathematics Part I textbook. Explanations and examples are original.</footer>
+</div>
+
+<script src="../../assets/js/sim-kit.js?v=20261010"></script>
+<script src="../../assets/js/math-kit.js?v=20261010"></script>
+<script src="../../assets/js/sims/real-surds.js?v=20261010"></script>
+<script src="../../assets/js/quiz.js?v=20261010"></script>
+<script>
+  (function () {
+    var simEl = document.getElementById("sim-main");
+    var sim = RealSurdSim.mount(simEl, { mode: "simplify", n: 72 });
+    window.lessonSim = sim;
+    // Buttons in the lesson that set up the simulation: data-sim='{...settings}'
+    document.querySelectorAll("main [data-sim]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        sim.set(JSON.parse(b.dataset.sim));
+        sim.play();
+        simEl.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+      });
+    });
+  })();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/contrib/auto-render.min.js"></script>
+<script>
+  renderMathInElement(document.body, {
+    delimiters: [{ left: "$$", right: "$$", display: true }, { left: "\\(", right: "\\)", display: false }],
+    output: window.KATEX_OUTPUT || "htmlAndMathml",
+    throwOnError: false
+  });
+</script>
+
+</body>
+</html>

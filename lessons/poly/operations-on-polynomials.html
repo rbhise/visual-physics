@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Operations and Synthetic Division · Visual Science &amp; Maths</title>
+<meta name="description" content="Add, subtract and multiply polynomials by collecting like terms, the division algorithm, and synthetic division by x − a, filled in one cell at a time.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.css">
+<link rel="stylesheet" href="../../assets/css/style.css?v=20261010">
+</head>
+<body class="lesson ch-poly">
+<div class="wrap">
+
+<header class="site-head">
+  <a class="brand" href="../../index.html"><svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><path d="M3 27 Q14 -1 29 27" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-dasharray="2.5 3.5"/><circle cx="21" cy="10" r="4.2" fill="var(--vy)"/></svg> Visual <span>Science &amp; Maths</span></a>
+  <nav class="site-nav" aria-label="Main"><a href="../../index.html#maths">Chapters</a><a href="../../index.html#games">Games</a></nav>
+</header>
+
+<main>
+<div class="title-band">
+<p class="eyebrow">Polynomials, lesson 2</p>
+<h1>Operations and Synthetic Division</h1>
+<p class="lede">Polynomials add, subtract and multiply much like numbers do: line up the like terms. Dividing by x − a has a shortcut, synthetic division, that needs only the coefficients.</p>
+<p class="downloads"><a class="btn" href="../../slides/operations-on-polynomials.pptx" download>Download slides (.pptx)</a> <span>12 slides with teacher notes</span></p>
+</div>
+
+<div id="sim-main"></div>
+
+<section class="prose">
+  <h2>Adding and subtracting</h2>
+  <p>Add or subtract the coefficients of <strong>like terms</strong> (terms with the same power of \(x\)). Writing the polynomials one under the other, in standard form, keeps like terms in the same column.</p>
+  <div class="eq">$$\begin{aligned} (2x^2 - 3x + 1) + (x^2 + 2x - 4) &= 3x^2 - x - 3 \\ (2x^2 - 3x + 1) - (x^2 + 2x - 4) &= 2x^2 - 3x + 1 - x^2 - 2x + 4 = x^2 - 5x + 5 \end{aligned}$$</div>
+  <p>To subtract, change the sign of <em>every</em> term of the second polynomial and then add.</p>
+
+  <h2>Multiplying</h2>
+  <p>Multiply every term of the first polynomial by every term of the second, then collect like terms. Use \(x^m \times x^n = x^{m+n}\).</p>
+  <div class="eq">$$(x + 2)(x^2 - 3x + 1) = x^3 - 3x^2 + x + 2x^2 - 6x + 2 = x^3 - x^2 - 5x + 2$$</div>
+  <p>The degree of a product is the <strong>sum</strong> of the degrees: here \(1 + 2 = 3\).</p>
+
+  <h2>Dividing: the division algorithm</h2>
+  <div class="note"><strong>Division algorithm.</strong> If \(p(x)\) and \(s(x)\) are two polynomials and the degree of \(p(x)\) is greater than or equal to the degree of \(s(x)\), then on dividing \(p(x)\) by \(s(x)\) we get a quotient \(q(x)\) and a remainder \(r(x)\) such that<br>\(p(x) = s(x) \times q(x) + r(x)\), that is, Dividend = Divisor × Quotient + Remainder,<br>where \(r(x) = 0\) or the degree of \(r(x)\) is less than the degree of \(s(x)\).</div>
+  <p>Long division works like long division of numbers: divide the first terms, multiply back, subtract, bring down the next term, and repeat.</p>
+
+  <h2>Synthetic division</h2>
+  <p>When the divisor is \(x - a\), there is a quicker method that uses only coefficients.</p>
+  <ol>
+    <li>Write the dividend in standard form and list its coefficients, writing 0 for any missing power. Write \(a\) on the left. (For \(x + 3\), \(a = -3\).)</li>
+    <li>Bring down the first coefficient.</li>
+    <li>Multiply it by \(a\) and write the product under the next coefficient. Add.</li>
+    <li>Repeat “multiply by \(a\), then add” to the end. The last number is the <strong>remainder</strong>; the others are the coefficients of the <strong>quotient</strong>, whose degree is one less than the dividend's.</li>
+  </ol>
+  <p>For \((x^3 - 6x^2 + 11x - 6) \div (x - 2)\): coefficients \(1, -6, 11, -6\) and \(a = 2\) give \(1,\ -4,\ 3\) and remainder 0. So the quotient is \(x^2 - 4x + 3\) and \(x^3 - 6x^2 + 11x - 6 = (x - 2)(x^2 - 4x + 3) + 0\).</p>
+</section>
+<h2>Try it</h2>
+<p class="prose" style="margin-top:1rem">Choose an operation. For synthetic division, press “Divide step by step” and watch each cell fill.</p>
+<ul class="tries">
+  <li><span><strong>Divide by x − 2.</strong> x³ − 6x² + 11x − 6.</span>
+    <button class="btn" data-sim='{"mode":"syn","p":[1,-6,11,-6],"a":2}'>Divide</button></li>
+  <li><span><strong>Divide by x + 2.</strong> 2x³ − 5x + 7 has no x² term.</span>
+    <button class="btn" data-sim='{"mode":"syn","p":[2,0,-5,7],"a":-2}'>Divide</button></li>
+  <li><span><strong>Degree 4.</strong> x⁴ − 16 divided by x − 2.</span>
+    <button class="btn" data-sim='{"mode":"syn","p":[1,0,0,0,-16],"a":2}'>Divide</button></li>
+  <li><span><strong>Add.</strong> (2x² − 3x + 1) + (x² + 2x − 4).</span>
+    <button class="btn" data-sim='{"mode":"add","P":[2,-3,1],"Q":[1,2,-4]}'>Show</button></li>
+  <li><span><strong>Subtract.</strong> The same pair, subtracted.</span>
+    <button class="btn" data-sim='{"mode":"sub","P":[2,-3,1],"Q":[1,2,-4]}'>Show</button></li>
+  <li><span><strong>Multiply.</strong> (x + 2)(x² − 3x + 1).</span>
+    <button class="btn" data-sim='{"mode":"mul","P":[0,1,2],"Q":[1,-3,1]}'>Show</button></li>
+</ul>
+<p class="prose" style="margin-top:1rem;font-size:.875rem;color:var(--muted)">What you should see: x³ − 6x² + 11x − 6 ÷ (x − 2) gives quotient x² − 4x + 3, remainder 0. For 2x³ − 5x + 7 use the coefficients 2, 0, −5, 7 and a = −2: quotient 2x² − 4x + 3, remainder 1. x⁴ − 16 ÷ (x − 2) gives x³ + 2x² + 4x + 8, remainder 0. The sum is 3x² − x − 3, the difference x² − 5x + 5, and the product x³ − x² − 5x + 2.</p>
+
+<h2>Worked examples</h2>
+<div class="example">
+  <h3 style="margin-top:0">1. Subtraction</h3>
+  <p>Subtract \(3x^2 + 4x - 1\) from \(5x^2 - 2x + 6\).</p>
+  <ol>
+    <li>\((5x^2 - 2x + 6) - (3x^2 + 4x - 1) = 5x^2 - 2x + 6 - 3x^2 - 4x + 1\)</li>
+    <li>Collect like terms: \((5 - 3)x^2 + (-2 - 4)x + (6 + 1)\)</li>
+    <li><span class="answer">\(2x^2 - 6x + 7\)</span></li>
+  </ol>
+  <button class="btn" data-sim='{"mode":"sub","P":[5,-2,6],"Q":[3,4,-1]}'>Check it in the simulation</button>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">2. Multiplication</h3>
+  <p>Multiply \((2x - 3)(x^2 + x - 2)\).</p>
+  <ol>
+    <li>\(2x(x^2 + x - 2) = 2x^3 + 2x^2 - 4x\)</li>
+    <li>\(-3(x^2 + x - 2) = -3x^2 - 3x + 6\)</li>
+    <li>Add: <span class="answer">\(2x^3 - x^2 - 7x + 6\)</span> (degree 1 + 2 = 3)</li>
+  </ol>
+  <button class="btn" data-sim='{"mode":"mul","P":[0,2,-3],"Q":[1,1,-2]}'>Check it in the simulation</button>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">3. Synthetic division by x + 3</h3>
+  <p>Divide \(x^3 + 2x^2 - 5x - 4\) by \(x + 3\) and write the answer as Dividend = Divisor × Quotient + Remainder.</p>
+  <ol>
+    <li>\(x + 3 = x - (-3)\), so \(a = -3\). Coefficients: \(1, 2, -5, -4\).</li>
+    <li>Bring down 1. \(1 \times (-3) = -3\), \(2 - 3 = -1\). \(-1 \times (-3) = 3\), \(-5 + 3 = -2\). \(-2 \times (-3) = 6\), \(-4 + 6 = 2\).</li>
+    <li>Quotient \(x^2 - x - 2\), remainder 2.</li>
+    <li><span class="answer">\(x^3 + 2x^2 - 5x - 4 = (x + 3)(x^2 - x - 2) + 2\)</span></li>
+  </ol>
+  <button class="btn" data-sim='{"mode":"syn","p":[1,2,-5,-4],"a":-3}'>Check it</button>
+</div>
+
+<h2>Common mistakes</h2>
+<ul class="mistakes" style="margin-top:1rem">
+  <li><strong>Skipping a missing power.</strong> In 2x³ − 5x + 7 there is no x² term. Write its coefficient as 0: 2, 0, −5, 7.</li>
+  <li><strong>Using +3 for x + 3.</strong> Synthetic division needs x − a. Since x + 3 = x − (−3), use a = −3.</li>
+  <li><strong>Changing only the first sign.</strong> −(x² + 2x − 4) = −x² − 2x + 4. Every term of the subtracted polynomial changes sign.</li>
+  <li><strong>Multiplying the degrees.</strong> The degree of a product is the sum of the degrees: (x² + 1)(x³ − 2) has degree 5.</li>
+</ul>
+
+<h2>Quick check</h2>
+<div class="quiz">
+  <fieldset class="q" data-answer="a">
+    <legend>1. \((3x^2 + x - 2) + (x^2 - 4x + 5) = \)…</legend>
+    <div class="opts">
+      <button data-opt="a">\(4x^2 - 3x + 3\)</button>
+      <button data-opt="b">\(4x^2 + 5x + 3\)</button>
+      <button data-opt="c">\(3x^2 - 3x + 3\)</button>
+      <button data-opt="d">\(4x^4 - 3x + 3\)</button>
+    </div>
+    <p class="why" hidden>x² terms: 3 + 1 = 4; x terms: 1 − 4 = −3; numbers: −2 + 5 = 3.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="b">
+    <legend>2. The degree of \((x^2 + 1)(x^3 - 2)\) is…</legend>
+    <div class="opts">
+      <button data-opt="a">6</button>
+      <button data-opt="b">5</button>
+      <button data-opt="c">3</button>
+      <button data-opt="d">2</button>
+    </div>
+    <p class="why" hidden>x² × x³ = x⁵: add the degrees, 2 + 3 = 5.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="b">
+    <legend>3. To divide by \(x + 4\) using synthetic division, the number written on the left is…</legend>
+    <div class="opts">
+      <button data-opt="a">4</button>
+      <button data-opt="b">−4</button>
+      <button data-opt="c">1</button>
+      <button data-opt="d">x</button>
+    </div>
+    <p class="why" hidden>x + 4 = x − (−4), so a = −4.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="a">
+    <legend>4. Dividing \(p(x)\) by \(x - 1\) gives quotient \(x^2 + 2\) and remainder 3. Then \(p(x) = \)…</legend>
+    <div class="opts">
+      <button data-opt="a">\(x^3 - x^2 + 2x + 1\)</button>
+      <button data-opt="b">\(x^3 + 2x + 3\)</button>
+      <button data-opt="c">\(x^3 - x^2 + 2x - 5\)</button>
+      <button data-opt="d">\(x^2 + 2x + 2\)</button>
+    </div>
+    <p class="why" hidden>(x − 1)(x² + 2) + 3 = x³ − x² + 2x − 2 + 3 = x³ − x² + 2x + 1.</p>
+  </fieldset>
+  <p class="score" aria-live="polite"></p>
+</div>
+<nav class="next-prev" aria-label="Lessons">
+  <a href="polynomials-and-degree.html">← Polynomials and their degree</a>
+  <a href="remainder-and-factor-theorems.html">Next: Remainder and factor theorems →</a>
+</nav>
+</main>
+
+<footer class="foot">Follows Chapter 3 of the Maharashtra State Board Std 9 Mathematics Part I textbook. Explanations and examples are original.</footer>
+</div>
+
+<script src="../../assets/js/sim-kit.js?v=20261010"></script>
+<script src="../../assets/js/math-kit.js?v=20261010"></script>
+<script src="../../assets/js/sims/poly-division.js?v=20261010"></script>
+<script src="../../assets/js/quiz.js?v=20261010"></script>
+<script>
+  (function () {
+    var simEl = document.getElementById("sim-main");
+    var sim = PolyDivSim.mount(simEl, { mode: "syn", deg: 3, k: [-6, 11, -6, 1, 0], a: 2 });
+    window.lessonSim = sim;
+    // Buttons in the lesson that set up the simulation: data-sim='{...settings}'
+    document.querySelectorAll("main [data-sim]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        sim.set(JSON.parse(b.dataset.sim));
+        sim.play();
+        simEl.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+      });
+    });
+  })();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/contrib/auto-render.min.js"></script>
+<script>
+  renderMathInElement(document.body, {
+    delimiters: [{ left: "$$", right: "$$", display: true }, { left: "\\(", right: "\\)", display: false }],
+    output: window.KATEX_OUTPUT || "htmlAndMathml",
+    throwOnError: false
+  });
+</script>
+
+</body>
+</html>

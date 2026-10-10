@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Midpoint Theorem · Visual Science &amp; Maths</title>
+<meta name="description" content="Join the midpoints of two sides of a triangle and see that the segment is parallel to the third side and half of it. Watch the proof, try the converse, and use it in quadrilaterals and trapeziums.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.css">
+<link rel="stylesheet" href="../../assets/css/style.css?v=20261010">
+</head>
+<body class="lesson ch-quads">
+<div class="wrap">
+
+<header class="site-head">
+  <a class="brand" href="../../index.html"><svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><path d="M3 27 Q14 -1 29 27" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-dasharray="2.5 3.5"/><circle cx="21" cy="10" r="4.2" fill="var(--vy)"/></svg> Visual <span>Science &amp; Maths</span></a>
+  <nav class="site-nav" aria-label="Main"><a href="../../index.html#maths">Chapters</a><a href="../../index.html#games">Games</a></nav>
+</header>
+
+<main>
+<div class="title-band">
+<p class="eyebrow">Quadrilaterals, lesson 3</p>
+<h1>The Midpoint Theorem</h1>
+<p class="lede">Mark the middle of two sides of any triangle and join them. However you draw the triangle, the new segment is parallel to the third side and exactly half as long.</p>
+<p class="downloads"><a class="btn" href="../../slides/midpoint-theorem.pptx" download>Download slides (.pptx)</a> <span>12 slides with teacher notes</span></p>
+</div>
+
+<div id="sim-main"></div>
+
+<section class="prose">
+  <h2>The theorem</h2>
+  <div class="note"><strong>Midpoint theorem.</strong> The segment joining the midpoints of any two sides of a triangle is parallel to the third side and half of it.<br>In \(\triangle ABC\), if \(P\) and \(Q\) are the midpoints of \(AB\) and \(AC\), then \(PQ \parallel BC\) and \(PQ = \tfrac12 BC\).</div>
+
+  <h2>Why it is true</h2>
+  <p>Extend \(PQ\) to a point \(R\) so that \(QR = PQ\), and join \(CR\).</p>
+  <ul class="mistakes">
+    <li>In \(\triangle AQP\) and \(\triangle CQR\): \(AQ = CQ\), \(PQ = RQ\), and the vertically opposite angles at \(Q\) are equal. So \(\triangle AQP \cong \triangle CQR\) by the S-A-S test.</li>
+    <li>So \(CR = AP = PB\), and \(\angle QAP = \angle QCR\). These are alternate angles, so \(CR \parallel AB\).</li>
+    <li>In \(\square PBCR\), the pair \(PB\) and \(CR\) is parallel and congruent, so it is a parallelogram. Hence \(PR \parallel BC\) and \(PR = BC\).</li>
+    <li>\(PQ\) is half of \(PR\), so \(PQ = \tfrac12 BC\).</li>
+  </ul>
+  <p>Press “Show why” in the simulation: \(\triangle APQ\) turns half a turn about \(Q\) and lands exactly on \(\triangle CRQ\).</p>
+
+  <h2>The converse</h2>
+  <div class="note"><strong>Converse of the midpoint theorem.</strong> If a line drawn through the midpoint of one side of a triangle is parallel to another side, it bisects the third side.</div>
+
+  <h2>Uses</h2>
+  <p><strong>Midpoints of a quadrilateral.</strong> Join the midpoints \(P, Q, R, S\) of the sides of any quadrilateral \(ABCD\). In \(\triangle ABC\), \(PQ \parallel AC\) and \(PQ = \tfrac12 AC\). In \(\triangle ADC\), \(SR \parallel AC\) and \(SR = \tfrac12 AC\). So \(PQ\) and \(SR\) are parallel and congruent, and \(PQRS\) is always a parallelogram.</p>
+  <p><strong>Trapezium.</strong> In trapezium \(ABCD\) with \(AB \parallel DC\), the segment \(MN\) joining the midpoints of the non-parallel sides is parallel to the parallel sides and</p>
+  <div class="eq">$$MN = \tfrac12\,(AB + DC)$$</div>
+</section>
+<h2>Try it</h2>
+<p class="prose" style="margin-top:1rem">Choose a view and drag the corners. They snap to the 1 cm grid.</p>
+<ul class="tries">
+  <li><span><strong>The theorem.</strong> BC = 10 cm. How long is PQ?</span>
+    <button class="btn" data-sim='{"mode":"theorem","tri":[[4,7],[1,1],[11,1]]}'>Show it</button></li>
+  <li><span><strong>The proof.</strong> Watch △APQ turn onto △CRQ.</span>
+    <button class="btn" data-sim='{"mode":"theorem","tri":[[4,7],[1,1],[11,1]],"proof":true}'>Show why</button></li>
+  <li><span><strong>The converse.</strong> A line through P parallel to BC.</span>
+    <button class="btn" data-sim='{"mode":"converse","tri":[[3,7],[1,1],[11,3]]}'>Show it</button></li>
+  <li><span><strong>Midpoints of a quadrilateral.</strong> What shape is PQRS?</span>
+    <button class="btn" data-sim='{"mode":"quad","quad":[[1,2],[9,1],[11,6],[4,7]]}'>Show it</button></li>
+</ul>
+<p class="prose" style="margin-top:1rem;font-size:.875rem;color:var(--muted)">What you should see: with BC = 10 cm, PQ = 5 cm and PQ ∥ BC, wherever you drag A. In the proof, the turned triangle fits exactly and PBCR is a parallelogram. In the converse, AQ = QC every time. PQRS is always a parallelogram; its sides are half of the diagonals AC and BD.</p>
+
+<h2>Worked examples</h2>
+<div class="example">
+  <h3 style="margin-top:0">1. Find the segment</h3>
+  <p>In \(\triangle ABC\), \(P\) and \(Q\) are the midpoints of \(AB\) and \(AC\), and \(BC = 9\) cm. Find \(PQ\).</p>
+  <ol>
+    <li>By the midpoint theorem, \(PQ = \tfrac12 BC = \tfrac12 \times 9\).</li>
+    <li><span class="answer">PQ = 4.5 cm</span>, and \(PQ \parallel BC\).</li>
+  </ol>
+  <button class="btn" data-sim='{"mode":"theorem","tri":[[5,7],[1,1],[10,1]]}'>Check it in the simulation</button>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">2. The midpoint triangle</h3>
+  <p>The sides of \(\triangle XYZ\) are 8 cm, 10 cm and 12 cm. Find the perimeter of the triangle formed by joining the midpoints of its sides.</p>
+  <ol>
+    <li>Each side of the new triangle joins two midpoints, so it is half of the third side: 4 cm, 5 cm and 6 cm.</li>
+    <li>Perimeter \(= 4 + 5 + 6 = 15\) cm, which is half of \(8 + 10 + 12 = 30\) cm.</li>
+    <li><span class="answer">15 cm</span></li>
+  </ol>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">3. A trapezium</h3>
+  <p>In trapezium \(ABCD\), \(AB \parallel DC\), \(AB = 12\) cm and \(DC = 6\) cm. \(M\) and \(N\) are the midpoints of \(AD\) and \(BC\). Find \(MN\).</p>
+  <ol>
+    <li>\(MN = \tfrac12 (AB + DC) = \tfrac12 (12 + 6)\).</li>
+    <li><span class="answer">MN = 9 cm</span></li>
+  </ol>
+  <button class="btn" data-sim='{"mode":"trap","trap":[[0,1],[12,1],[9,6],[3,6]]}'>Check it in the simulation</button>
+</div>
+
+<h2>Common mistakes</h2>
+<ul class="mistakes" style="margin-top:1rem">
+  <li><strong>PQ equals BC.</strong> PQ is half of BC. Going the other way, BC is double PQ.</li>
+  <li><strong>Parallel to the wrong side.</strong> PQ is parallel to the third side: the one that does not contain P or Q.</li>
+  <li><strong>Any parallel segment is half.</strong> Only the segment through the midpoints. A parallel line nearer to A gives a shorter segment.</li>
+  <li><strong>Mixing up the converse.</strong> In the converse you start with one midpoint and a parallel line, and prove the other point is a midpoint.</li>
+</ul>
+
+<h2>Quick check</h2>
+<div class="quiz">
+  <fieldset class="q" data-answer="c">
+    <legend>1. P and Q are the midpoints of sides AB and AC of △ABC, and PQ = 7 cm. Then BC is…</legend>
+    <div class="opts">
+      <button data-opt="a">3.5 cm</button>
+      <button data-opt="b">7 cm</button>
+      <button data-opt="c">14 cm</button>
+      <button data-opt="d">21 cm</button>
+    </div>
+    <p class="why" hidden>PQ = ½ BC, so BC = 2 × 7 = 14 cm.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="a">
+    <legend>2. In △ABC, a line through the midpoint of AB, parallel to BC, meets AC at Q. If AC = 10 cm, AQ is…</legend>
+    <div class="opts">
+      <button data-opt="a">5 cm</button>
+      <button data-opt="b">10 cm</button>
+      <button data-opt="c">20 cm</button>
+      <button data-opt="d">2.5 cm</button>
+    </div>
+    <p class="why" hidden>By the converse, Q is the midpoint of AC: AQ = 5 cm.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="d">
+    <legend>3. Joining the midpoints of the sides of any quadrilateral, in order, always gives…</legend>
+    <div class="opts">
+      <button data-opt="a">a rectangle</button>
+      <button data-opt="b">a rhombus</button>
+      <button data-opt="c">a trapezium</button>
+      <button data-opt="d">a parallelogram</button>
+    </div>
+    <p class="why" hidden>Two opposite sides are both parallel to one diagonal and half of it, so they are parallel and congruent.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="b">
+    <legend>4. A triangle has sides 6 cm, 8 cm and 10 cm. The triangle formed by joining their midpoints has perimeter…</legend>
+    <div class="opts">
+      <button data-opt="a">24 cm</button>
+      <button data-opt="b">12 cm</button>
+      <button data-opt="c">6 cm</button>
+      <button data-opt="d">48 cm</button>
+    </div>
+    <p class="why" hidden>Its sides are 3, 4 and 5 cm: half of 24 cm.</p>
+  </fieldset>
+  <p class="score" aria-live="polite"></p>
+</div>
+<nav class="next-prev" aria-label="Lessons">
+  <a href="special-quadrilaterals.html">← Rectangle, rhombus, square and trapezium</a>
+  <a href="../circle/chords-of-a-circle.html">Next chapter: Circle →</a>
+</nav>
+</main>
+
+<footer class="foot">Follows Chapter 5 of the Maharashtra State Board Std 9 Mathematics Part II textbook. Explanations and examples are original.</footer>
+</div>
+
+<script src="../../assets/js/sim-kit.js?v=20261010"></script>
+<script src="../../assets/js/math-kit.js?v=20261010"></script>
+<script src="../../assets/js/sims/quads-midpoint.js?v=20261010"></script>
+<script src="../../assets/js/quiz.js?v=20261010"></script>
+<script>
+  (function () {
+    var simEl = document.getElementById("sim-main");
+    var sim = QuadsMidSim.mount(simEl, { mode: "theorem" });
+    window.lessonSim = sim;
+    // Buttons in the lesson that set up the simulation: data-sim='{...settings}'
+    document.querySelectorAll("main [data-sim]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        sim.set(JSON.parse(b.dataset.sim));
+        sim.play();
+        simEl.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+      });
+    });
+  })();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/contrib/auto-render.min.js"></script>
+<script>
+  renderMathInElement(document.body, {
+    delimiters: [{ left: "$$", right: "$$", display: true }, { left: "\\(", right: "\\)", display: false }],
+    output: window.KATEX_OUTPUT || "htmlAndMathml",
+    throwOnError: false
+  });
+</script>
+
+</body>
+</html>

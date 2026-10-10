@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Trigonometric Ratios · Visual Science &amp; Maths</title>
+<meta name="description" content="Name the sides of a right-angled triangle for an angle, find sin, cos and tan, see that they depend only on the angle, and check sin²θ + cos²θ = 1.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.css">
+<link rel="stylesheet" href="../../assets/css/style.css?v=20261010">
+</head>
+<body class="lesson ch-trig">
+<div class="wrap">
+
+<header class="site-head">
+  <a class="brand" href="../../index.html"><svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><path d="M3 27 Q14 -1 29 27" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-dasharray="2.5 3.5"/><circle cx="21" cy="10" r="4.2" fill="var(--vy)"/></svg> Visual <span>Science &amp; Maths</span></a>
+  <nav class="site-nav" aria-label="Main"><a href="../../index.html#maths">Chapters</a><a href="../../index.html#games">Games</a></nav>
+</header>
+
+<main>
+<div class="title-band">
+<p class="eyebrow">Trigonometry, lesson 1</p>
+<h1>Trigonometric Ratios</h1>
+<p class="lede">How tall is a tree you cannot climb? Measure the angle up to its top and your distance from it. In a right-angled triangle, the angle fixes the ratios of the sides, and those ratios are trigonometry.</p>
+<p class="downloads"><a class="btn" href="../../slides/trigonometric-ratios.pptx" download>Download slides (.pptx)</a> <span>12 slides with teacher notes</span></p>
+</div>
+
+<div id="sim-main"></div>
+
+<section class="prose">
+  <h2>Sides of a right-angled triangle</h2>
+  <p>In \(\triangle ABC\), let \(\angle B = 90^\circ\). The side opposite the right angle, \(AC\), is the <strong class="c-path">hypotenuse</strong>. For the acute angle \(\angle A\):</p>
+  <ul class="mistakes">
+    <li>\(BC\), the side facing \(\angle A\), is the <strong class="c-vy">opposite side</strong> of \(\angle A\);</li>
+    <li>\(AB\), the side next to \(\angle A\) that is not the hypotenuse, is the <strong class="c-vx">adjacent side</strong> of \(\angle A\).</li>
+  </ul>
+  <p>For \(\angle C\) the roles swap: \(AB\) is opposite \(\angle C\) and \(BC\) is adjacent to it. The hypotenuse never changes.</p>
+
+  <h2>Sine, cosine and tangent</h2>
+  <div class="note">For an acute angle \(\theta\) of a right-angled triangle:
+  $$\sin\theta = \frac{\text{opposite side of } \theta}{\text{hypotenuse}}, \quad \cos\theta = \frac{\text{adjacent side of } \theta}{\text{hypotenuse}}, \quad \tan\theta = \frac{\text{opposite side of } \theta}{\text{adjacent side of } \theta}$$</div>
+  <p>The ratios depend <strong>only on the angle</strong>, not on the size of the triangle. Two right triangles with the same acute angle have the same three angles, so they are similar: one is a scaled copy of the other, and every side is scaled by the same number. The ratios do not change.</p>
+
+  <h2>Relations between the ratios</h2>
+  <p>In \(\triangle ABC\), \(\angle A + \angle C = 90^\circ\). The side opposite \(\angle A\) is adjacent to \(\angle C\), so</p>
+  <div class="eq">$$\sin\theta = \cos(90^\circ - \theta), \qquad \cos\theta = \sin(90^\circ - \theta)$$</div>
+  <p>Dividing \(\sin\theta\) by \(\cos\theta\), the hypotenuse cancels:</p>
+  <div class="eq">$$\frac{\sin\theta}{\cos\theta} = \frac{\text{opposite}}{\text{adjacent}} = \tan\theta$$</div>
+
+  <h2>An important equation</h2>
+  <p>By Pythagoras, \(\text{opposite}^2 + \text{adjacent}^2 = \text{hypotenuse}^2\). Divide every term by \(\text{hypotenuse}^2\):</p>
+  <div class="note">$$\sin^2\theta + \cos^2\theta = 1$$ Here \(\sin^2\theta\) means \((\sin\theta)^2\).</div>
+  <p>In the “Hypotenuse 1” view, the hypotenuse is 1, so the opposite side <em>is</em> \(\sin\theta\) and the adjacent side <em>is</em> \(\cos\theta\).</p>
+</section>
+<h2>Try it</h2>
+<p class="prose" style="margin-top:1rem">Use the sliders, or choose the angle at C to see the sides swap roles.</p>
+<ul class="tries">
+  <li><span><strong>A small triangle.</strong> ∠A = 30°, hypotenuse 4 cm.</span>
+    <button class="btn" data-sim='{"mode":"ratios","input":"angle","A":30,"hyp":4,"at":"A","similar":false}'>Show it</button></li>
+  <li><span><strong>The same angle, bigger.</strong> ∠A = 30°, hypotenuse 10 cm.</span>
+    <button class="btn" data-sim='{"mode":"ratios","input":"angle","A":30,"hyp":10,"at":"A","similar":true,"anim":"grow"}'>Grow it</button></li>
+  <li><span><strong>Sides 3 cm and 4 cm.</strong> BC = 3, AB = 4: find all three ratios.</span>
+    <button class="btn" data-sim='{"mode":"ratios","input":"sides","opp":3,"adj":4,"at":"A","similar":false}'>Show it</button></li>
+  <li><span><strong>Hypotenuse 1.</strong> Is sin²θ + cos²θ always 1?</span>
+    <button class="btn" data-sim='{"mode":"circle","th":40,"anim":"sweep"}'>Sweep it</button></li>
+</ul>
+<p class="prose" style="margin-top:1rem;font-size:.875rem;color:var(--muted)">What you should see: with hypotenuse 4 cm the opposite side is 2 cm; with 10 cm it is 5 cm. Both times sin 30° = 0.5, cos 30° ≈ 0.866 and tan 30° ≈ 0.577. With sides 3 and 4 the hypotenuse is 5, so sin A = 3/5 = 0.6, cos A = 4/5 = 0.8 and tan A = 3/4 = 0.75. In the last view sin²θ + cos²θ stays exactly 1.</p>
+
+<h2>Worked examples</h2>
+<div class="example">
+  <h3 style="margin-top:0">1. Ratios from the sides</h3>
+  <p>In \(\triangle LMN\), \(\angle M = 90^\circ\), \(LM = 8\) and \(MN = 6\). Find \(\sin N\), \(\cos N\) and \(\tan N\).</p>
+  <ol>
+    <li>Hypotenuse \(LN = \sqrt{8^2 + 6^2} = \sqrt{100} = 10\).</li>
+    <li>For \(\angle N\): opposite side \(= LM = 8\), adjacent side \(= MN = 6\).</li>
+    <li><span class="answer">sin N = 8/10 = 4/5, cos N = 6/10 = 3/5, tan N = 8/6 = 4/3</span></li>
+  </ol>
+  <p>In the simulation this is the triangle with BC = 8 and AB = 6, seen from A.</p>
+  <button class="btn" data-sim='{"mode":"ratios","input":"sides","opp":8,"adj":6,"at":"A","similar":false}'>Check it in the simulation</button>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">2. One ratio gives the others</h3>
+  <p>If \(\sin\theta = \dfrac{8}{17}\), find \(\cos\theta\) and \(\tan\theta\).</p>
+  <ol>
+    <li>Draw a right triangle with opposite side \(8k\) and hypotenuse \(17k\). (Any \(k\) works; the ratios do not depend on the size.)</li>
+    <li>Adjacent side \(= \sqrt{(17k)^2 - (8k)^2} = \sqrt{225k^2} = 15k\).</li>
+    <li><span class="answer">cos θ = 15k/17k = 15/17, tan θ = 8k/15k = 8/15</span></li>
+    <li>Check: \(\left(\tfrac{8}{17}\right)^2 + \left(\tfrac{15}{17}\right)^2 = \tfrac{64 + 225}{289} = 1\) ✓</li>
+  </ol>
+  <p>In the simulation \(k = 1\): BC = 8 and AB = 15.</p>
+  <button class="btn" data-sim='{"mode":"ratios","input":"sides","opp":8,"adj":15,"at":"A","similar":false}'>Check it in the simulation</button>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">3. Complementary angles</h3>
+  <p>Given \(\sin 35^\circ \approx 0.574\), find \(\cos 55^\circ\).</p>
+  <ol>
+    <li>\(35^\circ + 55^\circ = 90^\circ\), so \(\cos 55^\circ = \sin(90^\circ - 55^\circ) = \sin 35^\circ\).</li>
+    <li><span class="answer">cos 55° ≈ 0.574</span></li>
+  </ol>
+  <button class="btn" data-sim='{"mode":"circle","th":35}'>Check it in the simulation</button>
+</div>
+
+<h2>Common mistakes</h2>
+<ul class="mistakes" style="margin-top:1rem">
+  <li><strong>Calling the hypotenuse the adjacent side.</strong> The hypotenuse touches the angle too, but it is always called the hypotenuse. The adjacent side is the other one.</li>
+  <li><strong>Keeping “opposite” when the angle changes.</strong> Opposite and adjacent depend on which angle you look from. Swap them for the other acute angle.</li>
+  <li><strong>Reading sin θ as sin × θ.</strong> sin θ is one number: a ratio that belongs to the angle θ.</li>
+  <li><strong>Writing sin²θ as sin(θ²).</strong> sin²θ means (sin θ)²: find sin θ first, then square it.</li>
+</ul>
+
+<h2>Quick check</h2>
+<div class="quiz">
+  <fieldset class="q" data-answer="b">
+    <legend>1. In △PQR, ∠Q = 90°. The side opposite ∠P is…</legend>
+    <div class="opts">
+      <button data-opt="a">PQ</button>
+      <button data-opt="b">QR</button>
+      <button data-opt="c">PR</button>
+      <button data-opt="d">none of these</button>
+    </div>
+    <p class="why" hidden>QR is the side that faces ∠P. PR is the hypotenuse.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="a">
+    <legend>2. If sin θ = 3/5, then cos θ is…</legend>
+    <div class="opts">
+      <button data-opt="a">4/5</button>
+      <button data-opt="b">3/4</button>
+      <button data-opt="c">5/3</button>
+      <button data-opt="d">5/4</button>
+    </div>
+    <p class="why" hidden>Opposite 3, hypotenuse 5, so adjacent = √(25 − 9) = 4, and cos θ = 4/5.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="c">
+    <legend>3. A right triangle is enlarged to twice its size. Its sin θ…</legend>
+    <div class="opts">
+      <button data-opt="a">doubles</button>
+      <button data-opt="b">halves</button>
+      <button data-opt="c">stays the same</button>
+      <button data-opt="d">becomes 1</button>
+    </div>
+    <p class="why" hidden>Both sides in the ratio double, so the ratio does not change.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="b">
+    <legend>4. sin 20° is equal to…</legend>
+    <div class="opts">
+      <button data-opt="a">cos 20°</button>
+      <button data-opt="b">cos 70°</button>
+      <button data-opt="c">sin 70°</button>
+      <button data-opt="d">tan 20°</button>
+    </div>
+    <p class="why" hidden>sin θ = cos (90° − θ), and 90° − 20° = 70°.</p>
+  </fieldset>
+  <p class="score" aria-live="polite"></p>
+</div>
+<nav class="next-prev" aria-label="Lessons">
+  <a href="../coords/lines-parallel-to-axes.html">← Lines parallel to the axes</a>
+  <a href="special-angles.html">Next: Ratios of special angles →</a>
+</nav>
+</main>
+
+<footer class="foot">Follows Chapter 8 of the Maharashtra State Board Std 9 Mathematics Part II textbook. Explanations and examples are original.</footer>
+</div>
+
+<script src="../../assets/js/sim-kit.js?v=20261010"></script>
+<script src="../../assets/js/math-kit.js?v=20261010"></script>
+<script src="../../assets/js/sims/trig-ratios.js?v=20261010"></script>
+<script src="../../assets/js/quiz.js?v=20261010"></script>
+<script>
+  (function () {
+    var simEl = document.getElementById("sim-main");
+    var sim = TrigSim.mount(simEl, { mode: "ratios", A: 30, hyp: 6 });
+    window.lessonSim = sim;
+    // Buttons in the lesson that set up the simulation: data-sim='{...settings}'
+    document.querySelectorAll("main [data-sim]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        sim.set(JSON.parse(b.dataset.sim));
+        sim.play();
+        simEl.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+      });
+    });
+  })();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/contrib/auto-render.min.js"></script>
+<script>
+  renderMathInElement(document.body, {
+    delimiters: [{ left: "$$", right: "$$", display: true }, { left: "\\(", right: "\\)", display: false }],
+    output: window.KATEX_OUTPUT || "htmlAndMathml",
+    throwOnError: false
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Parallelograms · Visual Science &amp; Maths</title>
+<meta name="description" content="Drag the corners of a quadrilateral on a grid and see the properties of a parallelogram: opposite sides and angles congruent, diagonals bisecting each other, and the tests for a parallelogram.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.css">
+<link rel="stylesheet" href="../../assets/css/style.css?v=20261010">
+</head>
+<body class="lesson ch-quads">
+<div class="wrap">
+
+<header class="site-head">
+  <a class="brand" href="../../index.html"><svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><path d="M3 27 Q14 -1 29 27" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-dasharray="2.5 3.5"/><circle cx="21" cy="10" r="4.2" fill="var(--vy)"/></svg> Visual <span>Science &amp; Maths</span></a>
+  <nav class="site-nav" aria-label="Main"><a href="../../index.html#maths">Chapters</a><a href="../../index.html#games">Games</a></nav>
+</header>
+
+<main>
+<div class="title-band">
+<p class="eyebrow">Quadrilaterals, lesson 1</p>
+<h1>Parallelograms</h1>
+<p class="lede">Push a rectangular gate sideways and it leans into a slanted shape, but its opposite bars stay parallel. That shape is a parallelogram, and it has a set of properties you can rely on.</p>
+<p class="downloads"><a class="btn" href="../../slides/parallelograms.pptx" download>Download slides (.pptx)</a> <span>12 slides with teacher notes</span></p>
+</div>
+
+<div id="sim-main"></div>
+
+<section class="prose">
+  <h2>What is a parallelogram?</h2>
+  <p>A quadrilateral \(\square ABCD\) has four sides, four angles and two diagonals, \(AC\) and \(BD\). Sides \(AB\) and \(DC\) are <strong>opposite sides</strong>; sides \(AB\) and \(BC\) are <strong>adjacent sides</strong>. In the same way \(\angle A\) and \(\angle C\) are opposite angles, and \(\angle A\) and \(\angle B\) are adjacent angles.</p>
+  <div class="note"><strong>Parallelogram.</strong> A quadrilateral in which both pairs of opposite sides are parallel is called a parallelogram. In \(\square ABCD\): \(AB \parallel DC\) and \(AD \parallel BC\).</div>
+
+  <h2>Properties of a parallelogram</h2>
+  <div class="note"><strong>Theorems.</strong>
+    <ol style="margin:.4rem 0 0 1.2rem">
+      <li>Opposite sides of a parallelogram are congruent.</li>
+      <li>Opposite angles of a parallelogram are congruent.</li>
+      <li>Diagonals of a parallelogram bisect each other.</li>
+    </ol>
+  </div>
+  <p><strong>Why?</strong> Draw diagonal \(AC\). Because \(AB \parallel DC\), the alternate angles \(\angle BAC\) and \(\angle DCA\) are equal. Because \(AD \parallel BC\), \(\angle DAC = \angle BCA\). \(AC\) is common, so \(\triangle ABC \cong \triangle CDA\) by the A-S-A test. Matching parts give \(AB = CD\), \(BC = DA\) and \(\angle B = \angle D\).</p>
+  <p>Also, \(\angle A\) and \(\angle B\) are interior angles on the same side of the transversal \(AB\) between the parallel lines \(AD\) and \(BC\). So <strong>adjacent angles of a parallelogram are supplementary</strong>: they add up to \(180^\circ\).</p>
+
+  <h2>Tests for a parallelogram</h2>
+  <p>The theorems also work the other way round. A quadrilateral is a parallelogram if <strong>any one</strong> of these is true:</p>
+  <ul class="mistakes">
+    <li>both pairs of opposite sides are congruent;</li>
+    <li>both pairs of opposite angles are congruent;</li>
+    <li>the diagonals bisect each other;</li>
+    <li>one pair of opposite sides is <strong>parallel and congruent</strong>.</li>
+  </ul>
+  <p>In the simulation, the arrows <span class="c-path">&gt;</span> mark parallel sides, short ticks mark equal sides, matching arcs mark equal angles and small circles mark equal halves of the diagonals.</p>
+</section>
+<h2>Try it</h2>
+<p class="prose" style="margin-top:1rem">Drag the corners A, B, C, D (they snap to the grid), or use the buttons. The readouts compare opposite sides, opposite angles and the halves of the diagonals.</p>
+<ul class="tries">
+  <li><span><strong>A parallelogram.</strong> Are the opposite sides and angles equal?</span>
+    <button class="btn" data-sim='{"mode":"para","shape":"para","lock":false}'>Show it</button></li>
+  <li><span><strong>Keep it a parallelogram.</strong> Drag A, B or C: D follows. Do the properties ever fail?</span>
+    <button class="btn" data-sim='{"mode":"para","shape":"para","lock":true}'>Lock it</button></li>
+  <li><span><strong>Any quadrilateral.</strong> No parallel sides at all.</span>
+    <button class="btn" data-sim='{"mode":"para","shape":"any","lock":false}'>Show it</button></li>
+  <li><span><strong>A trapezium.</strong> One pair parallel is not enough.</span>
+    <button class="btn" data-sim='{"mode":"para","shape":"trap","lock":false}'>Show it</button></li>
+</ul>
+<p class="prose" style="margin-top:1rem;font-size:.875rem;color:var(--muted)">What you should see: in the parallelogram, AB = CD = 7 cm, BC = DA ≈ 5.83 cm, ∠A = ∠C ≈ 59.0° and ∠B = ∠D ≈ 121.0°, so ∠A + ∠B = 180°. The diagonals cut each other into equal halves at O. With the lock on, every shape you make keeps all these properties. The other two shapes fail every test.</p>
+
+<h2>Worked examples</h2>
+<div class="example">
+  <h3 style="margin-top:0">1. Angles of a parallelogram</h3>
+  <p>In parallelogram \(PQRS\), \(\angle P = 70^\circ\). Find the other three angles.</p>
+  <ol>
+    <li>Opposite angles are congruent: \(\angle R = \angle P = 70^\circ\).</li>
+    <li>Adjacent angles are supplementary: \(\angle Q = 180^\circ - 70^\circ = 110^\circ\), and \(\angle S = \angle Q\).</li>
+    <li><span class="answer">∠R = 70°, ∠Q = ∠S = 110°</span></li>
+  </ol>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">2. Sides from the perimeter</h3>
+  <p>The perimeter of parallelogram \(ABCD\) is 64 cm and \(AB : BC = 5 : 3\). Find all four sides.</p>
+  <ol>
+    <li>Opposite sides are equal, so perimeter \(= 2(AB + BC) = 64\) and \(AB + BC = 32\).</li>
+    <li>Let \(AB = 5k\), \(BC = 3k\): \(8k = 32\), so \(k = 4\).</li>
+    <li><span class="answer">AB = CD = 20 cm, BC = AD = 12 cm</span></li>
+  </ol>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">3. Use a test</h3>
+  <p>On a centimetre grid, \(A\) is at the corner (1, 1), \(B\) at (7, 2), \(C\) at (10, 6) and \(D\) at (4, 5). Is \(\square ABCD\) a parallelogram?</p>
+  <ol>
+    <li>From \(A\) to \(B\): 6 squares right and 1 up. From \(D\) to \(C\): also 6 right and 1 up.</li>
+    <li>So \(AB\) and \(DC\) point the same way and have the same length: they are parallel and congruent.</li>
+    <li>One pair of opposite sides is parallel and congruent, so <span class="answer">ABCD is a parallelogram</span></li>
+  </ol>
+  <p>The simulation confirms it: \(BC = DA = 5\) cm, \(\angle A = \angle C \approx 43.7^\circ\), and the diagonals bisect each other.</p>
+  <button class="btn" data-sim='{"mode":"para","pts":[[1,1],[7,2],[10,6],[4,5]],"lock":false}'>Check it in the simulation</button>
+</div>
+
+<h2>Common mistakes</h2>
+<ul class="mistakes" style="margin-top:1rem">
+  <li><strong>Adjacent angles are equal.</strong> In a parallelogram the <em>opposite</em> angles are equal. Adjacent angles add up to 180°.</li>
+  <li><strong>The diagonals are equal.</strong> Not in every parallelogram. They always bisect each other, but they are equal only in a rectangle or a square.</li>
+  <li><strong>One pair of parallel sides is enough.</strong> That only makes a trapezium. The same pair must be parallel <em>and</em> congruent, or both pairs must be parallel.</li>
+  <li><strong>Mixing up opposite and adjacent.</strong> In □ABCD, side AB is opposite DC, not BC. Read the letters in order round the shape.</li>
+</ul>
+
+<h2>Quick check</h2>
+<div class="quiz">
+  <fieldset class="q" data-answer="b">
+    <legend>1. In parallelogram ABCD, ∠B = 125°. Then ∠D is…</legend>
+    <div class="opts">
+      <button data-opt="a">55°</button>
+      <button data-opt="b">125°</button>
+      <button data-opt="c">65°</button>
+      <button data-opt="d">235°</button>
+    </div>
+    <p class="why" hidden>∠B and ∠D are opposite angles, so they are congruent.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="c">
+    <legend>2. In parallelogram ABCD, ∠A = 72°. Then ∠B is…</legend>
+    <div class="opts">
+      <button data-opt="a">72°</button>
+      <button data-opt="b">18°</button>
+      <button data-opt="c">108°</button>
+      <button data-opt="d">288°</button>
+    </div>
+    <p class="why" hidden>Adjacent angles are supplementary: 180° − 72° = 108°.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="d">
+    <legend>3. The diagonals of parallelogram PQRS meet at O, and PO = 6 cm. Then PR is…</legend>
+    <div class="opts">
+      <button data-opt="a">6 cm</button>
+      <button data-opt="b">3 cm</button>
+      <button data-opt="c">9 cm</button>
+      <button data-opt="d">12 cm</button>
+    </div>
+    <p class="why" hidden>The diagonals bisect each other, so OR = PO = 6 cm and PR = 12 cm.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="c">
+    <legend>4. Which of these is <em>not</em> enough to prove a quadrilateral is a parallelogram?</legend>
+    <div class="opts">
+      <button data-opt="a">Both pairs of opposite sides are congruent</button>
+      <button data-opt="b">The diagonals bisect each other</button>
+      <button data-opt="c">One pair of opposite sides is parallel</button>
+      <button data-opt="d">One pair of opposite sides is parallel and congruent</button>
+    </div>
+    <p class="why" hidden>A trapezium has one pair of parallel sides and is not a parallelogram.</p>
+  </fieldset>
+  <p class="score" aria-live="polite"></p>
+</div>
+<nav class="next-prev" aria-label="Lessons">
+  <a href="../constructions/constructing-triangles.html">← Constructing triangles</a>
+  <a href="special-quadrilaterals.html">Next: Rectangle, rhombus, square and trapezium →</a>
+</nav>
+</main>
+
+<footer class="foot">Follows Chapter 5 of the Maharashtra State Board Std 9 Mathematics Part II textbook. Explanations and examples are original.</footer>
+</div>
+
+<script src="../../assets/js/sim-kit.js?v=20261010"></script>
+<script src="../../assets/js/math-kit.js?v=20261010"></script>
+<script src="../../assets/js/sims/quads-shape.js?v=20261010"></script>
+<script src="../../assets/js/quiz.js?v=20261010"></script>
+<script>
+  (function () {
+    var simEl = document.getElementById("sim-main");
+    var sim = QuadsShapeSim.mount(simEl, { mode: "para", shape: "para" });
+    window.lessonSim = sim;
+    // Buttons in the lesson that set up the simulation: data-sim='{...settings}'
+    document.querySelectorAll("main [data-sim]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        sim.set(JSON.parse(b.dataset.sim));
+        sim.play();
+        simEl.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+      });
+    });
+  })();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/contrib/auto-render.min.js"></script>
+<script>
+  renderMathInElement(document.body, {
+    delimiters: [{ left: "$$", right: "$$", display: true }, { left: "\\(", right: "\\)", display: false }],
+    output: window.KATEX_OUTPUT || "htmlAndMathml",
+    throwOnError: false
+  });
+</script>
+
+</body>
+</html>

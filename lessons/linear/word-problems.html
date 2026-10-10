@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Word Problems with Two Unknowns · Visual Science &amp; Maths</title>
+<meta name="description" content="Turn everyday puzzles about notes, ages, digits and fractions into two equations, then find the answer by moving x and y until both conditions hold.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.css">
+<link rel="stylesheet" href="../../assets/css/style.css?v=20261010">
+</head>
+<body class="lesson ch-linear">
+<div class="wrap">
+
+<header class="site-head">
+  <a class="brand" href="../../index.html"><svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><path d="M3 27 Q14 -1 29 27" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-dasharray="2.5 3.5"/><circle cx="21" cy="10" r="4.2" fill="var(--vy)"/></svg> Visual <span>Science &amp; Maths</span></a>
+  <nav class="site-nav" aria-label="Main"><a href="../../index.html#maths">Chapters</a><a href="../../index.html#games">Games</a></nav>
+</header>
+
+<main>
+<div class="title-band">
+<p class="eyebrow">Linear Equations in Two Variables, lesson 3</p>
+<h1>Word Problems with Two Unknowns</h1>
+<p class="lede">Many puzzles hide two unknown numbers and two clues. Each clue becomes an equation, and solving the pair answers the puzzle.</p>
+<p class="downloads"><a class="btn" href="../../slides/word-problems.pptx" download>Download slides (.pptx)</a> <span>12 slides with teacher notes</span></p>
+</div>
+
+<div id="sim-main"></div>
+
+<section class="prose">
+  <h2>From words to equations</h2>
+  <ul class="mistakes">
+    <li><strong>Name the unknowns.</strong> Write exactly what \(x\) and \(y\) stand for, with units: “let \(x\) be the number of ₹5 notes”.</li>
+    <li><strong>Turn each clue into an equation.</strong> Look for words such as <em>total</em>, <em>more than</em>, <em>times</em>, <em>years ago</em>.</li>
+    <li><strong>Solve</strong> by elimination or substitution.</li>
+    <li><strong>Answer the question asked</strong>, in words, and check it against the story.</li>
+  </ul>
+
+  <h2>Useful translations</h2>
+</section>
+<div class="table-wrap">
+<table class="compare">
+  <thead><tr><th>Words</th><th>Equation</th></tr></thead>
+  <tbody>
+    <tr><th>45 notes in all</th><td>\(x + y = 45\)</td></tr>
+    <tr><th>₹5 and ₹10 notes worth ₹350</th><td>\(5x + 10y = 350\)</td></tr>
+    <tr><th>Five years ago, the mother was 7 times as old</th><td>\(x - 5 = 7(y - 5)\)</td></tr>
+    <tr><th>A two-digit number with tens digit x, units digit y</th><td>\(10x + y\)</td></tr>
+    <tr><th>The length is 4 more than the breadth</th><td>\(x = y + 4\)</td></tr>
+  </tbody>
+</table>
+</div>
+<h2>Try it</h2>
+<p class="prose" style="margin-top:1rem">Choose a problem, then move x and y until both conditions are green. Tick the box to see each condition as a line.</p>
+<ul class="tries">
+  <li><span><strong>Bank notes.</strong> How many of each note?</span>
+    <button class="btn" data-sim='{"p":"notes","x":0,"y":0,"eqs":false}'>Notes</button></li>
+  <li><span><strong>Ages.</strong> Mother and daughter.</span>
+    <button class="btn" data-sim='{"p":"ages","x":0,"y":0,"eqs":true}'>Ages</button></li>
+  <li><span><strong>Digits.</strong> A number that grows by 27 when reversed.</span>
+    <button class="btn" data-sim='{"p":"digits","x":0,"y":0,"eqs":true}'>Digits</button></li>
+  <li><span><strong>Heads and legs.</strong> Lions and peacocks.</span>
+    <button class="btn" data-sim='{"p":"zoo","x":0,"y":0,"eqs":true}'>Zoo</button></li>
+</ul>
+<p class="prose" style="margin-top:1rem;font-size:.875rem;color:var(--muted)">What you should see: Meena has 20 notes of ₹5 and 25 of ₹10. The mother is 40 and the daughter 10. The number is 36. There are 20 lions and 25 peacocks. In every case the answer is the point where the two lines cross.</p>
+
+<h2>Worked examples</h2>
+<div class="example">
+  <h3 style="margin-top:0">1. Bank notes</h3>
+  <p>Meena has 45 notes of ₹5 and ₹10 worth ₹350 in all. How many of each?</p>
+  <ol>
+    <li>Let \(x\) = number of ₹5 notes, \(y\) = number of ₹10 notes.</li>
+    <li>\(x + y = 45\) and \(5x + 10y = 350\). Divide the second by 5: \(x + 2y = 70\).</li>
+    <li>Subtract the first: \(y = 25\), so \(x = 20\).</li>
+    <li><span class="answer">20 notes of ₹5 and 25 notes of ₹10</span> (check: 100 + 250 = 350 ✓)</li>
+  </ol>
+  <button class="btn" data-sim='{"p":"notes","x":20,"y":25,"eqs":true}'>Check it</button>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">2. Ages</h3>
+  <p>A mother and daughter are 50 years old altogether. Five years ago the mother was 7 times as old as the daughter. Find their ages.</p>
+  <ol>
+    <li>Let the mother be \(x\) years and the daughter \(y\) years now. \(x + y = 50\).</li>
+    <li>Five years ago: \(x - 5 = 7(y - 5)\), so \(x - 7y = -30\).</li>
+    <li>Subtract: \(8y = 80\), \(y = 10\), \(x = 40\).</li>
+    <li><span class="answer">Mother 40 years, daughter 10 years</span></li>
+  </ol>
+  <button class="btn" data-sim='{"p":"ages","x":40,"y":10,"eqs":true}'>Check it</button>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">3. A fraction</h3>
+  <p>Adding 1 to the numerator and denominator of a fraction gives 4/5. Subtracting 5 from both gives 1/2. Find the fraction.</p>
+  <ol>
+    <li>Let the fraction be \(x/y\). Then \(5(x + 1) = 4(y + 1)\), so \(5x - 4y = -1\).</li>
+    <li>And \(2(x - 5) = y - 5\), so \(2x - y = 5\), i.e. \(y = 2x - 5\).</li>
+    <li>Substitute: \(5x - 4(2x - 5) = -1\), so \(-3x = -21\), \(x = 7\), \(y = 9\).</li>
+    <li><span class="answer">The fraction is 7/9</span></li>
+  </ol>
+  <button class="btn" data-sim='{"p":"fraction","x":7,"y":9,"eqs":true}'>Check it</button>
+</div>
+
+<h2>Common mistakes</h2>
+<ul class="mistakes" style="margin-top:1rem">
+  <li><strong>Not saying what x and y mean.</strong> Write “let x be …” first; it stops you mixing up the unknowns.</li>
+  <li><strong>Writing a two-digit number as xy.</strong> With tens digit x and units digit y, the number is 10x + y.</li>
+  <li><strong>Forgetting “years ago” applies to both people.</strong> Five years ago both ages were 5 less: x − 5 and y − 5.</li>
+  <li><strong>Answering with just numbers.</strong> Answer the question in words, with units, and check it in the story.</li>
+</ul>
+
+<h2>Quick check</h2>
+<div class="quiz">
+  <fieldset class="q" data-answer="b">
+    <legend>1. The sum of two numbers is 20 and their difference is 4. The numbers are…</legend>
+    <div class="opts">
+      <button data-opt="a">10 and 10</button>
+      <button data-opt="b">12 and 8</button>
+      <button data-opt="c">14 and 6</button>
+      <button data-opt="d">16 and 4</button>
+    </div>
+    <p class="why" hidden>x + y = 20 and x − y = 4 give x = 12, y = 8.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="c">
+    <legend>2. A two-digit number has tens digit x and units digit y. The number is…</legend>
+    <div class="opts">
+      <button data-opt="a">xy</button>
+      <button data-opt="b">x + y</button>
+      <button data-opt="c">10x + y</button>
+      <button data-opt="d">10y + x</button>
+    </div>
+    <p class="why" hidden>x tens and y units: 10x + y.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="a">
+    <legend>3. Pens cost ₹x and notebooks ₹y. 2 pens and 3 notebooks cost ₹80. The equation is…</legend>
+    <div class="opts">
+      <button data-opt="a">2x + 3y = 80</button>
+      <button data-opt="b">3x + 2y = 80</button>
+      <button data-opt="c">5xy = 80</button>
+      <button data-opt="d">x + y = 80</button>
+    </div>
+    <p class="why" hidden>2 pens cost 2x, 3 notebooks cost 3y.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="b">
+    <legend>4. 50 heads and 140 legs: some hens, some goats. How many goats?</legend>
+    <div class="opts">
+      <button data-opt="a">10</button>
+      <button data-opt="b">20</button>
+      <button data-opt="c">30</button>
+      <button data-opt="d">40</button>
+    </div>
+    <p class="why" hidden>h + g = 50, 2h + 4g = 140, so 2g = 40 and g = 20.</p>
+  </fieldset>
+  <p class="score" aria-live="polite"></p>
+</div>
+<nav class="next-prev" aria-label="Lessons">
+  <a href="simultaneous-equations.html">← Solving simultaneous equations</a>
+  <a href="../finance/savings-and-investment.html">Next chapter: Financial Planning →</a>
+</nav>
+</main>
+
+<footer class="foot">Follows Chapter 5 of the Maharashtra State Board Std 9 Mathematics Part I textbook, with the graphs of linear equations from the NCERT Class 9 book. Explanations and examples are original.</footer>
+</div>
+
+<script src="../../assets/js/sim-kit.js?v=20261010"></script>
+<script src="../../assets/js/math-kit.js?v=20261010"></script>
+<script src="../../assets/js/sims/wordsim.js?v=20261010"></script>
+<script src="../../assets/js/quiz.js?v=20261010"></script>
+<script>
+  (function () {
+    var simEl = document.getElementById("sim-main");
+    var sim = WordSim.mount(simEl, { p: "notes", x: 10, y: 10 });
+    window.lessonSim = sim;
+    // Buttons in the lesson that set up the simulation: data-sim='{...settings}'
+    document.querySelectorAll("main [data-sim]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        sim.set(JSON.parse(b.dataset.sim));
+        sim.play();
+        simEl.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+      });
+    });
+  })();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/contrib/auto-render.min.js"></script>
+<script>
+  renderMathInElement(document.body, {
+    delimiters: [{ left: "$$", right: "$$", display: true }, { left: "\\(", right: "\\)", display: false }],
+    output: window.KATEX_OUTPUT || "htmlAndMathml",
+    throwOnError: false
+  });
+</script>
+
+</body>
+</html>

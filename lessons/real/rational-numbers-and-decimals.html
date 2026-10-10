@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Rational Numbers and Decimals · Visual Science &amp; Maths</title>
+<meta name="description" content="Properties of rational numbers, terminating and non-terminating recurring decimals, why the denominator decides, and turning a recurring decimal back into p/q.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.css">
+<link rel="stylesheet" href="../../assets/css/style.css?v=20261010">
+</head>
+<body class="lesson ch-real">
+<div class="wrap">
+
+<header class="site-head">
+  <a class="brand" href="../../index.html"><svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><path d="M3 27 Q14 -1 29 27" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-dasharray="2.5 3.5"/><circle cx="21" cy="10" r="4.2" fill="var(--vy)"/></svg> Visual <span>Science &amp; Maths</span></a>
+  <nav class="site-nav" aria-label="Main"><a href="../../index.html#maths">Chapters</a><a href="../../index.html#games">Games</a></nav>
+</header>
+
+<main>
+<div class="title-band">
+<p class="eyebrow">Real Numbers, lesson 1</p>
+<h1>Rational Numbers and Decimals</h1>
+<p class="lede">Divide 1 by 8 and the division stops: 0.125. Divide 1 by 6 and it never stops: 0.1666… Watch the long division to see why, and why the digits must repeat.</p>
+<p class="downloads"><a class="btn" href="../../slides/rational-numbers-and-decimals.pptx" download>Download slides (.pptx)</a> <span>12 slides with teacher notes</span></p>
+</div>
+
+<div id="sim-main"></div>
+
+<section class="prose">
+  <h2>Rational numbers</h2>
+  <div class="note"><strong>Rational number.</strong> A number of the form \(\dfrac{p}{q}\), where \(p\) and \(q\) are integers and \(q \neq 0\), is called a rational number. The set of rational numbers is written \(Q\).</div>
+  <p>Every integer is rational, because \(-4 = \dfrac{-4}{1}\). One rational number has many names: \(\dfrac{3}{4} = \dfrac{6}{8} = \dfrac{9}{12}\). The form with no common factor in \(p\) and \(q\) is its <strong>lowest terms</strong> (simplest form).</p>
+
+  <h2>Properties of rational numbers</h2>
+  <p>Let \(a\), \(b\), \(c\) be rational numbers. Then \(a + b\), \(a - b\) and \(a \times b\) are rational, and \(a \div b\) is rational when \(b \neq 0\).</p>
+  <div class="table-wrap"><table class="compare">
+    <tr><th>Property</th><th>Addition</th><th>Multiplication</th></tr>
+    <tr><td>Commutative</td><td>\(a + b = b + a\)</td><td>\(a \times b = b \times a\)</td></tr>
+    <tr><td>Associative</td><td>\((a + b) + c = a + (b + c)\)</td><td>\((a \times b) \times c = a \times (b \times c)\)</td></tr>
+    <tr><td>Identity</td><td>\(a + 0 = a\)</td><td>\(a \times 1 = a\)</td></tr>
+    <tr><td>Inverse</td><td>\(a + (-a) = 0\)</td><td>\(a \times \dfrac{1}{a} = 1\) if \(a \neq 0\)</td></tr>
+  </table></div>
+  <p>Multiplication distributes over addition: \(a \times (b + c) = a \times b + a \times c\). For example, the additive inverse of \(\dfrac{2}{9}\) is \(-\dfrac{2}{9}\), and its multiplicative inverse (reciprocal) is \(\dfrac{9}{2}\).</p>
+
+  <h2>Decimal form of a rational number</h2>
+  <p>To write \(\dfrac{p}{q}\) as a decimal, divide \(p\) by \(q\). Two things can happen:</p>
+  <ul class="mistakes">
+    <li>the remainder becomes 0 and the division stops: a <strong>terminating decimal</strong>, such as \(\dfrac{7}{8} = 0.875\);</li>
+    <li>the remainder never becomes 0 and a group of digits repeats for ever: a <strong>non-terminating recurring decimal</strong>, such as \(\dfrac{5}{6} = 0.8333\ldots\)</li>
+  </ul>
+  <p>We write the repeating digits once, with a bar over them: \(0.8333\ldots = 0.8\overline{3}\) and \(0.272727\ldots = 0.\overline{27}\). (Some books put a dot over the repeating digit instead.)</p>
+
+  <h2>Why the digits must repeat</h2>
+  <p>When you divide by \(q\), every remainder is one of \(0, 1, 2, \ldots, q - 1\). There are only \(q\) of them, so within \(q\) steps either the remainder becomes 0 or a remainder comes back. Once a remainder comes back, the same digits follow again and again. The <strong>remainder wheel</strong> in the simulation shows this.</p>
+  <div class="note"><strong>Rule.</strong> Write \(\dfrac{p}{q}\) in lowest terms. If the prime factors of \(q\) are only 2 and 5, the decimal form is terminating. If \(q\) has any other prime factor, it is non-terminating recurring.<br>So the decimal form of every rational number is either terminating or non-terminating recurring.</div>
+  <p>The reason: when \(q\) is made only of 2s and 5s, you can multiply top and bottom to get a power of 10. \(\dfrac{7}{8} = \dfrac{7 \times 125}{8 \times 125} = \dfrac{875}{1000} = 0.875\). No power of 10 is a multiple of 3 or 7, so \(\dfrac{1}{3}\) or \(\dfrac{2}{7}\) can never stop.</p>
+
+  <h2>Recurring decimal to p/q</h2>
+  <p>Call the decimal \(x\). Multiply by 10, 100, 1000, … so that the repeating tails line up, then subtract. The endless tails cancel.</p>
+  <div class="eq">$$\begin{aligned} x &= 0.4545\ldots \\ 100x &= 45.4545\ldots \\ 100x - x &= 45 \;\Rightarrow\; 99x = 45 \;\Rightarrow\; x = \tfrac{45}{99} = \tfrac{5}{11} \end{aligned}$$</div>
+  <p>Use 10 for a block of one digit, 100 for a block of two digits, and so on. If some digits come before the block, as in \(0.2\overline{7}\), first multiply by 10 to move them past the point: \(10x = 2.777\ldots\), \(100x = 27.777\ldots\), so \(90x = 25\) and \(x = \dfrac{25}{90} = \dfrac{5}{18}\).</p>
+</section>
+<h2>Try it</h2>
+<p class="prose" style="margin-top:1rem">Choose p and q, then press “Divide step by step”. Watch the remainders on the wheel.</p>
+<ul class="tries">
+  <li><span><strong>1/6.</strong> Which remainder comes back?</span>
+    <button class="btn" data-sim='{"mode":"divide","p":1,"q":6}'>Divide</button></li>
+  <li><span><strong>7/8.</strong> 8 = 2 × 2 × 2. Does it stop?</span>
+    <button class="btn" data-sim='{"mode":"divide","p":7,"q":8}'>Divide</button></li>
+  <li><span><strong>3/7.</strong> How long is the repeating block?</span>
+    <button class="btn" data-sim='{"mode":"divide","p":3,"q":7}'>Divide</button></li>
+  <li><span><strong>9/12.</strong> Cancel first, then decide.</span>
+    <button class="btn" data-sim='{"mode":"divide","p":9,"q":12}'>Divide</button></li>
+  <li><span><strong>0.3636….</strong> Turn it back into p/q.</span>
+    <button class="btn" data-sim='{"mode":"back","dec":"0.(36)"}'>Convert</button></li>
+  <li><span><strong>1.2454545….</strong> Digits before the block.</span>
+    <button class="btn" data-sim='{"mode":"back","dec":"1.2(45)"}'>Convert</button></li>
+</ul>
+<p class="prose" style="margin-top:1rem;font-size:.875rem;color:var(--muted)">What you should see: 1/6 gives remainders 1, 4, 4: the 4 comes back, so \(\tfrac16 = 0.1666\ldots = 0.1\overline{6}\). 7/8 = 0.875 stops, because the remainder reaches 0. 3/7 = 0.428571428571…: the block 428571 has 6 digits and uses every remainder from 1 to 6. 9/12 = 3/4 = 0.75. 0.3636… = 36/99 = 4/11, and 1.2454545… = 1233/990 = 137/110.</p>
+
+<h2>Worked examples</h2>
+<div class="example">
+  <h3 style="margin-top:0">1. Decide without dividing</h3>
+  <p>Which of \(\dfrac{13}{40}\), \(\dfrac{7}{30}\) and \(\dfrac{21}{28}\) have terminating decimal forms?</p>
+  <ol>
+    <li>\(40 = 2^3 \times 5\): only 2s and 5s, so \(\dfrac{13}{40}\) terminates. Indeed \(\dfrac{13}{40} = \dfrac{325}{1000} = 0.325\).</li>
+    <li>\(30 = 2 \times 3 \times 5\) has the factor 3, so \(\dfrac{7}{30} = 0.2333\ldots = 0.2\overline{3}\) is non-terminating recurring.</li>
+    <li>\(\dfrac{21}{28} = \dfrac{3}{4}\) in lowest terms, and \(4 = 2^2\). So it terminates: \(0.75\).</li>
+    <li><span class="answer">13/40 and 21/28 terminate; 7/30 recurs</span></li>
+  </ol>
+  <button class="btn" data-sim='{"mode":"divide","p":7,"q":30}'>Check it in the simulation</button>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">2. A block of two digits</h3>
+  <p>Write \(0.\overline{72}\) in the form \(\dfrac{p}{q}\).</p>
+  <ol>
+    <li>Let \(x = 0.7272\ldots\). The block has 2 digits, so multiply by 100: \(100x = 72.7272\ldots\)</li>
+    <li>Subtract: \(100x - x = 72\), so \(99x = 72\).</li>
+    <li>\(x = \dfrac{72}{99} = \) <span class="answer">\(\dfrac{8}{11}\)</span></li>
+  </ol>
+  <button class="btn" data-sim='{"mode":"back","dec":"0.(72)"}'>Check it</button>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">3. Digits before the block</h3>
+  <p>Write \(0.58\overline{3}\) in the form \(\dfrac{p}{q}\).</p>
+  <ol>
+    <li>Let \(x = 0.58333\ldots\). Two digits come before the block: \(100x = 58.333\ldots\)</li>
+    <li>One more place moves one block across: \(1000x = 583.333\ldots\)</li>
+    <li>Subtract: \(1000x - 100x = 583 - 58\), so \(900x = 525\).</li>
+    <li>\(x = \dfrac{525}{900} = \) <span class="answer">\(\dfrac{7}{12}\)</span></li>
+  </ol>
+  <button class="btn" data-sim='{"mode":"back","dec":"0.58(3)"}'>Check it in the simulation</button>
+</div>
+
+<h2>Common mistakes</h2>
+<ul class="mistakes" style="margin-top:1rem">
+  <li><strong>Using the denominator before cancelling.</strong> 21/28 looks like it should recur (28 = 2² × 7), but 21/28 = 3/4 terminates. Always write the fraction in lowest terms first.</li>
+  <li><strong>Putting the bar in the wrong place.</strong> 0.1666… is \(0.1\overline{6}\), with the bar on the 6 only. \(0.\overline{16}\) would mean 0.161616…</li>
+  <li><strong>Multiplying by 10 for every block.</strong> Use 10 for a 1-digit block, 100 for a 2-digit block, 1000 for a 3-digit block, so the tails line up.</li>
+  <li><strong>Calling a long decimal irrational.</strong> 1/17 has a block of 16 digits, but it still repeats. Every p/q terminates or recurs.</li>
+</ul>
+
+<h2>Quick check</h2>
+<div class="quiz">
+  <fieldset class="q" data-answer="b">
+    <legend>1. Which of these has a terminating decimal form?</legend>
+    <div class="opts">
+      <button data-opt="a">\(\dfrac{5}{12}\)</button>
+      <button data-opt="b">\(\dfrac{9}{40}\)</button>
+      <button data-opt="c">\(\dfrac{4}{15}\)</button>
+      <button data-opt="d">\(\dfrac{2}{3}\)</button>
+    </div>
+    <p class="why" hidden>40 = 2³ × 5 has no prime factor other than 2 and 5, so 9/40 = 0.225. The others have the factor 3.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="b">
+    <legend>2. \(0.\overline{4}\) written as \(\dfrac{p}{q}\) is…</legend>
+    <div class="opts">
+      <button data-opt="a">\(\dfrac{4}{10}\)</button>
+      <button data-opt="b">\(\dfrac{4}{9}\)</button>
+      <button data-opt="c">\(\dfrac{2}{5}\)</button>
+      <button data-opt="d">\(\dfrac{4}{99}\)</button>
+    </div>
+    <p class="why" hidden>x = 0.444…, 10x = 4.444…, so 9x = 4 and x = 4/9.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="b">
+    <legend>3. The decimal form of \(\dfrac{5}{11}\) is…</legend>
+    <div class="opts">
+      <button data-opt="a">\(0.45\)</button>
+      <button data-opt="b">\(0.\overline{45}\)</button>
+      <button data-opt="c">\(0.4\overline{5}\)</button>
+      <button data-opt="d">\(0.\overline{454}\)</button>
+    </div>
+    <p class="why" hidden>50 ÷ 11 = 4 remainder 6, 60 ÷ 11 = 5 remainder 5, and remainder 5 comes back: 0.454545…</p>
+  </fieldset>
+  <fieldset class="q" data-answer="b">
+    <legend>4. \(\dfrac{2}{3} + \dfrac{1}{5} = \dfrac{1}{5} + \dfrac{2}{3}\) shows which property?</legend>
+    <div class="opts">
+      <button data-opt="a">associative</button>
+      <button data-opt="b">commutative</button>
+      <button data-opt="c">identity</button>
+      <button data-opt="d">inverse</button>
+    </div>
+    <p class="why" hidden>Changing the order of the numbers does not change the sum: the commutative property of addition.</p>
+  </fieldset>
+  <p class="score" aria-live="polite"></p>
+</div>
+<nav class="next-prev" aria-label="Lessons">
+  <a href="../sets/union-and-intersection.html">← Union, intersection and counting</a>
+  <a href="irrational-and-real-numbers.html">Next: Irrational and real numbers →</a>
+</nav>
+</main>
+
+<footer class="foot">Follows Chapter 2 of the Maharashtra State Board Std 9 Mathematics Part I textbook. Explanations and examples are original.</footer>
+</div>
+
+<script src="../../assets/js/sim-kit.js?v=20261010"></script>
+<script src="../../assets/js/math-kit.js?v=20261010"></script>
+<script src="../../assets/js/sims/real-decimals.js?v=20261010"></script>
+<script src="../../assets/js/quiz.js?v=20261010"></script>
+<script>
+  (function () {
+    var simEl = document.getElementById("sim-main");
+    var sim = RealDecimalSim.mount(simEl, { mode: "divide", p: 1, q: 6 });
+    window.lessonSim = sim;
+    // Buttons in the lesson that set up the simulation: data-sim='{...settings}'
+    document.querySelectorAll("main [data-sim]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        sim.set(JSON.parse(b.dataset.sim));
+        sim.play();
+        simEl.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+      });
+    });
+  })();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/contrib/auto-render.min.js"></script>
+<script>
+  renderMathInElement(document.body, {
+    delimiters: [{ left: "$$", right: "$$", display: true }, { left: "\\(", right: "\\)", display: false }],
+    output: window.KATEX_OUTPUT || "htmlAndMathml",
+    throwOnError: false
+  });
+</script>
+
+</body>
+</html>

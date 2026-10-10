@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ratio, Direct and Inverse Proportion · Visual Science &amp; Maths</title>
+<meta name="description" content="Write a ratio in simplest form, compare two ratios, turn ratios into percentages, and tell direct proportion from inverse proportion with tapes and graphs.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.css">
+<link rel="stylesheet" href="../../assets/css/style.css?v=20261010">
+</head>
+<body class="lesson ch-ratio">
+<div class="wrap">
+
+<header class="site-head">
+  <a class="brand" href="../../index.html"><svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><path d="M3 27 Q14 -1 29 27" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-dasharray="2.5 3.5"/><circle cx="21" cy="10" r="4.2" fill="var(--vy)"/></svg> Visual <span>Science &amp; Maths</span></a>
+  <nav class="site-nav" aria-label="Main"><a href="../../index.html#maths">Chapters</a><a href="../../index.html#games">Games</a></nav>
+</header>
+
+<main>
+<div class="title-band">
+<p class="eyebrow">Ratio and Proportion, lesson 1</p>
+<h1>Ratio, Direct and Inverse Proportion</h1>
+<p class="lede">A recipe needs 2 cups of rice for every 3 cups of water. Double the rice and you double the water. Ratio tells you how big one quantity is compared with another.</p>
+<p class="downloads"><a class="btn" href="../../slides/ratio-and-proportion.pptx" download>Download slides (.pptx)</a> <span>12 slides with teacher notes</span></p>
+</div>
+
+<div id="sim-main"></div>
+
+<section class="prose">
+  <h2>Ratio</h2>
+  <div class="note"><strong>Ratio.</strong> For two numbers \(a\) and \(b\) with \(b \ne 0\), the ratio of \(a\) to \(b\) is written \(a : b\) or \(\dfrac{a}{b}\). \(a\) is the first term (antecedent) and \(b\) is the second term (consequent).</div>
+  <p>A ratio compares quantities of the <strong>same kind</strong>, in the <strong>same unit</strong>. The ratio of 1.5 m to 75 cm is \(150 : 75 = 2 : 1\), not \(1.5 : 75\). A ratio has no unit of its own.</p>
+  <p>Multiplying or dividing both terms by the same non-zero number does not change a ratio: \(a : b = ak : bk\). To write a ratio in <strong>simplest form</strong>, divide both terms by their HCF:</p>
+  <div class="eq">$$24 : 36 = \frac{24}{12} : \frac{36}{12} = 2 : 3$$</div>
+  <p>The order matters: \(2 : 3\) and \(3 : 2\) are different ratios.</p>
+
+  <h2>Comparing ratios</h2>
+  <p>For positive numbers \(a, b, c, d\), compare \(ad\) with \(bc\):</p>
+  <ul class="mistakes">
+    <li>if \(ad &gt; bc\), then \(\dfrac{a}{b} &gt; \dfrac{c}{d}\);</li>
+    <li>if \(ad &lt; bc\), then \(\dfrac{a}{b} &lt; \dfrac{c}{d}\);</li>
+    <li>if \(ad = bc\), then \(\dfrac{a}{b} = \dfrac{c}{d}\), and we say \(a, b, c, d\) are <strong>in proportion</strong>.</li>
+  </ul>
+
+  <h2>Percentage as a ratio</h2>
+  <p>A percentage is a ratio whose second term is 100: \(x\% = \dfrac{x}{100}\). To change \(3 : 5\) to a percentage, make the second term 100: \(\dfrac{3}{5} = \dfrac{60}{100} = 60\%\).</p>
+
+  <h2>Direct and inverse proportion</h2>
+  <div class="note"><strong>Direct proportion.</strong> If two quantities change so that their <strong>ratio</strong> stays constant, \(\dfrac{y}{x} = k\), they are in direct proportion: \(y = kx\), written \(y \propto x\).<br>
+  <strong>Inverse proportion.</strong> If they change so that their <strong>product</strong> stays constant, \(xy = k\), they are in inverse proportion: \(y \propto \dfrac{1}{x}\).</div>
+  <p>The cost of notebooks is in direct proportion to the number bought: 2 notebooks cost twice as much as 1. The number of days needed to finish a job is in inverse proportion to the number of workers: twice the workers need half the days.</p>
+</section>
+<h2>Try it</h2>
+<p class="prose" style="margin-top:1rem">Choose a view with the chips, then move the sliders.</p>
+<ul class="tries">
+  <li><span><strong>Simplest form.</strong> 24 : 36 as tapes cut into equal blocks.</span>
+    <button class="btn" data-sim='{"mode":"ratio","a":24,"b":36,"nameA":"a","nameB":"b"}'>Try it</button></li>
+  <li><span><strong>A class.</strong> 16 girls and 20 boys.</span>
+    <button class="btn" data-sim='{"mode":"ratio","a":16,"b":20,"nameA":"Girls","nameB":"Boys"}'>Try it</button></li>
+  <li><span><strong>Compare.</strong> Which is bigger, 5/7 or 7/10?</span>
+    <button class="btn" data-sim='{"mode":"compare","a":5,"b":7,"c":7,"d":10}'>Try it</button></li>
+  <li><span><strong>Direct.</strong> Notebooks at ₹15 each.</span>
+    <button class="btn" data-sim='{"mode":"direct","k":15,"x":4,"xname":"Notebooks","yname":"Cost (₹)"}'>Try it</button></li>
+  <li><span><strong>Inverse.</strong> A job that takes 24 worker-days.</span>
+    <button class="btn" data-sim='{"mode":"inverse","k":24,"x":6,"xname":"Workers","yname":"Days"}'>Try it</button></li>
+</ul>
+<p class="prose" style="margin-top:1rem;font-size:.875rem;color:var(--muted)">What you should see: 24 : 36 = 2 : 3 (blocks of 12). Girls : boys = 16 : 20 = 4 : 5, so there are 80 girls for every 100 boys, and 4/9 of the class are girls. 5 × 10 = 50 and 7 × 7 = 49, so 5/7 &gt; 7/10. 4 notebooks cost ₹60, and cost ÷ number stays 15. 6 workers need 4 days, and workers × days stays 24.</p>
+
+<h2>Worked examples</h2>
+<div class="example">
+  <h3 style="margin-top:0">1. Same units first</h3>
+  <p>Write the ratio of 45 minutes to 2 hours in simplest form, and as a percentage.</p>
+  <ol>
+    <li>Change to the same unit: 2 hours = 120 minutes, so the ratio is \(45 : 120\).</li>
+    <li>HCF of 45 and 120 is 15: \(45 : 120 = 3 : 8\). <span class="answer">3 : 8</span></li>
+    <li>\(\dfrac{45}{120} \times 100 = 37.5\), so 45 minutes is <span class="answer">37.5%</span> of 2 hours.</li>
+  </ol>
+  <button class="btn" data-sim='{"mode":"ratio","a":45,"b":120,"nameA":"a","nameB":"b"}'>Check it</button>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">2. Comparing ratios</h3>
+  <p>Which ratio is greater, \(\dfrac{5}{7}\) or \(\dfrac{7}{10}\)?</p>
+  <ol>
+    <li>Cross-multiply: \(5 \times 10 = 50\) and \(7 \times 7 = 49\).</li>
+    <li>\(50 &gt; 49\), so <span class="answer">5/7 &gt; 7/10</span></li>
+  </ol>
+  <button class="btn" data-sim='{"mode":"compare","a":5,"b":7,"c":7,"d":10}'>Check it</button>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">3. Inverse proportion</h3>
+  <p>12 workers build a wall in 10 days. Working at the same rate, how many days would 8 workers take?</p>
+  <ol>
+    <li>Fewer workers need more days: inverse proportion. The product stays the same: \(12 \times 10 = 120\).</li>
+    <li>\(8 \times y = 120\), so \(y = 120 \div 8 = \) <span class="answer">15 days</span></li>
+  </ol>
+  <button class="btn" data-sim='{"mode":"inverse","k":120,"x":8,"xname":"Workers","yname":"Days"}'>Check it</button>
+</div>
+
+<h2>Common mistakes</h2>
+<ul class="mistakes" style="margin-top:1rem">
+  <li><strong>Mixing units.</strong> Change both quantities to the same unit before writing the ratio: 2 hours = 120 minutes.</li>
+  <li><strong>Swapping the order.</strong> The ratio of a to b is a : b. Girls to boys 4 : 5 is not boys to girls.</li>
+  <li><strong>Comparing only the tops.</strong> 5/7 and 7/10: compare 5 × 10 with 7 × 7, not 5 with 7.</li>
+  <li><strong>Direct or inverse?</strong> Ask: if one doubles, does the other double (direct) or halve (inverse)?</li>
+</ul>
+
+<h2>Quick check</h2>
+<div class="quiz">
+  <fieldset class="q" data-answer="b">
+    <legend>1. The simplest form of 42 : 56 is…</legend>
+    <div class="opts">
+      <button data-opt="a">6 : 8</button>
+      <button data-opt="b">3 : 4</button>
+      <button data-opt="c">4 : 3</button>
+      <button data-opt="d">21 : 28</button>
+    </div>
+    <p class="why" hidden>The HCF of 42 and 56 is 14: 42 ÷ 14 = 3 and 56 ÷ 14 = 4.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="b">
+    <legend>2. The ratio of 25 paise to ₹1 is…</legend>
+    <div class="opts">
+      <button data-opt="a">25 : 1</button>
+      <button data-opt="b">1 : 4</button>
+      <button data-opt="c">4 : 1</button>
+      <button data-opt="d">1 : 25</button>
+    </div>
+    <p class="why" hidden>₹1 = 100 paise, so 25 : 100 = 1 : 4.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="a">
+    <legend>3. Which is greater, 4/9 or 3/7?</legend>
+    <div class="opts">
+      <button data-opt="a">4/9</button>
+      <button data-opt="b">3/7</button>
+      <button data-opt="c">They are equal</button>
+      <button data-opt="d">It cannot be decided</button>
+    </div>
+    <p class="why" hidden>4 × 7 = 28 and 9 × 3 = 27. 28 &gt; 27, so 4/9 &gt; 3/7.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="c">
+    <legend>4. 6 taps fill a tank in 8 hours. How long would 4 such taps take?</legend>
+    <div class="opts">
+      <button data-opt="a">5 h 20 min</button>
+      <button data-opt="b">6 hours</button>
+      <button data-opt="c">12 hours</button>
+      <button data-opt="d">16 hours</button>
+    </div>
+    <p class="why" hidden>Inverse proportion: 6 × 8 = 48 tap-hours, and 48 ÷ 4 = 12 hours.</p>
+  </fieldset>
+  <p class="score" aria-live="polite"></p>
+</div>
+<nav class="next-prev" aria-label="Lessons">
+  <a href="../poly/remainder-and-factor-theorems.html">← Remainder and factor theorems</a>
+  <a href="properties-of-equal-ratios.html">Next: Properties of equal ratios →</a>
+</nav>
+</main>
+
+<footer class="foot">Follows Chapter 4 of the Maharashtra State Board Std 9 Mathematics Part I textbook. Explanations and examples are original.</footer>
+</div>
+
+<script src="../../assets/js/sim-kit.js?v=20261010"></script>
+<script src="../../assets/js/math-kit.js?v=20261010"></script>
+<script src="../../assets/js/sims/ratio-bars.js?v=20261010"></script>
+<script src="../../assets/js/quiz.js?v=20261010"></script>
+<script>
+  (function () {
+    var simEl = document.getElementById("sim-main");
+    var sim = RatioBarsSim.mount(simEl, { mode: "ratio", a: 24, b: 36 });
+    window.lessonSim = sim;
+    // Buttons in the lesson that set up the simulation: data-sim='{...settings}'
+    document.querySelectorAll("main [data-sim]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        sim.set(JSON.parse(b.dataset.sim));
+        sim.play();
+        simEl.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+      });
+    });
+  })();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/contrib/auto-render.min.js"></script>
+<script>
+  renderMathInElement(document.body, {
+    delimiters: [{ left: "$$", right: "$$", display: true }, { left: "\\(", right: "\\)", display: false }],
+    output: window.KATEX_OUTPUT || "htmlAndMathml",
+    throwOnError: false
+  });
+</script>
+
+</body>
+</html>

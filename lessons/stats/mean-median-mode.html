@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mean, Median and Mode · Visual Science &amp; Maths</title>
+<meta name="description" content="Find the arithmetic mean, the median for an odd or even number of observations, and the mode, and see the mean as the balance point of a dot plot. Includes the mean from a frequency table.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.css">
+<link rel="stylesheet" href="../../assets/css/style.css?v=20261010">
+</head>
+<body class="lesson ch-stats">
+<div class="wrap">
+
+<header class="site-head">
+  <a class="brand" href="../../index.html"><svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><path d="M3 27 Q14 -1 29 27" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-dasharray="2.5 3.5"/><circle cx="21" cy="10" r="4.2" fill="var(--vy)"/></svg> Visual <span>Science &amp; Maths</span></a>
+  <nav class="site-nav" aria-label="Main"><a href="../../index.html#maths">Chapters</a><a href="../../index.html#games">Games</a></nav>
+</header>
+
+<main>
+<div class="title-band">
+<p class="eyebrow">Statistics, lesson 3</p>
+<h1>Mean, Median and Mode</h1>
+<p class="lede">One number that describes a whole set of data is called a measure of central tendency. There are three: the mean, the median and the mode, and each tells a slightly different story.</p>
+<p class="downloads"><a class="btn" href="../../slides/mean-median-mode.pptx" download>Download slides (.pptx)</a> <span>12 slides with teacher notes</span></p>
+</div>
+
+<div id="sim-main"></div>
+
+<section class="prose">
+  <h2>Arithmetic mean</h2>
+  <div class="note"><strong>Mean</strong> \(= \dfrac{\text{sum of all the observations}}{\text{number of observations}}\). In symbols, \(\bar{x} = \dfrac{\sum x_i}{n}\).</div>
+  <p>The mean is the <strong>balance point</strong> of the data. Put a dot for each observation on a ruler: the ruler balances on a support placed exactly at the mean. The mean need not be one of the observations.</p>
+  <p>When the data is in a frequency table, multiply each observation \(x_i\) by its frequency \(f_i\), add the products, and divide by the total frequency \(N\):</p>
+  <div class="eq">$$\bar{x} = \frac{\sum f_i x_i}{N}$$</div>
+
+  <h2>Median</h2>
+  <p>Arrange the observations in <strong>ascending order</strong>. The <strong>median</strong> is the middle observation: half the data lies below it and half above.</p>
+  <ul class="mistakes">
+    <li>If \(n\) is <strong>odd</strong>, the median is the \(\left(\dfrac{n+1}{2}\right)\)th observation.</li>
+    <li>If \(n\) is <strong>even</strong>, the median is the mean of the \(\left(\dfrac{n}{2}\right)\)th and the \(\left(\dfrac{n}{2}+1\right)\)th observations.</li>
+  </ul>
+
+  <h2>Mode</h2>
+  <p>The <strong>mode</strong> is the observation that occurs <strong>most often</strong>, the one with the highest frequency. A set of data can have more than one mode; if every observation occurs only once, there is no mode.</p>
+  <p>A shopkeeper ordering school shoes cares about the mode (the size most children wear). A teacher comparing two classes uses the mean. When one value is very far from the rest, the median often describes the data better than the mean.</p>
+</section>
+<h2>Try it</h2>
+<p class="prose" style="margin-top:1rem">Drag any dot to change it, or tap the line to add one. The see-saw tips until its support is at the mean.</p>
+<ul class="tries">
+  <li><span><strong>Balance point.</strong> Support at 10 for the marks 12, 15, 8, 17, 15, 10, 14. Watch it move.</span>
+    <button class="btn" data-sim='{"vals":[12,15,8,17,15,10,14],"fulcrum":10,"table":false}'>Balance it</button></li>
+  <li><span><strong>Even n.</strong> 4, 9, 11, 6, 15, 7: two middle values.</span>
+    <button class="btn" data-sim='{"vals":[4,9,11,6,15,7],"table":false}'>Show me</button></li>
+  <li><span><strong>Two modes.</strong> 3, 5, 5, 7, 9, 9, 11.</span>
+    <button class="btn" data-sim='{"vals":[3,5,5,7,9,9,11],"table":false}'>Show me</button></li>
+  <li><span><strong>One far value.</strong> 2, 3, 3, 4, 4, 5, 20: compare mean and median.</span>
+    <button class="btn" data-sim='{"vals":[2,3,3,4,4,5,20],"table":false}'>Show me</button></li>
+  <li><span><strong>Frequency table.</strong> Shoe sizes of 30 students.</span>
+    <button class="btn" data-sim='{"vals":[4,4,4,5,5,5,5,5,5,5,6,6,6,6,6,6,6,6,6,7,7,7,7,7,7,8,8,8,8,8],"table":true}'>Show me</button></li>
+</ul>
+<p class="prose" style="margin-top:1rem;font-size:.875rem;color:var(--muted)">What you should see: the support slides from 10 to 13, the mean, and the see-saw levels. With six values the median is (7 + 9) ÷ 2 = 8. The third set has two modes, 5 and 9. The value 20 pulls the mean up to about 5.86 while the median stays at 4. For the shoe sizes, Σfᵢxᵢ = 183 and N = 30, so the mean is 6.1; the median and the mode are both 6.</p>
+
+<h2>Worked examples</h2>
+<div class="example">
+  <h3 style="margin-top:0">1. Mean, median and mode</h3>
+  <p>Seven students scored these marks out of 20: 12, 15, 8, 17, 15, 10, 14. Find the mean, median and mode.</p>
+  <ol>
+    <li>Mean \(= \dfrac{12 + 15 + 8 + 17 + 15 + 10 + 14}{7} = \dfrac{91}{7} = 13\).</li>
+    <li>In order: 8, 10, 12, 14, 15, 15, 17. \(n = 7\) is odd, so the median is the \(\tfrac{7+1}{2} = \) 4th observation, 14.</li>
+    <li>15 occurs twice, every other mark once. <span class="answer">Mean 13, median 14, mode 15</span></li>
+  </ol>
+  <button class="btn" data-sim='{"vals":[12,15,8,17,15,10,14],"table":false}'>Check it</button>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">2. Median of an even number of observations</h3>
+  <p>Find the median of 4, 9, 11, 6, 15, 7.</p>
+  <ol>
+    <li>In order: 4, 6, 7, 9, 11, 15. \(n = 6\) is even.</li>
+    <li>The middle observations are the \(\tfrac{6}{2} = \) 3rd and the 4th: 7 and 9.</li>
+    <li>Median \(= \dfrac{7 + 9}{2} = \) <span class="answer">8</span>. (Notice that 8 is not one of the observations.)</li>
+  </ol>
+  <button class="btn" data-sim='{"vals":[4,9,11,6,15,7],"table":false}'>Check it</button>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">3. Mean from a frequency table</h3>
+  <p>Shoe sizes of 30 students: size 4 – 3 students, size 5 – 7, size 6 – 9, size 7 – 6, size 8 – 5. Find the mean, median and mode.</p>
+  <ol>
+    <li>\(\sum f_i x_i = 4(3) + 5(7) + 6(9) + 7(6) + 8(5) = 12 + 35 + 54 + 42 + 40 = 183\); \(N = 30\).</li>
+    <li>Mean \(= \dfrac{183}{30} = 6.1\).</li>
+    <li>\(N = 30\) is even: the 15th and 16th observations. The cumulative frequencies are 3, 10, 19, …, so both are size 6. Median \(= 6\).</li>
+    <li>Size 6 has the highest frequency, 9. <span class="answer">Mean 6.1, median 6, mode 6</span></li>
+  </ol>
+  <button class="btn" data-sim='{"vals":[4,4,4,5,5,5,5,5,5,5,6,6,6,6,6,6,6,6,6,7,7,7,7,7,7,8,8,8,8,8],"table":true}'>Check it</button>
+</div>
+
+<h2>Common mistakes</h2>
+<ul class="mistakes" style="margin-top:1rem">
+  <li><strong>Taking the middle without sorting.</strong> Arrange the observations in ascending order before finding the median.</li>
+  <li><strong>One middle value when n is even.</strong> With an even n there are two middle observations; the median is their mean.</li>
+  <li><strong>Giving the frequency as the mode.</strong> The mode is the observation that occurs most often, not the number of times it occurs.</li>
+  <li><strong>Dividing by the number of rows.</strong> In a frequency table, divide Σfᵢxᵢ by N, the total frequency, not by the number of different values.</li>
+</ul>
+
+<h2>Quick check</h2>
+<div class="quiz">
+  <fieldset class="q" data-answer="b">
+    <legend>1. What is the mean of 4, 7, 10 and 3?</legend>
+    <div class="opts">
+      <button data-opt="a">5</button>
+      <button data-opt="b">6</button>
+      <button data-opt="c">7</button>
+      <button data-opt="d">24</button>
+    </div>
+    <p class="why" hidden>(4 + 7 + 10 + 3) ÷ 4 = 24 ÷ 4 = 6.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="c">
+    <legend>2. What is the median of 3, 9, 5, 12, 6, 8?</legend>
+    <div class="opts">
+      <button data-opt="a">5.5</button>
+      <button data-opt="b">6</button>
+      <button data-opt="c">7</button>
+      <button data-opt="d">7.5</button>
+    </div>
+    <p class="why" hidden>In order: 3, 5, 6, 8, 9, 12. The 3rd and 4th are 6 and 8; (6 + 8) ÷ 2 = 7.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="d">
+    <legend>3. What is the mode of 2, 4, 4, 5, 7, 7, 7, 9?</legend>
+    <div class="opts">
+      <button data-opt="a">3</button>
+      <button data-opt="b">4</button>
+      <button data-opt="c">5.625</button>
+      <button data-opt="d">7</button>
+    </div>
+    <p class="why" hidden>7 occurs three times, more often than any other observation. (3 is its frequency, not the mode.)</p>
+  </fieldset>
+  <fieldset class="q" data-answer="a">
+    <legend>4. In a frequency table, Σfᵢxᵢ = 240 and N = 40. The mean is…</legend>
+    <div class="opts">
+      <button data-opt="a">6</button>
+      <button data-opt="b">60</button>
+      <button data-opt="c">200</button>
+      <button data-opt="d">9600</button>
+    </div>
+    <p class="why" hidden>Mean = Σfᵢxᵢ ÷ N = 240 ÷ 40 = 6.</p>
+  </fieldset>
+  <p class="score" aria-live="polite"></p>
+</div>
+<nav class="next-prev" aria-label="Lessons">
+  <a href="frequency-tables.html">← Frequency tables</a>
+  <a href="../../index.html#maths">All maths chapters →</a>
+</nav>
+</main>
+
+<footer class="foot">Follows Chapter 7 of the Maharashtra State Board Std 9 Mathematics Part I textbook. Explanations and examples are original.</footer>
+</div>
+
+<script src="../../assets/js/sim-kit.js?v=20261010"></script>
+<script src="../../assets/js/math-kit.js?v=20261010"></script>
+<script src="../../assets/js/sims/stats-center.js?v=20261010"></script>
+<script src="../../assets/js/quiz.js?v=20261010"></script>
+<script>
+  (function () {
+    var simEl = document.getElementById("sim-main");
+    var sim = StatsCenterSim.mount(simEl, { vals: [12, 15, 8, 17, 15, 10, 14] });
+    window.lessonSim = sim;
+    // Buttons in the lesson that set up the simulation: data-sim='{...settings}'
+    document.querySelectorAll("main [data-sim]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        sim.set(JSON.parse(b.dataset.sim));
+        sim.play();
+        simEl.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+      });
+    });
+  })();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/contrib/auto-render.min.js"></script>
+<script>
+  renderMathInElement(document.body, {
+    delimiters: [{ left: "$$", right: "$$", display: true }, { left: "\\(", right: "\\)", display: false }],
+    output: window.KATEX_OUTPUT || "htmlAndMathml",
+    throwOnError: false
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Irrational and Real Numbers · Visual Science &amp; Maths</title>
+<meta name="description" content="Irrational numbers, showing √2 and √5 on the number line, real numbers and their order properties, and absolute value as distance.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.css">
+<link rel="stylesheet" href="../../assets/css/style.css?v=20261010">
+</head>
+<body class="lesson ch-real">
+<div class="wrap">
+
+<header class="site-head">
+  <a class="brand" href="../../index.html"><svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><path d="M3 27 Q14 -1 29 27" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-dasharray="2.5 3.5"/><circle cx="21" cy="10" r="4.2" fill="var(--vy)"/></svg> Visual <span>Science &amp; Maths</span></a>
+  <nav class="site-nav" aria-label="Main"><a href="../../index.html#maths">Chapters</a><a href="../../index.html#games">Games</a></nav>
+</header>
+
+<main>
+<div class="title-band">
+<p class="eyebrow">Real Numbers, lesson 2</p>
+<h1>Irrational and Real Numbers</h1>
+<p class="lede">√2 never stops and never repeats, yet you can mark it exactly on a number line with a ruler and compass. Together, the rational and irrational numbers fill the whole line: the real numbers.</p>
+<p class="downloads"><a class="btn" href="../../slides/irrational-and-real-numbers.pptx" download>Download slides (.pptx)</a> <span>12 slides with teacher notes</span></p>
+</div>
+
+<div id="sim-main"></div>
+
+<section class="prose">
+  <h2>Irrational numbers</h2>
+  <div class="note"><strong>Irrational number.</strong> A number whose decimal form is non-terminating and non-recurring is called an irrational number. It cannot be written in the form \(\dfrac{p}{q}\).</div>
+  <p>Examples: \(\sqrt{2} = 1.41421356\ldots\), \(\sqrt{3} = 1.7320508\ldots\), \(\pi = 3.14159265\ldots\) The digits never end, and no block repeats. (\(\dfrac{22}{7}\) is only an approximate value of \(\pi\); it is rational.) If \(n\) is a positive integer that is not a perfect square, \(\sqrt{n}\) is irrational.</p>
+  <div class="note"><strong>Why √2 is irrational (indirect proof).</strong> Suppose \(\sqrt{2} = \dfrac{p}{q}\) in lowest terms. Then \(p^2 = 2q^2\), so \(p^2\) is even and \(p\) is even, say \(p = 2m\). Then \(4m^2 = 2q^2\), so \(q^2 = 2m^2\) and \(q\) is even too. Both even contradicts “lowest terms”, so \(\sqrt{2}\) is not rational.</div>
+  <p>A rational number plus an irrational number is irrational, and a non-zero rational number times an irrational number is irrational. So \(5 + \sqrt{3}\) and \(4\sqrt{3}\) are irrational.</p>
+
+  <h2>√2 on the number line</h2>
+  <p>Mark O at 0 and A at 1. At A draw a perpendicular AB of length 1. By Pythagoras, \(OB^2 = 1^2 + 1^2 = 2\), so \(OB = \sqrt{2}\). With centre O and radius OB, draw an arc to cut the number line at P. Then \(OP = \sqrt{2}\): the point P is \(\sqrt{2}\).</p>
+  <p>For \(\sqrt{5}\) use legs 2 and 1, since \(2^2 + 1^2 = 5\). For \(\sqrt{3}\), stand a side of 1 on \(\sqrt{2}\): \((\sqrt{2})^2 + 1^2 = 3\). Repeating this gives the <strong>spiral of square roots</strong>.</p>
+
+  <h2>Real numbers</h2>
+  <div class="note"><strong>Real numbers.</strong> The rational numbers and the irrational numbers together form the set of real numbers, \(R\). Every real number is shown by a unique point on the number line, and every point on the number line shows a unique real number.</div>
+  <p>So \(N \subset W \subset I \subset Q \subset R\): natural numbers, whole numbers, integers, rational numbers, real numbers. Between any two real numbers there are infinitely many rational numbers; for example 1.5, 1.6 and 1.7 lie between \(\sqrt{2} \approx 1.414\) and \(\sqrt{3} \approx 1.732\).</p>
+  <p>The square of a real number is never negative. So the square root of a negative number, such as \(\sqrt{-9}\), is <strong>not</strong> a real number.</p>
+
+  <h2>Order properties of real numbers</h2>
+  <p>For real numbers \(a\), \(b\), \(c\):</p>
+  <ul class="mistakes">
+    <li>exactly one of \(a &lt; b\), \(a = b\), \(a &gt; b\) is true;</li>
+    <li>if \(a &lt; b\) and \(b &lt; c\), then \(a &lt; c\);</li>
+    <li>if \(a &lt; b\), then \(a + c &lt; b + c\);</li>
+    <li>if \(a &lt; b\) and \(c &gt; 0\), then \(ac &lt; bc\); but if \(c &lt; 0\), then \(ac &gt; bc\).</li>
+  </ul>
+
+  <h2>Absolute value</h2>
+  <div class="note"><strong>Absolute value.</strong> For a real number \(x\): \(|x| = x\) if \(x &gt; 0\); \(|x| = 0\) if \(x = 0\); \(|x| = -x\) if \(x &lt; 0\).</div>
+  <p>\(|x|\) is the <strong>distance</strong> of \(x\) from 0 on the number line, so it is never negative: \(|8| = 8\) and \(|-8| = -(-8) = 8\). In the same way, \(|x - a|\) is the distance between \(x\) and \(a\). So \(|x - a| = d\) (with \(d &gt; 0\)) has two solutions, \(x = a + d\) and \(x = a - d\).</p>
+</section>
+<h2>Try it</h2>
+<p class="prose" style="margin-top:1rem">Pick a view, then use the buttons and sliders.</p>
+<ul class="tries">
+  <li><span><strong>√2.</strong> Watch the compass arc.</span>
+    <button class="btn" data-sim='{"mode":"root","n":2}'>Construct</button></li>
+  <li><span><strong>√5.</strong> Legs 2 and 1.</span>
+    <button class="btn" data-sim='{"mode":"root","n":5}'>Construct</button></li>
+  <li><span><strong>√3.</strong> Built on √2.</span>
+    <button class="btn" data-sim='{"mode":"root","n":3}'>Construct</button></li>
+  <li><span><strong>Spiral.</strong> Grow it up to √16.</span>
+    <button class="btn" data-sim='{"mode":"spiral","ns":15}'>Grow</button></li>
+  <li><span><strong>|−6|.</strong> Distance from 0.</span>
+    <button class="btn" data-sim='{"mode":"abs","x":-6,"a":0,"solve":false}'>Try it</button></li>
+  <li><span><strong>|x − 5| = 2.</strong> Which points are 2 from 5?</span>
+    <button class="btn" data-sim='{"mode":"abs","x":3,"a":5,"d":2,"solve":true}'>Solve</button></li>
+  <li><span><strong>Multiply by −2.</strong> 2 &lt; 5. What about −4 and −10?</span>
+    <button class="btn" data-sim='{"mode":"order","op":"mul","oa":2,"ob":5,"oc":-2}'>Try it</button></li>
+</ul>
+<p class="prose" style="margin-top:1rem;font-size:.875rem;color:var(--muted)">What you should see: √2 = 1.41421356…, between 1.41 and 1.42. √5 = 2.2360679…, from legs 2 and 1. √3 needs √2 first. In the spiral, √4 = 2, √9 = 3 and √16 = 4 are the only whole numbers. |−6| = 6. |x − 5| = 2 gives x = 3 or x = 7. Multiplying 2 &lt; 5 by −2 gives −4 &gt; −10: the order is reversed.</p>
+
+<h2>Worked examples</h2>
+<div class="example">
+  <h3 style="margin-top:0">1. √5 on the number line</h3>
+  <p>Show \(\sqrt{5}\) on the number line.</p>
+  <ol>
+    <li>\(5 = 2^2 + 1^2\). Mark O at 0 and A at 2.</li>
+    <li>At A draw AB perpendicular to the line, with AB = 1. Then \(OB^2 = 2^2 + 1^2 = 5\), so \(OB = \sqrt{5}\).</li>
+    <li>With centre O and radius OB, draw an arc cutting the line at P. <span class="answer">OP = √5 ≈ 2.236</span></li>
+  </ol>
+  <button class="btn" data-sim='{"mode":"root","n":5}'>Check it</button>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">2. An absolute value equation</h3>
+  <p>Solve \(|x + 2| = 3\).</p>
+  <ol>
+    <li>\(|x + 2| = |x - (-2)|\) is the distance between \(x\) and \(-2\).</li>
+    <li>Go 3 each way from \(-2\): \(x + 2 = 3\) or \(x + 2 = -3\).</li>
+    <li><span class="answer">x = 1 or x = −5</span></li>
+  </ol>
+  <button class="btn" data-sim='{"mode":"abs","x":1,"a":-2,"d":3,"solve":true}'>Check it in the simulation</button>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">3. Rational numbers between two irrationals</h3>
+  <p>Write three rational numbers between \(\sqrt{2}\) and \(\sqrt{3}\).</p>
+  <ol>
+    <li>\(\sqrt{2} = 1.414\ldots\) and \(\sqrt{3} = 1.732\ldots\)</li>
+    <li>Any terminating decimal between them is rational: 1.5, 1.6, 1.7.</li>
+    <li><span class="answer">\(\tfrac{3}{2}, \tfrac{8}{5}, \tfrac{17}{10}\)</span> (and infinitely many more)</li>
+  </ol>
+  <button class="btn" data-sim='{"mode":"root","n":3}'>Check it in the simulation</button>
+</div>
+
+<h2>Common mistakes</h2>
+<ul class="mistakes" style="margin-top:1rem">
+  <li><strong>Calling 22/7 or 3.14 “π”.</strong> They are rational approximations. π itself is irrational.</li>
+  <li><strong>Thinking every square root is irrational.</strong> √49 = 7 and √0.25 = 0.5 are rational. Only roots of non-perfect squares are irrational.</li>
+  <li><strong>Keeping the sign inside |  |.</strong> |−8| = 8. An absolute value is a distance, so it is never negative.</li>
+  <li><strong>Forgetting to flip the sign.</strong> If a &lt; b and you multiply by a negative number, the order reverses: −3a &gt; −3b.</li>
+</ul>
+
+<h2>Quick check</h2>
+<div class="quiz">
+  <fieldset class="q" data-answer="c">
+    <legend>1. Which of these is irrational?</legend>
+    <div class="opts">
+      <button data-opt="a">\(0.\overline{25}\)</button>
+      <button data-opt="b">\(\sqrt{49}\)</button>
+      <button data-opt="c">\(\sqrt{7}\)</button>
+      <button data-opt="d">\(\dfrac{22}{7}\)</button>
+    </div>
+    <p class="why" hidden>7 is not a perfect square, so √7 is non-terminating and non-recurring. The others can be written as p/q.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="c">
+    <legend>2. \(|-9| + |4| = \)…</legend>
+    <div class="opts">
+      <button data-opt="a">−5</button>
+      <button data-opt="b">5</button>
+      <button data-opt="c">13</button>
+      <button data-opt="d">−13</button>
+    </div>
+    <p class="why" hidden>|−9| = 9 and |4| = 4, so the sum is 13.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="b">
+    <legend>3. If \(a &lt; b\), then \(-2a\) … \(-2b\).</legend>
+    <div class="opts">
+      <button data-opt="a">&lt;</button>
+      <button data-opt="b">&gt;</button>
+      <button data-opt="c">=</button>
+      <button data-opt="d">cannot tell</button>
+    </div>
+    <p class="why" hidden>Multiplying by a negative number reverses the order.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="a">
+    <legend>4. To show \(\sqrt{10}\) on the number line, a right triangle with legs … works.</legend>
+    <div class="opts">
+      <button data-opt="a">3 and 1</button>
+      <button data-opt="b">5 and 5</button>
+      <button data-opt="c">9 and 1</button>
+      <button data-opt="d">2 and 3</button>
+    </div>
+    <p class="why" hidden>3² + 1² = 9 + 1 = 10, so the hypotenuse is √10.</p>
+  </fieldset>
+  <p class="score" aria-live="polite"></p>
+</div>
+<nav class="next-prev" aria-label="Lessons">
+  <a href="rational-numbers-and-decimals.html">← Rational numbers and decimals</a>
+  <a href="surds.html">Next: Surds and rationalising →</a>
+</nav>
+</main>
+
+<footer class="foot">Follows Chapter 2 of the Maharashtra State Board Std 9 Mathematics Part I textbook. Explanations and examples are original.</footer>
+</div>
+
+<script src="../../assets/js/sim-kit.js?v=20261010"></script>
+<script src="../../assets/js/math-kit.js?v=20261010"></script>
+<script src="../../assets/js/sims/real-numberline.js?v=20261010"></script>
+<script src="../../assets/js/quiz.js?v=20261010"></script>
+<script>
+  (function () {
+    var simEl = document.getElementById("sim-main");
+    var sim = RealLineSim.mount(simEl, { mode: "root", n: 2 });
+    window.lessonSim = sim;
+    // Buttons in the lesson that set up the simulation: data-sim='{...settings}'
+    document.querySelectorAll("main [data-sim]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        sim.set(JSON.parse(b.dataset.sim));
+        sim.play();
+        simEl.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+      });
+    });
+  })();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/contrib/auto-render.min.js"></script>
+<script>
+  renderMathInElement(document.body, {
+    delimiters: [{ left: "$$", right: "$$", display: true }, { left: "\\(", right: "\\)", display: false }],
+    output: window.KATEX_OUTPUT || "htmlAndMathml",
+    throwOnError: false
+  });
+</script>
+
+</body>
+</html>

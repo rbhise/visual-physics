@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Cones · Visual Science &amp; Maths</title>
+<meta name="description" content="Slant height, curved and total surface area, and volume of a right circular cone: unroll it, cut it into a near-rectangle and fill a cylinder with three conefuls.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.css">
+<link rel="stylesheet" href="../../assets/css/style.css?v=20261010">
+</head>
+<body class="lesson ch-volume">
+<div class="wrap">
+
+<header class="site-head">
+  <a class="brand" href="../../index.html"><svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><path d="M3 27 Q14 -1 29 27" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-dasharray="2.5 3.5"/><circle cx="21" cy="10" r="4.2" fill="var(--vy)"/></svg> Visual <span>Science &amp; Maths</span></a>
+  <nav class="site-nav" aria-label="Main"><a href="../../index.html#maths">Chapters</a><a href="../../index.html#games">Games</a></nav>
+</header>
+
+<main>
+<div class="title-band">
+<p class="eyebrow">Surface Area and Volume, lesson 2</p>
+<h1>Cones</h1>
+<p class="lede">An ice-cream cone, a birthday cap, a heap of grain: each is a cone. Its slant height, surface and volume all come from the radius and the height.</p>
+<p class="downloads"><a class="btn" href="../../slides/cones.pptx" download>Download slides (.pptx)</a> <span>12 slides with teacher notes</span></p>
+</div>
+
+<div id="sim-main"></div>
+
+<section class="prose">
+  <h2>Parts of a cone</h2>
+  <p>A <strong>right circular cone</strong> has a circular base and a pointed top called the <strong>vertex</strong>. The segment from the vertex to the centre of the base is perpendicular to the base; its length is the <strong>perpendicular height</strong> \(h\). A segment from the vertex to any point on the edge of the base is a <strong>slant height</strong> \(l\). The radius of the base is \(r\).</p>
+
+  <h2>Slant height</h2>
+  <p>The height, the radius and a slant height make a right-angled triangle, with \(l\) as the hypotenuse. By Pythagoras' theorem:</p>
+  <div class="note"><strong>Slant height.</strong> $$l^2 = r^2 + h^2$$</div>
+
+  <h2>Curved surface area</h2>
+  <p>Cut the cone along a slant height and open it out. The curved surface becomes a <strong>sector</strong> of a circle of radius \(l\); its arc is the circumference of the base, \(2\pi r\). Now cut the sector into many thin pieces and lay them head to tail. They make a shape very close to a <strong>rectangle</strong>: its length is half the arc, \(\pi r\), and its breadth is \(l\).</p>
+  <div class="note"><strong>Cone.</strong>
+  $$\text{Curved surface area} = \pi r \times l = \pi rl$$
+  $$\text{Total surface area} = \pi rl + \pi r^2 = \pi r(l + r)$$</div>
+
+  <h2>Volume</h2>
+  <p>Take a hollow cone and a hollow cylinder with the <strong>same base and the same height</strong>. Fill the cone with sand or water and pour it into the cylinder. It takes exactly <strong>three conefuls</strong> to fill the cylinder.</p>
+  <div class="note"><strong>Volume of a cone.</strong> $$V = \tfrac{1}{3} \times \text{volume of the cylinder} = \tfrac{1}{3}\pi r^2 h$$</div>
+  <p>Use \(h\), not \(l\), in the volume. Use \(l\), not \(h\), in the curved surface area.</p>
+</section>
+<h2>Try it</h2>
+<p class="prose" style="margin-top:1rem">Use the sliders for r and h, then try each view.</p>
+<ul class="tries">
+  <li><span><strong>Slant height.</strong> r = 6 cm, h = 8 cm.</span>
+    <button class="btn" data-sim='{"mode":"cone","d":{"r":6,"h":8}}'>3-D</button></li>
+  <li><span><strong>Open it out.</strong> Unroll the same cone into a sector.</span>
+    <button class="btn" data-sim='{"mode":"cone","view":"net","d":{"r":6,"h":8}}'>Net</button></li>
+  <li><span><strong>Cut and rearrange.</strong> Lay 16 thin pieces head to tail.</span>
+    <button class="btn" data-sim='{"mode":"cone","view":"cut","pi":"3.14","d":{"r":6,"h":8}}'>Rearrange</button></li>
+  <li><span><strong>Three conefuls.</strong> r = 7 cm, h = 24 cm, π = 22/7.</span>
+    <button class="btn" data-sim='{"mode":"cone","view":"fill","pi":"22/7","d":{"r":7,"h":24}}'>Pour</button></li>
+</ul>
+<p class="prose" style="margin-top:1rem;font-size:.875rem;color:var(--muted)">What you should see: with r = 6 and h = 8, l² = 36 + 64 = 100, so l = 10 cm. The net is a sector of radius 10 cm with angle 216°. The pieces make a near-rectangle about πr = 18.84 cm long and 10 cm wide, so the curved surface area is 188.4 cm² (π = 3.14). In the last one the cylinder holds 3696 cm³ and the cone 1232 cm³, a third of it.</p>
+
+<h2>Worked examples</h2>
+<div class="example">
+  <h3 style="margin-top:0">1. A birthday cap</h3>
+  <p>A conical cap has base radius 5 cm and perpendicular height 12 cm. Find its slant height and the card needed for its curved surface. If it were a closed cone, what would its total surface area be? \((\pi = 3.14)\)</p>
+  <ol>
+    <li>\(l^2 = r^2 + h^2 = 25 + 144 = 169\), so \(l =\) <span class="answer">13 cm</span></li>
+    <li>Curved surface area \(= \pi rl = 3.14 \times 5 \times 13 =\) <span class="answer">204.1 cm²</span></li>
+    <li>Total surface area \(= \pi r(l + r) = 3.14 \times 5 \times 18 =\) <span class="answer">282.6 cm²</span></li>
+  </ol>
+  <button class="btn" data-sim='{"mode":"cone","pi":"3.14","d":{"r":5,"h":12}}'>Check it</button>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">2. A heap of grain</h3>
+  <p>Grain is piled in a cone with base radius 7 m and height 24 m. Find the volume of the grain and the slant height of the heap. \((\pi = \tfrac{22}{7})\)</p>
+  <ol>
+    <li>Volume \(= \tfrac13 \pi r^2 h = \tfrac13 \times \tfrac{22}{7} \times 7 \times 7 \times 24 = 22 \times 7 \times 8 =\) <span class="answer">1232 m³</span></li>
+    <li>\(l^2 = 7^2 + 24^2 = 49 + 576 = 625\), so \(l =\) <span class="answer">25 m</span></li>
+  </ol>
+  <p>A cylinder with the same base and height would hold \(3 \times 1232 = 3696\) m³.</p>
+  <button class="btn" data-sim='{"mode":"cone","view":"fill","pi":"22/7","d":{"r":7,"h":24}}'>Pour three conefuls</button>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">3. Finding the height</h3>
+  <p>The volume of a cone is 1570 cm³ and the radius of its base is 10 cm. Find its height. \((\pi = 3.14)\)</p>
+  <ol>
+    <li>\(\tfrac13 \times 3.14 \times 10^2 \times h = 1570\)</li>
+    <li>\(314h = 1570 \times 3 = 4710\), so \(h = 4710 \div 314 =\) <span class="answer">15 cm</span></li>
+  </ol>
+  <button class="btn" data-sim='{"mode":"cone","pi":"3.14","d":{"r":10,"h":15}}'>Check it</button>
+</div>
+
+<h2>Common mistakes</h2>
+<ul class="mistakes" style="margin-top:1rem">
+  <li><strong>Using h for the curved surface.</strong> Curved surface area is πrl, with the slant height l. Find l first from l² = r² + h².</li>
+  <li><strong>Using l for the volume.</strong> Volume is ⅓πr²h, with the perpendicular height h.</li>
+  <li><strong>Forgetting the ⅓.</strong> A cone holds only a third of the cylinder with the same base and height.</li>
+  <li><strong>Adding the base to an open cone.</strong> A cap or a funnel has no base: use πrl only. A solid cone has the base too: πr(l + r).</li>
+</ul>
+
+<h2>Quick check</h2>
+<div class="quiz">
+  <fieldset class="q" data-answer="b">
+    <legend>1. A cone has radius 8 cm and height 6 cm. Its slant height is…</legend>
+    <div class="opts">
+      <button data-opt="a">14 cm</button>
+      <button data-opt="b">10 cm</button>
+      <button data-opt="c">√28 cm</button>
+      <button data-opt="d">48 cm</button>
+    </div>
+    <p class="why" hidden>l² = 64 + 36 = 100, so l = 10 cm.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="a">
+    <legend>2. A cone has radius 7 cm and slant height 10 cm. Its curved surface area (π = 22/7) is…</legend>
+    <div class="opts">
+      <button data-opt="a">220 cm²</button>
+      <button data-opt="b">154 cm²</button>
+      <button data-opt="c">374 cm²</button>
+      <button data-opt="d">440 cm²</button>
+    </div>
+    <p class="why" hidden>πrl = 22/7 × 7 × 10 = 220 cm². (374 cm² is the total surface area.)</p>
+  </fieldset>
+  <fieldset class="q" data-answer="c">
+    <legend>3. A cylinder holds 900 cm³. A cone with the same base and height holds…</legend>
+    <div class="opts">
+      <button data-opt="a">2700 cm³</button>
+      <button data-opt="b">450 cm³</button>
+      <button data-opt="c">300 cm³</button>
+      <button data-opt="d">600 cm³</button>
+    </div>
+    <p class="why" hidden>Three conefuls fill the cylinder, so the cone holds 900 ÷ 3 = 300 cm³.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="b">
+    <legend>4. The total surface area of a solid cone is…</legend>
+    <div class="opts">
+      <button data-opt="a">πrl</button>
+      <button data-opt="b">πr(l + r)</button>
+      <button data-opt="c">⅓πr²h</button>
+      <button data-opt="d">2πr(r + h)</button>
+    </div>
+    <p class="why" hidden>Curved surface πrl plus the circular base πr².</p>
+  </fieldset>
+  <p class="score" aria-live="polite"></p>
+</div>
+<nav class="next-prev" aria-label="Lessons">
+  <a href="cuboids-and-cylinders.html">← Cuboids, cubes and cylinders</a>
+  <a href="spheres-and-hemispheres.html">Spheres and hemispheres →</a>
+</nav>
+</main>
+
+<footer class="foot">Follows Chapter 9 of the Maharashtra State Board Std 9 Mathematics Part II textbook. Explanations and examples are original.</footer>
+</div>
+
+<script src="../../assets/js/sim-kit.js?v=20261010"></script>
+<script src="../../assets/js/math-kit.js?v=20261010"></script>
+<script src="../../assets/js/sims/volume-solids.js?v=20261010"></script>
+<script src="../../assets/js/quiz.js?v=20261010"></script>
+<script>
+  (function () {
+    var simEl = document.getElementById("sim-main");
+    var sim = VolumeSim.mount(simEl, { modes: ["cone"], mode: "cone", d: { r: 6, h: 8 } });
+    window.lessonSim = sim;
+    // Buttons in the lesson that set up the simulation: data-sim='{...settings}'
+    document.querySelectorAll("main [data-sim]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        sim.set(JSON.parse(b.dataset.sim));
+        sim.play();
+        simEl.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+      });
+    });
+  })();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/contrib/auto-render.min.js"></script>
+<script>
+  renderMathInElement(document.body, {
+    delimiters: [{ left: "$$", right: "$$", display: true }, { left: "\\(", right: "\\)", display: false }],
+    output: window.KATEX_OUTPUT || "htmlAndMathml",
+    throwOnError: false
+  });
+</script>
+
+</body>
+</html>

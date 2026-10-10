@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Linear Equations in Two Variables · Visual Science &amp; Maths</title>
+<meta name="description" content="Drag a point and test whether it satisfies an equation like x + y = 7. Mark the solutions and watch them line up.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.css">
+<link rel="stylesheet" href="../../assets/css/style.css?v=20261010">
+</head>
+<body class="lesson ch-linear">
+<div class="wrap">
+
+<header class="site-head">
+  <a class="brand" href="../../index.html"><svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><path d="M3 27 Q14 -1 29 27" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-dasharray="2.5 3.5"/><circle cx="21" cy="10" r="4.2" fill="var(--vy)"/></svg> Visual <span>Science &amp; Maths</span></a>
+  <nav class="site-nav" aria-label="Main"><a href="../../index.html#maths">Chapters</a><a href="../../index.html#games">Games</a></nav>
+</header>
+
+<main>
+<div class="title-band">
+<p class="eyebrow">Linear Equations in Two Variables, lesson 1</p>
+<h1>Linear Equations in Two Variables</h1>
+<p class="lede">Two friends have 7 sweets between them. Rahul could have 1 and Sneha 6, or 3 and 4, or 5 and 2. One equation, many answers, and all of them sit on one straight line.</p>
+<p class="downloads"><a class="btn" href="../../slides/linear-equations.pptx" download>Download slides (.pptx)</a> <span>12 slides with teacher notes</span></p>
+</div>
+
+<div id="sim-main"></div>
+
+<section class="prose">
+  <h2>Equations with two unknowns</h2>
+  <p>An equation such as \(x + y = 7\) has two variables, and each appears only to the power 1. It is a <strong>linear equation in two variables</strong>. Any such equation can be written in the <strong>general form</strong></p>
+  <div class="eq">$$ax + by + c = 0$$</div>
+  <p>where \(a\), \(b\) and \(c\) are real numbers and \(a\) and \(b\) are not both zero. For example, \(3x - 4y = -12\) becomes \(3x - 4y + 12 = 0\).</p>
+
+  <h2>Solutions</h2>
+  <p>A <strong>solution</strong> is a pair of values, one for \(x\) and one for \(y\), that makes the equation true. We write it as an ordered pair \((x, y)\). To test a pair, substitute both values and see whether the two sides are equal.</p>
+  <ul class="mistakes">
+    <li>\((2, 5)\) satisfies \(x + y = 7\) because \(2 + 5 = 7\).</li>
+    <li>\((3, 1)\) does not, because \(3 + 1 = 4 \ne 7\).</li>
+  </ul>
+  <p>Pick any value for \(x\) and you can work out the matching \(y\). So a linear equation in two variables has <strong>infinitely many solutions</strong>.</p>
+
+  <h2>The solutions form a line</h2>
+  <p>Plot the solutions as points on a graph and something striking happens: they all lie on one straight line. Every point on that line is a solution, and every solution is a point on it. That is why these equations are called <em>linear</em>. The line crosses the x-axis where \(y = 0\) and the y-axis where \(x = 0\).</p>
+</section>
+<h2>Try it</h2>
+<p class="prose" style="margin-top:1rem">Drag the point on the grid, or use the point sliders.</p>
+<ul class="tries">
+  <li><span><strong>Find solutions.</strong> Mark four points that satisfy x + y = 7.</span>
+    <button class="btn" data-sim='{"a":1,"b":1,"k":7,"x":0,"y":0,"line":false}'>Start</button></li>
+  <li><span><strong>Show the line.</strong> Do your marked points sit on it?</span>
+    <button class="btn" data-sim='{"a":1,"b":1,"k":7,"x":3,"y":4,"line":true}'>Show line</button></li>
+  <li><span><strong>A new equation.</strong> Try 2x + 3y = 12.</span>
+    <button class="btn" data-sim='{"a":2,"b":3,"k":12,"x":3,"y":2,"line":false}'>2x + 3y = 12</button></li>
+  <li><span><strong>Negative coefficient.</strong> x − y = 2: which way does the line slope?</span>
+    <button class="btn" data-sim='{"a":1,"b":-1,"k":2,"x":4,"y":2,"line":true}'>x − y = 2</button></li>
+</ul>
+<p class="prose" style="margin-top:1rem;font-size:.875rem;color:var(--muted)">What you should see: for x + y = 7 the pairs (0, 7), (1, 6), (2, 5), (3, 4) … all pass, and they lie on one line that crosses both axes at 7. For 2x + 3y = 12, (3, 2) works because 6 + 6 = 12; the line crosses the axes at (6, 0) and (0, 4). The line x − y = 2 slopes upwards.</p>
+
+<h2>Worked examples</h2>
+<div class="example">
+  <h3 style="margin-top:0">1. General form</h3>
+  <p>Write \(2x = 5y - 3\) in the form \(ax + by + c = 0\).</p>
+  <ol>
+    <li>Move every term to one side: \(2x - 5y + 3 = 0\)</li>
+    <li>So \(a = 2\), \(b = -5\), \(c = 3\): <span class="answer">2x − 5y + 3 = 0</span></li>
+  </ol>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">2. Is it a solution?</h3>
+  <p>Which of \((3, 2)\) and \((1, 4)\) are solutions of \(2x + 3y = 12\)?</p>
+  <ol>
+    <li>\((3, 2)\): \(2(3) + 3(2) = 6 + 6 = 12\) ✓ <span class="answer">solution</span></li>
+    <li>\((1, 4)\): \(2(1) + 3(4) = 2 + 12 = 14 \ne 12\) <span class="answer">not a solution</span></li>
+  </ol>
+  <button class="btn" data-sim='{"a":2,"b":3,"k":12,"x":3,"y":2,"line":false}'>Test (3, 2)</button>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">3. Finding solutions</h3>
+  <p>Find three solutions of \(x - 2y = 4\).</p>
+  <ol>
+    <li>Make \(x\) the subject: \(x = 4 + 2y\).</li>
+    <li>\(y = 0 \Rightarrow x = 4\); \(y = 1 \Rightarrow x = 6\); \(y = 2 \Rightarrow x = 8\)</li>
+    <li>Three solutions: <span class="answer">(4, 0), (6, 1), (8, 2)</span></li>
+  </ol>
+  <button class="btn" data-sim='{"a":1,"b":-2,"k":4,"x":6,"y":1,"line":true}'>See them on the line</button>
+</div>
+
+<h2>Common mistakes</h2>
+<ul class="mistakes" style="margin-top:1rem">
+  <li><strong>Writing the pair the wrong way round.</strong> (x, y) always means x first. (2, 5) and (5, 2) are different points.</li>
+  <li><strong>“It has only one answer.”</strong> One linear equation in two variables has infinitely many solutions.</li>
+  <li><strong>Testing only one side.</strong> Substitute into the left side and compare it with the right side.</li>
+  <li><strong>Forgetting signs when rearranging.</strong> 2x = 5y − 3 becomes 2x − 5y + 3 = 0, not 2x + 5y − 3 = 0.</li>
+</ul>
+
+<h2>Quick check</h2>
+<div class="quiz">
+  <fieldset class="q" data-answer="b">
+    <legend>1. Which of these is a linear equation in two variables?</legend>
+    <div class="opts">
+      <button data-opt="a">x² + y = 4</button>
+      <button data-opt="b">3x − 2y = 7</button>
+      <button data-opt="c">xy = 6</button>
+      <button data-opt="d">x + 1/y = 2</button>
+    </div>
+    <p class="why" hidden>Both variables appear only to the power 1 and are not multiplied together.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="b">
+    <legend>2. Which pair is a solution of x + 2y = 10?</legend>
+    <div class="opts">
+      <button data-opt="a">(2, 3)</button>
+      <button data-opt="b">(4, 3)</button>
+      <button data-opt="c">(3, 4)</button>
+      <button data-opt="d">(10, 1)</button>
+    </div>
+    <p class="why" hidden>4 + 2 × 3 = 10.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="d">
+    <legend>3. How many solutions does 3x + y = 9 have?</legend>
+    <div class="opts">
+      <button data-opt="a">None</button>
+      <button data-opt="b">One</button>
+      <button data-opt="c">Two</button>
+      <button data-opt="d">Infinitely many</button>
+    </div>
+    <p class="why" hidden>Every point on its line is a solution.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="b">
+    <legend>4. Where does the line x + y = 7 cross the y-axis?</legend>
+    <div class="opts">
+      <button data-opt="a">(7, 0)</button>
+      <button data-opt="b">(0, 7)</button>
+      <button data-opt="c">(0, 0)</button>
+      <button data-opt="d">(1, 6)</button>
+    </div>
+    <p class="why" hidden>On the y-axis x = 0, so y = 7.</p>
+  </fieldset>
+  <p class="score" aria-live="polite"></p>
+</div>
+<nav class="next-prev" aria-label="Lessons">
+  <a href="../ratio/k-method.html">← Theorem on equal ratios and the k method</a>
+  <a href="simultaneous-equations.html">Next: Solving simultaneous equations →</a>
+</nav>
+</main>
+
+<footer class="foot">Follows Chapter 5 of the Maharashtra State Board Std 9 Mathematics Part I textbook, with the graphs of linear equations from the NCERT Class 9 book. Explanations and examples are original.</footer>
+</div>
+
+<script src="../../assets/js/sim-kit.js?v=20261010"></script>
+<script src="../../assets/js/math-kit.js?v=20261010"></script>
+<script src="../../assets/js/sims/lineq.js?v=20261010"></script>
+<script src="../../assets/js/quiz.js?v=20261010"></script>
+<script>
+  (function () {
+    var simEl = document.getElementById("sim-main");
+    var sim = LineSim.mount(simEl, { a: 1, b: 1, k: 7, x: 2, y: 3 });
+    window.lessonSim = sim;
+    // Buttons in the lesson that set up the simulation: data-sim='{...settings}'
+    document.querySelectorAll("main [data-sim]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        sim.set(JSON.parse(b.dataset.sim));
+        sim.play();
+        simEl.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+      });
+    });
+  })();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/contrib/auto-render.min.js"></script>
+<script>
+  renderMathInElement(document.body, {
+    delimiters: [{ left: "$$", right: "$$", display: true }, { left: "\\(", right: "\\)", display: false }],
+    output: window.KATEX_OUTPUT || "htmlAndMathml",
+    throwOnError: false
+  });
+</script>
+
+</body>
+</html>

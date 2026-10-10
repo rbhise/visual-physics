@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Rectangle, Rhombus, Square and Trapezium · Visual Science &amp; Maths</title>
+<meta name="description" content="Make a rectangle, rhombus, square, trapezium or isosceles trapezium by dragging corners, and compare their sides, angles and diagonals.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.css">
+<link rel="stylesheet" href="../../assets/css/style.css?v=20261010">
+</head>
+<body class="lesson ch-quads">
+<div class="wrap">
+
+<header class="site-head">
+  <a class="brand" href="../../index.html"><svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><path d="M3 27 Q14 -1 29 27" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-dasharray="2.5 3.5"/><circle cx="21" cy="10" r="4.2" fill="var(--vy)"/></svg> Visual <span>Science &amp; Maths</span></a>
+  <nav class="site-nav" aria-label="Main"><a href="../../index.html#maths">Chapters</a><a href="../../index.html#games">Games</a></nav>
+</header>
+
+<main>
+<div class="title-band">
+<p class="eyebrow">Quadrilaterals, lesson 2</p>
+<h1>Rectangle, Rhombus, Square and Trapezium</h1>
+<p class="lede">A door is a rectangle, a kite-shaped tile is often a rhombus, and a bucket seen from the side is an isosceles trapezium. Each special quadrilateral adds one extra condition, and each condition changes what the diagonals do.</p>
+<p class="downloads"><a class="btn" href="../../slides/special-quadrilaterals.pptx" download>Download slides (.pptx)</a> <span>12 slides with teacher notes</span></p>
+</div>
+
+<div id="sim-main"></div>
+
+<section class="prose">
+  <h2>Definitions</h2>
+  <div class="note">
+    <p style="margin:0"><strong>Rectangle.</strong> If all angles of a quadrilateral are right angles, it is called a rectangle.</p>
+    <p style="margin:.5rem 0 0"><strong>Rhombus.</strong> If all sides of a quadrilateral are congruent, it is called a rhombus.</p>
+    <p style="margin:.5rem 0 0"><strong>Square.</strong> If all sides and all angles of a quadrilateral are congruent, it is called a square.</p>
+    <p style="margin:.5rem 0 0"><strong>Trapezium.</strong> If only one pair of opposite sides of a quadrilateral is parallel, it is called a trapezium.</p>
+    <p style="margin:.5rem 0 0"><strong>Isosceles trapezium.</strong> If the non-parallel sides of a trapezium are congruent, it is called an isosceles trapezium.</p>
+  </div>
+  <p>A rectangle, a rhombus and a square all have both pairs of opposite sides parallel, so each one is a <strong>parallelogram</strong> and has every property from the last lesson. A square is a rectangle <em>and</em> a rhombus at the same time. A trapezium is <strong>not</strong> a parallelogram.</p>
+
+  <h2>The diagonals tell them apart</h2>
+  <div class="table-wrap">
+  <table class="compare">
+    <thead><tr><th>The diagonals…</th><th>Parallelogram</th><th>Rectangle</th><th>Rhombus</th><th>Square</th></tr></thead>
+    <tbody>
+      <tr><th>bisect each other</th><td>✓</td><td>✓</td><td>✓</td><td>✓</td></tr>
+      <tr><th>are congruent</th><td>–</td><td>✓</td><td>–</td><td>✓</td></tr>
+      <tr><th>are perpendicular</th><td>–</td><td>–</td><td>✓</td><td>✓</td></tr>
+      <tr><th>bisect the opposite angles</th><td>–</td><td>–</td><td>✓</td><td>✓</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="note"><strong>Theorems.</strong> The diagonals of a rectangle are congruent. The diagonals of a rhombus are perpendicular bisectors of each other, and they bisect its opposite angles. The diagonals of a square are congruent, are perpendicular bisectors of each other, and bisect its opposite angles.</div>
+
+  <h2>Trapeziums</h2>
+  <p>In trapezium \(ABCD\) with \(AB \parallel DC\), side \(AD\) is a transversal of the two parallel sides, so \(\angle A + \angle D = 180^\circ\). In the same way \(\angle B + \angle C = 180^\circ\).</p>
+  <div class="note"><strong>Isosceles trapezium.</strong> The base angles of an isosceles trapezium are congruent: if \(AD = BC\), then \(\angle A = \angle B\) and \(\angle D = \angle C\). Its diagonals are congruent too.</div>
+  <p>The simulation also knows a <strong>kite</strong>: two pairs of equal sides next to each other. Its diagonals are perpendicular, but only one of them is bisected.</p>
+</section>
+<h2>Try it</h2>
+<p class="prose" style="margin-top:1rem">Press a shape, then drag a corner and watch the name and the diagonal readouts change. The shape buttons light up whenever ABCD is that shape.</p>
+<ul class="tries">
+  <li><span><strong>Rectangle.</strong> 8 cm by 6 cm. Are the diagonals equal?</span>
+    <button class="btn" data-sim='{"mode":"special","pts":[[2,1],[10,1],[10,7],[2,7]],"lock":false}'>Show it</button></li>
+  <li><span><strong>Rhombus.</strong> Diagonals 8 cm and 6 cm.</span>
+    <button class="btn" data-sim='{"mode":"special","pts":[[2,4],[6,1],[10,4],[6,7]],"lock":false}'>Show it</button></li>
+  <li><span><strong>A tilted square.</strong> Still a square?</span>
+    <button class="btn" data-sim='{"mode":"special","pts":[[3,1],[7,2],[6,6],[2,5]],"lock":false}'>Show it</button></li>
+  <li><span><strong>Isosceles trapezium.</strong> Compare the base angles.</span>
+    <button class="btn" data-sim='{"mode":"special","shape":"isotrap","lock":false}'>Show it</button></li>
+</ul>
+<p class="prose" style="margin-top:1rem;font-size:.875rem;color:var(--muted)">What you should see: the rectangle has AC = BD = 10 cm. The rhombus has sides of 5 cm and its diagonals meet at 90°. The tilted square has all sides about 4.12 cm and every angle 90°, and its diagonals are equal and perpendicular. In the isosceles trapezium ∠A = ∠B ≈ 59.0° and ∠C = ∠D ≈ 121.0°.</p>
+
+<h2>Worked examples</h2>
+<div class="example">
+  <h3 style="margin-top:0">1. Diagonals of a rectangle</h3>
+  <p>In rectangle \(ABCD\), \(AB = 8\) cm and \(BC = 6\) cm. The diagonals meet at \(O\). Find \(AC\), \(BD\) and \(AO\).</p>
+  <ol>
+    <li>\(\angle B = 90^\circ\), so by Pythagoras \(AC = \sqrt{8^2 + 6^2} = \sqrt{100} = 10\) cm.</li>
+    <li>The diagonals of a rectangle are congruent: \(BD = 10\) cm. They bisect each other: \(AO = 5\) cm.</li>
+    <li><span class="answer">AC = BD = 10 cm, AO = 5 cm</span></li>
+  </ol>
+  <button class="btn" data-sim='{"mode":"special","pts":[[2,1],[10,1],[10,7],[2,7]],"lock":false}'>Check it in the simulation</button>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">2. Side of a rhombus</h3>
+  <p>The diagonals of a rhombus are 8 cm and 6 cm long. Find its side and its perimeter.</p>
+  <ol>
+    <li>The diagonals are perpendicular bisectors of each other, so they make four right triangles with legs 4 cm and 3 cm.</li>
+    <li>Side \(= \sqrt{4^2 + 3^2} = \sqrt{25} = 5\) cm. Perimeter \(= 4 \times 5 = 20\) cm.</li>
+    <li><span class="answer">side 5 cm, perimeter 20 cm</span></li>
+  </ol>
+  <button class="btn" data-sim='{"mode":"special","pts":[[2,4],[6,1],[10,4],[6,7]],"lock":false}'>Check it in the simulation</button>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">3. Angles of an isosceles trapezium</h3>
+  <p>In trapezium \(PQRS\), \(PQ \parallel SR\) and \(PS = QR\). If \(\angle P = 65^\circ\), find the other angles.</p>
+  <ol>
+    <li>Base angles of an isosceles trapezium are congruent: \(\angle Q = \angle P = 65^\circ\).</li>
+    <li>\(\angle P + \angle S = 180^\circ\) (interior angles, \(PQ \parallel SR\)), so \(\angle S = 115^\circ\), and \(\angle R = \angle S\).</li>
+    <li><span class="answer">∠Q = 65°, ∠R = ∠S = 115°</span></li>
+  </ol>
+</div>
+
+<h2>Common mistakes</h2>
+<ul class="mistakes" style="margin-top:1rem">
+  <li><strong>A rhombus has equal diagonals.</strong> No. Its diagonals are perpendicular. Equal diagonals belong to a rectangle (and a square).</li>
+  <li><strong>A square is not a rectangle.</strong> It is: all its angles are right angles. It is also a rhombus.</li>
+  <li><strong>Every trapezium has equal base angles.</strong> Only an isosceles trapezium does.</li>
+  <li><strong>Perpendicular diagonals make a rhombus.</strong> A kite has them too. For a rhombus the diagonals must also bisect each other.</li>
+</ul>
+
+<h2>Quick check</h2>
+<div class="quiz">
+  <fieldset class="q" data-answer="a">
+    <legend>1. The diagonals of a rhombus are 10 cm and 24 cm. Its side is…</legend>
+    <div class="opts">
+      <button data-opt="a">13 cm</button>
+      <button data-opt="b">17 cm</button>
+      <button data-opt="c">26 cm</button>
+      <button data-opt="d">12 cm</button>
+    </div>
+    <p class="why" hidden>Half-diagonals 5 and 12 meet at 90°: √(25 + 144) = √169 = 13 cm.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="b">
+    <legend>2. Which statement is true?</legend>
+    <div class="opts">
+      <button data-opt="a">Every rhombus is a square</button>
+      <button data-opt="b">Every square is a rhombus</button>
+      <button data-opt="c">Every rectangle is a square</button>
+      <button data-opt="d">Every trapezium is a parallelogram</button>
+    </div>
+    <p class="why" hidden>A square has all sides congruent, so it is a rhombus. The others fail: a rhombus need not have right angles, and so on.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="c">
+    <legend>3. In square ABCD, ∠ABD is…</legend>
+    <div class="opts">
+      <button data-opt="a">90°</button>
+      <button data-opt="b">60°</button>
+      <button data-opt="c">45°</button>
+      <button data-opt="d">30°</button>
+    </div>
+    <p class="why" hidden>The diagonal BD bisects the 90° angle at B.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="b">
+    <legend>4. In rectangle PQRS the diagonals meet at O, and PR = 18 cm. Then QO is…</legend>
+    <div class="opts">
+      <button data-opt="a">18 cm</button>
+      <button data-opt="b">9 cm</button>
+      <button data-opt="c">6 cm</button>
+      <button data-opt="d">36 cm</button>
+    </div>
+    <p class="why" hidden>QS = PR = 18 cm (congruent diagonals), and O is the midpoint of QS.</p>
+  </fieldset>
+  <p class="score" aria-live="polite"></p>
+</div>
+<nav class="next-prev" aria-label="Lessons">
+  <a href="parallelograms.html">← Parallelograms</a>
+  <a href="midpoint-theorem.html">Next: The midpoint theorem →</a>
+</nav>
+</main>
+
+<footer class="foot">Follows Chapter 5 of the Maharashtra State Board Std 9 Mathematics Part II textbook. Explanations and examples are original.</footer>
+</div>
+
+<script src="../../assets/js/sim-kit.js?v=20261010"></script>
+<script src="../../assets/js/math-kit.js?v=20261010"></script>
+<script src="../../assets/js/sims/quads-shape.js?v=20261010"></script>
+<script src="../../assets/js/quiz.js?v=20261010"></script>
+<script>
+  (function () {
+    var simEl = document.getElementById("sim-main");
+    var sim = QuadsShapeSim.mount(simEl, { mode: "special", shape: "rect" });
+    window.lessonSim = sim;
+    // Buttons in the lesson that set up the simulation: data-sim='{...settings}'
+    document.querySelectorAll("main [data-sim]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        sim.set(JSON.parse(b.dataset.sim));
+        sim.play();
+        simEl.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+      });
+    });
+  })();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/contrib/auto-render.min.js"></script>
+<script>
+  renderMathInElement(document.body, {
+    delimiters: [{ left: "$$", right: "$$", display: true }, { left: "\\(", right: "\\)", display: false }],
+    output: window.KATEX_OUTPUT || "htmlAndMathml",
+    throwOnError: false
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Angles of a Triangle · Visual Science &amp; Maths</title>
+<meta name="description" content="Drag the corners of a triangle and watch the angles always add up to 180°. Slide two corners over to see why an exterior angle equals the two remote interior angles.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.css">
+<link rel="stylesheet" href="../../assets/css/style.css?v=20261010">
+</head>
+<body class="lesson ch-triangles">
+<div class="wrap">
+
+<header class="site-head">
+  <a class="brand" href="../../index.html"><svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><path d="M3 27 Q14 -1 29 27" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-dasharray="2.5 3.5"/><circle cx="21" cy="10" r="4.2" fill="var(--vy)"/></svg> Visual <span>Science &amp; Maths</span></a>
+  <nav class="site-nav" aria-label="Main"><a href="../../index.html#maths">Chapters</a><a href="../../index.html#games">Games</a></nav>
+</header>
+
+<main>
+<div class="title-band">
+<p class="eyebrow">Triangles, lesson 1</p>
+<h1>Angles of a Triangle</h1>
+<p class="lede">Draw any triangle, tear off its three corners and put them side by side: they always make a straight line. That one fact explains the exterior angle theorem too.</p>
+<p class="downloads"><a class="btn" href="../../slides/angles-of-a-triangle.pptx" download>Download slides (.pptx)</a> <span>12 slides with teacher notes</span></p>
+</div>
+
+<div id="sim-main"></div>
+
+<section class="prose">
+  <h2>The angle sum</h2>
+  <p>In every triangle the three interior angles add up to \(180^\circ\):</p>
+  <div class="eq">$$\angle A + \angle B + \angle C = 180^\circ$$</div>
+  <p>Drag any corner in the simulation: the angles change, but their sum never does. Press “Move the corners” to fit \(\angle A\) and \(\angle B\) next to \(\angle C\): together they make a straight angle.</p>
+
+  <h2>Exterior angles</h2>
+  <p>Extend side \(BC\) beyond \(C\) to a point \(D\). The angle \(\angle ACD\) between the extended side and side \(CA\) is an <strong>exterior angle</strong> of the triangle. The two angles of the triangle that are not next to it, \(\angle A\) and \(\angle B\), are its <strong>remote interior angles</strong>.</p>
+  <div class="note"><strong>Theorem of remote interior angles.</strong> An exterior angle of a triangle is equal to the sum of its remote interior angles: \(\angle ACD = \angle A + \angle B\).</div>
+  <p><strong>Proof.</strong> \(\angle ACB + \angle ACD = 180^\circ\) because they form a linear pair. Also \(\angle A + \angle B + \angle ACB = 180^\circ\) (angle sum). Comparing the two, \(\angle ACD = \angle A + \angle B\).</p>
+  <p>It follows that an exterior angle is <strong>greater than each</strong> of its remote interior angles.</p>
+</section>
+<h2>Try it</h2>
+<p class="prose" style="margin-top:1rem">Use the chips, the sliders, or drag the corners A, B and C.</p>
+<ul class="tries">
+  <li><span><strong>Angle sum.</strong> Watch the corners fill a straight line.</span>
+    <button class="btn" data-sim='{"B":60,"C":70,"mode":"sum"}'>Move the corners</button></li>
+  <li><span><strong>Exterior angle.</strong> Does ∠A + ∠B fill ∠ACD?</span>
+    <button class="btn" data-sim='{"B":45,"C":75,"mode":"ext"}'>Show it</button></li>
+  <li><span><strong>An obtuse angle.</strong> Make ∠B = 110°.</span>
+    <button class="btn" data-sim='{"B":110,"C":35,"mode":"sum"}'>Obtuse ∠B</button></li>
+  <li><span><strong>Ratio 5 : 6 : 7.</strong> Angles of 50°, 60° and 70°.</span>
+    <button class="btn" data-sim='{"B":60,"C":70,"mode":"sum"}'>Set it up</button></li>
+</ul>
+<p class="prose" style="margin-top:1rem;font-size:.875rem;color:var(--muted)">What you should see: the three angles always total 180°, and the copies of ∠A and ∠B line up with ∠C along a straight line. With ∠B = 45° and ∠C = 75°, ∠A = 60° and the exterior angle is 120° = 60° + 45°.</p>
+
+<h2>Worked examples</h2>
+<div class="example">
+  <h3 style="margin-top:0">1. Angles in a ratio</h3>
+  <p>The angles of a triangle are in the ratio 5 : 6 : 7. Find them.</p>
+  <ol>
+    <li>Let the angles be \(5x\), \(6x\) and \(7x\). Then \(18x = 180^\circ\), so \(x = 10^\circ\).</li>
+    <li>The angles are <span class="answer">50°, 60° and 70°</span></li>
+  </ol>
+  <button class="btn" data-sim='{"B":60,"C":70,"mode":"sum"}'>Check it</button>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">2. An exterior angle</h3>
+  <p>In \(\triangle PQR\), side \(QR\) is extended to \(S\). If \(\angle P = 55^\circ\) and \(\angle Q = 65^\circ\), find \(\angle PRS\) and \(\angle PRQ\).</p>
+  <ol>
+    <li>By the remote interior angles theorem, \(\angle PRS = 55^\circ + 65^\circ = \) <span class="answer">120°</span></li>
+    <li>\(\angle PRQ = 180^\circ - 120^\circ = \) <span class="answer">60°</span></li>
+  </ol>
+  <button class="btn" data-sim='{"B":65,"C":60,"mode":"ext"}'>See it</button>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">3. Exterior angles all round</h3>
+  <p>Show that the three exterior angles of a triangle, one at each corner, add up to \(360^\circ\).</p>
+  <ol>
+    <li>Each exterior angle is \(180^\circ\) minus the interior angle beside it.</li>
+    <li>Sum \(= 3 \times 180^\circ - (\angle A + \angle B + \angle C) = 540^\circ - 180^\circ = \) <span class="answer">360°</span></li>
+  </ol>
+</div>
+
+<h2>Common mistakes</h2>
+<ul class="mistakes" style="margin-top:1rem">
+  <li><strong>Adding the wrong angles.</strong> The exterior angle equals the two angles not touching it, not the one beside it.</li>
+  <li><strong>“Exterior and interior angles are equal.”</strong> The exterior angle and the interior angle beside it add up to 180°.</li>
+  <li><strong>Two obtuse angles.</strong> Two obtuse angles already exceed 180°, so a triangle can have at most one.</li>
+  <li><strong>Forgetting to use the ratio total.</strong> For a ratio 5 : 6 : 7, divide 180° by 5 + 6 + 7 = 18.</li>
+</ul>
+
+<h2>Quick check</h2>
+<div class="quiz">
+  <fieldset class="q" data-answer="a">
+    <legend>1. Two angles of a triangle are 48° and 75°. The third angle is…</legend>
+    <div class="opts">
+      <button data-opt="a">57°</button>
+      <button data-opt="b">67°</button>
+      <button data-opt="c">47°</button>
+      <button data-opt="d">123°</button>
+    </div>
+    <p class="why" hidden>180° − 48° − 75° = 57°.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="b">
+    <legend>2. An exterior angle of a triangle is 110°. One remote interior angle is 40°. The other is…</legend>
+    <div class="opts">
+      <button data-opt="a">30°</button>
+      <button data-opt="b">70°</button>
+      <button data-opt="c">140°</button>
+      <button data-opt="d">150°</button>
+    </div>
+    <p class="why" hidden>110° = 40° + x, so x = 70°.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="b">
+    <legend>3. Which statement is always true?</legend>
+    <div class="opts">
+      <button data-opt="a">An exterior angle is smaller than each remote interior angle</button>
+      <button data-opt="b">An exterior angle is greater than each remote interior angle</button>
+      <button data-opt="c">All exterior angles are 90°</button>
+      <button data-opt="d">An exterior angle equals the interior angle beside it</button>
+    </div>
+    <p class="why" hidden>It equals their sum, so it is bigger than either one.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="b">
+    <legend>4. Can a triangle have angles of 100°, 50° and 40°?</legend>
+    <div class="opts">
+      <button data-opt="a">Yes</button>
+      <button data-opt="b">No, they add to 190°</button>
+      <button data-opt="c">No, a triangle cannot have an obtuse angle</button>
+      <button data-opt="d">Yes, if it is isosceles</button>
+    </div>
+    <p class="why" hidden>The angles must add up to exactly 180°.</p>
+  </fieldset>
+  <p class="score" aria-live="polite"></p>
+</div>
+<nav class="next-prev" aria-label="Lessons">
+  <a href="../parallel/tests-for-parallel-lines.html">← Tests for parallel lines</a>
+  <a href="congruence-of-triangles.html">Next: Congruence of triangles →</a>
+</nav>
+</main>
+
+<footer class="foot">Follows Chapter 3 of the Maharashtra State Board Std 9 Mathematics Part II textbook. Explanations and examples are original.</footer>
+</div>
+
+<script src="../../assets/js/sim-kit.js?v=20261010"></script>
+<script src="../../assets/js/math-kit.js?v=20261010"></script>
+<script src="../../assets/js/sims/triangle.js?v=20261010"></script>
+<script src="../../assets/js/quiz.js?v=20261010"></script>
+<script>
+  (function () {
+    var simEl = document.getElementById("sim-main");
+    var sim = TriAngleSim.mount(simEl, { B: 60, C: 70, mode: "sum" });
+    window.lessonSim = sim;
+    // Buttons in the lesson that set up the simulation: data-sim='{...settings}'
+    document.querySelectorAll("main [data-sim]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        sim.set(JSON.parse(b.dataset.sim));
+        sim.play();
+        simEl.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+      });
+    });
+  })();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/contrib/auto-render.min.js"></script>
+<script>
+  renderMathInElement(document.body, {
+    delimiters: [{ left: "$$", right: "$$", display: true }, { left: "\\(", right: "\\)", display: false }],
+    output: window.KATEX_OUTPUT || "htmlAndMathml",
+    throwOnError: false
+  });
+</script>
+
+</body>
+</html>

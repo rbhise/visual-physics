@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Perpendicular and Angle Bisectors · Visual Science &amp; Maths</title>
+<meta name="description" content="The perpendicular bisector theorem, the angle bisector theorem and their converses, with the compass constructions drawn step by step.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.css">
+<link rel="stylesheet" href="../../assets/css/style.css?v=20261010">
+</head>
+<body class="lesson ch-constructions">
+<div class="wrap">
+
+<header class="site-head">
+  <a class="brand" href="../../index.html"><svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><path d="M3 27 Q14 -1 29 27" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-dasharray="2.5 3.5"/><circle cx="21" cy="10" r="4.2" fill="var(--vy)"/></svg> Visual <span>Science &amp; Maths</span></a>
+  <nav class="site-nav" aria-label="Main"><a href="../../index.html#maths">Chapters</a><a href="../../index.html#games">Games</a></nav>
+</header>
+
+<main>
+<div class="title-band">
+<p class="eyebrow">Constructions of Triangles, lesson 1</p>
+<h1>Perpendicular and Angle Bisectors</h1>
+<p class="lede">Every triangle construction in this chapter uses two tools: the perpendicular bisector of a segment and the bisector of an angle. Here is what each one guarantees, and how to draw it with a compass and ruler.</p>
+<p class="downloads"><a class="btn" href="../../slides/bisectors.pptx" download>Download slides (.pptx)</a> <span>12 slides with teacher notes</span></p>
+</div>
+
+<div id="sim-main"></div>
+
+<section class="prose">
+  <h2>The perpendicular bisector</h2>
+  <p>The <strong>perpendicular bisector</strong> of a segment is the line that passes through its midpoint and is perpendicular to it.</p>
+  <div class="note"><strong>Perpendicular bisector theorem.</strong> Every point on the perpendicular bisector of a segment is equidistant from the end points of the segment.<br>
+  <strong>Converse.</strong> Every point which is equidistant from the end points of a segment lies on the perpendicular bisector of the segment.</div>
+  <p><strong>Why it is true.</strong> Let line \(l\) be the perpendicular bisector of \(AB\), meeting it at \(M\), and let \(P\) be any point on \(l\). In \(\triangle PMA\) and \(\triangle PMB\): \(AM = BM\), \(\angle PMA = \angle PMB = 90^\circ\) and \(PM\) is common. So the triangles are congruent by the S-A-S test, and \(PA = PB\).</p>
+
+  <h2>Constructing the perpendicular bisector</h2>
+  <ol>
+    <li>Open the compass to <strong>more than half</strong> of \(AB\). With centre \(A\), draw an arc above \(AB\) and an arc below it.</li>
+    <li>Keep the same opening. With centre \(B\), draw arcs that cut the first two at \(X\) and \(Y\).</li>
+    <li>Draw line \(XY\). It is the perpendicular bisector of \(AB\).</li>
+  </ol>
+  <p>This works because of the converse: \(XA = XB\) and \(YA = YB\) (the same compass opening), so both \(X\) and \(Y\) lie on the perpendicular bisector. Two points fix a line.</p>
+
+  <h2>The angle bisector</h2>
+  <p>The <strong>bisector of an angle</strong> is the ray from the vertex that divides the angle into two congruent angles. The distance of a point from a line is the length of the <strong>perpendicular</strong> drawn from the point to the line.</p>
+  <div class="note"><strong>Angle bisector theorem.</strong> Every point on the bisector of an angle is equidistant from the sides of the angle.<br>
+  <strong>Converse.</strong> Any point equidistant from the sides of an angle lies on the bisector of the angle.</div>
+  <p><strong>Why it is true.</strong> Let \(P\) be on the bisector of \(\angle ABC\), with \(PM \perp BA\) and \(PN \perp BC\). In \(\triangle PMB\) and \(\triangle PNB\): \(\angle PBM = \angle PBN\), \(\angle PMB = \angle PNB = 90^\circ\) and \(PB\) is common. They are congruent by the A-A-S test, so \(PM = PN\).</p>
+
+  <h2>Constructing the angle bisector</h2>
+  <ol>
+    <li>With centre \(B\) and any radius, draw an arc that cuts ray \(BA\) at \(D\) and ray \(BC\) at \(E\).</li>
+    <li>With centres \(D\) and \(E\) and the same radius (more than half of \(DE\)), draw arcs that meet at \(F\).</li>
+    <li>Draw ray \(BF\). It bisects \(\angle ABC\).</li>
+  </ol>
+  <p>\(BD = BE\) and \(DF = EF\), and \(BF\) is common, so \(\triangle BDF \cong \triangle BEF\) (S-S-S) and \(\angle DBF = \angle EBF\).</p>
+</section>
+<h2>Try it</h2>
+<p class="prose" style="margin-top:1rem">Choose a bisector, drag P on the picture, and press “Play construction” to watch the compass work.</p>
+<ul class="tries">
+  <li><span><strong>Perpendicular bisector.</strong> AB = 7 cm, P on the bisector.</span>
+    <button class="btn" data-sim='{"mode":"perp","len":7,"P":[0,2.5],"snap":true}'>Construct</button></li>
+  <li><span><strong>Converse.</strong> Move P off the bisector.</span>
+    <button class="btn" data-sim='{"mode":"perp","len":7,"P":[1.5,2.5],"snap":false}'>Try it</button></li>
+  <li><span><strong>Angle bisector.</strong> Bisect an angle of 120°.</span>
+    <button class="btn" data-sim='{"mode":"angle","ang":120,"pr":5,"snap":true}'>Construct</button></li>
+  <li><span><strong>Off the bisector.</strong> ∠ABC = 80°, P not on BF.</span>
+    <button class="btn" data-sim='{"mode":"angle","ang":80,"P":[4,1],"snap":false}'>Try it</button></li>
+</ul>
+<p class="prose" style="margin-top:1rem;font-size:.875rem;color:var(--muted)">What you should see: with P on the perpendicular bisector of a 7 cm segment, PA = PB = 4.3 cm. Moved off it, PA = 5.59 cm but PB = 3.2 cm. The bisector of 120° makes two angles of 60°, and P is 4.33 cm from both arms. Off the bisector, P is 3.77 cm from BA but only 1 cm from BC.</p>
+
+<h2>Worked examples</h2>
+<div class="example">
+  <h3 style="margin-top:0">1. Using the perpendicular bisector theorem</h3>
+  <p>\(AB = 8\) cm. Point \(P\) is on the perpendicular bisector of \(AB\), which meets \(AB\) at \(M\), and \(PM = 3\) cm. Find \(PA\) and \(PB\).</p>
+  <ol>
+    <li>\(M\) is the midpoint, so \(AM = 4\) cm, and \(\angle PMA = 90^\circ\).</li>
+    <li>By Pythagoras, \(PA = \sqrt{4^2 + 3^2} = \sqrt{25} = 5\) cm.</li>
+    <li>P is on the perpendicular bisector, so \(PB = PA\): <span class="answer">PA = PB = 5 cm</span></li>
+  </ol>
+  <button class="btn" data-sim='{"mode":"perp","len":8,"P":[0,3],"snap":true}'>Check it</button>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">2. Using the angle bisector theorem</h3>
+  <p>Ray \(BF\) bisects \(\angle ABC = 60^\circ\). \(P\) is on \(BF\) and \(BP = 5\) cm. Find \(\angle PBC\) and the distance of \(P\) from each arm.</p>
+  <ol>
+    <li>\(\angle PBC = 60^\circ \div 2 = \) <span class="answer">30°</span></li>
+    <li>Draw \(PN \perp BC\). \(\triangle PNB\) is a 30°–60°–90° triangle with hypotenuse \(BP\), so \(PN = \tfrac12 \times 5 = 2.5\) cm.</li>
+    <li>By the angle bisector theorem, P is the same distance from \(BA\): <span class="answer">2.5 cm from each arm</span></li>
+  </ol>
+  <button class="btn" data-sim='{"mode":"angle","ang":60,"pr":5,"snap":true}'>Check it</button>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">3. Using the converse</h3>
+  <p>Two villages A and B are 6 km apart. A water tank must be the same distance from both, and 4 km from each. Where can it be built? (Scale: 1 cm for 1 km.)</p>
+  <ol>
+    <li>The tank T has \(TA = TB\), so by the converse it lies on the perpendicular bisector of \(AB\).</li>
+    <li>If the bisector meets \(AB\) at \(M\), then \(AM = 3\) and \(TM = \sqrt{4^2 - 3^2} = \sqrt7 \approx 2.65\) km.</li>
+    <li><span class="answer">On the perpendicular bisector, about 2.65 km from AB</span>, on either side of it: two places.</li>
+  </ol>
+  <button class="btn" data-sim='{"mode":"perp","len":6,"P":[0,2.65],"snap":true}'>Check it</button>
+</div>
+
+<h2>Common mistakes</h2>
+<ul class="mistakes" style="margin-top:1rem">
+  <li><strong>Compass opening too small.</strong> For the perpendicular bisector the radius must be more than half of AB, or the arcs from A and B never meet.</li>
+  <li><strong>Changing the opening between arcs.</strong> The arcs from A and from B (or from D and from E) must have the same radius.</li>
+  <li><strong>Measuring a slanting distance.</strong> The distance of a point from an arm is along the perpendicular to that arm, not along any line you like.</li>
+  <li><strong>Forgetting the converse.</strong> PA = PB tells you that P is on the perpendicular bisector. You do not need to be told it separately.</li>
+</ul>
+
+<h2>Quick check</h2>
+<div class="quiz">
+  <fieldset class="q" data-answer="b">
+    <legend>1. P is on the perpendicular bisector of segment XY and PX = 7 cm. Then PY is…</legend>
+    <div class="opts">
+      <button data-opt="a">3.5 cm</button>
+      <button data-opt="b">7 cm</button>
+      <button data-opt="c">14 cm</button>
+      <button data-opt="d">it cannot be found</button>
+    </div>
+    <p class="why" hidden>Every point on the perpendicular bisector is equidistant from X and Y.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="a">
+    <legend>2. QA = QB = 5 cm and AB = 8 cm. How far is Q from segment AB?</legend>
+    <div class="opts">
+      <button data-opt="a">3 cm</button>
+      <button data-opt="b">4 cm</button>
+      <button data-opt="c">5 cm</button>
+      <button data-opt="d">1 cm</button>
+    </div>
+    <p class="why" hidden>Q is on the perpendicular bisector (converse). Half of AB is 4, so the distance is √(25 − 16) = 3 cm.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="c">
+    <legend>3. Ray BD bisects ∠ABC = 84°. Then ∠ABD is…</legend>
+    <div class="opts">
+      <button data-opt="a">84°</button>
+      <button data-opt="b">168°</button>
+      <button data-opt="c">42°</button>
+      <button data-opt="d">21°</button>
+    </div>
+    <p class="why" hidden>A bisector divides the angle into two equal angles: 84° ÷ 2 = 42°.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="a">
+    <legend>4. A point inside ∠ABC is 3 cm from arm BA and 3 cm from arm BC. It lies…</legend>
+    <div class="opts">
+      <button data-opt="a">on the bisector of ∠ABC</button>
+      <button data-opt="b">on ray BA</button>
+      <button data-opt="c">on the perpendicular bisector of BC</button>
+      <button data-opt="d">anywhere</button>
+    </div>
+    <p class="why" hidden>Converse of the angle bisector theorem: a point equidistant from the sides is on the bisector.</p>
+  </fieldset>
+  <p class="score" aria-live="polite"></p>
+</div>
+<nav class="next-prev" aria-label="Lessons">
+  <a href="../triangles/special-triangles.html">← Isosceles and right triangles</a>
+  <a href="constructing-triangles.html">Next: Constructing triangles →</a>
+</nav>
+</main>
+
+<footer class="foot">Follows Chapter 4 of the Maharashtra State Board Std 9 Mathematics Part II textbook. Explanations and examples are original.</footer>
+</div>
+
+<script src="../../assets/js/sim-kit.js?v=20261010"></script>
+<script src="../../assets/js/math-kit.js?v=20261010"></script>
+<script src="../../assets/js/sims/constructions-bisectors.js?v=20261010"></script>
+<script src="../../assets/js/quiz.js?v=20261010"></script>
+<script>
+  (function () {
+    var simEl = document.getElementById("sim-main");
+    var sim = ConstrBisectSim.mount(simEl, { mode: "perp", len: 7, P: [0, 2.5], snap: true });
+    window.lessonSim = sim;
+    // Buttons in the lesson that set up the simulation: data-sim='{...settings}'
+    document.querySelectorAll("main [data-sim]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        sim.set(JSON.parse(b.dataset.sim));
+        sim.play();
+        simEl.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+      });
+    });
+  })();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/contrib/auto-render.min.js"></script>
+<script>
+  renderMathInElement(document.body, {
+    delimiters: [{ left: "$$", right: "$$", display: true }, { left: "\\(", right: "\\)", display: false }],
+    output: window.KATEX_OUTPUT || "htmlAndMathml",
+    throwOnError: false
+  });
+</script>
+
+</body>
+</html>

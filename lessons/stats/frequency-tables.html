@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Frequency Tables and Cumulative Frequency · Visual Science &amp; Maths</title>
+<meta name="description" content="Sort raw data with tally marks into ungrouped and grouped frequency tables, with class intervals, class marks, inclusive and exclusive classes, and less-than and more-than cumulative frequency.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.css">
+<link rel="stylesheet" href="../../assets/css/style.css?v=20261010">
+</head>
+<body class="lesson ch-stats">
+<div class="wrap">
+
+<header class="site-head">
+  <a class="brand" href="../../index.html"><svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><path d="M3 27 Q14 -1 29 27" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-dasharray="2.5 3.5"/><circle cx="21" cy="10" r="4.2" fill="var(--vy)"/></svg> Visual <span>Science &amp; Maths</span></a>
+  <nav class="site-nav" aria-label="Main"><a href="../../index.html#maths">Chapters</a><a href="../../index.html#games">Games</a></nav>
+</header>
+
+<main>
+<div class="title-band">
+<p class="eyebrow">Statistics, lesson 2</p>
+<h1>Frequency Tables and Cumulative Frequency</h1>
+<p class="lede">Thirty test marks written in a row tell you very little. Sort them into a table and you can see at once how many students did well, how many struggled and where most of them lie.</p>
+<p class="downloads"><a class="btn" href="../../slides/frequency-tables.pptx" download>Download slides (.pptx)</a> <span>12 slides with teacher notes</span></p>
+</div>
+
+<div id="sim-main"></div>
+
+<section class="prose">
+  <h2>Data</h2>
+  <p>Numerical information collected for a study is called <strong>data</strong>. Data collected by the investigator himself or herself, for example by asking each student in the class, is <strong>primary data</strong>. Data taken from records already collected by someone else, such as a school register or a government report, is <strong>secondary data</strong>.</p>
+  <p>Data in the form in which it was collected, not yet arranged in any way, is <strong>raw data</strong>.</p>
+
+  <h2>Tally marks and frequency</h2>
+  <p>The number of times an observation occurs is its <strong>frequency</strong>. To count quickly, draw a <strong>tally mark</strong> for each observation: four vertical strokes, and the fifth drawn across them, so the marks come in easy bundles of five.</p>
+  <p>A table showing each observation with its frequency is an <strong>ungrouped frequency distribution table</strong>. The sum of all the frequencies is the number of observations, written \(N\).</p>
+
+  <h2>Grouped frequency tables</h2>
+  <p>When the observations are spread over a wide range, group them into <strong>classes</strong> such as 10–20, 20–30, … . In the class 20–30, 20 is the <strong>lower class limit</strong> and 30 is the <strong>upper class limit</strong>; the difference, 10, is the <strong>class width</strong>.</p>
+  <div class="note"><strong>Class mark</strong> \(= \dfrac{\text{lower class limit} + \text{upper class limit}}{2}\). For 20–30 the class mark is \(\dfrac{20 + 30}{2} = 25\).</div>
+  <ul class="mistakes">
+    <li><strong>Exclusive classes</strong> (10–20, 20–30, …): the upper limit is <em>not</em> included. An observation of 20 goes into 20–30.</li>
+    <li><strong>Inclusive classes</strong> (10–19, 20–29, …): both limits are included. To make them continuous, subtract 0.5 from each lower limit and add 0.5 to each upper limit: 9.5–19.5, 19.5–29.5, … .</li>
+  </ul>
+
+  <h2>Cumulative frequency</h2>
+  <p>The <strong>cumulative frequency</strong> (c.f.) of a class is a running total of frequencies.</p>
+  <ul class="mistakes">
+    <li><strong>Less than</strong> type: add each frequency to the total of the classes above it. It counts the observations <em>less than the upper limit</em> of that class. The last one equals \(N\).</li>
+    <li><strong>More than</strong> type: start from the last class and add upwards. It counts the observations <em>equal to or more than the lower limit</em> of that class. The first one equals \(N\).</li>
+  </ul>
+</section>
+<h2>Try it</h2>
+<p class="prose" style="margin-top:1rem">Choose a table, then press “Sort the data” to watch each value find its row. Tap a row to read it.</p>
+<ul class="tries">
+  <li><span><strong>Ungrouped.</strong> Family sizes of 25 students.</span>
+    <button class="btn" data-sim='{"data":"family","grouped":false,"cf":"none","sel":2}'>Sort</button></li>
+  <li><span><strong>Grouped.</strong> 30 test marks in classes of width 10.</span>
+    <button class="btn" data-sim='{"data":"marks","grouped":true,"width":10,"form":"excl","cf":"none","sel":1}'>Sort</button></li>
+  <li><span><strong>Narrower classes.</strong> The same marks, width 5.</span>
+    <button class="btn" data-sim='{"data":"marks","grouped":true,"width":5,"form":"excl","cf":"none","sel":4}'>Sort</button></li>
+  <li><span><strong>Inclusive.</strong> Classes 10–19, 20–29, …</span>
+    <button class="btn" data-sim='{"data":"marks","grouped":true,"width":10,"form":"incl","cf":"none","sel":1}'>Sort</button></li>
+  <li><span><strong>Less than c.f.</strong> Running totals going down.</span>
+    <button class="btn" data-sim='{"data":"marks","grouped":true,"width":10,"form":"excl","cf":"less","sel":1}'>Sort</button></li>
+  <li><span><strong>More than c.f.</strong> Running totals going up.</span>
+    <button class="btn" data-sim='{"data":"marks","grouped":true,"width":10,"form":"excl","cf":"more","sel":2}'>Sort</button></li>
+</ul>
+<p class="prose" style="margin-top:1rem;font-size:.875rem;color:var(--muted)">What you should see: 8 of the 25 families have 4 members. With width 10 the frequencies are 5, 8, 11 and 6; with width 5 the class 30–35 is the fullest, with 6. The marks 20 and 30 go into 20–30 and 30–40, never into the class they end. The less-than c.f. column reads 5, 13, 24, 30; the more-than column reads 30, 25, 17, 6.</p>
+
+<h2>Worked examples</h2>
+<div class="example">
+  <h3 style="margin-top:0">1. An ungrouped table</h3>
+  <p>The family sizes of 25 students are: 4, 3, 5, 4, 6, 2, 4, 3, 5, 7, 4, 3, 4, 5, 6, 3, 4, 2, 5, 4, 3, 6, 4, 5, 3. Make a frequency table.</p>
+  <ol>
+    <li>The values run from 2 to 7. Draw one tally mark for each student in the row of his or her family size.</li>
+    <li>Frequencies: 2 → 2, 3 → 6, 4 → 8, 5 → 5, 6 → 3, 7 → 1.</li>
+    <li>Check: \(2 + 6 + 8 + 5 + 3 + 1 = 25 = N\) ✓ <span class="answer">8 families have 4 members, the most common size</span></li>
+  </ol>
+  <button class="btn" data-sim='{"data":"family","grouped":false,"cf":"none","sel":2}'>Check it</button>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">2. A grouped table</h3>
+  <p>Make a grouped frequency table of the 30 marks shown in the simulation, with exclusive classes 10–20, 20–30, 30–40, 40–50. Give the class marks.</p>
+  <ol>
+    <li>Put each mark in its class; a mark of 20 goes into 20–30 and a mark of 30 into 30–40.</li>
+    <li>Frequencies: 5, 8, 11, 6. Check: \(5 + 8 + 11 + 6 = 30\) ✓</li>
+    <li>Class marks: \(\tfrac{10 + 20}{2} = 15\), then 25, 35, 45. <span class="answer">f = 5, 8, 11, 6; class marks 15, 25, 35, 45</span></li>
+  </ol>
+  <button class="btn" data-sim='{"data":"marks","grouped":true,"width":10,"form":"excl","cf":"none","sel":2}'>Check it</button>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">3. Cumulative frequency</h3>
+  <p>From the table in Example 2, how many students scored less than 30? How many scored 30 or more?</p>
+  <ol>
+    <li>Less than c.f.: 5, \(5 + 8 = 13\), \(13 + 11 = 24\), \(24 + 6 = 30\). The class 20–30 has c.f. 13.</li>
+    <li>More than c.f., from the bottom: 6, \(6 + 11 = 17\), \(17 + 8 = 25\), \(25 + 5 = 30\). The class 30–40 has c.f. 17.</li>
+    <li><span class="answer">13 students scored less than 30; 17 scored 30 or more</span>. Check: \(13 + 17 = 30\) ✓</li>
+  </ol>
+  <button class="btn" data-sim='{"data":"marks","grouped":true,"width":10,"form":"excl","cf":"more","sel":2}'>Check it</button>
+</div>
+
+<h2>Common mistakes</h2>
+<ul class="mistakes" style="margin-top:1rem">
+  <li><strong>Counting a boundary value twice.</strong> In exclusive classes 20 belongs only to 20–30. In inclusive classes the next class starts at 20.</li>
+  <li><strong>Class mark as the width.</strong> The class mark is the middle of the class, (lower + upper) ÷ 2, not upper − lower.</li>
+  <li><strong>Frequencies that do not add up to N.</strong> Always total the frequency column; if it is not N, a value was missed or counted twice.</li>
+  <li><strong>More-than c.f. added downwards.</strong> Start at the last class and add upwards; the first entry should equal N.</li>
+</ul>
+
+<h2>Quick check</h2>
+<div class="quiz">
+  <fieldset class="q" data-answer="c">
+    <legend>1. What is the class mark of the class 40–50?</legend>
+    <div class="opts">
+      <button data-opt="a">10</button>
+      <button data-opt="b">40</button>
+      <button data-opt="c">45</button>
+      <button data-opt="d">90</button>
+    </div>
+    <p class="why" hidden>(40 + 50) ÷ 2 = 45.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="c">
+    <legend>2. With exclusive classes 10–20, 20–30, 30–40, the observation 30 is counted in…</legend>
+    <div class="opts">
+      <button data-opt="a">10–20</button>
+      <button data-opt="b">20–30</button>
+      <button data-opt="c">30–40</button>
+      <button data-opt="d">both 20–30 and 30–40</button>
+    </div>
+    <p class="why" hidden>The upper limit is not included in an exclusive class, so 30 belongs to 30–40.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="c">
+    <legend>3. Four classes have frequencies 4, 7, 9 and 5. What is the less-than cumulative frequency of the third class?</legend>
+    <div class="opts">
+      <button data-opt="a">9</button>
+      <button data-opt="b">16</button>
+      <button data-opt="c">20</button>
+      <button data-opt="d">25</button>
+    </div>
+    <p class="why" hidden>4 + 7 + 9 = 20.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="b">
+    <legend>4. A student asks every classmate how they travel to school. This is…</legend>
+    <div class="opts">
+      <button data-opt="a">secondary data</button>
+      <button data-opt="b">primary data</button>
+      <button data-opt="c">a cumulative frequency</button>
+      <button data-opt="d">a class mark</button>
+    </div>
+    <p class="why" hidden>The student collected the data directly, so it is primary data.</p>
+  </fieldset>
+  <p class="score" aria-live="polite"></p>
+</div>
+<nav class="next-prev" aria-label="Lessons">
+  <a href="bar-graphs.html">← Bar graphs</a>
+  <a href="mean-median-mode.html">Next: Mean, median and mode →</a>
+</nav>
+</main>
+
+<footer class="foot">Follows Chapter 7 of the Maharashtra State Board Std 9 Mathematics Part I textbook. Explanations and examples are original.</footer>
+</div>
+
+<script src="../../assets/js/sim-kit.js?v=20261010"></script>
+<script src="../../assets/js/math-kit.js?v=20261010"></script>
+<script src="../../assets/js/sims/stats-freq.js?v=20261010"></script>
+<script src="../../assets/js/quiz.js?v=20261010"></script>
+<script>
+  (function () {
+    var simEl = document.getElementById("sim-main");
+    var sim = StatsFreqSim.mount(simEl, { data: "marks", width: 10, form: "excl", cf: "less" });
+    window.lessonSim = sim;
+    // Buttons in the lesson that set up the simulation: data-sim='{...settings}'
+    document.querySelectorAll("main [data-sim]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        sim.set(JSON.parse(b.dataset.sim));
+        sim.play();
+        simEl.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+      });
+    });
+  })();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/contrib/auto-render.min.js"></script>
+<script>
+  renderMathInElement(document.body, {
+    delimiters: [{ left: "$$", right: "$$", display: true }, { left: "\\(", right: "\\)", display: false }],
+    output: window.KATEX_OUTPUT || "htmlAndMathml",
+    throwOnError: false
+  });
+</script>
+
+</body>
+</html>

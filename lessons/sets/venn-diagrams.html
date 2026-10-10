@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Venn Diagrams, Subsets and Complements · Visual Science &amp; Maths</title>
+<meta name="description" content="Draw sets as Venn diagrams, decide when one set is a subset of another, and find the complement of a set inside a universal set. Drag elements between the circles.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.css">
+<link rel="stylesheet" href="../../assets/css/style.css?v=20261010">
+</head>
+<body class="lesson ch-sets">
+<div class="wrap">
+
+<header class="site-head">
+  <a class="brand" href="../../index.html"><svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><path d="M3 27 Q14 -1 29 27" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-dasharray="2.5 3.5"/><circle cx="21" cy="10" r="4.2" fill="var(--vy)"/></svg> Visual <span>Science &amp; Maths</span></a>
+  <nav class="site-nav" aria-label="Main"><a href="../../index.html#maths">Chapters</a><a href="../../index.html#games">Games</a></nav>
+</header>
+
+<main>
+<div class="title-band">
+<p class="eyebrow">Sets, lesson 2</p>
+<h1>Venn Diagrams, Subsets and Complements</h1>
+<p class="lede">A picture often says more than a list. Draw a set as a closed curve with its elements inside, and you can see at a glance which sets sit inside others and what is left outside.</p>
+<p class="downloads"><a class="btn" href="../../slides/venn-diagrams.pptx" download>Download slides (.pptx)</a> <span>12 slides with teacher notes</span></p>
+</div>
+
+<div id="sim-main"></div>
+
+<section class="prose">
+  <h2>Venn diagrams</h2>
+  <p>A <strong>Venn diagram</strong> shows a set as a closed figure, such as a circle or an oval, with its elements written inside. The idea comes from the English mathematician John Venn. In the simulation, set \(A\) is the <span class="c-vx">green circle</span> and set \(B\) the <span class="c-vy">orange circle</span>.</p>
+
+  <h2>Subsets</h2>
+  <div class="note"><strong>Subset.</strong> If every element of set \(B\) is also an element of set \(A\), then \(B\) is a <strong>subset</strong> of \(A\). We write \(B \subseteq A\) and read it “\(B\) is a subset of \(A\)”.</div>
+  <p>For \(A = \{1, 2, 3, 4, 6, 12\}\) (the factors of 12) and \(B = \{1, 2, 3, 6\}\) (the factors of 6), every element of \(B\) is in \(A\), so \(B \subseteq A\). In a Venn diagram the circle for \(B\) is drawn inside the circle for \(A\).</p>
+  <ul class="mistakes">
+    <li>Every set is a subset of itself: \(A \subseteq A\).</li>
+    <li>The empty set is a subset of every set: \(\varnothing \subseteq A\).</li>
+    <li>If \(A \subseteq B\) and \(B \subseteq A\), then \(A = B\).</li>
+    <li>If \(A \subseteq B\) and \(B \subseteq C\), then \(A \subseteq C\). For example \(N \subseteq W \subseteq I\), so \(N \subseteq I\).</li>
+  </ul>
+
+  <h2>The universal set</h2>
+  <p>When we work with some sets, we choose one big set that contains all of them. It is called the <strong>universal set</strong>, written \(U\), and is drawn as a rectangle. Every set in the discussion is a subset of \(U\). If we talk about the factors of 12 and the factors of 6, we might take \(U = \{1, 2, 3, \ldots, 12\}\).</p>
+
+  <h2>Complement of a set</h2>
+  <div class="note"><strong>Complement.</strong> Let \(U\) be the universal set and \(A \subseteq U\). The set of all elements of \(U\) that are not in \(A\) is called the <strong>complement</strong> of \(A\), written \(A'\).
+  $$A' = \{x \mid x \in U, \; x \notin A\}$$</div>
+  <p>In a Venn diagram, \(A'\) is the part of the rectangle outside circle \(A\). Some properties:</p>
+  <ul class="mistakes">
+    <li>The complement of \(A'\) is \(A\) again: \((A')' = A\).</li>
+    <li>\(U' = \varnothing\) and \(\varnothing' = U\).</li>
+    <li>\(A\) and \(A'\) share no element, and together they make up \(U\), so \(n(A) + n(A') = n(U)\).</li>
+  </ul>
+</section>
+<h2>Try it</h2>
+<p class="prose" style="margin-top:1rem">Choose what to shade with the chips. Drag any number into another region to change the sets; the readouts follow.</p>
+<ul class="tries">
+  <li><span><strong>A subset.</strong> Factors of 6 inside factors of 12.</span>
+    <button class="btn" data-sim='{"view":"sub","U":[1,2,3,4,5,6,7,8,9,10,11,12],"A":[1,2,3,4,6,12],"B":[1,2,3,6],"shade":"B"}'>Try it</button></li>
+  <li><span><strong>Not a subset.</strong> Even numbers and multiples of 3. Is B ⊆ A?</span>
+    <button class="btn" data-sim='{"view":"sub","U":[1,2,3,4,5,6,7,8,9,10,11,12],"A":[2,4,6,8,10,12],"B":[3,6,9,12],"shade":"B"}'>Try it</button></li>
+  <li><span><strong>Make it a subset.</strong> Same sets: drag 3 and 9 out of B (or into the overlap). What changes?</span>
+    <button class="btn" data-sim='{"view":"sub","U":[1,2,3,4,5,6,7,8,9,10,11,12],"A":[2,4,6,8,10,12],"B":[3,6,9,12],"shade":"A"}'>Try it</button></li>
+  <li><span><strong>Complement.</strong> U = {1, …, 10}, A = the prime numbers. Find A′.</span>
+    <button class="btn" data-sim='{"view":"sub","U":[1,2,3,4,5,6,7,8,9,10],"A":[2,3,5,7],"B":[],"shade":"Ac"}'>Try it</button></li>
+</ul>
+<p class="prose" style="margin-top:1rem;font-size:.875rem;color:var(--muted)">What you should see: B = {1, 2, 3, 6} ⊆ A. For the even numbers and the multiples of 3, 3 ∈ B but 3 ∉ A, so B is not a subset; once 3 and 9 are moved, every element left in B is even and B ⊆ A. The primes up to 10 are {2, 3, 5, 7}, so A′ = {1, 4, 6, 8, 9, 10} and 4 + 6 = 10 = n(U).</p>
+
+<h2>Worked examples</h2>
+<div class="example">
+  <h3 style="margin-top:0">1. Finding a complement</h3>
+  <p>\(U = \{1, 2, 3, \ldots, 10\}\) and \(A = \{x \mid x \text{ is an odd number}, x \in U\}\). Find \(A'\) and check \(n(A) + n(A') = n(U)\).</p>
+  <ol>
+    <li>\(A = \{1, 3, 5, 7, 9\}\). Take the elements of \(U\) that are not in \(A\).</li>
+    <li><span class="answer">A′ = {2, 4, 6, 8, 10}</span></li>
+    <li>\(n(A) + n(A') = 5 + 5 = 10 = n(U)\) ✓</li>
+  </ol>
+  <button class="btn" data-sim='{"view":"sub","U":[1,2,3,4,5,6,7,8,9,10],"A":[1,3,5,7,9],"B":[],"shade":"Ac"}'>Check it</button>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">2. Is it a subset?</h3>
+  <p>\(P = \{x \mid x \text{ is a multiple of } 4, x \le 20\}\) and \(Q = \{x \mid x \text{ is an even natural number}, x \le 20\}\). Is \(P \subseteq Q\)? Is \(Q \subseteq P\)?</p>
+  <ol>
+    <li>\(P = \{4, 8, 12, 16, 20\}\) and \(Q = \{2, 4, 6, \ldots, 20\}\).</li>
+    <li>Every multiple of 4 is even, so every element of \(P\) is in \(Q\): <span class="answer">P ⊆ Q</span></li>
+    <li>\(2 \in Q\) but \(2 \notin P\): <span class="answer">Q is not a subset of P</span></li>
+  </ol>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">3. All the subsets</h3>
+  <p>Write all the subsets of \(M = \{p, q\}\).</p>
+  <ol>
+    <li>No element: \(\varnothing\). One element: \(\{p\}, \{q\}\). Both elements: \(\{p, q\}\).</li>
+    <li><span class="answer">∅, {p}, {q}, {p, q}</span>: 4 subsets in all. Do not forget \(\varnothing\) and \(M\) itself.</li>
+  </ol>
+</div>
+
+<h2>Common mistakes</h2>
+<ul class="mistakes" style="margin-top:1rem">
+  <li><strong>Writing 2 ⊆ A.</strong> Use ∈ for an element and ⊆ for a set: 2 ∈ A, but {2} ⊆ A.</li>
+  <li><strong>Reading B ⊆ A the wrong way.</strong> B ⊆ A means every element of B is in A. B is the one drawn inside.</li>
+  <li><strong>Forgetting U.</strong> A′ depends on the universal set. With a different U the complement changes.</li>
+  <li><strong>Missing subsets.</strong> ∅ and the set itself are always subsets. {p, q} has 4 subsets, not 2.</li>
+</ul>
+
+<h2>Quick check</h2>
+<div class="quiz">
+  <fieldset class="q" data-answer="b">
+    <legend>1. U = {1, 2, 3, 4, 5, 6, 7, 8} and A = {2, 4, 6, 8}. A′ is…</legend>
+    <div class="opts">
+      <button data-opt="a">{2, 4, 6, 8}</button>
+      <button data-opt="b">{1, 3, 5, 7}</button>
+      <button data-opt="c">{1, 2, 3, 4, 5, 6, 7, 8}</button>
+      <button data-opt="d">∅</button>
+    </div>
+    <p class="why" hidden>A′ has the elements of U that are not in A: 1, 3, 5 and 7.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="a">
+    <legend>2. Which statement is true?</legend>
+    <div class="opts">
+      <button data-opt="a">{1, 2} ⊆ {1, 2, 3}</button>
+      <button data-opt="b">{1, 4} ⊆ {1, 2, 3}</button>
+      <button data-opt="c">{1, 2, 3} ⊆ {1, 2}</button>
+      <button data-opt="d">3 ⊆ {1, 2, 3}</button>
+    </div>
+    <p class="why" hidden>1 and 2 are both in {1, 2, 3}. 4 is not, {1, 2} lacks 3, and 3 is an element, so we write 3 ∈ {1, 2, 3}.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="d">
+    <legend>3. How many subsets does {x, y} have?</legend>
+    <div class="opts">
+      <button data-opt="a">1</button>
+      <button data-opt="b">2</button>
+      <button data-opt="c">3</button>
+      <button data-opt="d">4</button>
+    </div>
+    <p class="why" hidden>∅, {x}, {y} and {x, y}.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="b">
+    <legend>4. n(U) = 9 and n(A) = 4. Then n(A′) is…</legend>
+    <div class="opts">
+      <button data-opt="a">4</button>
+      <button data-opt="b">5</button>
+      <button data-opt="c">9</button>
+      <button data-opt="d">13</button>
+    </div>
+    <p class="why" hidden>n(A) + n(A′) = n(U), so n(A′) = 9 − 4 = 5.</p>
+  </fieldset>
+  <p class="score" aria-live="polite"></p>
+</div>
+<nav class="next-prev" aria-label="Lessons">
+  <a href="what-is-a-set.html">← Sets and how to write them</a>
+  <a href="union-and-intersection.html">Next: Union, intersection and counting →</a>
+</nav>
+</main>
+
+<footer class="foot">Follows Chapter 1 of the Maharashtra State Board Std 9 Mathematics Part I textbook. Explanations and examples are original.</footer>
+</div>
+
+<script src="../../assets/js/sim-kit.js?v=20261010"></script>
+<script src="../../assets/js/math-kit.js?v=20261010"></script>
+<script src="../../assets/js/sims/sets-venn.js?v=20261010"></script>
+<script src="../../assets/js/quiz.js?v=20261010"></script>
+<script>
+  (function () {
+    var simEl = document.getElementById("sim-main");
+    var sim = SetsVennSim.mount(simEl, { view: "sub", U: [1,2,3,4,5,6,7,8,9,10,11,12], A: [1,2,3,4,6,12], B: [1,2,3,6], shade: "B" });
+    window.lessonSim = sim;
+    // Buttons in the lesson that set up the simulation: data-sim='{...settings}'
+    document.querySelectorAll("main [data-sim]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        sim.set(JSON.parse(b.dataset.sim));
+        sim.play();
+        simEl.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+      });
+    });
+  })();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/contrib/auto-render.min.js"></script>
+<script>
+  renderMathInElement(document.body, {
+    delimiters: [{ left: "$$", right: "$$", display: true }, { left: "\\(", right: "\\)", display: false }],
+    output: window.KATEX_OUTPUT || "htmlAndMathml",
+    throwOnError: false
+  });
+</script>
+
+</body>
+</html>

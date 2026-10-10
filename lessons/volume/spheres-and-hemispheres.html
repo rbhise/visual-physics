@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Spheres and Hemispheres · Visual Science &amp; Maths</title>
+<meta name="description" content="Surface area and volume of a sphere and a hemisphere: four circles of string cover a sphere, and two conefuls fill a hemisphere.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.css">
+<link rel="stylesheet" href="../../assets/css/style.css?v=20261010">
+</head>
+<body class="lesson ch-volume">
+<div class="wrap">
+
+<header class="site-head">
+  <a class="brand" href="../../index.html"><svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><path d="M3 27 Q14 -1 29 27" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-dasharray="2.5 3.5"/><circle cx="21" cy="10" r="4.2" fill="var(--vy)"/></svg> Visual <span>Science &amp; Maths</span></a>
+  <nav class="site-nav" aria-label="Main"><a href="../../index.html#maths">Chapters</a><a href="../../index.html#games">Games</a></nav>
+</header>
+
+<main>
+<div class="title-band">
+<p class="eyebrow">Surface Area and Volume, lesson 3</p>
+<h1>Spheres and Hemispheres</h1>
+<p class="lede">A football, a marble, a bowl: round solids have no edges to measure, yet their surface and volume depend on just one length, the radius.</p>
+<p class="downloads"><a class="btn" href="../../slides/spheres-and-hemispheres.pptx" download>Download slides (.pptx)</a> <span>12 slides with teacher notes</span></p>
+</div>
+
+<div id="sim-main"></div>
+
+<section class="prose">
+  <h2>Sphere</h2>
+  <p>A <strong>sphere</strong> is the set of all points in space at the same distance from a fixed point, its <strong>centre</strong>. That distance is the <strong>radius</strong> \(r\); the diameter is \(2r\). A ball is a sphere.</p>
+
+  <h2>Surface area of a sphere</h2>
+  <p>Wind a string tightly round half of a ball until it is covered, then unwind it and cover the whole ball. Now use the same length of string to fill circles with the same radius as the ball. The string that covers the ball fills exactly <strong>four circles</strong>. So the surface of a sphere is four times the area of a circle of radius \(r\).</p>
+  <div class="note"><strong>Sphere.</strong>
+  $$\text{Surface area} = 4\pi r^2$$
+  $$\text{Volume} = \tfrac{4}{3}\pi r^3$$</div>
+  <p>The sphere fits exactly inside a cylinder of radius \(r\) and height \(2r\). Its surface \(4\pi r^2\) equals the cylinder's curved surface \(2\pi r \times 2r\), and its volume is \(\tfrac23\) of the cylinder's volume \(2\pi r^3\).</p>
+
+  <h2>Hemisphere</h2>
+  <p>A plane through the centre cuts a sphere into two equal halves. Each half is a <strong>hemisphere</strong>. A solid hemisphere has a curved surface (half the sphere) and a flat circular face.</p>
+  <div class="note"><strong>Hemisphere.</strong>
+  $$\text{Curved surface area} = \tfrac12 \times 4\pi r^2 = 2\pi r^2$$
+  $$\text{Total surface area of a solid hemisphere} = 2\pi r^2 + \pi r^2 = 3\pi r^2$$
+  $$\text{Volume} = \tfrac12 \times \tfrac43 \pi r^3 = \tfrac{2}{3}\pi r^3$$</div>
+  <p>You can check the volume with sand. Take a hollow hemisphere and a hollow cone with the same radius and with height equal to the radius. The cone holds \(\tfrac13 \pi r^2 \times r = \tfrac13 \pi r^3\). It takes <strong>two conefuls</strong> to fill the hemisphere: \(2 \times \tfrac13 \pi r^3 = \tfrac23 \pi r^3\).</p>
+  <p>A bowl is a <em>hollow</em> hemisphere: it has no flat face, so only the curved surface \(2\pi r^2\) counts.</p>
+</section>
+<h2>Try it</h2>
+<p class="prose" style="margin-top:1rem">Choose a solid and a view, then move the radius slider.</p>
+<ul class="tries">
+  <li><span><strong>Four circles.</strong> Sphere of radius 7 cm, π = 22/7.</span>
+    <button class="btn" data-sim='{"mode":"sphere","view":"circles","pi":"22/7","d":{"r":7}}'>Wind the string</button></li>
+  <li><span><strong>Sphere in a cylinder.</strong> Radius 7 cm, π = 22/7.</span>
+    <button class="btn" data-sim='{"mode":"sphere","view":"cyl","pi":"22/7","d":{"r":7}}'>Compare</button></li>
+  <li><span><strong>Two conefuls.</strong> Hemisphere of radius 6 cm, π = 3.14.</span>
+    <button class="btn" data-sim='{"mode":"hemisphere","view":"fill","pi":"3.14","d":{"r":6}}'>Pour</button></li>
+  <li><span><strong>Solid hemisphere.</strong> Radius 7 cm, π = 22/7.</span>
+    <button class="btn" data-sim='{"mode":"hemisphere","pi":"22/7","d":{"r":7}}'>Hemisphere</button></li>
+</ul>
+<p class="prose" style="margin-top:1rem;font-size:.875rem;color:var(--muted)">What you should see: each circle of radius 7 cm has area 154 cm², and four of them make the sphere's surface, 616 cm². The cylinder round that sphere holds 2156 cm³; the sphere holds two thirds of it, about 1437.33 cm³. The cone with r = h = 6 cm holds 226.08 cm³ and two of them fill the hemisphere, 452.16 cm³. The solid hemisphere of radius 7 cm has curved surface 308 cm², flat face 154 cm² and total surface 462 cm².</p>
+
+<h2>Worked examples</h2>
+<div class="example">
+  <h3 style="margin-top:0">1. A football</h3>
+  <p>A ball has diameter 21 cm. Find its surface area and its volume. \((\pi = \tfrac{22}{7})\)</p>
+  <ol>
+    <li>\(r = 21 \div 2 = 10.5\) cm</li>
+    <li>Surface area \(= 4\pi r^2 = 4 \times \tfrac{22}{7} \times 10.5 \times 10.5 = 88 \times 1.5 \times 10.5 =\) <span class="answer">1386 cm²</span></li>
+    <li>Volume \(= \tfrac43 \pi r^3 = \tfrac43 \times \tfrac{22}{7} \times 10.5^3 = \tfrac{4 \times 22 \times 1.5 \times 10.5 \times 10.5}{3} = 44 \times 110.25 =\) <span class="answer">4851 cm³</span></li>
+  </ol>
+  <button class="btn" data-sim='{"mode":"sphere","pi":"22/7","d":{"r":10.5}}'>Check it</button>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">2. A solid hemisphere</h3>
+  <p>A solid hemisphere has radius 6 cm. Find its curved surface area, total surface area and volume. \((\pi = 3.14)\)</p>
+  <ol>
+    <li>Curved surface area \(= 2\pi r^2 = 2 \times 3.14 \times 36 =\) <span class="answer">226.08 cm²</span></li>
+    <li>Total surface area \(= 3\pi r^2 = 3 \times 3.14 \times 36 =\) <span class="answer">339.12 cm²</span></li>
+    <li>Volume \(= \tfrac23 \pi r^3 = \tfrac23 \times 3.14 \times 216 = 3.14 \times 144 =\) <span class="answer">452.16 cm³</span></li>
+  </ol>
+  <button class="btn" data-sim='{"mode":"hemisphere","pi":"3.14","d":{"r":6}}'>Check it</button>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">3. Radius from the surface area</h3>
+  <p>The surface area of a sphere is 1256 cm². Find its radius and diameter. \((\pi = 3.14)\)</p>
+  <ol>
+    <li>\(4 \times 3.14 \times r^2 = 1256\), so \(12.56\,r^2 = 1256\)</li>
+    <li>\(r^2 = 1256 \div 12.56 = 100\), so \(r =\) <span class="answer">10 cm</span> and the diameter is <span class="answer">20 cm</span></li>
+  </ol>
+  <button class="btn" data-sim='{"mode":"sphere","pi":"3.14","d":{"r":10}}'>Check it</button>
+</div>
+
+<h2>Common mistakes</h2>
+<ul class="mistakes" style="margin-top:1rem">
+  <li><strong>Using the diameter as r.</strong> A 21 cm ball has r = 10.5 cm. Halve the diameter first.</li>
+  <li><strong>4πr³ or 4πr² mixed up.</strong> Surface area has r² (square units, cm²); volume has r³ (cubic units, cm³).</li>
+  <li><strong>2πr² for a solid hemisphere.</strong> A solid hemisphere also has a flat circle: total surface area is 3πr². A hollow bowl has only 2πr².</li>
+  <li><strong>Halving the wrong formula.</strong> Hemisphere volume is half of ⁴⁄₃πr³, which is ⅔πr³, not ⅓πr³.</li>
+</ul>
+
+<h2>Quick check</h2>
+<div class="quiz">
+  <fieldset class="q" data-answer="c">
+    <legend>1. A sphere has radius 7 cm. Its surface area (π = 22/7) is…</legend>
+    <div class="opts">
+      <button data-opt="a">154 cm²</button>
+      <button data-opt="b">308 cm²</button>
+      <button data-opt="c">616 cm²</button>
+      <button data-opt="d">1437 cm²</button>
+    </div>
+    <p class="why" hidden>4πr² = 4 × 22/7 × 49 = 616 cm².</p>
+  </fieldset>
+  <fieldset class="q" data-answer="b">
+    <legend>2. The total surface area of a solid hemisphere of radius r is…</legend>
+    <div class="opts">
+      <button data-opt="a">2πr²</button>
+      <button data-opt="b">3πr²</button>
+      <button data-opt="c">4πr²</button>
+      <button data-opt="d">⅔πr³</button>
+    </div>
+    <p class="why" hidden>Curved surface 2πr² plus the flat circle πr².</p>
+  </fieldset>
+  <fieldset class="q" data-answer="a">
+    <legend>3. The curved surface area of a hemisphere of radius 10 cm (π = 3.14) is…</legend>
+    <div class="opts">
+      <button data-opt="a">628 cm²</button>
+      <button data-opt="b">314 cm²</button>
+      <button data-opt="c">942 cm²</button>
+      <button data-opt="d">1256 cm²</button>
+    </div>
+    <p class="why" hidden>2πr² = 2 × 3.14 × 100 = 628 cm².</p>
+  </fieldset>
+  <fieldset class="q" data-answer="d">
+    <legend>4. If the radius of a sphere is doubled, its volume becomes…</legend>
+    <div class="opts">
+      <button data-opt="a">2 times as large</button>
+      <button data-opt="b">4 times as large</button>
+      <button data-opt="c">6 times as large</button>
+      <button data-opt="d">8 times as large</button>
+    </div>
+    <p class="why" hidden>Volume has r³, and 2³ = 8.</p>
+  </fieldset>
+  <p class="score" aria-live="polite"></p>
+</div>
+<nav class="next-prev" aria-label="Lessons">
+  <a href="cones.html">← Cones</a>
+  <a href="../../index.html#maths">All maths chapters →</a>
+</nav>
+</main>
+
+<footer class="foot">Follows Chapter 9 of the Maharashtra State Board Std 9 Mathematics Part II textbook. Explanations and examples are original.</footer>
+</div>
+
+<script src="../../assets/js/sim-kit.js?v=20261010"></script>
+<script src="../../assets/js/math-kit.js?v=20261010"></script>
+<script src="../../assets/js/sims/volume-solids.js?v=20261010"></script>
+<script src="../../assets/js/quiz.js?v=20261010"></script>
+<script>
+  (function () {
+    var simEl = document.getElementById("sim-main");
+    var sim = VolumeSim.mount(simEl, { modes: ["sphere", "hemisphere"], mode: "sphere", d: { r: 7 } });
+    window.lessonSim = sim;
+    // Buttons in the lesson that set up the simulation: data-sim='{...settings}'
+    document.querySelectorAll("main [data-sim]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        sim.set(JSON.parse(b.dataset.sim));
+        sim.play();
+        simEl.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+      });
+    });
+  })();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/contrib/auto-render.min.js"></script>
+<script>
+  renderMathInElement(document.body, {
+    delimiters: [{ left: "$$", right: "$$", display: true }, { left: "\\(", right: "\\)", display: false }],
+    output: window.KATEX_OUTPUT || "htmlAndMathml",
+    throwOnError: false
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Isosceles and Right Triangles · Visual Science &amp; Maths</title>
+<meta name="description" content="Explore the isosceles triangle theorem, the 30°–60°–90° and 45°–45°–90° triangles, the median on the hypotenuse, and how the longest side faces the largest angle.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.css">
+<link rel="stylesheet" href="../../assets/css/style.css?v=20261010">
+</head>
+<body class="lesson ch-triangles">
+<div class="wrap">
+
+<header class="site-head">
+  <a class="brand" href="../../index.html"><svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><path d="M3 27 Q14 -1 29 27" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-dasharray="2.5 3.5"/><circle cx="21" cy="10" r="4.2" fill="var(--vy)"/></svg> Visual <span>Science &amp; Maths</span></a>
+  <nav class="site-nav" aria-label="Main"><a href="../../index.html#maths">Chapters</a><a href="../../index.html#games">Games</a></nav>
+</header>
+
+<main>
+<div class="title-band">
+<p class="eyebrow">Triangles, lesson 3</p>
+<h1>Isosceles and Right Triangles</h1>
+<p class="lede">A set square, a roof truss, a ladder against a wall: special triangles are everywhere, and each has a property that makes it easy to work with.</p>
+<p class="downloads"><a class="btn" href="../../slides/special-triangles.pptx" download>Download slides (.pptx)</a> <span>12 slides with teacher notes</span></p>
+</div>
+
+<div id="sim-main"></div>
+
+<section class="prose">
+  <h2>Isosceles triangles</h2>
+  <div class="note"><strong>Isosceles triangle theorem.</strong> If two sides of a triangle are congruent, the angles opposite them are congruent. The <strong>converse</strong> is also true: if two angles are congruent, the sides opposite them are congruent.</div>
+  <p>So an equilateral triangle, with all three sides equal, has all three angles equal: \(60^\circ\) each. The apex of an isosceles triangle always lies on the <strong>perpendicular bisector</strong> of its base: every point on that line is the same distance from both ends of the base.</p>
+
+  <h2>The 30°–60°–90° triangle</h2>
+  <p>In a right triangle with angles \(30^\circ\), \(60^\circ\) and \(90^\circ\):</p>
+  <ul class="mistakes">
+    <li>the side opposite \(30^\circ\) is <strong>half the hypotenuse</strong>;</li>
+    <li>the side opposite \(60^\circ\) is \(\dfrac{\sqrt{3}}{2}\) times the hypotenuse.</li>
+  </ul>
+  <p>The sides are in the ratio \(1 : \sqrt{3} : 2\).</p>
+
+  <h2>The 45°–45°–90° triangle</h2>
+  <p>Each leg is \(\dfrac{1}{\sqrt{2}}\) times the hypotenuse, and the sides are in the ratio \(1 : 1 : \sqrt{2}\). It is the shape of the other set square in your geometry box.</p>
+
+  <h2>Median on the hypotenuse</h2>
+  <p>A <strong>median</strong> joins a vertex to the midpoint of the opposite side. In a right-angled triangle, the median to the hypotenuse is <strong>half the hypotenuse</strong>. The midpoint of the hypotenuse is the centre of a circle through all three vertices.</p>
+
+  <h2>Sides and angles</h2>
+  <p>In any triangle, the <strong>largest side is opposite the largest angle</strong> (and the smallest side opposite the smallest angle). Also, <strong>the sum of any two sides is greater than the third side</strong>; otherwise the sides cannot meet.</p>
+</section>
+<h2>Try it</h2>
+<p class="prose" style="margin-top:1rem">Choose a view and use the sliders.</p>
+<ul class="tries">
+  <li><span><strong>Isosceles.</strong> Slide A onto the dashed line.</span>
+    <button class="btn" data-sim='{"mode":"iso","off":0,"h":6}'>Isosceles</button></li>
+  <li><span><strong>30°–60°–90°.</strong> Hypotenuse 10 cm.</span>
+    <button class="btn" data-sim='{"mode":"t3060","hyp":10}'>30°–60°–90°</button></li>
+  <li><span><strong>Median.</strong> Move B round the circle.</span>
+    <button class="btn" data-sim='{"mode":"median","hyp":10,"th":60}'>Median</button></li>
+  <li><span><strong>Sides 3, 4, 8.</strong> Can they make a triangle?</span>
+    <button class="btn" data-sim='{"mode":"ineq","a":3,"b":4,"c":8}'>Try it</button></li>
+</ul>
+<p class="prose" style="margin-top:1rem;font-size:.875rem;color:var(--muted)">What you should see: when A sits on the perpendicular bisector, AB = AC and ∠B = ∠C. With hypotenuse 10 cm the sides are 5 cm and about 8.66 cm. The median BM stays 5 cm wherever B is. Sides 3, 4 and 8 cannot make a triangle, because 3 + 4 = 7 is less than 8.</p>
+
+<h2>Worked examples</h2>
+<div class="example">
+  <h3 style="margin-top:0">1. Isosceles triangle</h3>
+  <p>In \(\triangle ABC\), \(AB = AC\) and \(\angle A = 40^\circ\). Find \(\angle B\) and \(\angle C\).</p>
+  <ol>
+    <li>\(AB = AC\), so \(\angle B = \angle C\) (isosceles triangle theorem).</li>
+    <li>\(2\angle B = 180^\circ - 40^\circ = 140^\circ\), so <span class="answer">∠B = ∠C = 70°</span></li>
+  </ol>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">2. A 30°–60°–90° triangle</h3>
+  <p>In a right triangle the hypotenuse is 10 cm and one angle is \(30^\circ\). Find the other two sides.</p>
+  <ol>
+    <li>Side opposite \(30^\circ\) \(= \tfrac12 \times 10 = \) <span class="answer">5 cm</span></li>
+    <li>Side opposite \(60^\circ\) \(= \tfrac{\sqrt3}{2} \times 10 = 5\sqrt3 \approx\) <span class="answer">8.66 cm</span></li>
+  </ol>
+  <button class="btn" data-sim='{"mode":"t3060","hyp":10}'>Check it</button>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">3. Median on the hypotenuse</h3>
+  <p>In \(\triangle PQR\), \(\angle Q = 90^\circ\), \(PQ = 12\) and \(QR = 5\). \(S\) is the midpoint of \(PR\). Find \(QS\).</p>
+  <ol>
+    <li>\(PR = \sqrt{12^2 + 5^2} = \sqrt{169} = 13\).</li>
+    <li>The median to the hypotenuse is half of it: \(QS = 13 \div 2 = \) <span class="answer">6.5</span></li>
+  </ol>
+</div>
+
+<h2>Common mistakes</h2>
+<ul class="mistakes" style="margin-top:1rem">
+  <li><strong>Matching the wrong angle to a side.</strong> In the isosceles theorem, the equal angles are opposite the equal sides, at the base.</li>
+  <li><strong>Halving the wrong side.</strong> In a 30°–60°–90° triangle, the side opposite 30° (the shortest) is half the hypotenuse.</li>
+  <li><strong>Any three lengths make a triangle.</strong> Check that the two shorter sides add up to more than the longest.</li>
+  <li><strong>Largest angle next to the longest side.</strong> The largest angle is opposite the longest side.</li>
+</ul>
+
+<h2>Quick check</h2>
+<div class="quiz">
+  <fieldset class="q" data-answer="b">
+    <legend>1. In △PQR, PQ = PR and ∠P = 50°. Then ∠Q is…</legend>
+    <div class="opts">
+      <button data-opt="a">50°</button>
+      <button data-opt="b">65°</button>
+      <button data-opt="c">130°</button>
+      <button data-opt="d">80°</button>
+    </div>
+    <p class="why" hidden>(180° − 50°) ÷ 2 = 65°.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="a">
+    <legend>2. A 30°–60°–90° triangle has hypotenuse 14 cm. The side opposite 30° is…</legend>
+    <div class="opts">
+      <button data-opt="a">7 cm</button>
+      <button data-opt="b">14 cm</button>
+      <button data-opt="c">7√3 cm</button>
+      <button data-opt="d">28 cm</button>
+    </div>
+    <p class="why" hidden>Half the hypotenuse.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="b">
+    <legend>3. Which three lengths can form a triangle?</legend>
+    <div class="opts">
+      <button data-opt="a">2, 3, 6</button>
+      <button data-opt="b">3, 4, 5</button>
+      <button data-opt="c">1, 2, 3</button>
+      <button data-opt="d">5, 5, 12</button>
+    </div>
+    <p class="why" hidden>Only 3 + 4 > 5 works; in the others the two shorter sides are not longer than the third.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="c">
+    <legend>4. In a right triangle the hypotenuse is 15 cm. The median to the hypotenuse is…</legend>
+    <div class="opts">
+      <button data-opt="a">15 cm</button>
+      <button data-opt="b">30 cm</button>
+      <button data-opt="c">7.5 cm</button>
+      <button data-opt="d">5 cm</button>
+    </div>
+    <p class="why" hidden>It is half the hypotenuse.</p>
+  </fieldset>
+  <p class="score" aria-live="polite"></p>
+</div>
+<nav class="next-prev" aria-label="Lessons">
+  <a href="congruence-of-triangles.html">← Congruence of triangles</a>
+  <a href="../constructions/bisectors.html">Next chapter: Constructions of Triangles →</a>
+</nav>
+</main>
+
+<footer class="foot">Follows Chapter 3 of the Maharashtra State Board Std 9 Mathematics Part II textbook. Explanations and examples are original.</footer>
+</div>
+
+<script src="../../assets/js/sim-kit.js?v=20261010"></script>
+<script src="../../assets/js/math-kit.js?v=20261010"></script>
+<script src="../../assets/js/sims/special.js?v=20261010"></script>
+<script src="../../assets/js/quiz.js?v=20261010"></script>
+<script>
+  (function () {
+    var simEl = document.getElementById("sim-main");
+    var sim = SpecialSim.mount(simEl, { mode: "iso", off: 1.5, h: 6 });
+    window.lessonSim = sim;
+    // Buttons in the lesson that set up the simulation: data-sim='{...settings}'
+    document.querySelectorAll("main [data-sim]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        sim.set(JSON.parse(b.dataset.sim));
+        sim.play();
+        simEl.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+      });
+    });
+  })();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/contrib/auto-render.min.js"></script>
+<script>
+  renderMathInElement(document.body, {
+    delimiters: [{ left: "$$", right: "$$", display: true }, { left: "\\(", right: "\\)", display: false }],
+    output: window.KATEX_OUTPUT || "htmlAndMathml",
+    throwOnError: false
+  });
+</script>
+
+</body>
+</html>

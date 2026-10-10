@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Polynomials and Their Degree · Visual Science &amp; Maths</title>
+<meta name="description" content="What a polynomial in one variable is, its degree, monomials, binomials and trinomials, linear, quadratic and cubic polynomials, standard, coefficient and index forms, and the value p(a).">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.css">
+<link rel="stylesheet" href="../../assets/css/style.css?v=20261010">
+</head>
+<body class="lesson ch-poly">
+<div class="wrap">
+
+<header class="site-head">
+  <a class="brand" href="../../index.html"><svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><path d="M3 27 Q14 -1 29 27" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-dasharray="2.5 3.5"/><circle cx="21" cy="10" r="4.2" fill="var(--vy)"/></svg> Visual <span>Science &amp; Maths</span></a>
+  <nav class="site-nav" aria-label="Main"><a href="../../index.html#maths">Chapters</a><a href="../../index.html#games">Games</a></nav>
+</header>
+
+<main>
+<div class="title-band">
+<p class="eyebrow">Polynomials, lesson 1</p>
+<h1>Polynomials and Their Degree</h1>
+<p class="lede">3x² − 5x + 1 is a polynomial; x + 1/x is not. Change the coefficients and watch the graph, the degree and the type change, then drag a point to find the value of the polynomial.</p>
+<p class="downloads"><a class="btn" href="../../slides/polynomials-and-degree.pptx" download>Download slides (.pptx)</a> <span>12 slides with teacher notes</span></p>
+</div>
+
+<div id="sim-main"></div>
+
+<section class="prose">
+  <h2>Polynomials in one variable</h2>
+  <div class="note"><strong>Polynomial.</strong> An algebraic expression in which the power of the variable in every term is a whole number is called a polynomial. It is written \(p(x)\), \(q(y)\), and so on.</div>
+  <p>\(3x^2 - 5x + 1\), \(y^3 + 7\) and \(\sqrt{2}\,m - 4\) are polynomials. (The coefficients may be any real numbers; only the powers must be whole numbers.) But \(x + \dfrac{1}{x} = x + x^{-1}\) and \(\sqrt{x} + 2 = x^{\frac12} + 2\) are <strong>not</strong> polynomials.</p>
+
+  <h2>Degree of a polynomial</h2>
+  <div class="note"><strong>Degree.</strong> The highest power of the variable in a polynomial in one variable is its degree.</div>
+  <p>\(4x^3 - x + 9\) has degree 3. A non-zero constant, such as 7, is a polynomial of degree 0 (\(7 = 7x^0\)). The zero polynomial, 0, has no degree: its degree is not defined. In a polynomial in more than one variable, the degree is the highest <em>sum of the powers</em> in any one term: \(3x^2y^3 + 5xy\) has degree \(2 + 3 = 5\).</p>
+
+  <h2>Types of polynomials</h2>
+  <div class="table-wrap"><table class="compare">
+    <tr><th>By number of terms</th><th>Example</th><th>By degree</th><th>Example</th></tr>
+    <tr><td>Monomial (1 term)</td><td>\(-2x^3\)</td><td>Linear (degree 1)</td><td>\(3x - 6\)</td></tr>
+    <tr><td>Binomial (2 terms)</td><td>\(x^3 - 4x\)</td><td>Quadratic (degree 2)</td><td>\(2x^2 - 3x + 1\)</td></tr>
+    <tr><td>Trinomial (3 terms)</td><td>\(y^2 + 5y - 1\)</td><td>Cubic (degree 3)</td><td>\(x^3 - 4x\)</td></tr>
+  </table></div>
+
+  <h2>Standard form, coefficient form and index form</h2>
+  <p>A polynomial is in <strong>standard form</strong> when its terms are written in descending powers of the variable: \(x^4 - 2x + 5\), not \(5 - 2x + x^4\).</p>
+  <p>In <strong>coefficient form</strong> we write only the coefficients, in descending powers, putting 0 for every missing power: \(x^4 - 2x + 5\) becomes \((1, 0, 0, -2, 5)\). Going back, writing the terms with the powers of \(x\), gives the <strong>index form</strong>: \((5, 0, -1, 3)\) is \(5x^3 - x + 3\).</p>
+
+  <h2>Value of a polynomial</h2>
+  <p>To find the value of \(p(x)\) at \(x = a\), substitute \(a\) for \(x\). The result is written \(p(a)\). For \(p(x) = x^2 - 3x + 2\): \(p(2) = 4 - 6 + 2 = 0\) and \(p(-1) = 1 + 3 + 2 = 6\). On the graph, \(p(a)\) is the height of the curve above \(x = a\). When \(p(a) = 0\), the graph meets the x-axis, and \(a\) is called a <strong>zero</strong> of the polynomial.</p>
+</section>
+<h2>Try it</h2>
+<p class="prose" style="margin-top:1rem">Set the coefficients with the sliders, then drag along the graph to move x = a.</p>
+<ul class="tries">
+  <li><span><strong>x³ − 4x.</strong> Find p(2).</span>
+    <button class="btn" data-sim='{"c":[1,0,-4,0],"a":2}'>Show</button></li>
+  <li><span><strong>2x² − 3x + 1.</strong> Find p(1).</span>
+    <button class="btn" data-sim='{"c":[0,2,-3,1],"a":1}'>Show</button></li>
+  <li><span><strong>3x − 6.</strong> Where does it meet the x-axis?</span>
+    <button class="btn" data-sim='{"c":[0,0,3,-6],"a":2}'>Show</button></li>
+  <li><span><strong>−2x³.</strong> Find p(−1).</span>
+    <button class="btn" data-sim='{"c":[-2,0,0,0],"a":-1}'>Show</button></li>
+  <li><span><strong>5.</strong> What is its degree?</span>
+    <button class="btn" data-sim='{"c":[0,0,0,5],"a":0}'>Show</button></li>
+</ul>
+<p class="prose" style="margin-top:1rem;font-size:.875rem;color:var(--muted)">What you should see: x³ − 4x is a cubic binomial with p(2) = 0; its zeroes are −2, 0 and 2. 2x² − 3x + 1 is a quadratic trinomial, p(1) = 0. 3x − 6 is linear and meets the x-axis at x = 2. −2x³ is a cubic monomial and p(−1) = −2(−1)³ = 2. The constant 5 has degree 0, and its graph never meets the x-axis.</p>
+
+<h2>Worked examples</h2>
+<div class="example">
+  <h3 style="margin-top:0">1. Degree and type</h3>
+  <p>State the degree and type of (i) \(7y^3 - 2y + 4\), (ii) \(5m\), (iii) \(3x^2y^3 + 5xy\).</p>
+  <ol>
+    <li>(i) Highest power 3, three terms: a <span class="answer">cubic trinomial, degree 3</span>.</li>
+    <li>(ii) \(5m = 5m^1\), one term: a <span class="answer">linear monomial, degree 1</span>.</li>
+    <li>(iii) Powers in \(3x^2y^3\) add to 5; in \(5xy\) to 2. <span class="answer">Degree 5</span> (a binomial in two variables).</li>
+  </ol>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">2. Coefficient form and index form</h3>
+  <p>Write \(x^3 - 5x + 2\) in coefficient form, and \((2, -1, 0, 4)\) in index form.</p>
+  <ol>
+    <li>\(x^3 - 5x + 2 = 1x^3 + 0x^2 - 5x + 2\), so the coefficient form is <span class="answer">(1, 0, −5, 2)</span>.</li>
+    <li>\((2, -1, 0, 4)\) has 4 coefficients, so it starts at \(x^3\): \(2x^3 - 1x^2 + 0x + 4 = \) <span class="answer">\(2x^3 - x^2 + 4\)</span>.</li>
+  </ol>
+  <button class="btn" data-sim='{"c":[1,0,-5,2],"a":0}'>Check it</button>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">3. Values of a polynomial</h3>
+  <p>For \(p(x) = 2x^3 - 3x^2 + 1\), find \(p(2)\) and \(p(-1)\).</p>
+  <ol>
+    <li>\(p(2) = 2(2)^3 - 3(2)^2 + 1 = 16 - 12 + 1 = \) <span class="answer">5</span></li>
+    <li>\(p(-1) = 2(-1)^3 - 3(-1)^2 + 1 = -2 - 3 + 1 = \) <span class="answer">−4</span></li>
+  </ol>
+  <button class="btn" data-sim='{"c":[2,-3,0,1],"a":2}'>Check it in the simulation</button>
+</div>
+
+<h2>Common mistakes</h2>
+<ul class="mistakes" style="margin-top:1rem">
+  <li><strong>Counting terms to get the degree.</strong> x³ − 4x has two terms but degree 3. The degree is the highest power.</li>
+  <li><strong>Leaving out zeroes in coefficient form.</strong> x³ − 2 is (1, 0, 0, −2), not (1, −2). Every missing power needs a 0.</li>
+  <li><strong>Sign slips with negative a.</strong> (−1)² = 1 but (−1)³ = −1. Put a negative value in brackets before you square or cube it.</li>
+  <li><strong>Calling any expression a polynomial.</strong> x + 1/x and √x + 2 have powers −1 and ½, which are not whole numbers.</li>
+</ul>
+
+<h2>Quick check</h2>
+<div class="quiz">
+  <fieldset class="q" data-answer="c">
+    <legend>1. Which of these is a polynomial?</legend>
+    <div class="opts">
+      <button data-opt="a">\(x + \dfrac{1}{x}\)</button>
+      <button data-opt="b">\(\sqrt{x} + 2\)</button>
+      <button data-opt="c">\(3x^2 - \sqrt{2}\,x + 1\)</button>
+      <button data-opt="d">\(x^{-2} + 4\)</button>
+    </div>
+    <p class="why" hidden>Its powers 2, 1 and 0 are whole numbers. A coefficient like √2 is allowed.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="b">
+    <legend>2. The degree of \(5x^3 - x^4 + 2\) is…</legend>
+    <div class="opts">
+      <button data-opt="a">3</button>
+      <button data-opt="b">4</button>
+      <button data-opt="c">5</button>
+      <button data-opt="d">2</button>
+    </div>
+    <p class="why" hidden>The highest power of x is 4, even though that term is not written first.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="c">
+    <legend>3. The coefficient form of \(x^3 - 2\) is…</legend>
+    <div class="opts">
+      <button data-opt="a">(1, −2)</button>
+      <button data-opt="b">(1, 0, −2)</button>
+      <button data-opt="c">(1, 0, 0, −2)</button>
+      <button data-opt="d">(−2, 0, 0, 1)</button>
+    </div>
+    <p class="why" hidden>x³ + 0x² + 0x − 2: a 0 for each missing power.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="a">
+    <legend>4. If \(p(x) = x^2 - 5x + 6\), then \(p(3) = \)…</legend>
+    <div class="opts">
+      <button data-opt="a">0</button>
+      <button data-opt="b">6</button>
+      <button data-opt="c">30</button>
+      <button data-opt="d">−6</button>
+    </div>
+    <p class="why" hidden>9 − 15 + 6 = 0, so 3 is a zero of p(x).</p>
+  </fieldset>
+  <p class="score" aria-live="polite"></p>
+</div>
+<nav class="next-prev" aria-label="Lessons">
+  <a href="../real/surds.html">← Surds and rationalising</a>
+  <a href="operations-on-polynomials.html">Next: Operations and synthetic division →</a>
+</nav>
+</main>
+
+<footer class="foot">Follows Chapter 3 of the Maharashtra State Board Std 9 Mathematics Part I textbook. Explanations and examples are original.</footer>
+</div>
+
+<script src="../../assets/js/sim-kit.js?v=20261010"></script>
+<script src="../../assets/js/math-kit.js?v=20261010"></script>
+<script src="../../assets/js/sims/poly-graph.js?v=20261010"></script>
+<script src="../../assets/js/quiz.js?v=20261010"></script>
+<script>
+  (function () {
+    var simEl = document.getElementById("sim-main");
+    var sim = PolyGraphSim.mount(simEl, { c: [1, 0, -4, 0], a: 2 });
+    window.lessonSim = sim;
+    // Buttons in the lesson that set up the simulation: data-sim='{...settings}'
+    document.querySelectorAll("main [data-sim]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        sim.set(JSON.parse(b.dataset.sim));
+        sim.play();
+        simEl.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+      });
+    });
+  })();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/contrib/auto-render.min.js"></script>
+<script>
+  renderMathInElement(document.body, {
+    delimiters: [{ left: "$$", right: "$$", display: true }, { left: "\\(", right: "\\)", display: false }],
+    output: window.KATEX_OUTPUT || "htmlAndMathml",
+    throwOnError: false
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Cuboids, Cubes and Cylinders · Visual Science &amp; Maths</title>
+<meta name="description" content="Revise the surface area and volume of a cuboid, a cube and a right circular cylinder, with nets that fold out and 1 cm cubes that fill the box.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.css">
+<link rel="stylesheet" href="../../assets/css/style.css?v=20261010">
+</head>
+<body class="lesson ch-volume">
+<div class="wrap">
+
+<header class="site-head">
+  <a class="brand" href="../../index.html"><svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><path d="M3 27 Q14 -1 29 27" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-dasharray="2.5 3.5"/><circle cx="21" cy="10" r="4.2" fill="var(--vy)"/></svg> Visual <span>Science &amp; Maths</span></a>
+  <nav class="site-nav" aria-label="Main"><a href="../../index.html#maths">Chapters</a><a href="../../index.html#games">Games</a></nav>
+</header>
+
+<main>
+<div class="title-band">
+<p class="eyebrow">Surface Area and Volume, lesson 1</p>
+<h1>Cuboids, Cubes and Cylinders</h1>
+<p class="lede">A shoebox, a dice and a tin of paint: how much card covers each one, and how much space is inside? Two numbers answer that: surface area and volume.</p>
+<p class="downloads"><a class="btn" href="../../slides/cuboids-and-cylinders.pptx" download>Download slides (.pptx)</a> <span>12 slides with teacher notes</span></p>
+</div>
+
+<div id="sim-main"></div>
+
+<section class="prose">
+  <h2>Surface area and volume</h2>
+  <p>A <strong>solid</strong> takes up space. The total area of all its faces is its <strong>surface area</strong>, measured in square units such as cm². The space it fills is its <strong>volume</strong>, measured in cubic units such as cm³. A cube of side 1 cm has volume 1 cm³.</p>
+
+  <h2>Cuboid</h2>
+  <p>A cuboid has 6 rectangular faces in 3 equal pairs. Call its length \(l\), breadth \(b\) and height \(h\).</p>
+  <div class="note"><strong>Cuboid.</strong>
+  $$\text{Area of the four vertical faces (lateral surface area)} = 2(l + b) \times h$$
+  $$\text{Total surface area} = 2(lb + bh + lh)$$
+  $$\text{Volume} = l \times b \times h$$</div>
+  <p>Open the <strong>Net</strong> view: the six faces lie flat, and you can see the three pairs. Turn on <strong>Show 1 cm cubes</strong> to count the cubes that fill the box: one layer of \(l \times b\) cubes, stacked \(h\) layers high.</p>
+
+  <h2>Cube</h2>
+  <p>A cube is a cuboid whose length, breadth and height are all equal. If its side is \(l\), each face is a square of area \(l^2\).</p>
+  <div class="note"><strong>Cube.</strong> Lateral surface area \(= 4l^2\), total surface area \(= 6l^2\), volume \(= l^3\).</div>
+
+  <h2>Right circular cylinder</h2>
+  <p>A tin or a pipe is a <strong>right circular cylinder</strong>: two congruent circular bases joined by a curved surface, with the axis perpendicular to the bases. Let the radius of the base be \(r\) and the height \(h\).</p>
+  <p>Cut the curved surface straight down and unroll it. It becomes a <strong>rectangle</strong>. Its length is the circumference of the base, \(2\pi r\), and its breadth is \(h\).</p>
+  <div class="note"><strong>Cylinder.</strong>
+  $$\text{Curved surface area} = 2\pi rh$$
+  $$\text{Total surface area} = 2\pi rh + 2\pi r^2 = 2\pi r(r + h)$$
+  $$\text{Volume} = \text{area of base} \times \text{height} = \pi r^2 h$$</div>
+  <p>Like the textbook, each problem says which value of \(\pi\) to use: \(\dfrac{22}{7}\) (handy when \(r\) is a multiple of 7) or \(3.14\). The simulation lets you choose.</p>
+</section>
+<h2>Try it</h2>
+<p class="prose" style="margin-top:1rem">Choose a solid and a view, then move the sliders.</p>
+<ul class="tries">
+  <li><span><strong>A box.</strong> Cuboid 10 cm × 6 cm × 4 cm, with its 1 cm cubes.</span>
+    <button class="btn" data-sim='{"mode":"cuboid","d":{"l":10,"b":6,"h":4},"cubes":true}'>Cuboid</button></li>
+  <li><span><strong>Fold it flat.</strong> The net of a cube of side 5 cm.</span>
+    <button class="btn" data-sim='{"mode":"cube","view":"net","d":{"a":5}}'>Cube net</button></li>
+  <li><span><strong>Unroll a tin.</strong> Cylinder with r = 7 cm, h = 10 cm, π = 22/7.</span>
+    <button class="btn" data-sim='{"mode":"cylinder","view":"net","pi":"22/7","d":{"r":7,"h":10}}'>Unroll</button></li>
+  <li><span><strong>Use π = 3.14.</strong> Cylinder with r = 5 cm, h = 12 cm.</span>
+    <button class="btn" data-sim='{"mode":"cylinder","pi":"3.14","d":{"r":5,"h":12}}'>Cylinder</button></li>
+</ul>
+<p class="prose" style="margin-top:1rem;font-size:.875rem;color:var(--muted)">What you should see: the 10 × 6 × 4 cuboid has lateral surface area 128 cm², total surface area 248 cm² and volume 240 cm³ (240 small cubes). The cube's net is 6 squares of 25 cm², 150 cm² in all. The tin unrolls into a rectangle 44 cm by 10 cm, so its curved surface area is 440 cm². With π = 3.14, the second cylinder has curved surface area 376.8 cm², total surface area 533.8 cm² and volume 942 cm³.</p>
+
+<h2>Worked examples</h2>
+<div class="example">
+  <h3 style="margin-top:0">1. A gift box</h3>
+  <p>A cuboid box is 12 cm long, 8 cm broad and 5 cm high. Find the area of its four vertical faces, its total surface area and its volume.</p>
+  <ol>
+    <li>Vertical faces \(= 2(l + b)h = 2(12 + 8) \times 5 = 2 \times 20 \times 5 =\) <span class="answer">200 cm²</span></li>
+    <li>Total surface area \(= 2(lb + bh + lh) = 2(96 + 40 + 60) = 2 \times 196 =\) <span class="answer">392 cm²</span></li>
+    <li>Volume \(= 12 \times 8 \times 5 =\) <span class="answer">480 cm³</span></li>
+  </ol>
+  <button class="btn" data-sim='{"mode":"cuboid","d":{"l":12,"b":8,"h":5},"cubes":true}'>Check it</button>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">2. From surface area back to the side</h3>
+  <p>The total surface area of a cube is 294 cm². Find its side and its volume.</p>
+  <ol>
+    <li>\(6l^2 = 294\), so \(l^2 = 294 \div 6 = 49\) and \(l =\) <span class="answer">7 cm</span></li>
+    <li>Volume \(= l^3 = 7^3 =\) <span class="answer">343 cm³</span></li>
+  </ol>
+  <button class="btn" data-sim='{"mode":"cube","d":{"a":7}}'>Check it</button>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">3. A water tank</h3>
+  <p>A cylindrical tank has radius 7 m and height 10 m. Find its curved surface area, total surface area and volume. \((\pi = \tfrac{22}{7})\)</p>
+  <ol>
+    <li>Curved surface area \(= 2\pi rh = 2 \times \tfrac{22}{7} \times 7 \times 10 =\) <span class="answer">440 m²</span></li>
+    <li>Total surface area \(= 2\pi r(r + h) = 2 \times \tfrac{22}{7} \times 7 \times 17 = 44 \times 17 =\) <span class="answer">748 m²</span></li>
+    <li>Volume \(= \pi r^2 h = \tfrac{22}{7} \times 49 \times 10 = 22 \times 7 \times 10 =\) <span class="answer">1540 m³</span></li>
+  </ol>
+  <p>The simulation works in cm, but the numbers are the same: just read m for cm.</p>
+  <button class="btn" data-sim='{"mode":"cylinder","pi":"22/7","d":{"r":7,"h":10}}'>Check it</button>
+</div>
+
+<h2>Common mistakes</h2>
+<ul class="mistakes" style="margin-top:1rem">
+  <li><strong>Square units for volume.</strong> Area is in cm² (or m²); volume is in cm³ (or m³).</li>
+  <li><strong>Total instead of lateral.</strong> The four vertical faces leave out the top and bottom: 2(l + b)h, not 2(lb + bh + lh).</li>
+  <li><strong>Diameter for radius.</strong> If a tin is 14 cm across, r = 7 cm. Halve the diameter before using 2πrh or πr²h.</li>
+  <li><strong>Forgetting the ends.</strong> Curved surface 2πrh is only the side. A closed cylinder adds two circles: 2πr(r + h).</li>
+</ul>
+
+<h2>Quick check</h2>
+<div class="quiz">
+  <fieldset class="q" data-answer="b">
+    <legend>1. The side of a cube is 4 cm. Its total surface area is…</legend>
+    <div class="opts">
+      <button data-opt="a">64 cm²</button>
+      <button data-opt="b">96 cm²</button>
+      <button data-opt="c">16 cm²</button>
+      <button data-opt="d">384 cm²</button>
+    </div>
+    <p class="why" hidden>6l² = 6 × 16 = 96 cm². (64 is the volume in cm³.)</p>
+  </fieldset>
+  <fieldset class="q" data-answer="a">
+    <legend>2. A cuboid is 5 cm × 4 cm × 3 cm. Its volume is…</legend>
+    <div class="opts">
+      <button data-opt="a">60 cm³</button>
+      <button data-opt="b">94 cm³</button>
+      <button data-opt="c">12 cm³</button>
+      <button data-opt="d">47 cm³</button>
+    </div>
+    <p class="why" hidden>l × b × h = 5 × 4 × 3 = 60 cm³. (94 cm² is its total surface area.)</p>
+  </fieldset>
+  <fieldset class="q" data-answer="c">
+    <legend>3. A cylinder has radius 7 cm and height 5 cm. Its curved surface area (π = 22/7) is…</legend>
+    <div class="opts">
+      <button data-opt="a">154 cm²</button>
+      <button data-opt="b">770 cm²</button>
+      <button data-opt="c">220 cm²</button>
+      <button data-opt="d">440 cm²</button>
+    </div>
+    <p class="why" hidden>2πrh = 2 × 22/7 × 7 × 5 = 220 cm².</p>
+  </fieldset>
+  <fieldset class="q" data-answer="b">
+    <legend>4. When the curved surface of a cylinder is cut and unrolled, it makes a…</legend>
+    <div class="opts">
+      <button data-opt="a">circle</button>
+      <button data-opt="b">rectangle</button>
+      <button data-opt="c">sector</button>
+      <button data-opt="d">triangle</button>
+    </div>
+    <p class="why" hidden>A rectangle 2πr long and h wide, so its area is 2πrh.</p>
+  </fieldset>
+  <p class="score" aria-live="polite"></p>
+</div>
+<nav class="next-prev" aria-label="Lessons">
+  <a href="../trig/special-angles.html">← Ratios of special angles</a>
+  <a href="cones.html">Cones →</a>
+</nav>
+</main>
+
+<footer class="foot">Follows Chapter 9 of the Maharashtra State Board Std 9 Mathematics Part II textbook. Explanations and examples are original.</footer>
+</div>
+
+<script src="../../assets/js/sim-kit.js?v=20261010"></script>
+<script src="../../assets/js/math-kit.js?v=20261010"></script>
+<script src="../../assets/js/sims/volume-solids.js?v=20261010"></script>
+<script src="../../assets/js/quiz.js?v=20261010"></script>
+<script>
+  (function () {
+    var simEl = document.getElementById("sim-main");
+    var sim = VolumeSim.mount(simEl, { modes: ["cuboid", "cube", "cylinder"], mode: "cuboid", d: { l: 10, b: 6, h: 4 } });
+    window.lessonSim = sim;
+    // Buttons in the lesson that set up the simulation: data-sim='{...settings}'
+    document.querySelectorAll("main [data-sim]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        sim.set(JSON.parse(b.dataset.sim));
+        sim.play();
+        simEl.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+      });
+    });
+  })();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/contrib/auto-render.min.js"></script>
+<script>
+  renderMathInElement(document.body, {
+    delimiters: [{ left: "$$", right: "$$", display: true }, { left: "\\(", right: "\\)", display: false }],
+    output: window.KATEX_OUTPUT || "htmlAndMathml",
+    throwOnError: false
+  });
+</script>
+
+</body>
+</html>

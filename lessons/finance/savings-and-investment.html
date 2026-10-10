@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Savings and Investment · Visual Science &amp; Maths</title>
+<meta name="description" content="Plan a monthly budget, see how much is left to save, and compare where savings can be invested: bank, post office, gold, shares and mutual funds, with simple and compound interest.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.css">
+<link rel="stylesheet" href="../../assets/css/style.css?v=20261010">
+</head>
+<body class="lesson ch-finance">
+<div class="wrap">
+
+<header class="site-head">
+  <a class="brand" href="../../index.html"><svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><path d="M3 27 Q14 -1 29 27" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-dasharray="2.5 3.5"/><circle cx="21" cy="10" r="4.2" fill="var(--vy)"/></svg> Visual <span>Science &amp; Maths</span></a>
+  <nav class="site-nav" aria-label="Main"><a href="../../index.html#maths">Chapters</a><a href="../../index.html#games">Games</a></nav>
+</header>
+
+<main>
+<div class="title-band">
+<p class="eyebrow">Financial Planning, lesson 1</p>
+<h1>Savings and Investment</h1>
+<p class="lede">Money comes in, money goes out. Financial planning means deciding in advance how much to spend, how much to save, and where to keep the savings so that they grow safely.</p>
+<p class="downloads"><a class="btn" href="../../slides/savings-and-investment.pptx" download>Download slides (.pptx)</a> <span>12 slides with teacher notes</span></p>
+</div>
+
+<div id="sim-main"></div>
+
+<section class="prose">
+  <h2>Income, expenditure and savings</h2>
+  <p>The money a family earns is its <strong>income</strong>. The money it spends on food, rent, electricity, education, travel and so on is its <strong>expenditure</strong>. What is left over is <strong>savings</strong>.</p>
+  <div class="note"><strong>Savings = Income − Expenditure.</strong> Planning in advance how the income will be spent and saved is called <strong>financial planning</strong>. A written plan of income and expenditure is a <strong>budget</strong>.</div>
+  <p>Savings are often written as a percentage of income. If a family earns ₹30,000 a month and spends ₹25,500, it saves ₹4,500, which is \(\dfrac{4500}{30000} \times 100 = 15\%\) of its income.</p>
+
+  <h2>Investment</h2>
+  <p>Savings kept at home do not grow. Putting savings somewhere that pays interest or may increase in value is called <strong>investment</strong>. Before investing, think about three things:</p>
+  <ul class="mistakes">
+    <li><strong>Safety:</strong> is the money safe, or could some of it be lost?</li>
+    <li><strong>Returns:</strong> how much will it earn?</li>
+    <li><strong>Liquidity:</strong> how quickly can you take the money out when you need it?</li>
+  </ul>
+  <div class="table-wrap"><table class="compare">
+    <thead><tr><th>Where to invest</th><th>What you get</th><th>Risk</th></tr></thead>
+    <tbody>
+      <tr><td>Bank: savings account, fixed deposit, recurring deposit</td><td>Interest at a rate fixed by the bank</td><td>Low</td></tr>
+      <tr><td>Post office schemes (savings account, NSC, PPF and others)</td><td>Interest at a rate fixed by the government</td><td>Low</td></tr>
+      <tr><td>Gold, land and houses</td><td>Their price may rise over time; no fixed interest</td><td>Medium: prices go up and down</td></tr>
+      <tr><td>Shares of companies</td><td>A share of the company's profit; the share price may rise or fall</td><td>High</td></tr>
+      <tr><td>Mutual funds</td><td>Many people's money, invested by experts in shares and other options</td><td>Depends on the fund</td></tr>
+    </tbody>
+  </table></div>
+  <p>The rule of thumb is: <strong>the higher the possible return, the higher the risk</strong>. That is why people usually spread their savings over several options.</p>
+
+  <h2>Interest: the tool for comparing</h2>
+  <p>For a principal \(P\), a rate of \(R\%\) per year and \(N\) years:</p>
+  <div class="eq">$$\text{Simple interest } I = \frac{PNR}{100} \qquad\qquad \text{Compound interest: amount } A = P\left(1 + \frac{R}{100}\right)^{N}$$</div>
+  <p>In compound interest, each year's interest is added to the principal, and the next year's interest is worked out on the bigger amount. To compare two investments of different sizes, compare the <strong>percentage gain</strong>: \(\dfrac{\text{gain}}{\text{amount invested}} \times 100\).</p>
+</section>
+<h2>Try it</h2>
+<p class="prose" style="margin-top:1rem">Use the simulation's two views: the monthly budget, and the growth of an investment.</p>
+<ul class="tries">
+  <li><span><strong>Budget.</strong> Income ₹30,000: food 30%, rent 25%, education 15%, other 15%. Drag the handles.</span>
+    <button class="btn" data-sim='{"mode":"budget","income":30000,"food":30,"house":25,"edu":15,"other":15}'>Budget</button></li>
+  <li><span><strong>Save more.</strong> Same income, but other expenses cut to 5%.</span>
+    <button class="btn" data-sim='{"mode":"budget","income":30000,"food":30,"house":25,"edu":15,"other":5}'>Try it</button></li>
+  <li><span><strong>Simple vs compound.</strong> ₹10,000 at 10% for 5 years.</span>
+    <button class="btn" data-sim='{"mode":"grow","P":10000,"r":10,"n":5,"si":true,"ci":true,"shares":false}'>Grow it</button></li>
+  <li><span><strong>Risk.</strong> Compare the bank deposit with possible paths of shares.</span>
+    <button class="btn" data-sim='{"mode":"grow","P":10000,"r":7,"n":8,"si":false,"ci":true,"shares":true}'>Show risk</button></li>
+</ul>
+<p class="prose" style="margin-top:1rem;font-size:.875rem;color:var(--muted)">What you should see: the family saves ₹4,500 (15%); cutting other expenses raises savings to ₹7,500 (25%). After 5 years, ₹10,000 grows to ₹15,000 with simple interest but ₹16,105.10 with compound interest. The share paths spread out: some end far above the deposit, some below it.</p>
+
+<h2>Worked examples</h2>
+<div class="example">
+  <h3 style="margin-top:0">1. Income from savings</h3>
+  <p>Ravi saves 15% of his monthly income. His savings are ₹3,600 a month. What is his monthly income?</p>
+  <ol>
+    <li>Let the income be \(x\). Then \(15\%\) of \(x\) is 3,600: \(\dfrac{15}{100}x = 3600\).</li>
+    <li>\(x = \dfrac{3600 \times 100}{15} = 24000\).</li>
+    <li>Income <span class="answer">₹24,000</span>; his expenditure is ₹20,400.</li>
+  </ol>
+  <button class="btn" data-sim='{"mode":"budget","income":24000,"food":35,"house":25,"edu":15,"other":10}'>Check it</button>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">2. Which investment gained more?</h3>
+  <p>Asha puts ₹50,000 in a fixed deposit at 8% per year compound interest for 2 years. Neha buys shares for ₹30,000 and sells them after 2 years for ₹36,000. Whose investment gained more, as a percentage?</p>
+  <ol>
+    <li>Asha: \(A = 50000\left(1 + \tfrac{8}{100}\right)^2 = 50000 \times 1.1664 = 58320\). Gain \(= 8320\), which is \(\tfrac{8320}{50000} \times 100 = 16.64\%\).</li>
+    <li>Neha: gain \(= 36000 - 30000 = 6000\), which is \(\tfrac{6000}{30000} \times 100 = 20\%\).</li>
+    <li><span class="answer">Neha's gain was higher: 20% against 16.64%</span>. But her shares could also have fallen; Asha's deposit could not.</li>
+  </ol>
+  <button class="btn" data-sim='{"mode":"grow","P":50000,"r":8,"n":2,"si":true,"ci":true,"shares":false}'>Check Asha's deposit</button>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">3. Splitting an investment</h3>
+  <p>Kiran invests ₹40,000 in two schemes: part at 6% and the rest at 8% simple interest per year. Her total interest for one year is ₹2,900. How much did she put in each?</p>
+  <ol>
+    <li>Let the amounts be \(x\) and \(y\). Then \(x + y = 40000\) and \(\dfrac{6x}{100} + \dfrac{8y}{100} = 2900\), that is \(6x + 8y = 290000\).</li>
+    <li>Multiply the first by 6: \(6x + 6y = 240000\). Subtract: \(2y = 50000\), so \(y = 25000\) and \(x = 15000\).</li>
+    <li><span class="answer">₹15,000 at 6% and ₹25,000 at 8%</span>. Check: \(900 + 2000 = 2900\) ✓</li>
+  </ol>
+</div>
+
+<h2>Common mistakes</h2>
+<ul class="mistakes" style="margin-top:1rem">
+  <li><strong>Percentage of the wrong total.</strong> Savings % is savings ÷ income × 100, not savings ÷ expenditure.</li>
+  <li><strong>Compound interest on the first principal every year.</strong> Each year's interest is on the amount at the start of that year.</li>
+  <li><strong>Comparing rupees, not percentages.</strong> ₹8,320 on ₹50,000 is a smaller gain than ₹6,000 on ₹30,000.</li>
+  <li><strong>Ignoring risk.</strong> A higher return is not guaranteed; shares and gold can also fall in value.</li>
+</ul>
+
+<h2>Quick check</h2>
+<div class="quiz">
+  <fieldset class="q" data-answer="b">
+    <legend>1. A family earns ₹40,000 a month and spends ₹34,000. What percentage of its income does it save?</legend>
+    <div class="opts">
+      <button data-opt="a">6%</button>
+      <button data-opt="b">15%</button>
+      <button data-opt="c">17.6%</button>
+      <button data-opt="d">85%</button>
+    </div>
+    <p class="why" hidden>Savings = 40,000 − 34,000 = ₹6,000, and 6,000 ÷ 40,000 × 100 = 15%.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="c">
+    <legend>2. ₹20,000 is invested at 10% per year compound interest. What is the amount after 2 years?</legend>
+    <div class="opts">
+      <button data-opt="a">₹22,000</button>
+      <button data-opt="b">₹24,000</button>
+      <button data-opt="c">₹24,200</button>
+      <button data-opt="d">₹26,620</button>
+    </div>
+    <p class="why" hidden>A = 20,000 × 1.1 × 1.1 = ₹24,200. (₹24,000 is the simple interest amount.)</p>
+  </fieldset>
+  <fieldset class="q" data-answer="c">
+    <legend>3. Which of these investments carries the highest risk?</legend>
+    <div class="opts">
+      <button data-opt="a">A fixed deposit in a bank</button>
+      <button data-opt="b">A post office savings scheme</button>
+      <button data-opt="c">Shares of a company</button>
+      <button data-opt="d">A recurring deposit</button>
+    </div>
+    <p class="why" hidden>A share's price can rise or fall, so the money invested is not fixed. The other three pay a fixed rate of interest.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="b">
+    <legend>4. Meera saves 12% of her income, which is ₹4,800. What is her income?</legend>
+    <div class="opts">
+      <button data-opt="a">₹4,224</button>
+      <button data-opt="b">₹40,000</button>
+      <button data-opt="c">₹48,000</button>
+      <button data-opt="d">₹57,600</button>
+    </div>
+    <p class="why" hidden>12% of x = 4,800, so x = 4,800 × 100 ÷ 12 = ₹40,000.</p>
+  </fieldset>
+  <p class="score" aria-live="polite"></p>
+</div>
+<nav class="next-prev" aria-label="Lessons">
+  <a href="../linear/word-problems.html">← Word problems with two unknowns</a>
+  <a href="income-tax.html">Next: Income tax →</a>
+</nav>
+</main>
+
+<footer class="foot">Follows Chapter 6 of the Maharashtra State Board Std 9 Mathematics Part I textbook. Explanations and examples are original.</footer>
+</div>
+
+<script src="../../assets/js/sim-kit.js?v=20261010"></script>
+<script src="../../assets/js/math-kit.js?v=20261010"></script>
+<script src="../../assets/js/sims/finance-budget.js?v=20261010"></script>
+<script src="../../assets/js/quiz.js?v=20261010"></script>
+<script>
+  (function () {
+    var simEl = document.getElementById("sim-main");
+    var sim = FinanceBudgetSim.mount(simEl, { mode: "budget", income: 30000, food: 30, house: 25, edu: 15, other: 15 });
+    window.lessonSim = sim;
+    // Buttons in the lesson that set up the simulation: data-sim='{...settings}'
+    document.querySelectorAll("main [data-sim]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        sim.set(JSON.parse(b.dataset.sim));
+        sim.play();
+        simEl.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+      });
+    });
+  })();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/contrib/auto-render.min.js"></script>
+<script>
+  renderMathInElement(document.body, {
+    delimiters: [{ left: "$$", right: "$$", display: true }, { left: "\\(", right: "\\)", display: false }],
+    output: window.KATEX_OUTPUT || "htmlAndMathml",
+    throwOnError: false
+  });
+</script>
+
+</body>
+</html>

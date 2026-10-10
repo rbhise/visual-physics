@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Conditional Statements and Proofs · Visual Science &amp; Maths</title>
+<meta name="description" content="If-then statements, antecedent and consequent, the converse of a statement, counterexamples, and direct and indirect proofs.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.css">
+<link rel="stylesheet" href="../../assets/css/style.css?v=20261010">
+</head>
+<body class="lesson ch-geometry">
+<div class="wrap">
+
+<header class="site-head">
+  <a class="brand" href="../../index.html"><svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><path d="M3 27 Q14 -1 29 27" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-dasharray="2.5 3.5"/><circle cx="21" cy="10" r="4.2" fill="var(--vy)"/></svg> Visual <span>Science &amp; Maths</span></a>
+  <nav class="site-nav" aria-label="Main"><a href="../../index.html#maths">Chapters</a><a href="../../index.html#games">Games</a></nav>
+</header>
+
+<main>
+<div class="title-band">
+<p class="eyebrow">Basic Concepts in Geometry, lesson 2</p>
+<h1>Conditional Statements and Proofs</h1>
+<p class="lede">Geometry is built from statements of the form “if this, then that”. Learn to split them into the given part and the part to be proved, to turn them round into a converse, and to prove them.</p>
+<p class="downloads"><a class="btn" href="../../slides/conditional-statements-and-proofs.pptx" download>Download slides (.pptx)</a> <span>12 slides with teacher notes</span></p>
+</div>
+
+<div id="sim-main"></div>
+
+<section class="prose">
+  <h2>Conditional statements</h2>
+  <p>Many properties can be written in the form <strong>“If …, then …”</strong>. Such a statement is called a <strong>conditional statement</strong>.</p>
+  <div class="note"><strong>Antecedent and consequent.</strong> In a conditional statement, the part after “if” is the <strong>antecedent</strong>: it is the given part. The part after “then” is the <strong>consequent</strong>: it is the part to be proved.</div>
+  <p>“Every number divisible by 4 is divisible by 2” becomes:</p>
+  <p class="eqn-show">If <span class="c-path">a number is divisible by 4</span>, then <span class="c-vx">it is divisible by 2</span>.</p>
+  <p>Picture it with sets: the statement is true when <strong>everything that fits the antecedent also fits the consequent</strong>. In the simulation the violet set (divisible by 4) sits completely inside the teal set (divisible by 2).</p>
+
+  <h2>The converse</h2>
+  <div class="note"><strong>Converse.</strong> When the antecedent and the consequent of a conditional statement are interchanged, the new statement is called the <strong>converse</strong> of the first statement.</div>
+  <p>The converse of the statement above is “If a number is divisible by 2, then it is divisible by 4.” This is false: 6 is divisible by 2 but not by 4. An example that shows a statement is false is called a <strong>counterexample</strong>. So <strong>the converse of a true statement is not always true</strong>. Sometimes it is: “If a triangle is equilateral, then its angles are all equal” and its converse are both true.</p>
+
+  <h2>Proofs</h2>
+  <p>A <strong>theorem</strong> is a statement that is proved by logical steps. We write what is <strong>given</strong> (the antecedent), what is <strong>to be proved</strong> (the consequent), and then the proof. Each step must follow from the given facts, from definitions, or from properties already accepted or proved.</p>
+  <ul class="mistakes">
+    <li><strong>Direct proof.</strong> Start from the given facts and move step by step to the conclusion. Example: when two lines intersect, the vertically opposite angles are equal.</li>
+    <li><strong>Indirect proof.</strong> Suppose the conclusion is <em>false</em>. Show that this leads to a contradiction: something that cannot happen, or that goes against the given facts or an accepted property. Then the supposition is wrong, so the conclusion is true.</li>
+  </ul>
+  <p>Examples, however many, cannot prove a general statement. But <strong>one counterexample</strong> is enough to show that a statement is false.</p>
+</section>
+<h2>Try it</h2>
+<p class="prose" style="margin-top:1rem">Choose a view. In “If-then”, pick a statement and switch between the statement and its converse. In the proofs, press “Next step”.</p>
+<ul class="tries">
+  <li><span><strong>Statement.</strong> If a number is divisible by 4, then it is divisible by 2.</span>
+    <button class="btn" data-sim='{"mode":"ifthen","st":"four","conv":false}'>Show</button></li>
+  <li><span><strong>Converse.</strong> Turn the same statement round.</span>
+    <button class="btn" data-sim='{"mode":"ifthen","st":"four","conv":true}'>Show</button></li>
+  <li><span><strong>A true converse.</strong> Equilateral triangles and equal angles.</span>
+    <button class="btn" data-sim='{"mode":"ifthen","st":"equi","conv":true}'>Show</button></li>
+  <li><span><strong>Direct proof.</strong> Vertically opposite angles.</span>
+    <button class="btn" data-sim='{"mode":"direct","ang":55,"step":0}'>Play</button></li>
+  <li><span><strong>Indirect proof.</strong> Two distinct lines meet in at most one point.</span>
+    <button class="btn" data-sim='{"mode":"indirect","step":0}'>Play</button></li>
+</ul>
+<p class="prose" style="margin-top:1rem;font-size:.875rem;color:var(--muted)">What you should see: the violet set lies inside the teal set, so the statement is true. In the converse, 6, 10 and 18 are marked ✗: they are divisible by 2 but not by 4. For equilateral triangles both directions are true. The direct proof ends with ∠AOC = ∠BOD; the indirect proof ends with a contradiction.</p>
+
+<h2>Worked examples</h2>
+<div class="example">
+  <h3 style="margin-top:0">1. Write in if-then form</h3>
+  <p>Write “A number ending in 0 is divisible by 5” as a conditional statement. Name the antecedent and the consequent, and write its converse.</p>
+  <ol>
+    <li>If a number ends in 0, then it is divisible by 5.</li>
+    <li>Antecedent: <em>a number ends in 0</em>. Consequent: <em>it is divisible by 5</em>.</li>
+    <li>Converse: <span class="answer">If a number is divisible by 5, then it ends in 0.</span> It is false: 15 is divisible by 5 but ends in 5.</li>
+  </ol>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">2. Is the converse true?</h3>
+  <p>“If two angles form a linear pair, then they are supplementary.” Write the converse and decide whether it is true.</p>
+  <ol>
+    <li>Interchange the parts: “If two angles are supplementary, then they form a linear pair.”</li>
+    <li>Counterexample: angles of 130° and 50° drawn far apart. They add up to 180°, but they are not adjacent, so they are not a linear pair.</li>
+    <li>The converse is <span class="answer">false</span></li>
+  </ol>
+  <button class="btn" data-sim='{"mode":"ifthen","st":"lp","conv":true}'>Check it</button>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">3. Using a direct proof</h3>
+  <p>Lines AB and CD intersect at O and \(\angle AOC = 55^\circ\). Find \(\angle BOC\), \(\angle BOD\) and \(\angle AOD\).</p>
+  <ol>
+    <li>\(\angle AOC\) and \(\angle BOC\) form a linear pair, so \(\angle BOC = 180^\circ - 55^\circ = \) <span class="answer">125°</span></li>
+    <li>Vertically opposite angles are equal: \(\angle BOD = \angle AOC = \) <span class="answer">55°</span></li>
+    <li>\(\angle AOD = \angle BOC = \) <span class="answer">125°</span></li>
+  </ol>
+  <button class="btn" data-sim='{"mode":"direct","ang":55,"step":6}'>Check it</button>
+</div>
+
+<h2>Common mistakes</h2>
+<ul class="mistakes" style="margin-top:1rem">
+  <li><strong>“The converse must be true too.”</strong> Not always. Test the converse separately; one counterexample shows it is false.</li>
+  <li><strong>Proving with examples.</strong> A few examples that work do not prove a general statement. You need a proof.</li>
+  <li><strong>Swapping the parts by mistake.</strong> The antecedent is the part after “if”; the consequent is the part after “then”.</li>
+  <li><strong>Supposing the wrong thing.</strong> In an indirect proof, keep the given facts and suppose that the <em>conclusion</em> is false.</li>
+</ul>
+
+<h2>Quick check</h2>
+<div class="quiz">
+  <fieldset class="q" data-answer="b">
+    <legend>1. In “If a triangle is equilateral, then it is isosceles”, the antecedent is…</legend>
+    <div class="opts">
+      <button data-opt="a">it is isosceles</button>
+      <button data-opt="b">a triangle is equilateral</button>
+      <button data-opt="c">a triangle</button>
+      <button data-opt="d">the whole sentence</button>
+    </div>
+    <p class="why" hidden>The antecedent is the given part, after “if”.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="c">
+    <legend>2. The converse of “If x = 4, then x² = 16” is…</legend>
+    <div class="opts">
+      <button data-opt="a">If x ≠ 4, then x² ≠ 16</button>
+      <button data-opt="b">If x = 16, then x² = 4</button>
+      <button data-opt="c">If x² = 16, then x = 4</button>
+      <button data-opt="d">If x² = 16, then x = −4</button>
+    </div>
+    <p class="why" hidden>Interchange the antecedent and the consequent. (This converse is false: x could be −4.)</p>
+  </fieldset>
+  <fieldset class="q" data-answer="b">
+    <legend>3. “If two angles are right angles, then they are congruent.” Its converse is…</legend>
+    <div class="opts">
+      <button data-opt="a">true, because all right angles measure 90°</button>
+      <button data-opt="b">false: two 40° angles are congruent but are not right angles</button>
+      <button data-opt="c">true only for vertically opposite angles</button>
+      <button data-opt="d">not a conditional statement</button>
+    </div>
+    <p class="why" hidden>The converse is “If two angles are congruent, then they are right angles”. Two 40° angles are a counterexample.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="a">
+    <legend>4. An indirect proof begins by…</legend>
+    <div class="opts">
+      <button data-opt="a">supposing that the conclusion is false</button>
+      <button data-opt="b">drawing an accurate figure</button>
+      <button data-opt="c">proving the converse</button>
+      <button data-opt="d">checking one example</button>
+    </div>
+    <p class="why" hidden>We suppose the conclusion is false and show that this leads to a contradiction.</p>
+  </fieldset>
+  <p class="score" aria-live="polite"></p>
+</div>
+<nav class="next-prev" aria-label="Lessons">
+  <a href="points-lines-and-distance.html">← Points, lines and distance</a>
+  <a href="../parallel/angles-and-transversals.html">Next chapter: Parallel Lines →</a>
+</nav>
+</main>
+
+<footer class="foot">Follows Chapter 1 of the Maharashtra State Board Std 9 Mathematics Part II textbook. Explanations and examples are original.</footer>
+</div>
+
+<script src="../../assets/js/sim-kit.js?v=20261010"></script>
+<script src="../../assets/js/math-kit.js?v=20261010"></script>
+<script src="../../assets/js/sims/geometry-logic.js?v=20261010"></script>
+<script src="../../assets/js/quiz.js?v=20261010"></script>
+<script>
+  (function () {
+    var simEl = document.getElementById("sim-main");
+    var sim = GeoLogicSim.mount(simEl, { mode: "ifthen", st: "four", conv: false });
+    window.lessonSim = sim;
+    // Buttons in the lesson that set up the simulation: data-sim='{...settings}'
+    document.querySelectorAll("main [data-sim]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        sim.set(JSON.parse(b.dataset.sim));
+        sim.play();
+        simEl.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+      });
+    });
+  })();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/contrib/auto-render.min.js"></script>
+<script>
+  renderMathInElement(document.body, {
+    delimiters: [{ left: "$$", right: "$$", display: true }, { left: "\\(", right: "\\)", display: false }],
+    output: window.KATEX_OUTPUT || "htmlAndMathml",
+    throwOnError: false
+  });
+</script>
+
+</body>
+</html>

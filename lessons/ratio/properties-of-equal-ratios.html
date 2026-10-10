@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Properties of Equal Ratios · Visual Science &amp; Maths</title>
+<meta name="description" content="Invertendo, alternando, componendo, dividendo and componendo-dividendo: watch equal ratios change step by step and stay equal, then use the properties to solve problems.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.css">
+<link rel="stylesheet" href="../../assets/css/style.css?v=20261010">
+</head>
+<body class="lesson ch-ratio">
+<div class="wrap">
+
+<header class="site-head">
+  <a class="brand" href="../../index.html"><svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><path d="M3 27 Q14 -1 29 27" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-dasharray="2.5 3.5"/><circle cx="21" cy="10" r="4.2" fill="var(--vy)"/></svg> Visual <span>Science &amp; Maths</span></a>
+  <nav class="site-nav" aria-label="Main"><a href="../../index.html#maths">Chapters</a><a href="../../index.html#games">Games</a></nav>
+</header>
+
+<main>
+<div class="title-band">
+<p class="eyebrow">Ratio and Proportion, lesson 2</p>
+<h1>Properties of Equal Ratios</h1>
+<p class="lede">If two ratios are equal, you can turn them upside down, swap their terms, or add the bottom to the top, and they stay equal. These moves have names, and they make many problems short.</p>
+<p class="downloads"><a class="btn" href="../../slides/properties-of-equal-ratios.pptx" download>Download slides (.pptx)</a> <span>12 slides with teacher notes</span></p>
+</div>
+
+<div id="sim-main"></div>
+
+<section class="prose">
+  <h2>Five properties</h2>
+  <p>Let \(a, b, c, d\) be positive numbers with \(\dfrac{a}{b} = \dfrac{c}{d}\). For example \(\dfrac{6}{8} = \dfrac{9}{12}\), since both equal \(\dfrac{3}{4}\). Then:</p>
+  <div class="table-wrap"><table class="compare">
+    <thead><tr><th>Property</th><th>If \(\frac{a}{b} = \frac{c}{d}\), then…</th><th>With 6/8 = 9/12</th></tr></thead>
+    <tbody>
+      <tr><th>Invertendo</th><td>\(\dfrac{b}{a} = \dfrac{d}{c}\)</td><td>\(\frac{8}{6} = \frac{12}{9} = \frac{4}{3}\)</td></tr>
+      <tr><th>Alternando</th><td>\(\dfrac{a}{c} = \dfrac{b}{d}\)</td><td>\(\frac{6}{9} = \frac{8}{12} = \frac{2}{3}\)</td></tr>
+      <tr><th>Componendo</th><td>\(\dfrac{a + b}{b} = \dfrac{c + d}{d}\)</td><td>\(\frac{14}{8} = \frac{21}{12} = \frac{7}{4}\)</td></tr>
+      <tr><th>Dividendo</th><td>\(\dfrac{a - b}{b} = \dfrac{c - d}{d}\)</td><td>\(\frac{-2}{8} = \frac{-3}{12} = -\frac{1}{4}\)</td></tr>
+      <tr><th>Componendo-dividendo</th><td>\(\dfrac{a + b}{a - b} = \dfrac{c + d}{c - d}\), if \(a \ne b,\; c \ne d\)</td><td>\(\frac{14}{-2} = \frac{21}{-3} = -7\)</td></tr>
+    </tbody>
+  </table></div>
+
+  <h2>Why they work</h2>
+  <p><strong>Invertendo:</strong> divide 1 by both equal numbers. <strong>Alternando:</strong> \(\frac{a}{b} = \frac{c}{d}\) means \(ad = bc\); divide both sides by \(cd\) to get \(\frac{a}{c} = \frac{b}{d}\). <strong>Componendo:</strong> add 1 to both sides: \(\frac{a}{b} + 1 = \frac{c}{d} + 1\), that is \(\frac{a + b}{b} = \frac{c + d}{d}\). <strong>Dividendo:</strong> subtract 1 from both sides. <strong>Componendo-dividendo:</strong> divide the componendo result by the dividendo result.</p>
+  <div class="note"><strong>Remember.</strong> Do the same thing to <em>both</em> ratios. And never use componendo-dividendo when \(a = b\): then \(a - b = 0\), and we cannot divide by 0.</div>
+
+  <h2>Using the properties</h2>
+  <p>Componendo-dividendo is very handy when an equation has the form \(\dfrac{\text{something} + \text{something}}{\text{something} - \text{something}}\). Applying it makes the sums and differences collapse, as in Example 3 below.</p>
+</section>
+<h2>Try it</h2>
+<p class="prose" style="margin-top:1rem">Pick a property, then press “Show the step”. The sliders change the numbers: a = p × m, b = q × m, c = p × n, d = q × n.</p>
+<ul class="tries">
+  <li><span><strong>Invertendo.</strong> 6/8 = 9/12 turned upside down.</span>
+    <button class="btn" data-sim='{"prop":"inv","p":3,"q":4,"m":2,"n":3}'>Show me</button></li>
+  <li><span><strong>Alternando.</strong> Swap b and c in 6/8 = 9/12.</span>
+    <button class="btn" data-sim='{"prop":"alt","p":3,"q":4,"m":2,"n":3}'>Show me</button></li>
+  <li><span><strong>Componendo.</strong> Add each denominator to its numerator.</span>
+    <button class="btn" data-sim='{"prop":"comp","p":3,"q":4,"m":2,"n":3}'>Show me</button></li>
+  <li><span><strong>Dividendo.</strong> 10/4 = 15/6: take the denominator away.</span>
+    <button class="btn" data-sim='{"prop":"div","p":5,"q":2,"m":2,"n":3}'>Show me</button></li>
+  <li><span><strong>Componendo-dividendo.</strong> 10/4 = 15/6 again.</span>
+    <button class="btn" data-sim='{"prop":"cd","p":5,"q":2,"m":2,"n":3}'>Show me</button></li>
+</ul>
+<p class="prose" style="margin-top:1rem;font-size:.875rem;color:var(--muted)">What you should see: 8/6 = 12/9 = 4/3; 6/9 = 8/12 = 2/3; 14/8 = 21/12 = 7/4. For 10/4 = 15/6, dividendo gives 6/4 = 9/6 = 3/2 and componendo-dividendo gives 14/6 = 21/9 = 7/3.</p>
+
+<h2>Worked examples</h2>
+<div class="example">
+  <h3 style="margin-top:0">1. Componendo and dividendo</h3>
+  <p>If \(\dfrac{a}{b} = \dfrac{5}{3}\), find \(\dfrac{a + b}{b}\) and \(\dfrac{a - b}{b}\).</p>
+  <ol>
+    <li>Componendo: \(\dfrac{a + b}{b} = \dfrac{5 + 3}{3} = \) <span class="answer">8/3</span></li>
+    <li>Dividendo: \(\dfrac{a - b}{b} = \dfrac{5 - 3}{3} = \) <span class="answer">2/3</span></li>
+  </ol>
+  <button class="btn" data-sim='{"prop":"comp","p":5,"q":3,"m":2,"n":1}'>Check componendo</button>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">2. Make a new ratio first</h3>
+  <p>If \(\dfrac{a}{b} = \dfrac{7}{4}\), find \(\dfrac{5a + 4b}{5a - 4b}\).</p>
+  <ol>
+    <li>Multiply: \(\dfrac{5a}{4b} = \dfrac{5 \times 7}{4 \times 4} = \dfrac{35}{16}\).</li>
+    <li>Componendo-dividendo: \(\dfrac{5a + 4b}{5a - 4b} = \dfrac{35 + 16}{35 - 16} = \) <span class="answer">51/19</span></li>
+  </ol>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">3. Solving an equation</h3>
+  <p>Solve \(\dfrac{x + 4}{x - 4} = \dfrac{5}{3}\).</p>
+  <ol>
+    <li>Componendo-dividendo: \(\dfrac{(x + 4) + (x - 4)}{(x + 4) - (x - 4)} = \dfrac{5 + 3}{5 - 3}\).</li>
+    <li>\(\dfrac{2x}{8} = \dfrac{8}{2} = 4\), so \(2x = 32\) and <span class="answer">x = 16</span></li>
+    <li>Check: \(\dfrac{20}{12} = \dfrac{5}{3}\) ✓. In the simulation, 20/12 = 5/3 gives \(\frac{32}{8} = \frac{8}{2} = 4\) on both sides.</li>
+  </ol>
+  <button class="btn" data-sim='{"prop":"cd","p":5,"q":3,"m":4,"n":1}'>Check it</button>
+</div>
+
+<h2>Common mistakes</h2>
+<ul class="mistakes" style="margin-top:1rem">
+  <li><strong>Changing one side only.</strong> Each property changes both ratios in the same way. Add b on the left, add d on the right.</li>
+  <li><strong>Alternando the wrong way.</strong> From a/b = c/d, alternando gives a/c = b/d: first terms together, second terms together.</li>
+  <li><strong>Dividing by zero.</strong> Componendo-dividendo needs a ≠ b. If a = b, then a − b = 0.</li>
+  <li><strong>Mixed-up differences.</strong> Use a − b on the left and c − d on the right, in the same order on both sides.</li>
+</ul>
+
+<h2>Quick check</h2>
+<div class="quiz">
+  <fieldset class="q" data-answer="b">
+    <legend>1. If a/b = 3/5, invertendo gives b/a = …</legend>
+    <div class="opts">
+      <button data-opt="a">3/5</button>
+      <button data-opt="b">5/3</button>
+      <button data-opt="c">8/5</button>
+      <button data-opt="d">2/5</button>
+    </div>
+    <p class="why" hidden>Invertendo turns both ratios upside down.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="a">
+    <legend>2. If a/b = 4/3, then (a + b)/b is…</legend>
+    <div class="opts">
+      <button data-opt="a">7/3</button>
+      <button data-opt="b">1/3</button>
+      <button data-opt="c">7/4</button>
+      <button data-opt="d">4/7</button>
+    </div>
+    <p class="why" hidden>Componendo: (4 + 3)/3 = 7/3.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="c">
+    <legend>3. If x/y = 9/5, then (x + y)/(x − y) is…</legend>
+    <div class="opts">
+      <button data-opt="a">14/5</button>
+      <button data-opt="b">4/14</button>
+      <button data-opt="c">7/2</button>
+      <button data-opt="d">9/4</button>
+    </div>
+    <p class="why" hidden>Componendo-dividendo: (9 + 5)/(9 − 5) = 14/4 = 7/2.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="b">
+    <legend>4. Which property turns a/b = c/d into a/c = b/d?</legend>
+    <div class="opts">
+      <button data-opt="a">invertendo</button>
+      <button data-opt="b">alternando</button>
+      <button data-opt="c">componendo</button>
+      <button data-opt="d">dividendo</button>
+    </div>
+    <p class="why" hidden>Alternando swaps the means b and c.</p>
+  </fieldset>
+  <p class="score" aria-live="polite"></p>
+</div>
+<nav class="next-prev" aria-label="Lessons">
+  <a href="ratio-and-proportion.html">← Ratio, direct and inverse proportion</a>
+  <a href="k-method.html">Next: Theorem on equal ratios and the k method →</a>
+</nav>
+</main>
+
+<footer class="foot">Follows Chapter 4 of the Maharashtra State Board Std 9 Mathematics Part I textbook. Explanations and examples are original.</footer>
+</div>
+
+<script src="../../assets/js/sim-kit.js?v=20261010"></script>
+<script src="../../assets/js/math-kit.js?v=20261010"></script>
+<script src="../../assets/js/sims/ratio-props.js?v=20261010"></script>
+<script src="../../assets/js/quiz.js?v=20261010"></script>
+<script>
+  (function () {
+    var simEl = document.getElementById("sim-main");
+    var sim = RatioPropsSim.mount(simEl, { prop: "comp", p: 3, q: 4, m: 2, n: 3 });
+    window.lessonSim = sim;
+    // Buttons in the lesson that set up the simulation: data-sim='{...settings}'
+    document.querySelectorAll("main [data-sim]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        sim.set(JSON.parse(b.dataset.sim));
+        sim.play();
+        simEl.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+      });
+    });
+  })();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/contrib/auto-render.min.js"></script>
+<script>
+  renderMathInElement(document.body, {
+    delimiters: [{ left: "$$", right: "$$", display: true }, { left: "\\(", right: "\\)", display: false }],
+    output: window.KATEX_OUTPUT || "htmlAndMathml",
+    throwOnError: false
+  });
+</script>
+
+</body>
+</html>

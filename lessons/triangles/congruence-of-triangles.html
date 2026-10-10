@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Congruence of Triangles · Visual Science &amp; Maths</title>
+<meta name="description" content="Set two sides and an angle, or two angles and a side, and see how many triangles fit. Find out why SSS, SAS, ASA, AAS and hypotenuse-side prove congruence and SSA and AAA do not.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.css">
+<link rel="stylesheet" href="../../assets/css/style.css?v=20261010">
+</head>
+<body class="lesson ch-triangles">
+<div class="wrap">
+
+<header class="site-head">
+  <a class="brand" href="../../index.html"><svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><path d="M3 27 Q14 -1 29 27" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-dasharray="2.5 3.5"/><circle cx="21" cy="10" r="4.2" fill="var(--vy)"/></svg> Visual <span>Science &amp; Maths</span></a>
+  <nav class="site-nav" aria-label="Main"><a href="../../index.html#maths">Chapters</a><a href="../../index.html#games">Games</a></nav>
+</header>
+
+<main>
+<div class="title-band">
+<p class="eyebrow">Triangles, lesson 2</p>
+<h1>Congruence of Triangles</h1>
+<p class="lede">Two triangles are congruent if one fits exactly on top of the other. You do not need to check all six sides and angles: three well-chosen parts are enough.</p>
+<p class="downloads"><a class="btn" href="../../slides/congruence-of-triangles.pptx" download>Download slides (.pptx)</a> <span>12 slides with teacher notes</span></p>
+</div>
+
+<div id="sim-main"></div>
+
+<section class="prose">
+  <h2>Congruent triangles</h2>
+  <p>Triangles are <strong>congruent</strong> when their corresponding sides and corresponding angles are equal, so one can be placed exactly over the other. We write \(\triangle ABC \cong \triangle PQR\), listing the vertices in matching order: \(A \leftrightarrow P\), \(B \leftrightarrow Q\), \(C \leftrightarrow R\).</p>
+  <p>Some sets of three parts fix a triangle completely: only <strong>one</strong> triangle can be drawn with them. If two triangles share such a set, they must be congruent. These are the <strong>tests of congruence</strong>.</p>
+</section>
+
+<div class="table-wrap">
+<table class="compare">
+  <thead><tr><th>Test</th><th>Equal parts</th></tr></thead>
+  <tbody>
+    <tr><th>S-S-S</th><td>All three pairs of sides</td></tr>
+    <tr><th>S-A-S</th><td>Two sides and the angle between them</td></tr>
+    <tr><th>A-S-A</th><td>Two angles and the side between them</td></tr>
+    <tr><th>A-A-S</th><td>Two angles and a side not between them</td></tr>
+    <tr><th>Hypotenuse–side</th><td>In right triangles: the hypotenuse and one other side</td></tr>
+  </tbody>
+</table>
+</div>
+
+<section class="prose" style="margin-top:1rem">
+  <h2>Parts that are not enough</h2>
+  <p><strong>S-S-A</strong> (two sides and an angle that is not between them) can fit <em>two</em> different triangles, so it is not a test. <strong>A-A-A</strong> fixes the shape but not the size: the triangles are <em>similar</em>, not congruent. The simulation draws every triangle that fits the parts you choose, so you can see this happen.</p>
+  <p>Once two triangles are shown congruent, all their remaining corresponding parts are equal too. This is often written as <strong>c.s.c.t.</strong> (corresponding sides of congruent triangles) and <strong>c.a.c.t.</strong> (corresponding angles of congruent triangles).</p>
+</section>
+<h2>Try it</h2>
+<p class="prose" style="margin-top:1rem">Pick a test and change the given parts.</p>
+<ul class="tries">
+  <li><span><strong>S-A-S.</strong> How many triangles fit?</span>
+    <button class="btn" data-sim='{"test":"SAS","v":[5,50,7]}'>S-A-S</button></li>
+  <li><span><strong>S-S-S.</strong> Try sides 3, 4 and 9.</span>
+    <button class="btn" data-sim='{"test":"SSS","v":[3,4,9]}'>S-S-S</button></li>
+  <li><span><strong>S-S-A.</strong> Same parts, two triangles?</span>
+    <button class="btn" data-sim='{"test":"SSA","v":[8,35,5.5]}'>S-S-A</button></li>
+  <li><span><strong>A-A-A.</strong> Same angles, different sizes.</span>
+    <button class="btn" data-sim='{"test":"AAA","v":[70,50]}'>A-A-A</button></li>
+</ul>
+<p class="prose" style="margin-top:1rem;font-size:.875rem;color:var(--muted)">What you should see: S-A-S always gives exactly one triangle. Sides 3, 4 and 9 cannot make a triangle at all, because 3 + 4 is less than 9. With S-S-A the side CA can swing to two places on the base, giving two different triangles. A-A-A gives triangles of any size.</p>
+
+<h2>Worked examples</h2>
+<div class="example">
+  <h3 style="margin-top:0">1. Naming the test</h3>
+  <p>In \(\triangle ABC\) and \(\triangle PQR\), \(AB = PQ = 5\) cm, \(\angle B = \angle Q = 50^\circ\) and \(BC = QR = 7\) cm. Are they congruent?</p>
+  <ol>
+    <li>The equal angle lies between the two equal sides.</li>
+    <li>So <span class="answer">\(\triangle ABC \cong \triangle PQR\) by the S-A-S test</span></li>
+  </ol>
+  <button class="btn" data-sim='{"test":"SAS","v":[5,50,7]}'>See that only one fits</button>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">2. Using c.s.c.t.</h3>
+  <p>Point \(S\) is joined to points \(P\), \(Q\) and \(R\), with \(PS = RS\) and \(\angle PSQ = \angle RSQ\). Show that \(PQ = RQ\).</p>
+  <ol>
+    <li>In \(\triangle PSQ\) and \(\triangle RSQ\): \(PS = RS\) (given), \(\angle PSQ = \angle RSQ\) (given), \(SQ = SQ\) (common side).</li>
+    <li>So \(\triangle PSQ \cong \triangle RSQ\) by S-A-S, and therefore <span class="answer">PQ = RQ (c.s.c.t.)</span></li>
+  </ol>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">3. Right triangles</h3>
+  <p>Two right-angled triangles both have a hypotenuse of 10 cm and one other side of 6 cm. Are they congruent? Find the third side.</p>
+  <ol>
+    <li>Yes, by the <span class="answer">hypotenuse–side test</span>.</li>
+    <li>Third side \(= \sqrt{10^2 - 6^2} = \sqrt{64} = \) <span class="answer">8 cm</span> in both</li>
+  </ol>
+  <button class="btn" data-sim='{"test":"RHS","v":[10,6]}'>Check it</button>
+</div>
+
+<h2>Common mistakes</h2>
+<ul class="mistakes" style="margin-top:1rem">
+  <li><strong>Using S-S-A as a test.</strong> Two sides and a non-included angle can fit two different triangles.</li>
+  <li><strong>Using A-A-A as a test.</strong> Equal angles give the same shape, not the same size.</li>
+  <li><strong>Mismatching the order.</strong> In △ABC ≅ △PQR, A matches P, B matches Q and C matches R. Keep that order.</li>
+  <li><strong>Choosing the wrong angle for S-A-S.</strong> The angle must be the one between the two equal sides.</li>
+</ul>
+
+<h2>Quick check</h2>
+<div class="quiz">
+  <fieldset class="q" data-answer="c">
+    <legend>1. Which set of equal parts does NOT prove two triangles congruent?</legend>
+    <div class="opts">
+      <button data-opt="a">S-S-S</button>
+      <button data-opt="b">A-S-A</button>
+      <button data-opt="c">A-A-A</button>
+      <button data-opt="d">S-A-S</button>
+    </div>
+    <p class="why" hidden>Equal angles alone allow triangles of different sizes.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="b">
+    <legend>2. In △ABC and △DEF, AB = DE, BC = EF and ∠B = ∠E. The test is…</legend>
+    <div class="opts">
+      <button data-opt="a">S-S-S</button>
+      <button data-opt="b">S-A-S</button>
+      <button data-opt="c">A-S-A</button>
+      <button data-opt="d">Hypotenuse–side</button>
+    </div>
+    <p class="why" hidden>∠B lies between AB and BC, and ∠E between DE and EF.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="b">
+    <legend>3. If △PQR ≅ △XYZ, which side equals QR?</legend>
+    <div class="opts">
+      <button data-opt="a">XY</button>
+      <button data-opt="b">YZ</button>
+      <button data-opt="c">XZ</button>
+      <button data-opt="d">PR</button>
+    </div>
+    <p class="why" hidden>Q matches Y and R matches Z.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="b">
+    <legend>4. Two right triangles have equal hypotenuses of 13 cm and one equal side of 5 cm. The third side of each is…</legend>
+    <div class="opts">
+      <button data-opt="a">8 cm</button>
+      <button data-opt="b">12 cm</button>
+      <button data-opt="c">18 cm</button>
+      <button data-opt="d">10 cm</button>
+    </div>
+    <p class="why" hidden>√(13² − 5²) = √144 = 12.</p>
+  </fieldset>
+  <p class="score" aria-live="polite"></p>
+</div>
+<nav class="next-prev" aria-label="Lessons">
+  <a href="angles-of-a-triangle.html">← Angles of a triangle</a>
+  <a href="special-triangles.html">Next: Isosceles and right triangles →</a>
+</nav>
+</main>
+
+<footer class="foot">Follows Chapter 3 of the Maharashtra State Board Std 9 Mathematics Part II textbook. Explanations and examples are original.</footer>
+</div>
+
+<script src="../../assets/js/sim-kit.js?v=20261010"></script>
+<script src="../../assets/js/math-kit.js?v=20261010"></script>
+<script src="../../assets/js/sims/congruence.js?v=20261010"></script>
+<script src="../../assets/js/quiz.js?v=20261010"></script>
+<script>
+  (function () {
+    var simEl = document.getElementById("sim-main");
+    var sim = CongSim.mount(simEl, { test: "SAS" });
+    window.lessonSim = sim;
+    // Buttons in the lesson that set up the simulation: data-sim='{...settings}'
+    document.querySelectorAll("main [data-sim]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        sim.set(JSON.parse(b.dataset.sim));
+        sim.play();
+        simEl.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+      });
+    });
+  })();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/contrib/auto-render.min.js"></script>
+<script>
+  renderMathInElement(document.body, {
+    delimiters: [{ left: "$$", right: "$$", display: true }, { left: "\\(", right: "\\)", display: false }],
+    output: window.KATEX_OUTPUT || "htmlAndMathml",
+    throwOnError: false
+  });
+</script>
+
+</body>
+</html>

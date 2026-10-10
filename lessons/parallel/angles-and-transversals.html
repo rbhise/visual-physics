@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Angles Made by a Transversal · Visual Science &amp; Maths</title>
+<meta name="description" content="Transversal, corresponding, alternate and interior angles, the properties of parallel lines with their proofs, and the angle sum of a triangle.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.css">
+<link rel="stylesheet" href="../../assets/css/style.css?v=20261010">
+</head>
+<body class="lesson ch-parallel">
+<div class="wrap">
+
+<header class="site-head">
+  <a class="brand" href="../../index.html"><svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><path d="M3 27 Q14 -1 29 27" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-dasharray="2.5 3.5"/><circle cx="21" cy="10" r="4.2" fill="var(--vy)"/></svg> Visual <span>Science &amp; Maths</span></a>
+  <nav class="site-nav" aria-label="Main"><a href="../../index.html#maths">Chapters</a><a href="../../index.html#games">Games</a></nav>
+</header>
+
+<main>
+<div class="title-band">
+<p class="eyebrow">Parallel Lines, lesson 1</p>
+<h1>Angles Made by a Transversal</h1>
+<p class="lede">Railway tracks, the lines of a ruled notebook, the edges of a ladder: parallel lines are everywhere. Cut them with one more line and eight angles appear, tied together by simple rules.</p>
+<p class="downloads"><a class="btn" href="../../slides/angles-and-transversals.pptx" download>Download slides (.pptx)</a> <span>12 slides with teacher notes</span></p>
+</div>
+
+<div id="sim-main"></div>
+
+<section class="prose">
+  <h2>Parallel lines and a transversal</h2>
+  <p>Lines in one plane that do not intersect each other are <strong>parallel lines</strong>. We write \(l \parallel m\).</p>
+  <div class="note"><strong>Transversal.</strong> If a line intersects two lines in two distinct points, it is called a <strong>transversal</strong> of those lines.</div>
+  <p>In the simulation, transversal \(t\) cuts line \(l\) and line \(m\). It makes four angles at each point: \(\angle a, \angle b, \angle c, \angle d\) at \(l\) and \(\angle p, \angle q, \angle r, \angle s\) at \(m\). The angles between the two lines (\(\angle c, \angle d, \angle p, \angle q\)) are <strong>interior angles</strong>; the other four are exterior angles.</p>
+
+  <h2>Pairs of angles</h2>
+  <div class="table-wrap"><table class="compare">
+    <tr><th>Pair</th><th>Where they are</th><th>In the figure</th></tr>
+    <tr><td>Corresponding angles</td><td>in the same position at the two points</td><td>∠a, ∠p · ∠b, ∠q · ∠c, ∠r · ∠d, ∠s</td></tr>
+    <tr><td>Alternate interior angles</td><td>between the lines, on opposite sides of the transversal</td><td>∠c, ∠p · ∠d, ∠q</td></tr>
+    <tr><td>Alternate exterior angles</td><td>outside the lines, on opposite sides of the transversal</td><td>∠a, ∠r · ∠b, ∠s</td></tr>
+    <tr><td>Interior angles on the same side</td><td>between the lines, on the same side of the transversal</td><td>∠d, ∠p · ∠c, ∠q</td></tr>
+  </table></div>
+
+  <h2>Properties of parallel lines</h2>
+  <div class="note"><strong>Interior angle theorem.</strong> If two parallel lines are intersected by a transversal, the interior angles on either side of the transversal are supplementary.</div>
+  <p><em>Why:</em> by Euclid’s postulate, if the interior angles on one side add up to <strong>less than</strong> 180°, the lines meet on that side. Turn line \(m\) in the simulation and watch this happen. Parallel lines never meet, so neither sum is less than 180°. The two sums together make \(\angle c + \angle d + \angle p + \angle q = 360^\circ\), so each sum is exactly \(180^\circ\).</p>
+  <div class="note"><strong>Corresponding angle theorem.</strong> The corresponding angles formed by a transversal of two parallel lines are of equal measure.<br><strong>Alternate angle theorem.</strong> The alternate angles formed by a transversal of two parallel lines are of equal measure.</div>
+  <p><em>Proof (direct):</em> \(\angle a + \angle d = 180^\circ\) (linear pair) and \(\angle d + \angle p = 180^\circ\) (interior angle theorem), so \(\angle a = \angle p\). Then \(\angle c = \angle a\) (vertically opposite angles), so \(\angle c = \angle p\).</p>
+
+  <p>One more consequence: if a line is <strong>perpendicular to one of two parallel lines</strong>, it is perpendicular to the other too. (If \(\angle a = 90^\circ\), then its corresponding angle \(\angle p = 90^\circ\).)</p>
+
+  <h2>The angle sum of a triangle</h2>
+  <p>Draw line PQ through A parallel to side BC of \(\triangle ABC\). With transversal AB, \(\angle PAB = \angle ABC\) (alternate angles). With transversal AC, \(\angle QAC = \angle ACB\). The angles \(\angle PAB\), \(\angle BAC\) and \(\angle QAC\) together make the straight angle PAQ, so</p>
+  $$\angle A + \angle B + \angle C = 180^\circ$$
+</section>
+<h2>Try it</h2>
+<p class="prose" style="margin-top:1rem">Choose a kind of pair. Drag the top of t, or turn line m with the slider or by its end.</p>
+<ul class="tries">
+  <li><span><strong>Corresponding.</strong> l ∥ m, transversal at 60°.</span>
+    <button class="btn" data-sim='{"mode":"pairs","pair":"corr","th":60,"phi":0}'>Show</button></li>
+  <li><span><strong>Alternate interior.</strong> l ∥ m, transversal at 70°.</span>
+    <button class="btn" data-sim='{"mode":"pairs","pair":"altint","th":70,"phi":0}'>Show</button></li>
+  <li><span><strong>Interior angles.</strong> l ∥ m, transversal at 65°.</span>
+    <button class="btn" data-sim='{"mode":"pairs","pair":"int","th":65,"phi":0}'>Show</button></li>
+  <li><span><strong>Not parallel.</strong> Turn m by 10°.</span>
+    <button class="btn" data-sim='{"mode":"pairs","pair":"corr","th":60,"phi":10}'>Show</button></li>
+  <li><span><strong>Angle sum.</strong> ∠B = 55°, ∠C = 70°.</span>
+    <button class="btn" data-sim='{"mode":"sum","B":55,"C":70}'>Play</button></li>
+</ul>
+<p class="prose" style="margin-top:1rem;font-size:.875rem;color:var(--muted)">What you should see: with l ∥ m, ∠a = ∠p = 60° and ∠d = ∠s = 120°; alternate angles ∠c = ∠p = 70°; interior angles 115° + 65° = 180°. When m is turned by 10°, ∠p becomes 50° and is no longer equal to ∠a; the interior angles on the right add up to 170° and the lines meet on the right. In the triangle, ∠A = 55° and 55° + 55° + 70° = 180°.</p>
+
+<h2>Worked examples</h2>
+<div class="example">
+  <h3 style="margin-top:0">1. All eight angles from one</h3>
+  <p>\(l \parallel m\) and \(\angle a = 75^\circ\). Find the other seven angles.</p>
+  <ol>
+    <li>\(\angle b = 180^\circ - 75^\circ = 105^\circ\) (linear pair); \(\angle c = 75^\circ\), \(\angle d = 105^\circ\) (vertically opposite angles).</li>
+    <li>Corresponding angles are equal: \(\angle p = \angle a\), \(\angle q = \angle b\), \(\angle r = \angle c\), \(\angle s = \angle d\).</li>
+    <li><span class="answer">∠a = ∠c = ∠p = ∠r = 75°; ∠b = ∠d = ∠q = ∠s = 105°</span></li>
+  </ol>
+  <button class="btn" data-sim='{"mode":"pairs","pair":"corr","th":75,"phi":0}'>Check it</button>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">2. Interior angles with x</h3>
+  <p>\(l \parallel m\), \(\angle d = (3x + 10)^\circ\) and \(\angle p = (2x + 20)^\circ\). Find \(x\), \(\angle d\) and \(\angle p\).</p>
+  <ol>
+    <li>∠d and ∠p are interior angles on the same side, so they are supplementary: \(3x + 10 + 2x + 20 = 180\).</li>
+    <li>\(5x + 30 = 180\), so \(5x = 150\) and <span class="answer">x = 30</span></li>
+    <li>\(\angle d = 3(30) + 10 = \) <span class="answer">100°</span> and \(\angle p = 2(30) + 20 = \) <span class="answer">80°</span></li>
+  </ol>
+  <button class="btn" data-sim='{"mode":"pairs","pair":"int","th":80,"phi":0}'>Check it</button>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">3. A line parallel to the base</h3>
+  <p>In \(\triangle ABC\), \(\angle B = 48^\circ\) and \(\angle C = 67^\circ\). Line PQ through A is parallel to BC. Find \(\angle PAB\), \(\angle QAC\) and \(\angle BAC\).</p>
+  <ol>
+    <li>\(\angle PAB = \angle ABC = 48^\circ\) and \(\angle QAC = \angle ACB = 67^\circ\) (alternate angles).</li>
+    <li>\(\angle PAB + \angle BAC + \angle QAC = 180^\circ\), so \(\angle BAC = 180^\circ - 48^\circ - 67^\circ = \) <span class="answer">65°</span></li>
+  </ol>
+  <button class="btn" data-sim='{"mode":"sum","B":48,"C":67}'>Check it</button>
+</div>
+
+<h2>Common mistakes</h2>
+<ul class="mistakes" style="margin-top:1rem">
+  <li><strong>Using the properties for any two lines.</strong> Corresponding angles are equal only when the lines are parallel. Check that l ∥ m is given.</li>
+  <li><strong>“Interior angles are equal.”</strong> Interior angles on the same side are supplementary: they add up to 180°.</li>
+  <li><strong>Mixing up the pairs.</strong> Corresponding angles sit in the same position at the two points. Alternate angles are on opposite sides of the transversal.</li>
+  <li><strong>Reading the wrong angle.</strong> Name each angle by its letter or with three points, like ∠PAB, before you use a property.</li>
+</ul>
+
+<h2>Quick check</h2>
+<div class="quiz">
+  <fieldset class="q" data-answer="b">
+    <legend>1. l ∥ m. One of a pair of corresponding angles is 112°. The other one is…</legend>
+    <div class="opts">
+      <button data-opt="a">68°</button>
+      <button data-opt="b">112°</button>
+      <button data-opt="c">248°</button>
+      <button data-opt="d">90°</button>
+    </div>
+    <p class="why" hidden>Corresponding angles formed by parallel lines are equal.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="c">
+    <legend>2. l ∥ m. One interior angle is 75°. The interior angle on the same side of the transversal is…</legend>
+    <div class="opts">
+      <button data-opt="a">75°</button>
+      <button data-opt="b">15°</button>
+      <button data-opt="c">105°</button>
+      <button data-opt="d">285°</button>
+    </div>
+    <p class="why" hidden>Interior angles on the same side are supplementary: 180° − 75° = 105°.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="b">
+    <legend>3. In this lesson’s figure, which pair is a pair of alternate interior angles?</legend>
+    <div class="opts">
+      <button data-opt="a">∠a and ∠p</button>
+      <button data-opt="b">∠c and ∠p</button>
+      <button data-opt="c">∠d and ∠p</button>
+      <button data-opt="d">∠a and ∠r</button>
+    </div>
+    <p class="why" hidden>∠c and ∠p lie between the lines, on opposite sides of t. ∠a, ∠p are corresponding; ∠d, ∠p are interior on the same side; ∠a, ∠r are alternate exterior.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="a">
+    <legend>4. In △ABC, ∠B = 40° and ∠C = 75°. Line PQ through A is parallel to BC, with Q on the side of C. Then ∠QAC is…</legend>
+    <div class="opts">
+      <button data-opt="a">75°</button>
+      <button data-opt="b">65°</button>
+      <button data-opt="c">40°</button>
+      <button data-opt="d">105°</button>
+    </div>
+    <p class="why" hidden>∠QAC and ∠ACB are alternate angles, so ∠QAC = 75°.</p>
+  </fieldset>
+  <p class="score" aria-live="polite"></p>
+</div>
+<nav class="next-prev" aria-label="Lessons">
+  <a href="../geometry/conditional-statements-and-proofs.html">← Conditional statements and proofs</a>
+  <a href="tests-for-parallel-lines.html">Next: Tests for parallel lines →</a>
+</nav>
+</main>
+
+<footer class="foot">Follows Chapter 2 of the Maharashtra State Board Std 9 Mathematics Part II textbook. Explanations and examples are original.</footer>
+</div>
+
+<script src="../../assets/js/sim-kit.js?v=20261010"></script>
+<script src="../../assets/js/math-kit.js?v=20261010"></script>
+<script src="../../assets/js/sims/parallel-lines.js?v=20261010"></script>
+<script src="../../assets/js/quiz.js?v=20261010"></script>
+<script>
+  (function () {
+    var simEl = document.getElementById("sim-main");
+    var sim = ParallelSim.mount(simEl, { mode: "pairs", pair: "corr", th: 60, phi: 0 });
+    window.lessonSim = sim;
+    // Buttons in the lesson that set up the simulation: data-sim='{...settings}'
+    document.querySelectorAll("main [data-sim]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        sim.set(JSON.parse(b.dataset.sim));
+        sim.play();
+        simEl.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+      });
+    });
+  })();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/contrib/auto-render.min.js"></script>
+<script>
+  renderMathInElement(document.body, {
+    delimiters: [{ left: "$$", right: "$$", display: true }, { left: "\\(", right: "\\)", display: false }],
+    output: window.KATEX_OUTPUT || "htmlAndMathml",
+    throwOnError: false
+  });
+</script>
+
+</body>
+</html>

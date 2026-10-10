@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Chords of a Circle · Visual Science &amp; Maths</title>
+<meta name="description" content="Drag a chord round a circle: the perpendicular from the centre bisects it, and congruent chords are equidistant from the centre. Solve chord problems with Pythagoras.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.css">
+<link rel="stylesheet" href="../../assets/css/style.css?v=20261010">
+</head>
+<body class="lesson ch-circle">
+<div class="wrap">
+
+<header class="site-head">
+  <a class="brand" href="../../index.html"><svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><path d="M3 27 Q14 -1 29 27" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-dasharray="2.5 3.5"/><circle cx="21" cy="10" r="4.2" fill="var(--vy)"/></svg> Visual <span>Science &amp; Maths</span></a>
+  <nav class="site-nav" aria-label="Main"><a href="../../index.html#maths">Chapters</a><a href="../../index.html#games">Games</a></nav>
+</header>
+
+<main>
+<div class="title-band">
+<p class="eyebrow">Circle, lesson 1</p>
+<h1>Chords of a Circle</h1>
+<p class="lede">Cut a round cake straight across and the cut is a chord. How long the cut is depends only on how far it passes from the centre. Two theorems and Pythagoras let you work out one from the other.</p>
+<p class="downloads"><a class="btn" href="../../slides/chords-of-a-circle.pptx" download>Download slides (.pptx)</a> <span>12 slides with teacher notes</span></p>
+</div>
+
+<div id="sim-main"></div>
+
+<section class="prose">
+  <h2>Words to know</h2>
+  <p>A <strong>circle</strong> is the set of all points in a plane that are at the same distance from a fixed point. The fixed point is the <strong>centre</strong>, and that distance is the <strong>radius</strong>.</p>
+  <ul>
+    <li>A <strong>chord</strong> is a segment whose end points lie on the circle.</li>
+    <li>A chord that passes through the centre is a <strong>diameter</strong>. It is the longest chord, and diameter \(= 2 \times\) radius.</li>
+  </ul>
+
+  <h2>The perpendicular from the centre</h2>
+  <div class="note"><strong>Theorem.</strong> A perpendicular drawn from the centre of a circle on its chord bisects the chord.<br>
+  <strong>Converse.</strong> The segment joining the centre of a circle and the midpoint of its chord is perpendicular to the chord.</div>
+  <p><strong>Why it is true.</strong> Let \(OM \perp AB\). Join \(OA\) and \(OB\). In right triangles \(OMA\) and \(OMB\), the hypotenuses \(OA\) and \(OB\) are equal (radii) and \(OM\) is common. By the hypotenuse–side test they are congruent, so \(AM = MB\).</p>
+  <p>The distance of a chord from the centre is the length of this perpendicular, \(OM\). Triangle \(OMA\) is right-angled, so</p>
+  $$OA^2 = OM^2 + AM^2 \qquad (\text{radius})^2 = (\text{distance})^2 + (\text{half the chord})^2$$
+
+  <h2>Congruent chords</h2>
+  <div class="note"><strong>Theorem.</strong> Congruent chords of a circle are equidistant from the centre.<br>
+  <strong>Converse.</strong> The chords of a circle equidistant from the centre are congruent.</div>
+  <p>Both follow from the formula above: in the same circle the radius is fixed, so the same half-chord gives the same distance, and the same distance gives the same half-chord. A chord <strong>nearer</strong> the centre is <strong>longer</strong>.</p>
+</section>
+<h2>Try it</h2>
+<p class="prose" style="margin-top:1rem">Drag the end points A and B (and C and D) round the circle, or use the sliders.</p>
+<ul class="tries">
+  <li><span><strong>A diameter.</strong> Radius 5 cm, distance 0.</span>
+    <button class="btn" data-sim='{"mode":"chord","r":5,"d":0}'>Try it</button></li>
+  <li><span><strong>Half the chord.</strong> Radius 5 cm, chord 4 cm from the centre.</span>
+    <button class="btn" data-sim='{"mode":"chord","r":5,"d":4}'>Try it</button></li>
+  <li><span><strong>Two chords.</strong> Radius 10 cm, distances 3 cm and 7 cm.</span>
+    <button class="btn" data-sim='{"mode":"equal","r":10,"d":3,"d2":7}'>Compare</button></li>
+  <li><span><strong>Equidistant.</strong> Radius 10 cm, both chords 6 cm from O.</span>
+    <button class="btn" data-sim='{"mode":"equal","r":10,"d":6,"d2":6}'>Compare</button></li>
+</ul>
+<p class="prose" style="margin-top:1rem;font-size:.875rem;color:var(--muted)">What you should see: the diameter is 10 cm, the longest chord. A chord 4 cm from the centre of a 5 cm circle has AM = MB = 3 cm, so it is 6 cm long. The chord 3 cm from O (19.08 cm) is longer than the one 7 cm away (14.28 cm). Chords both 6 cm from the centre are both 16 cm.</p>
+
+<h2>Worked examples</h2>
+<div class="example">
+  <h3 style="margin-top:0">1. Distance of a chord</h3>
+  <p>In a circle of radius 15 cm, chord \(AB = 24\) cm. How far is the chord from the centre?</p>
+  <ol>
+    <li>Draw \(OM \perp AB\). It bisects the chord, so \(AM = 12\) cm.</li>
+    <li>\(OM^2 = OA^2 - AM^2 = 225 - 144 = 81\).</li>
+    <li><span class="answer">OM = 9 cm</span></li>
+  </ol>
+  <button class="btn" data-sim='{"mode":"chord","r":15,"d":9}'>Check it</button>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">2. Length of a chord</h3>
+  <p>A chord of a circle of radius 8.5 cm is 4 cm from the centre. Find its length.</p>
+  <ol>
+    <li>\(AM^2 = OA^2 - OM^2 = 72.25 - 16 = 56.25\), so \(AM = 7.5\) cm.</li>
+    <li>The perpendicular bisects the chord: \(AB = 2 \times AM\).</li>
+    <li><span class="answer">AB = 15 cm</span></li>
+  </ol>
+  <button class="btn" data-sim='{"mode":"chord","r":8.5,"d":4}'>Check it</button>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">3. Two congruent chords</h3>
+  <p>In a circle of radius 5 cm, chords \(AB\) and \(CD\) are each 8 cm long. Find the distance of each from the centre.</p>
+  <ol>
+    <li>Half of each chord is 4 cm, so each distance is \(\sqrt{25 - 16} = 3\) cm.</li>
+    <li>This agrees with the theorem: congruent chords are equidistant from the centre.</li>
+    <li><span class="answer">OM = ON = 3 cm</span></li>
+  </ol>
+  <button class="btn" data-sim='{"mode":"equal","r":5,"d":3,"d2":3}'>Check it</button>
+</div>
+
+<h2>Common mistakes</h2>
+<ul class="mistakes" style="margin-top:1rem">
+  <li><strong>Using the whole chord in Pythagoras.</strong> The right triangle OMA has AM, which is half the chord.</li>
+  <li><strong>Measuring the distance along a slant.</strong> The distance of a chord from the centre is along the perpendicular OM.</li>
+  <li><strong>Forgetting to double.</strong> After finding AM, the chord is 2 × AM.</li>
+  <li><strong>Thinking a far chord is longer.</strong> The nearer the chord is to the centre, the longer it is; the diameter is longest.</li>
+</ul>
+
+<h2>Quick check</h2>
+<div class="quiz">
+  <fieldset class="q" data-answer="b">
+    <legend>1. In a circle of radius 17 cm, a chord is 30 cm long. Its distance from the centre is…</legend>
+    <div class="opts">
+      <button data-opt="a">13 cm</button>
+      <button data-opt="b">8 cm</button>
+      <button data-opt="c">15 cm</button>
+      <button data-opt="d">12 cm</button>
+    </div>
+    <p class="why" hidden>Half the chord is 15 cm; √(17² − 15²) = √(289 − 225) = √64 = 8 cm.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="b">
+    <legend>2. A chord of a circle of radius 10 cm is 6 cm from the centre. The chord is…</legend>
+    <div class="opts">
+      <button data-opt="a">8 cm</button>
+      <button data-opt="b">16 cm</button>
+      <button data-opt="c">12 cm</button>
+      <button data-opt="d">4 cm</button>
+    </div>
+    <p class="why" hidden>Half the chord = √(100 − 36) = √64 = 8 cm, so the chord is 2 × 8 = 16 cm.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="a">
+    <legend>3. Two chords of a circle are each 4 cm from the centre. One is 10 cm long. The other is…</legend>
+    <div class="opts">
+      <button data-opt="a">10 cm</button>
+      <button data-opt="b">8 cm</button>
+      <button data-opt="c">5 cm</button>
+      <button data-opt="d">can't tell</button>
+    </div>
+    <p class="why" hidden>Chords equidistant from the centre are congruent.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="c">
+    <legend>4. O is the centre and M is the midpoint of chord PQ. Then ∠OMP is…</legend>
+    <div class="opts">
+      <button data-opt="a">45°</button>
+      <button data-opt="b">60°</button>
+      <button data-opt="c">90°</button>
+      <button data-opt="d">180°</button>
+    </div>
+    <p class="why" hidden>The segment from the centre to the midpoint of a chord is perpendicular to it.</p>
+  </fieldset>
+  <p class="score" aria-live="polite"></p>
+</div>
+<nav class="next-prev" aria-label="Lessons">
+  <a href="../quads/midpoint-theorem.html">← The midpoint theorem</a>
+  <a href="incircle-and-circumcircle.html">Next: Incircle and circumcircle →</a>
+</nav>
+</main>
+
+<footer class="foot">Follows Chapter 6 of the Maharashtra State Board Std 9 Mathematics Part II textbook. Explanations and examples are original.</footer>
+</div>
+
+<script src="../../assets/js/sim-kit.js?v=20261010"></script>
+<script src="../../assets/js/math-kit.js?v=20261010"></script>
+<script src="../../assets/js/sims/circle-chords.js?v=20261010"></script>
+<script src="../../assets/js/quiz.js?v=20261010"></script>
+<script>
+  (function () {
+    var simEl = document.getElementById("sim-main");
+    var sim = CircleChordSim.mount(simEl, { mode: "chord", r: 10, d: 6 });
+    window.lessonSim = sim;
+    // Buttons in the lesson that set up the simulation: data-sim='{...settings}'
+    document.querySelectorAll("main [data-sim]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        sim.set(JSON.parse(b.dataset.sim));
+        sim.play();
+        simEl.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+      });
+    });
+  })();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/contrib/auto-render.min.js"></script>
+<script>
+  renderMathInElement(document.body, {
+    delimiters: [{ left: "$$", right: "$$", display: true }, { left: "\\(", right: "\\)", display: false }],
+    output: window.KATEX_OUTPUT || "htmlAndMathml",
+    throwOnError: false
+  });
+</script>
+
+</body>
+</html>

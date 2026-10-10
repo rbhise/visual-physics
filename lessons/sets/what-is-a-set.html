@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sets and How to Write Them · Visual Science &amp; Maths</title>
+<meta name="description" content="What a set is, the symbols ∈ and ∉, the listing and rule methods, and finite, infinite, empty, singleton and equal sets. Sort number tokens into a set yourself.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.css">
+<link rel="stylesheet" href="../../assets/css/style.css?v=20261010">
+</head>
+<body class="lesson ch-sets">
+<div class="wrap">
+
+<header class="site-head">
+  <a class="brand" href="../../index.html"><svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><path d="M3 27 Q14 -1 29 27" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-dasharray="2.5 3.5"/><circle cx="21" cy="10" r="4.2" fill="var(--vy)"/></svg> Visual <span>Science &amp; Maths</span></a>
+  <nav class="site-nav" aria-label="Main"><a href="../../index.html#maths">Chapters</a><a href="../../index.html#games">Games</a></nav>
+</header>
+
+<main>
+<div class="title-band">
+<p class="eyebrow">Sets, lesson 1</p>
+<h1>Sets and How to Write Them</h1>
+<p class="lede">The days of the week, the factors of 18, the letters of your name: each is a collection where you can say for sure what belongs. In mathematics such a collection is called a set.</p>
+<p class="downloads"><a class="btn" href="../../slides/what-is-a-set.pptx" download>Download slides (.pptx)</a> <span>12 slides with teacher notes</span></p>
+</div>
+
+<div id="sim-main"></div>
+
+<section class="prose">
+  <h2>What is a set?</h2>
+  <div class="note"><strong>Set.</strong> A <strong>set</strong> is a collection of objects in which it is possible to decide clearly whether a given object belongs to the collection or not. Each object in a set is called an <strong>element</strong> (or member) of the set.</div>
+  <p>“The months that have 31 days” is a set: January belongs, June does not. “The tall students in my class” is <em>not</em> a set, because people can disagree about who is tall. A set must be <strong>well defined</strong>.</p>
+  <p>Sets are usually named with capital letters \(A, B, C, \ldots\) and elements with small letters. If \(a\) is an element of set \(A\), we write \(a \in A\) and read it “\(a\) belongs to \(A\)”. If \(b\) is not an element of \(A\), we write \(b \notin A\).</p>
+
+  <h2>Two ways to write a set</h2>
+  <p><strong>Listing method (roster method).</strong> Write every element inside curly brackets \(\{\;\}\), separated by commas. Each element is written only once, and the order does not matter.</p>
+  <div class="eq">$$A = \{2, 4, 6, 8, 10, 12\}$$</div>
+  <p><strong>Rule method (set-builder method).</strong> Write a general element, say \(x\), and after a vertical bar the property every element has. The bar “\(|\)” is read “such that”.</p>
+  <div class="eq">$$A = \{x \mid x \text{ is an even natural number}, x &lt; 13\}$$</div>
+  <p>Some sets of numbers have their own letters: \(N\) natural numbers, \(W\) whole numbers, \(I\) integers, \(Q\) rational numbers and \(R\) real numbers.</p>
+
+  <h2>Types of sets</h2>
+  <div class="table-wrap"><table class="compare">
+    <thead><tr><th>Type</th><th>Meaning</th><th>Example</th></tr></thead>
+    <tbody>
+      <tr><th>Singleton set</th><td>exactly one element</td><td>\(\{x \mid x \in N, x^2 = 49\} = \{7\}\)</td></tr>
+      <tr><th>Empty (null) set</th><td>no element at all; written \(\{\;\}\) or \(\varnothing\)</td><td>even prime numbers greater than 2</td></tr>
+      <tr><th>Finite set</th><td>the elements can be counted to an end</td><td>\(\{1, 2, 3, 6, 9, 18\}\)</td></tr>
+      <tr><th>Infinite set</th><td>the elements never come to an end</td><td>\(\{5, 10, 15, 20, \ldots\}\)</td></tr>
+    </tbody>
+  </table></div>
+  <p>The number of elements in a finite set \(A\) is written \(n(A)\). For \(A = \{1, 2, 3, 6, 9, 18\}\), \(n(A) = 6\). The empty set has \(n(\varnothing) = 0\).</p>
+
+  <h2>Equal sets</h2>
+  <div class="note"><strong>Equal sets.</strong> If every element of set \(A\) is in set \(B\) and every element of \(B\) is in \(A\), then \(A\) and \(B\) are equal sets: \(A = B\).</div>
+  <p>The letters of the word “listen” and the letters of the word “silent” form the same set \(\{l, i, s, t, e, n\}\), so the two sets are equal. Order and repetition make no difference.</p>
+</section>
+<h2>Try it</h2>
+<p class="prose" style="margin-top:1rem">Pick a rule, then drag the number tokens into the oval for A (or tap a token to move it). The readouts write the set for you.</p>
+<ul class="tries">
+  <li><span><strong>Finite set.</strong> Even natural numbers less than 13.</span>
+    <button class="btn" data-sim='{"rule":"even","inside":[]}'>Try it</button></li>
+  <li><span><strong>Primes.</strong> All prime numbers below 20. Is 1 one of them?</span>
+    <button class="btn" data-sim='{"rule":"prime","inside":[]}'>Try it</button></li>
+  <li><span><strong>Singleton set.</strong> Natural numbers whose square is 49.</span>
+    <button class="btn" data-sim='{"rule":"single","inside":[]}'>Try it</button></li>
+  <li><span><strong>Empty set.</strong> Even prime numbers greater than 2.</span>
+    <button class="btn" data-sim='{"rule":"empty","inside":[]}'>Try it</button></li>
+  <li><span><strong>Infinite set.</strong> Multiples of 5. The tray stops at 20, but the set does not.</span>
+    <button class="btn" data-sim='{"rule":"five","inside":[]}'>Try it</button></li>
+</ul>
+<p class="prose" style="margin-top:1rem;font-size:.875rem;color:var(--muted)">What you should see: 8 primes below 20: {2, 3, 5, 7, 11, 13, 17, 19}; 1 is not prime. The square rule gives the singleton set {7}. No number fits “even prime greater than 2”, so that set is ∅. The multiples of 5 are written {5, 10, 15, 20, …}: an infinite set.</p>
+
+<h2>Worked examples</h2>
+<div class="example">
+  <h3 style="margin-top:0">1. Rule form to listing form</h3>
+  <p>Write \(A = \{x \mid x \text{ is a factor of } 18\}\) by the listing method and find \(n(A)\).</p>
+  <ol>
+    <li>The factors of 18 come in pairs: \(1 \times 18,\; 2 \times 9,\; 3 \times 6\).</li>
+    <li><span class="answer">A = {1, 2, 3, 6, 9, 18}</span> and <span class="answer">n(A) = 6</span></li>
+  </ol>
+  <button class="btn" data-sim='{"rule":"factor","done":true}'>Check it</button>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">2. Listing form to rule form</h3>
+  <p>Write \(B = \{1, 4, 9, 16, 25\}\) by the rule method.</p>
+  <ol>
+    <li>Look for the pattern: \(1 = 1^2,\; 4 = 2^2,\; 9 = 3^2,\; 16 = 4^2,\; 25 = 5^2\).</li>
+    <li><span class="answer">B = {x | x = n², n ∈ N, n ≤ 5}</span>, or in words, “the squares of the first five natural numbers”.</li>
+  </ol>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">3. Which type of set?</h3>
+  <p>Say whether each set is empty, singleton, finite or infinite: (i) \(P = \{x \mid x \in N, x + 4 = 4\}\) (ii) \(Q = \{0\}\) (iii) \(S\) = the letters of the word “MISSISSIPPI” (iv) \(T = \{x \mid x \text{ is an odd natural number}\}\).</p>
+  <ol>
+    <li>(i) \(x + 4 = 4\) gives \(x = 0\), which is not a natural number: <span class="answer">P = ∅, empty</span></li>
+    <li>(ii) \(Q\) has one element, the number 0: <span class="answer">singleton</span></li>
+    <li>(iii) Write each letter once: \(S = \{M, I, S, P\}\): <span class="answer">finite, n(S) = 4</span></li>
+    <li>(iv) \(T = \{1, 3, 5, 7, \ldots\}\) never ends: <span class="answer">infinite</span></li>
+  </ol>
+</div>
+
+<h2>Common mistakes</h2>
+<ul class="mistakes" style="margin-top:1rem">
+  <li><strong>Writing an element twice.</strong> The letters of “banana” form the set {b, a, n}, not {b, a, n, a, n, a}.</li>
+  <li><strong>Calling {0} empty.</strong> {0} has one element, the number 0, so it is a singleton set. The empty set is { } or ∅.</li>
+  <li><strong>Thinking order matters.</strong> {1, 2, 3} and {3, 1, 2} have the same elements, so they are equal sets.</li>
+  <li><strong>Collecting vague things.</strong> “Good singers” or “big cities” are not sets: there is no clear test of who belongs.</li>
+</ul>
+
+<h2>Quick check</h2>
+<div class="quiz">
+  <fieldset class="q" data-answer="b">
+    <legend>1. Which of these is a set?</legend>
+    <div class="opts">
+      <button data-opt="a">the good books in a library</button>
+      <button data-opt="b">the months that have 31 days</button>
+      <button data-opt="c">the tall trees in a park</button>
+      <button data-opt="d">the clever students in a class</button>
+    </div>
+    <p class="why" hidden>Only the months with 31 days can be decided without doubt: January, March, May, July, August, October and December.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="b">
+    <legend>2. A = {x | x is a prime number, 10 &lt; x &lt; 20}. What is n(A)?</legend>
+    <div class="opts">
+      <button data-opt="a">3</button>
+      <button data-opt="b">4</button>
+      <button data-opt="c">5</button>
+      <button data-opt="d">6</button>
+    </div>
+    <p class="why" hidden>A = {11, 13, 17, 19}, so n(A) = 4. 15 is not prime.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="b">
+    <legend>3. Which set is empty?</legend>
+    <div class="opts">
+      <button data-opt="a">{0}</button>
+      <button data-opt="b">{x | x ∈ N, x + 3 = 3}</button>
+      <button data-opt="c">{x | x is an even prime number}</button>
+      <button data-opt="d">{x | x ∈ N, x &lt; 2}</button>
+    </div>
+    <p class="why" hidden>x + 3 = 3 gives x = 0, and 0 is not a natural number. {0} has one element; the even prime set is {2}; and {x | x ∈ N, x &lt; 2} = {1}.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="b">
+    <legend>4. Which two sets are equal?</legend>
+    <div class="opts">
+      <button data-opt="a">{1, 2, 3} and {1, 2, 3, 4}</button>
+      <button data-opt="b">the letters of “stop” and the letters of “post”</button>
+      <button data-opt="c">{2, 4} and {4, 8}</button>
+      <button data-opt="d">{0} and ∅</button>
+    </div>
+    <p class="why" hidden>Both are {s, t, o, p}: the same four letters in a different order.</p>
+  </fieldset>
+  <p class="score" aria-live="polite"></p>
+</div>
+<nav class="next-prev" aria-label="Lessons">
+  <a href="../../index.html#maths">← All maths chapters</a>
+  <a href="venn-diagrams.html">Next: Venn diagrams, subsets and complements →</a>
+</nav>
+</main>
+
+<footer class="foot">Follows Chapter 1 of the Maharashtra State Board Std 9 Mathematics Part I textbook. Explanations and examples are original.</footer>
+</div>
+
+<script src="../../assets/js/sim-kit.js?v=20261010"></script>
+<script src="../../assets/js/math-kit.js?v=20261010"></script>
+<script src="../../assets/js/sims/sets-intro.js?v=20261010"></script>
+<script src="../../assets/js/quiz.js?v=20261010"></script>
+<script>
+  (function () {
+    var simEl = document.getElementById("sim-main");
+    var sim = SetsIntroSim.mount(simEl, { rule: "even", inside: [2, 4, 9] });
+    window.lessonSim = sim;
+    // Buttons in the lesson that set up the simulation: data-sim='{...settings}'
+    document.querySelectorAll("main [data-sim]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        sim.set(JSON.parse(b.dataset.sim));
+        sim.play();
+        simEl.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+      });
+    });
+  })();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/contrib/auto-render.min.js"></script>
+<script>
+  renderMathInElement(document.body, {
+    delimiters: [{ left: "$$", right: "$$", display: true }, { left: "\\(", right: "\\)", display: false }],
+    output: window.KATEX_OUTPUT || "htmlAndMathml",
+    throwOnError: false
+  });
+</script>
+
+</body>
+</html>

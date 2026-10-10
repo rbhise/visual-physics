@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tests for Parallel Lines · Visual Science &amp; Maths</title>
+<meta name="description" content="The converse tests: interior angles supplementary, alternate angles equal or corresponding angles equal show that two lines are parallel; lines perpendicular to one line.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.css">
+<link rel="stylesheet" href="../../assets/css/style.css?v=20261010">
+</head>
+<body class="lesson ch-parallel">
+<div class="wrap">
+
+<header class="site-head">
+  <a class="brand" href="../../index.html"><svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><path d="M3 27 Q14 -1 29 27" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-dasharray="2.5 3.5"/><circle cx="21" cy="10" r="4.2" fill="var(--vy)"/></svg> Visual <span>Science &amp; Maths</span></a>
+  <nav class="site-nav" aria-label="Main"><a href="../../index.html#maths">Chapters</a><a href="../../index.html#games">Games</a></nav>
+</header>
+
+<main>
+<div class="title-band">
+<p class="eyebrow">Parallel Lines, lesson 2</p>
+<h1>Tests for Parallel Lines</h1>
+<p class="lede">The properties tell us about angles when we already know the lines are parallel. The tests work the other way round: measure a pair of angles and decide whether the lines are parallel.</p>
+<p class="downloads"><a class="btn" href="../../slides/tests-for-parallel-lines.pptx" download>Download slides (.pptx)</a> <span>12 slides with teacher notes</span></p>
+</div>
+
+<div id="sim-main"></div>
+
+<section class="prose">
+  <h2>Properties and tests</h2>
+  <p>In the last lesson we started from \(l \parallel m\) and found facts about the angles. Those were conditional statements. Their <strong>converses</strong> start from the angles and conclude that the lines are parallel. The converses are also true, and they are called the <strong>tests for parallel lines</strong>.</p>
+
+  <h2>The three tests</h2>
+  <div class="note"><strong>Interior angle test.</strong> If the interior angles formed by a transversal of two distinct lines are supplementary, then the two lines are parallel.</div>
+  <div class="note"><strong>Alternate angle test.</strong> If a pair of alternate angles formed by a transversal of two lines is congruent, then the two lines are parallel.</div>
+  <div class="note"><strong>Corresponding angle test.</strong> If a pair of corresponding angles formed by a transversal of two lines is congruent, then the two lines are parallel.</div>
+  <p>The simulation uses the same letters as before: \(\angle a, \angle b, \angle c, \angle d\) at \(l\) and \(\angle p, \angle q, \angle r, \angle s\) at \(m\). Set \(\angle p\) and watch: the lines become parallel <strong>exactly</strong> when the pair passes the test.</p>
+
+  <h2>Why the interior angle test works (indirect proof)</h2>
+  <p>Suppose \(\angle d + \angle p = 180^\circ\) but the lines are <em>not</em> parallel. Then they meet at some point T, on one side of the transversal. The other two interior angles also add up to \(360^\circ - 180^\circ = 180^\circ\). So whichever side T is on, the triangle formed there has two angles adding up to \(180^\circ\), and its third angle at T would be \(0^\circ\). That is impossible. So the lines are parallel.</p>
+  <p>The other two tests follow from it. If \(\angle c = \angle p\), then \(\angle d + \angle p = \angle d + \angle c = 180^\circ\) (linear pair), so the interior angle test applies. If \(\angle a = \angle p\), then \(\angle c = \angle a = \angle p\) (vertically opposite angles), so the alternate angle test applies.</p>
+
+  <h2>Two corollaries</h2>
+  <ul class="mistakes">
+    <li>If a line is perpendicular to two lines in a plane, then the two lines are parallel to each other. (The interior angles are \(90^\circ + 90^\circ = 180^\circ\).)</li>
+    <li>If two lines in a plane are parallel to a third line in the plane, then those two lines are parallel to each other.</li>
+  </ul>
+</section>
+<h2>Try it</h2>
+<p class="prose" style="margin-top:1rem">Choose a test, then set ∠p with the slider or by dragging the end of line m.</p>
+<ul class="tries">
+  <li><span><strong>Corresponding, not equal.</strong> ∠a = 65°, ∠p = 50°.</span>
+    <button class="btn" data-sim='{"mode":"test","test":"corr","th":65,"pm":50}'>Show</button></li>
+  <li><span><strong>Corresponding, equal.</strong> ∠a = 65°, ∠p = 65°.</span>
+    <button class="btn" data-sim='{"mode":"test","test":"corr","th":65,"pm":65}'>Show</button></li>
+  <li><span><strong>Alternate.</strong> ∠c = 110°, ∠p = 110°.</span>
+    <button class="btn" data-sim='{"mode":"test","test":"alt","th":110,"pm":110}'>Show</button></li>
+  <li><span><strong>Interior.</strong> ∠d = 110°, ∠p = 70°.</span>
+    <button class="btn" data-sim='{"mode":"test","test":"int","th":70,"pm":70}'>Show</button></li>
+  <li><span><strong>Both perpendicular.</strong> l ⊥ t and m ⊥ t.</span>
+    <button class="btn" data-sim='{"mode":"test","test":"perp","pm":90}'>Show</button></li>
+</ul>
+<p class="prose" style="margin-top:1rem;font-size:.875rem;color:var(--muted)">What you should see: with 65° and 50° the test fails and the lines meet on the right. With 65° and 65°, 110° and 110°, or 110° + 70° = 180°, the test passes and the lines are parallel. Two lines perpendicular to t are parallel.</p>
+
+<h2>Worked examples</h2>
+<div class="example">
+  <h3 style="margin-top:0">1. Name the test</h3>
+  <p>A transversal makes \(\angle a = 72^\circ\) with line \(l\) and the corresponding angle \(\angle p = 72^\circ\) with line \(m\). Are the lines parallel?</p>
+  <ol>
+    <li>\(\angle a\) and \(\angle p\) are corresponding angles and they are equal.</li>
+    <li>By the corresponding angle test, <span class="answer">l ∥ m</span></li>
+  </ol>
+  <button class="btn" data-sim='{"mode":"test","test":"corr","th":72,"pm":72}'>Check it</button>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">2. Find x so that the lines are parallel</h3>
+  <p>Interior angles on the same side of a transversal are \(\angle d = (2x + 16)^\circ\) and \(\angle p = (3x - 6)^\circ\). For what value of \(x\) is \(l \parallel m\)?</p>
+  <ol>
+    <li>By the interior angle test the lines are parallel when \(2x + 16 + 3x - 6 = 180\).</li>
+    <li>\(5x + 10 = 180\), so \(5x = 170\) and <span class="answer">x = 34</span></li>
+    <li>Then \(\angle d = 84^\circ\) and \(\angle p = 96^\circ\); \(84^\circ + 96^\circ = 180^\circ\) ✓</li>
+  </ol>
+  <button class="btn" data-sim='{"mode":"test","test":"int","th":96,"pm":96}'>Check it</button>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">3. Using the corollaries</h3>
+  <p>Lines \(l\) and \(m\) are both perpendicular to line \(n\). Line \(k\) is parallel to \(m\). How are \(k\) and \(l\) related?</p>
+  <ol>
+    <li>\(l \perp n\) and \(m \perp n\), so \(l \parallel m\) (a line perpendicular to two lines).</li>
+    <li>\(k \parallel m\) and \(l \parallel m\): two lines parallel to a third line are parallel to each other.</li>
+    <li>So <span class="answer">k ∥ l</span></li>
+  </ol>
+  <button class="btn" data-sim='{"mode":"test","test":"perp","pm":90}'>See l ⊥ t, m ⊥ t</button>
+</div>
+
+<h2>Common mistakes</h2>
+<ul class="mistakes" style="margin-top:1rem">
+  <li><strong>Testing the wrong pair.</strong> Vertically opposite angles are always equal; they say nothing about whether the lines are parallel. Use a pair at the two different lines.</li>
+  <li><strong>“Equal interior angles, so parallel.”</strong> Interior angles on the same side must add up to 180°. They are equal only when both are 90°.</li>
+  <li><strong>Mixing up property and test.</strong> A property starts from l ∥ m. A test ends with l ∥ m. Say which one you are using.</li>
+  <li><strong>Wrong positions.</strong> Alternate angles must be on opposite sides of the transversal; interior angles of the test must be on the same side.</li>
+</ul>
+
+<h2>Quick check</h2>
+<div class="quiz">
+  <fieldset class="q" data-answer="b">
+    <legend>1. A transversal makes a pair of alternate angles of 63° and 63°. The two lines are…</legend>
+    <div class="opts">
+      <button data-opt="a">not parallel</button>
+      <button data-opt="b">parallel</button>
+      <button data-opt="c">perpendicular</button>
+      <button data-opt="d">impossible to decide</button>
+    </div>
+    <p class="why" hidden>Equal alternate angles: by the alternate angle test the lines are parallel.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="a">
+    <legend>2. Interior angles on the same side of a transversal are 95° and 95°. The lines are…</legend>
+    <div class="opts">
+      <button data-opt="a">not parallel</button>
+      <button data-opt="b">parallel</button>
+      <button data-opt="c">perpendicular to each other</button>
+      <button data-opt="d">the same line</button>
+    </div>
+    <p class="why" hidden>95° + 95° = 190°, not 180°. The interior angles on the other side add up to 170°, so the lines meet on that side.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="a">
+    <legend>3. Corresponding angles are (3x + 5)° and 50°. The lines are parallel when x is…</legend>
+    <div class="opts">
+      <button data-opt="a">15</button>
+      <button data-opt="b">10</button>
+      <button data-opt="c">55</button>
+      <button data-opt="d">45</button>
+    </div>
+    <p class="why" hidden>3x + 5 = 50, so 3x = 45 and x = 15.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="b">
+    <legend>4. Line l ⊥ line n and line m ⊥ line n, all in one plane. Then…</legend>
+    <div class="opts">
+      <button data-opt="a">l ⊥ m</button>
+      <button data-opt="b">l ∥ m</button>
+      <button data-opt="c">l ∥ n</button>
+      <button data-opt="d">nothing can be said</button>
+    </div>
+    <p class="why" hidden>A line perpendicular to two lines in a plane makes them parallel (interior angles 90° + 90° = 180°).</p>
+  </fieldset>
+  <p class="score" aria-live="polite"></p>
+</div>
+<nav class="next-prev" aria-label="Lessons">
+  <a href="angles-and-transversals.html">← Angles made by a transversal</a>
+  <a href="../triangles/angles-of-a-triangle.html">Next chapter: Triangles →</a>
+</nav>
+</main>
+
+<footer class="foot">Follows Chapter 2 of the Maharashtra State Board Std 9 Mathematics Part II textbook. Explanations and examples are original.</footer>
+</div>
+
+<script src="../../assets/js/sim-kit.js?v=20261010"></script>
+<script src="../../assets/js/math-kit.js?v=20261010"></script>
+<script src="../../assets/js/sims/parallel-lines.js?v=20261010"></script>
+<script src="../../assets/js/quiz.js?v=20261010"></script>
+<script>
+  (function () {
+    var simEl = document.getElementById("sim-main");
+    var sim = ParallelSim.mount(simEl, { mode: "test", test: "corr", th: 65, pm: 50 });
+    window.lessonSim = sim;
+    // Buttons in the lesson that set up the simulation: data-sim='{...settings}'
+    document.querySelectorAll("main [data-sim]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        sim.set(JSON.parse(b.dataset.sim));
+        sim.play();
+        simEl.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+      });
+    });
+  })();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/contrib/auto-render.min.js"></script>
+<script>
+  renderMathInElement(document.body, {
+    delimiters: [{ left: "$$", right: "$$", display: true }, { left: "\\(", right: "\\)", display: false }],
+    output: window.KATEX_OUTPUT || "htmlAndMathml",
+    throwOnError: false
+  });
+</script>
+
+</body>
+</html>

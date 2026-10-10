@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Solving Simultaneous Equations · Visual Science &amp; Maths</title>
+<meta name="description" content="Solve two equations at once by elimination or substitution, step by step, and see the answer where the two lines cross.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.css">
+<link rel="stylesheet" href="../../assets/css/style.css?v=20261010">
+</head>
+<body class="lesson ch-linear">
+<div class="wrap">
+
+<header class="site-head">
+  <a class="brand" href="../../index.html"><svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><path d="M3 27 Q14 -1 29 27" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-dasharray="2.5 3.5"/><circle cx="21" cy="10" r="4.2" fill="var(--vy)"/></svg> Visual <span>Science &amp; Maths</span></a>
+  <nav class="site-nav" aria-label="Main"><a href="../../index.html#maths">Chapters</a><a href="../../index.html#games">Games</a></nav>
+</header>
+
+<main>
+<div class="title-band">
+<p class="eyebrow">Linear Equations in Two Variables, lesson 2</p>
+<h1>Solving Simultaneous Equations</h1>
+<p class="lede">One equation has endless solutions. Add a second condition and usually only one pair of numbers satisfies both. Finding that pair is called solving simultaneous equations.</p>
+<p class="downloads"><a class="btn" href="../../slides/simultaneous-equations.pptx" download>Download slides (.pptx)</a> <span>12 slides with teacher notes</span></p>
+</div>
+
+<div id="sim-main"></div>
+
+<section class="prose">
+  <h2>Two equations, one answer</h2>
+  <p>A pair of linear equations in the same two variables, considered together, are called <strong>simultaneous equations</strong>. Their solution is the pair \((x, y)\) that satisfies <em>both</em>. On a graph, each equation is a line; the solution is the point where the lines <strong>cross</strong>.</p>
+
+  <h2>Elimination method</h2>
+  <p>Make the coefficients of one variable equal (multiply one or both equations if needed), then add or subtract the equations so that variable disappears. Solve for the other variable and substitute back.</p>
+  <div class="eq">$$\begin{aligned} x + y &= 4 &&\text{(I)}\\ 2x - 5y &= 1 &&\text{(II)} \end{aligned}$$</div>
+  <p>Multiply (I) by 5: \(5x + 5y = 20\). Add (II): \(7x = 21\), so \(x = 3\). Then from (I), \(y = 4 - 3 = 1\). The solution is \((3, 1)\).</p>
+
+  <h2>Substitution method</h2>
+  <p>Make one variable the subject of one equation, substitute that expression into the other equation, and solve. From (I), \(x = 4 - y\). Put it in (II): \(2(4 - y) - 5y = 1\), so \(8 - 7y = 1\), \(y = 1\) and \(x = 3\). Same answer.</p>
+
+  <div class="note"><strong>Always check.</strong> Put your answer into both original equations. \((3, 1)\): \(3 + 1 = 4\) ✓ and \(6 - 5 = 1\) ✓.</div>
+
+  <h2>When there is no single answer</h2>
+  <p>If the two lines are parallel they never meet, and the equations have <strong>no solution</strong>. If both equations describe the same line, there are <strong>infinitely many</strong>. You can see both cases in the simulation.</p>
+</section>
+<h2>Try it</h2>
+<p class="prose" style="margin-top:1rem">Set the equations with the sliders, then press “Show the steps”.</p>
+<ul class="tries">
+  <li><span><strong>Elimination.</strong> x + y = 4 and 2x − 5y = 1.</span>
+    <button class="btn" data-sim='{"e1":[1,1,4],"e2":[2,-5,1],"method":"elim"}'>Solve</button></li>
+  <li><span><strong>Substitution.</strong> The same pair by substitution.</span>
+    <button class="btn" data-sim='{"e1":[1,1,4],"e2":[2,-5,1],"method":"subs"}'>Solve</button></li>
+  <li><span><strong>Add to eliminate.</strong> 3x − 5y = −16 and 2x + 5y = 31.</span>
+    <button class="btn" data-sim='{"e1":[3,-5,-16],"e2":[2,5,31],"method":"elim"}'>Solve</button></li>
+  <li><span><strong>Parallel lines.</strong> x + 2y = 4 and 2x + 4y = 12.</span>
+    <button class="btn" data-sim='{"e1":[1,2,4],"e2":[2,4,12],"method":"elim"}'>Try it</button></li>
+</ul>
+<p class="prose" style="margin-top:1rem;font-size:.875rem;color:var(--muted)">What you should see: both methods give (3, 1), and the lines cross there. In the third pair the y-terms already cancel when you add: 5x = 15, so x = 3 and y = 5. In the last pair the lines are parallel: there is no solution.</p>
+
+<h2>Worked examples</h2>
+<div class="example">
+  <h3 style="margin-top:0">1. Elimination by adding</h3>
+  <p>Solve \(3x - 5y = -16\) and \(2x + 5y = 31\).</p>
+  <ol>
+    <li>The y-coefficients are −5 and +5. Add the equations: \(5x = 15\), so \(x = 3\).</li>
+    <li>Put \(x = 3\) in the second: \(6 + 5y = 31\), so \(5y = 25\), \(y = 5\).</li>
+    <li><span class="answer">x = 3, y = 5</span></li>
+  </ol>
+  <button class="btn" data-sim='{"e1":[3,-5,-16],"e2":[2,5,31],"method":"elim"}'>Check it in the simulation</button>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">2. Multiply first</h3>
+  <p>Solve \(2x + 3y = 12\) and \(3x - 2y = 5\).</p>
+  <ol>
+    <li>Multiply the first by 2 and the second by 3: \(4x + 6y = 24\), \(9x - 6y = 15\).</li>
+    <li>Add: \(13x = 39\), so \(x = 3\). Then \(2(3) + 3y = 12\), so \(y = 2\).</li>
+    <li><span class="answer">x = 3, y = 2</span></li>
+  </ol>
+  <button class="btn" data-sim='{"e1":[2,3,12],"e2":[3,-2,5],"method":"elim"}'>Check it in the simulation</button>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">3. Substitution</h3>
+  <p>Solve \(y = 2x - 1\) and \(3x + 2y = 12\).</p>
+  <ol>
+    <li>The first is already solved for y. Substitute: \(3x + 2(2x - 1) = 12\).</li>
+    <li>\(7x - 2 = 12\), so \(x = 2\), and \(y = 2(2) - 1 = 3\).</li>
+    <li><span class="answer">x = 2, y = 3</span></li>
+  </ol>
+  <button class="btn" data-sim='{"e1":[-2,1,-1],"e2":[3,2,12],"method":"subs"}'>Check it in the simulation</button>
+</div>
+
+<h2>Common mistakes</h2>
+<ul class="mistakes" style="margin-top:1rem">
+  <li><strong>Adding when you should subtract.</strong> If the coefficients have the same sign, subtract; if opposite signs, add.</li>
+  <li><strong>Multiplying only one side.</strong> When you multiply an equation, multiply every term, including the right side.</li>
+  <li><strong>Stopping after one variable.</strong> You need both x and y. Substitute back to find the second.</li>
+  <li><strong>Skipping the check.</strong> Substitute into both original equations; a slip shows up at once.</li>
+</ul>
+
+<h2>Quick check</h2>
+<div class="quiz">
+  <fieldset class="q" data-answer="b">
+    <legend>1. Solve x + y = 10 and x − y = 2.</legend>
+    <div class="opts">
+      <button data-opt="a">x = 4, y = 6</button>
+      <button data-opt="b">x = 6, y = 4</button>
+      <button data-opt="c">x = 5, y = 5</button>
+      <button data-opt="d">x = 8, y = 2</button>
+    </div>
+    <p class="why" hidden>Add: 2x = 12, x = 6, then y = 4.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="b">
+    <legend>2. To eliminate y from 2x + 3y = 7 and 5x − 3y = 14, you should…</legend>
+    <div class="opts">
+      <button data-opt="a">subtract the equations</button>
+      <button data-opt="b">add the equations</button>
+      <button data-opt="c">multiply both by 3</button>
+      <button data-opt="d">divide by y</button>
+    </div>
+    <p class="why" hidden>+3y and −3y cancel when you add.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="b">
+    <legend>3. On a graph, the solution of two simultaneous equations is…</legend>
+    <div class="opts">
+      <button data-opt="a">where each line crosses the x-axis</button>
+      <button data-opt="b">where the two lines cross</button>
+      <button data-opt="c">the origin</button>
+      <button data-opt="d">the steeper line</button>
+    </div>
+    <p class="why" hidden>Only the crossing point lies on both lines.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="c">
+    <legend>4. x + 2y = 4 and 2x + 4y = 12 have…</legend>
+    <div class="opts">
+      <button data-opt="a">one solution</button>
+      <button data-opt="b">two solutions</button>
+      <button data-opt="c">no solution</button>
+      <button data-opt="d">infinitely many solutions</button>
+    </div>
+    <p class="why" hidden>The lines are parallel: the second has the same slope but a different constant.</p>
+  </fieldset>
+  <p class="score" aria-live="polite"></p>
+</div>
+<nav class="next-prev" aria-label="Lessons">
+  <a href="linear-equations.html">← Linear equations in two variables</a>
+  <a href="word-problems.html">Next: Word problems →</a>
+</nav>
+</main>
+
+<footer class="foot">Follows Chapter 5 of the Maharashtra State Board Std 9 Mathematics Part I textbook, with the graphs of linear equations from the NCERT Class 9 book. Explanations and examples are original.</footer>
+</div>
+
+<script src="../../assets/js/sim-kit.js?v=20261010"></script>
+<script src="../../assets/js/math-kit.js?v=20261010"></script>
+<script src="../../assets/js/sims/simul.js?v=20261010"></script>
+<script src="../../assets/js/quiz.js?v=20261010"></script>
+<script>
+  (function () {
+    var simEl = document.getElementById("sim-main");
+    var sim = SimulSim.mount(simEl, { e1: [1, 1, 4], e2: [2, -5, 1], method: "elim" });
+    window.lessonSim = sim;
+    // Buttons in the lesson that set up the simulation: data-sim='{...settings}'
+    document.querySelectorAll("main [data-sim]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        sim.set(JSON.parse(b.dataset.sim));
+        sim.play();
+        simEl.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+      });
+    });
+  })();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/contrib/auto-render.min.js"></script>
+<script>
+  renderMathInElement(document.body, {
+    delimiters: [{ left: "$$", right: "$$", display: true }, { left: "\\(", right: "\\)", display: false }],
+    output: window.KATEX_OUTPUT || "htmlAndMathml",
+    throwOnError: false
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Axes, Quadrants and Plotting Points · Visual Science &amp; Maths</title>
+<meta name="description" content="Drag a point on the co-ordinate plane and read its co-ordinates, signs and quadrant. Then plot hidden points yourself.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.css">
+<link rel="stylesheet" href="../../assets/css/style.css?v=20261010">
+</head>
+<body class="lesson ch-coords">
+<div class="wrap">
+
+<header class="site-head">
+  <a class="brand" href="../../index.html"><svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><path d="M3 27 Q14 -1 29 27" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-dasharray="2.5 3.5"/><circle cx="21" cy="10" r="4.2" fill="var(--vy)"/></svg> Visual <span>Science &amp; Maths</span></a>
+  <nav class="site-nav" aria-label="Main"><a href="../../index.html#maths">Chapters</a><a href="../../index.html#games">Games</a></nav>
+</header>
+
+<main>
+<div class="title-band">
+<p class="eyebrow">Co-ordinate Geometry, lesson 1</p>
+<h1>Axes, Quadrants and Plotting Points</h1>
+<p class="lede">“Meet me at the bench two steps east and three steps north of the gate.” Two numbers fix one place. On paper, two number lines at right angles do the same job for every point of the plane.</p>
+<p class="downloads"><a class="btn" href="../../slides/plotting-points.pptx" download>Download slides (.pptx)</a> <span>12 slides with teacher notes</span></p>
+</div>
+
+<div id="sim-main"></div>
+
+<section class="prose">
+  <h2>Co-ordinates on a number line</h2>
+  <p>On a number line every point has one number, its <strong>co-ordinate</strong>. Point O has co-ordinate 0. Points to the right of O have positive co-ordinates and points to the left have negative ones. If point A is 4 units to the left of O, the co-ordinate of A is \(-4\). One number is enough to fix a point on a line.</p>
+
+  <h2>The axes and the origin</h2>
+  <p>To fix a point in a plane we need two numbers. Draw a horizontal number line and a vertical number line that cross at right angles at their zero points.</p>
+  <div class="note">
+    <p>The horizontal line is the <strong>X-axis</strong> and the vertical line is the <strong>Y-axis</strong>. The point where they meet is the <strong>origin</strong>, written O. On the X-axis, numbers to the right of O are positive and to the left are negative. On the Y-axis, numbers above O are positive and below O are negative.</p>
+  </div>
+
+  <h2>Co-ordinates of a point</h2>
+  <p>Take any point P in the plane. Draw a perpendicular from P to the X-axis and another to the Y-axis. Suppose the first one meets the X-axis at 3 and the second meets the Y-axis at 2.</p>
+  <div class="note">
+    <p>Then 3 is the <strong>x co-ordinate</strong> and 2 is the <strong>y co-ordinate</strong> of P. We write P(3, 2). The x co-ordinate is always written first, so \((x, y)\) is an <strong>ordered pair</strong>. The co-ordinates of the origin are \((0, 0)\).</p>
+  </div>
+  <p>Order matters: \((3, 2)\) is 3 right and 2 up, while \((2, 3)\) is 2 right and 3 up. They are different points.</p>
+
+  <h2>Quadrants</h2>
+  <p>The two axes divide the plane into four parts called <strong>quadrants</strong>. They are numbered I, II, III and IV, going anticlockwise from the top right. The signs of the co-ordinates tell you the quadrant.</p>
+  <div class="table-wrap"><table class="compare">
+    <thead><tr><th>Quadrant</th><th>x</th><th>y</th><th>Signs</th><th>Example</th></tr></thead>
+    <tbody>
+      <tr><td>I</td><td>positive</td><td>positive</td><td>(+, +)</td><td>(4, 1)</td></tr>
+      <tr><td>II</td><td>negative</td><td>positive</td><td>(−, +)</td><td>(−2, 5)</td></tr>
+      <tr><td>III</td><td>negative</td><td>negative</td><td>(−, −)</td><td>(−6, −3)</td></tr>
+      <tr><td>IV</td><td>positive</td><td>negative</td><td>(+, −)</td><td>(1, −4)</td></tr>
+    </tbody>
+  </table></div>
+
+  <h2>Points on the axes</h2>
+  <div class="note">
+    <p>The y co-ordinate of every point on the X-axis is 0, so such a point is \((x, 0)\). The x co-ordinate of every point on the Y-axis is 0, so such a point is \((0, y)\). A point on an axis does not lie in any quadrant.</p>
+  </div>
+  <p>For example, \((7, 0)\) and \((-1.5, 0)\) are on the X-axis, and \((0, -5)\) is on the Y-axis.</p>
+
+  <h2>Plotting a point</h2>
+  <p>To plot \((-4, 3)\): start at the origin. The x co-ordinate is \(-4\), so move 4 units to the left along the X-axis. The y co-ordinate is 3, so from there move 3 units up, parallel to the Y-axis. Mark the point and write its name and co-ordinates beside it.</p>
+</section>
+<h2>Try it</h2>
+<p class="prose" style="margin-top:1rem">Drag P on the grid, or use the sliders. Turn on <em>Find the point</em> to plot hidden points yourself.</p>
+<ul class="tries">
+  <li><span><strong>Read the co-ordinates.</strong> Where do the dashed perpendiculars from P(3, 2) meet the axes?</span>
+    <button class="btn" data-sim='{"task":"explore","x":3,"y":2}'>P(3, 2)</button></li>
+  <li><span><strong>Another quadrant.</strong> Which quadrant is (−4, 3) in? Which signs does it have?</span>
+    <button class="btn" data-sim='{"task":"explore","x":-4,"y":3}'>(−4, 3)</button></li>
+  <li><span><strong>On an axis.</strong> Where is (0, −5)? Is it in any quadrant?</span>
+    <button class="btn" data-sim='{"task":"explore","x":0,"y":-5}'>(0, −5)</button></li>
+  <li><span><strong>Swap the numbers.</strong> (2, −5) and (−5, 2) use the same numbers. Are they the same point?</span>
+    <button class="btn" data-sim='{"task":"explore","x":-5,"y":2,"marks":[[2,-5,"A"],[-5,2,"B"]]}'>Compare them</button></li>
+  <li><span><strong>Find the point.</strong> Plot T(−3, −4) with its co-ordinates hidden, then press Check.</span>
+    <button class="btn" data-sim='{"task":"find","tx":-3,"ty":-4,"x":0,"y":0}'>Find T(−3, −4)</button></li>
+</ul>
+<p class="prose" style="margin-top:1rem;font-size:.875rem;color:var(--muted)">What you should see: P(3, 2) is 3 right and 2 up from O, in Quadrant I with signs (+, +). (−4, 3) is in Quadrant II, (−, +). (0, −5) is on the Y-axis, 5 below O, and not in any quadrant. A(2, −5) is in Quadrant IV but B(−5, 2) is in Quadrant II. For T go 3 left and 4 down: Quadrant III.</p>
+
+<h2>Worked examples</h2>
+<div class="example">
+  <h3 style="margin-top:0">1. Quadrant or axis?</h3>
+  <p>Without plotting, say where each point lies: \(A(-5, 2)\), \(B(4, -1)\), \(C(0, -3)\), \(D(-2.5, -4)\), \(E(6, 0)\).</p>
+  <ol>
+    <li>\(A\): \(x < 0\), \(y > 0\), signs \((-, +)\): <span class="answer">Quadrant II</span></li>
+    <li>\(B\): signs \((+, -)\): <span class="answer">Quadrant IV</span></li>
+    <li>\(C\): \(x = 0\): <span class="answer">on the Y-axis</span></li>
+    <li>\(D\): signs \((-, -)\): <span class="answer">Quadrant III</span></li>
+    <li>\(E\): \(y = 0\): <span class="answer">on the X-axis</span></li>
+  </ol>
+  <button class="btn" data-sim='{"task":"explore","x":-2.5,"y":-4,"marks":[[-5,2,"A"],[4,-1,"B"],[0,-3,"C"],[-2.5,-4,"D"],[6,0,"E"]]}'>Plot all five</button>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">2. Plot and name the figure</h3>
+  <p>Plot \(P(-4, -2)\), \(Q(3, -2)\), \(R(3, 2)\) and \(S(-4, 2)\). Join them in order. What figure is \(PQRS\)? How long are its sides?</p>
+  <ol>
+    <li>\(P\) and \(Q\) have the same y co-ordinate \(-2\), so \(PQ\) is horizontal. \(PQ = 3 - (-4) = 7\) units.</li>
+    <li>\(Q\) and \(R\) have the same x co-ordinate 3, so \(QR\) is vertical. \(QR = 2 - (-2) = 4\) units.</li>
+    <li>In the same way \(RS = 7\) and \(SP = 4\), and every corner is a right angle.</li>
+    <li>\(PQRS\) is a <span class="answer">rectangle, 7 units by 4 units</span></li>
+  </ol>
+  <button class="btn" data-sim='{"task":"explore","x":3,"y":2,"poly":true,"marks":[[-4,-2,"P"],[3,-2,"Q"],[3,2,"R"],[-4,2,"S"]]}'>Plot PQRS</button>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">3. Reasoning with signs</h3>
+  <p>The point \((a, b)\) lies in Quadrant II. In which quadrant does \((b, a)\) lie?</p>
+  <ol>
+    <li>Quadrant II has signs \((-, +)\), so \(a\) is negative and \(b\) is positive.</li>
+    <li>In \((b, a)\) the x co-ordinate is \(b\) (positive) and the y co-ordinate is \(a\) (negative).</li>
+    <li>Signs \((+, -)\): <span class="answer">Quadrant IV</span>. For example \((-3, 5)\) is in Quadrant II and \((5, -3)\) is in Quadrant IV.</li>
+  </ol>
+  <button class="btn" data-sim='{"task":"explore","x":5,"y":-3,"marks":[[-3,5,"A"]]}'>See (−3, 5) and (5, −3)</button>
+</div>
+
+<h2>Common mistakes</h2>
+<ul class="mistakes" style="margin-top:1rem">
+  <li><strong>Writing y first.</strong> (x, y): the x co-ordinate always comes first. (1, 4) is 1 right and 4 up, not 4 right and 1 up.</li>
+  <li><strong>Ignoring the minus sign.</strong> x = −3 means 3 units to the left of O, and y = −3 means 3 units below O.</li>
+  <li><strong>Putting axis points in a quadrant.</strong> (0, 6) and (−2, 0) lie on the axes, not in any quadrant.</li>
+  <li><strong>Numbering quadrants clockwise.</strong> Quadrants go anticlockwise: I top right, II top left, III bottom left, IV bottom right.</li>
+</ul>
+
+<h2>Quick check</h2>
+<div class="quiz">
+  <fieldset class="q" data-answer="c">
+    <legend>1. In which quadrant does (−7, −2) lie?</legend>
+    <div class="opts">
+      <button data-opt="a">Quadrant I</button>
+      <button data-opt="b">Quadrant II</button>
+      <button data-opt="c">Quadrant III</button>
+      <button data-opt="d">Quadrant IV</button>
+    </div>
+    <p class="why" hidden>Both co-ordinates are negative, signs (−, −): Quadrant III.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="b">
+    <legend>2. Where does the point (0, 4) lie?</legend>
+    <div class="opts">
+      <button data-opt="a">On the X-axis</button>
+      <button data-opt="b">On the Y-axis</button>
+      <button data-opt="c">In Quadrant I</button>
+      <button data-opt="d">At the origin</button>
+    </div>
+    <p class="why" hidden>Its x co-ordinate is 0, so it is on the Y-axis, 4 units above O.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="d">
+    <legend>3. A point has a positive x co-ordinate and a negative y co-ordinate. Where is it?</legend>
+    <div class="opts">
+      <button data-opt="a">Quadrant I</button>
+      <button data-opt="b">Quadrant II</button>
+      <button data-opt="c">Quadrant III</button>
+      <button data-opt="d">Quadrant IV</button>
+    </div>
+    <p class="why" hidden>Signs (+, −) belong to Quadrant IV, below the X-axis and right of the Y-axis.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="c">
+    <legend>4. To plot (−2, 5), starting from the origin you move …</legend>
+    <div class="opts">
+      <button data-opt="a">2 right, then 5 down</button>
+      <button data-opt="b">5 left, then 2 up</button>
+      <button data-opt="c">2 left, then 5 up</button>
+      <button data-opt="d">2 up, then 5 left</button>
+    </div>
+    <p class="why" hidden>x = −2 means 2 units left along the X-axis; y = 5 means 5 units up.</p>
+  </fieldset>
+  <p class="score" aria-live="polite"></p>
+</div>
+<nav class="next-prev" aria-label="Lessons">
+  <a href="../circle/incircle-and-circumcircle.html">← Incircle and circumcircle</a>
+  <a href="lines-parallel-to-axes.html">Next: Lines parallel to the axes →</a>
+</nav>
+</main>
+
+<footer class="foot">Follows Chapter 7 of the Maharashtra State Board Std 9 Mathematics Part II textbook. Explanations and examples are original.</footer>
+</div>
+
+<script src="../../assets/js/sim-kit.js?v=20261010"></script>
+<script src="../../assets/js/math-kit.js?v=20261010"></script>
+<script src="../../assets/js/sims/coords-plane.js?v=20261010"></script>
+<script src="../../assets/js/quiz.js?v=20261010"></script>
+<script>
+  (function () {
+    var simEl = document.getElementById("sim-main");
+    var sim = CoordsPlaneSim.mount(simEl, { mode: "points", x: 3, y: 2 });
+    window.lessonSim = sim;
+    // Buttons in the lesson that set up the simulation: data-sim='{...settings}'
+    document.querySelectorAll("main [data-sim]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        sim.set(JSON.parse(b.dataset.sim));
+        sim.play();
+        simEl.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+      });
+    });
+  })();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/contrib/auto-render.min.js"></script>
+<script>
+  renderMathInElement(document.body, {
+    delimiters: [{ left: "$$", right: "$$", display: true }, { left: "\\(", right: "\\)", display: false }],
+    output: window.KATEX_OUTPUT || "htmlAndMathml",
+    throwOnError: false
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Lines Parallel to the Axes · Visual Science &amp; Maths</title>
+<meta name="description" content="Drag the lines x = a and y = b, read their distances from the axes and see where they meet.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.css">
+<link rel="stylesheet" href="../../assets/css/style.css?v=20261010">
+</head>
+<body class="lesson ch-coords">
+<div class="wrap">
+
+<header class="site-head">
+  <a class="brand" href="../../index.html"><svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><path d="M3 27 Q14 -1 29 27" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-dasharray="2.5 3.5"/><circle cx="21" cy="10" r="4.2" fill="var(--vy)"/></svg> Visual <span>Science &amp; Maths</span></a>
+  <nav class="site-nav" aria-label="Main"><a href="../../index.html#maths">Chapters</a><a href="../../index.html#games">Games</a></nav>
+</header>
+
+<main>
+<div class="title-band">
+<p class="eyebrow">Co-ordinate Geometry, lesson 2</p>
+<h1>Lines Parallel to the Axes</h1>
+<p class="lede">Walk straight up a road that runs north from a point 3 km east of the gate. However far you walk, you stay 3 km east. Every point on that road has the same x co-ordinate, so one short equation describes the whole road.</p>
+<p class="downloads"><a class="btn" href="../../slides/lines-parallel-to-axes.pptx" download>Download slides (.pptx)</a> <span>12 slides with teacher notes</span></p>
+</div>
+
+<div id="sim-main"></div>
+
+<section class="prose">
+  <h2>A line parallel to the Y-axis</h2>
+  <p>Plot \((3, -2)\), \((3, 0)\), \((3, 1)\) and \((3, 4)\). They all lie on one vertical line, 3 units to the right of the Y-axis. Every point on this line has x co-ordinate 3, whatever its y co-ordinate is. So the line is described by the equation \(x = 3\).</p>
+  <div class="note">
+    <p>The equation of a line parallel to the Y-axis is \(x = a\). It is at a distance of \(|a|\) units from the Y-axis: on the right of the Y-axis if \(a\) is positive, on the left if \(a\) is negative.</p>
+  </div>
+
+  <h2>A line parallel to the X-axis</h2>
+  <p>In the same way, \((-6, -2)\), \((0, -2)\) and \((5, -2)\) all have y co-ordinate \(-2\). They lie on a horizontal line 2 units below the X-axis, and its equation is \(y = -2\).</p>
+  <div class="note">
+    <p>The equation of a line parallel to the X-axis is \(y = b\). It is at a distance of \(|b|\) units from the X-axis: above the X-axis if \(b\) is positive, below it if \(b\) is negative.</p>
+  </div>
+
+  <h2>Equations of the axes</h2>
+  <p>Every point on the X-axis has y co-ordinate 0, so the <strong>equation of the X-axis is \(y = 0\)</strong>. Every point on the Y-axis has x co-ordinate 0, so the <strong>equation of the Y-axis is \(x = 0\)</strong>.</p>
+
+  <h2>Recognising these lines</h2>
+  <p>An equation with only \(x\) in it gives a line parallel to the Y-axis, and one with only \(y\) gives a line parallel to the X-axis. Make the variable the subject first:</p>
+  <ul class="mistakes">
+    <li>\(x + 5 = 0\) gives \(x = -5\): parallel to the Y-axis, 5 units to its left.</li>
+    <li>\(2y - 7 = 0\) gives \(y = 3.5\): parallel to the X-axis, 3.5 units above it.</li>
+  </ul>
+
+  <h2>Where two such lines meet</h2>
+  <p>The line \(x = a\) and the line \(y = b\) are perpendicular to each other. They meet at exactly one point, and that point has x co-ordinate \(a\) and y co-ordinate \(b\): the point \((a, b)\). Two different lines \(x = a\) and \(x = c\) are parallel to each other, so they never meet.</p>
+</section>
+<h2>Try it</h2>
+<p class="prose" style="margin-top:1rem">Drag either line on the grid (grab the crossing point to move both), or use the sliders.</p>
+<ul class="tries">
+  <li><span><strong>Read the equations.</strong> Every point on the vertical line has the same x co-ordinate. Which?</span>
+    <button class="btn" data-sim='{"task":"explore","a":3,"b":-2,"dist":true,"samples":true}'>x = 3 and y = −2</button></li>
+  <li><span><strong>Negative values.</strong> Where is x = −5? How far is it from the Y-axis?</span>
+    <button class="btn" data-sim='{"task":"explore","a":-5,"b":4,"dist":true,"samples":true}'>x = −5</button></li>
+  <li><span><strong>The axes themselves.</strong> Set a = 0 and b = 0. Which lines do you get?</span>
+    <button class="btn" data-sim='{"task":"explore","a":0,"b":0,"dist":true,"samples":false}'>x = 0 and y = 0</button></li>
+  <li><span><strong>Rearrange first.</strong> Draw 2y − 7 = 0 together with x − 1.5 = 0.</span>
+    <button class="btn" data-sim='{"task":"explore","a":1.5,"b":3.5,"dist":true,"samples":false}'>2y − 7 = 0</button></li>
+  <li><span><strong>Hit the target.</strong> Move the two lines so both pass through T(−4, −3).</span>
+    <button class="btn" data-sim='{"task":"find","tx":-4,"ty":-3,"a":2,"b":2}'>Target T(−4, −3)</button></li>
+</ul>
+<p class="prose" style="margin-top:1rem;font-size:.875rem;color:var(--muted)">What you should see: x = 3 is 3 units right of the Y-axis and y = −2 is 2 units below the X-axis; they meet at (3, −2). x = −5 is 5 units left of the Y-axis. With a = 0 and b = 0 the lines are the Y-axis and the X-axis, meeting at the origin. 2y − 7 = 0 is the line y = 3.5, and it meets x = 1.5 at (1.5, 3.5). For T you need x = −4 and y = −3.</p>
+
+<h2>Worked examples</h2>
+<div class="example">
+  <h3 style="margin-top:0">1. A line below the X-axis</h3>
+  <p>Write the equation of the line parallel to the X-axis and 4 units below it. Which of \(A(2, -4)\), \(B(-4, 2)\) and \(C(0, -4)\) lie on it?</p>
+  <ol>
+    <li>Parallel to the X-axis means \(y = b\). Below the axis means \(b\) is negative, so \(b = -4\).</li>
+    <li>The equation is <span class="answer">y = −4</span></li>
+    <li>A point is on the line when its y co-ordinate is \(-4\): <span class="answer">A and C lie on it; B does not</span> (its y co-ordinate is 2).</li>
+  </ol>
+  <button class="btn" data-sim='{"task":"explore","a":0,"b":-4,"dist":true,"samples":true}'>Show y = −4</button>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">2. Lines through a point</h3>
+  <p>Write the equations of the lines through \(P(-5, 2)\) that are parallel to the axes. How far is each line from the axis it is parallel to?</p>
+  <ol>
+    <li>The line parallel to the Y-axis has every x co-ordinate equal to \(-5\): <span class="answer">x = −5</span>, 5 units to the left of the Y-axis.</li>
+    <li>The line parallel to the X-axis has every y co-ordinate equal to 2: <span class="answer">y = 2</span>, 2 units above the X-axis.</li>
+    <li>Check: the two lines meet at \((-5, 2)\), which is \(P\).</li>
+  </ol>
+  <button class="btn" data-sim='{"task":"explore","a":-5,"b":2,"dist":true,"samples":false}'>Check it in the simulation</button>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">3. Four lines make a rectangle</h3>
+  <p>Draw \(x + 3 = 0\), \(x - 5 = 0\), \(y + 1 = 0\) and \(2y - 8 = 0\). Find the points where they meet and the size of the figure they enclose.</p>
+  <ol>
+    <li>Rearrange: \(x = -3\), \(x = 5\), \(y = -1\), \(y = 4\). Two lines are parallel to the Y-axis and two are parallel to the X-axis.</li>
+    <li>Each vertical line meets each horizontal line: \((-3, -1)\), \((5, -1)\), \((5, 4)\), \((-3, 4)\).</li>
+    <li>Width \(= 5 - (-3) = 8\) units, height \(= 4 - (-1) = 5\) units.</li>
+    <li>The lines enclose a <span class="answer">rectangle 8 units by 5 units</span> with those four corners.</li>
+  </ol>
+  <button class="btn" data-sim='{"task":"explore","a":5,"b":4,"more":[["x",-3],["y",-1]]}'>Draw the four lines</button>
+</div>
+
+<h2>Common mistakes</h2>
+<ul class="mistakes" style="margin-top:1rem">
+  <li><strong>Mixing up the directions.</strong> x = 3 is a vertical line (parallel to the Y-axis), not a line along the X-axis.</li>
+  <li><strong>The wrong equation for an axis.</strong> The X-axis is y = 0 and the Y-axis is x = 0.</li>
+  <li><strong>Forgetting to rearrange.</strong> x + 6 = 0 is the line x = −6, which is 6 units to the left of the Y-axis, not at 6.</li>
+  <li><strong>A negative distance.</strong> x = −4 is 4 units from the Y-axis. Distance is never negative; the sign tells you the side.</li>
+</ul>
+
+<h2>Quick check</h2>
+<div class="quiz">
+  <fieldset class="q" data-answer="b">
+    <legend>1. What is the equation of the X-axis?</legend>
+    <div class="opts">
+      <button data-opt="a">x = 0</button>
+      <button data-opt="b">y = 0</button>
+      <button data-opt="c">x = y</button>
+      <button data-opt="d">y = 1</button>
+    </div>
+    <p class="why" hidden>Every point on the X-axis has y co-ordinate 0.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="c">
+    <legend>2. The line y − 6 = 0 is …</legend>
+    <div class="opts">
+      <button data-opt="a">parallel to the Y-axis, 6 units to its right</button>
+      <button data-opt="b">parallel to the X-axis, 6 units below it</button>
+      <button data-opt="c">parallel to the X-axis, 6 units above it</button>
+      <button data-opt="d">the Y-axis</button>
+    </div>
+    <p class="why" hidden>y − 6 = 0 gives y = 6: a horizontal line 6 units above the X-axis.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="b">
+    <legend>3. Where do the lines x = −2 and y = 7 meet?</legend>
+    <div class="opts">
+      <button data-opt="a">(7, −2)</button>
+      <button data-opt="b">(−2, 7)</button>
+      <button data-opt="c">(−2, 0)</button>
+      <button data-opt="d">They never meet</button>
+    </div>
+    <p class="why" hidden>Every point on x = −2 has x co-ordinate −2 and every point on y = 7 has y co-ordinate 7, so they meet at (−2, 7).</p>
+  </fieldset>
+  <fieldset class="q" data-answer="b">
+    <legend>4. Which point lies on the line x = 4?</legend>
+    <div class="opts">
+      <button data-opt="a">(1, 4)</button>
+      <button data-opt="b">(4, −9)</button>
+      <button data-opt="c">(0, 4)</button>
+      <button data-opt="d">(−4, 4)</button>
+    </div>
+    <p class="why" hidden>Its x co-ordinate is 4. The y co-ordinate can be anything.</p>
+  </fieldset>
+  <p class="score" aria-live="polite"></p>
+</div>
+<nav class="next-prev" aria-label="Lessons">
+  <a href="plotting-points.html">← Axes, quadrants and plotting points</a>
+  <a href="../trig/trigonometric-ratios.html">Next chapter: Trigonometry →</a>
+</nav>
+</main>
+
+<footer class="foot">Follows Chapter 7 of the Maharashtra State Board Std 9 Mathematics Part II textbook. Explanations and examples are original.</footer>
+</div>
+
+<script src="../../assets/js/sim-kit.js?v=20261010"></script>
+<script src="../../assets/js/math-kit.js?v=20261010"></script>
+<script src="../../assets/js/sims/coords-plane.js?v=20261010"></script>
+<script src="../../assets/js/quiz.js?v=20261010"></script>
+<script>
+  (function () {
+    var simEl = document.getElementById("sim-main");
+    var sim = CoordsPlaneSim.mount(simEl, { mode: "lines", a: 3, b: -2 });
+    window.lessonSim = sim;
+    // Buttons in the lesson that set up the simulation: data-sim='{...settings}'
+    document.querySelectorAll("main [data-sim]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        sim.set(JSON.parse(b.dataset.sim));
+        sim.play();
+        simEl.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+      });
+    });
+  })();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/contrib/auto-render.min.js"></script>
+<script>
+  renderMathInElement(document.body, {
+    delimiters: [{ left: "$$", right: "$$", display: true }, { left: "\\(", right: "\\)", display: false }],
+    output: window.KATEX_OUTPUT || "htmlAndMathml",
+    throwOnError: false
+  });
+</script>
+
+</body>
+</html>

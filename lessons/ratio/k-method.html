@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Theorem on Equal Ratios and the k Method · Visual Science &amp; Maths</title>
+<meta name="description" content="If several ratios are equal, their numerators and denominators can be added to make one more equal ratio. Prove it with the k method, use k to prove identities, and meet continued proportion.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.css">
+<link rel="stylesheet" href="../../assets/css/style.css?v=20261010">
+</head>
+<body class="lesson ch-ratio">
+<div class="wrap">
+
+<header class="site-head">
+  <a class="brand" href="../../index.html"><svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><path d="M3 27 Q14 -1 29 27" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-dasharray="2.5 3.5"/><circle cx="21" cy="10" r="4.2" fill="var(--vy)"/></svg> Visual <span>Science &amp; Maths</span></a>
+  <nav class="site-nav" aria-label="Main"><a href="../../index.html#maths">Chapters</a><a href="../../index.html#games">Games</a></nav>
+</header>
+
+<main>
+<div class="title-band">
+<p class="eyebrow">Ratio and Proportion, lesson 3</p>
+<h1>Theorem on Equal Ratios and the k Method</h1>
+<p class="lede">Three bags of mixed nuts each hold almonds and cashews in the ratio 2 : 3. Tip them all into one bowl: the ratio in the bowl is still 2 : 3. That is the theorem on equal ratios.</p>
+<p class="downloads"><a class="btn" href="../../slides/k-method.pptx" download>Download slides (.pptx)</a> <span>12 slides with teacher notes</span></p>
+</div>
+
+<div id="sim-main"></div>
+
+<section class="prose">
+  <h2>Theorem on equal ratios</h2>
+  <div class="note"><strong>Theorem.</strong> If \(\dfrac{a}{b} = \dfrac{c}{d} = \dfrac{e}{f} = \cdots\), then each ratio is equal to
+  $$\frac{a + c + e + \cdots}{b + d + f + \cdots}$$
+  More generally, for numbers \(l, m, n, \ldots\) with \(lb + md + nf + \cdots \ne 0\), each ratio is equal to
+  $$\frac{la + mc + ne + \cdots}{lb + md + nf + \cdots}$$</div>
+  <p>For example \(\dfrac{6}{9} = \dfrac{4}{6} = \dfrac{10}{15}\) (each is \(\frac{2}{3}\)), and \(\dfrac{6 + 4 + 10}{9 + 6 + 15} = \dfrac{20}{30} = \dfrac{2}{3}\) as well.</p>
+
+  <h2>The k method</h2>
+  <p>To prove the theorem, call the common value of the ratios \(k\):</p>
+  <div class="eq">$$\frac{a}{b} = \frac{c}{d} = \frac{e}{f} = k \quad\Rightarrow\quad a = bk,\; c = dk,\; e = fk$$</div>
+  <p>Then \(\dfrac{la + mc + ne}{lb + md + nf} = \dfrac{lbk + mdk + nfk}{lb + md + nf} = \dfrac{k(lb + md + nf)}{lb + md + nf} = k\). Every piece of the top is \(k\) times the matching piece of the bottom, so the whole top is \(k\) times the whole bottom. This way of working is called the <strong>k method</strong>. It is the easiest way to prove many statements about equal ratios: replace each numerator by (denominator × \(k\)) and simplify both sides.</p>
+
+  <h2>Continued proportion</h2>
+  <div class="note"><strong>Continued proportion.</strong> If \(\dfrac{a}{b} = \dfrac{b}{c}\), then \(a, b, c\) are in continued proportion. Then \(b^2 = ac\), and \(b\) is called the <strong>mean proportional</strong> of \(a\) and \(c\): \(b = \sqrt{ac}\).</div>
+  <p>For example \(4, 6, 9\) are in continued proportion: \(\frac{4}{6} = \frac{6}{9} = \frac{2}{3}\) and \(6^2 = 36 = 4 \times 9\). In the simulation, a rectangle \(a \times c\) and a square \(b \times b\) have the same area. With the k method, \(\frac{a}{b} = \frac{b}{c} = k\) gives \(b = ck\) and \(a = bk = ck^2\).</p>
+</section>
+<h2>Try it</h2>
+<p class="prose" style="margin-top:1rem">In the theorem view, press “Combine” to slide the pieces into one big ratio. The other view shows continued proportion.</p>
+<ul class="tries">
+  <li><span><strong>Add them up.</strong> 6/9 = 4/6 = 10/15.</span>
+    <button class="btn" data-sim='{"mode":"theorem","p":2,"q":3,"u":3,"v":2,"w":5,"l":1,"m":1,"n":1}'>Show me</button></li>
+  <li><span><strong>With l, m, n.</strong> Take 2 copies of 6/9, 1 of 4/6 and 3 of 10/15.</span>
+    <button class="btn" data-sim='{"mode":"theorem","p":2,"q":3,"u":3,"v":2,"w":5,"l":2,"m":1,"n":3}'>Show me</button></li>
+  <li><span><strong>Mean proportional.</strong> a = 4 and c = 9.</span>
+    <button class="btn" data-sim='{"mode":"cont","a":4,"c":9}'>Try it</button></li>
+  <li><span><strong>Not a whole number.</strong> a = 3 and c = 5.</span>
+    <button class="btn" data-sim='{"mode":"cont","a":3,"c":5}'>Try it</button></li>
+</ul>
+<p class="prose" style="margin-top:1rem;font-size:.875rem;color:var(--muted)">What you should see: 20/30 = 2/3. With l = 2, m = 1, n = 3: (12 + 4 + 30)/(18 + 6 + 45) = 46/69 = 2/3. For 4 and 9 the mean proportional is 6; for 3 and 5 it is √15 ≈ 3.87.</p>
+
+<h2>Worked examples</h2>
+<div class="example">
+  <h3 style="margin-top:0">1. Using the theorem</h3>
+  <p>Verify the theorem for \(\dfrac{4}{6} = \dfrac{6}{9} = \dfrac{10}{15}\) with \(l = 2,\; m = 1,\; n = 3\).</p>
+  <ol>
+    <li>Each ratio is \(\frac{2}{3}\).</li>
+    <li>\(\dfrac{2(4) + 1(6) + 3(10)}{2(6) + 1(9) + 3(15)} = \dfrac{8 + 6 + 30}{12 + 9 + 45} = \dfrac{44}{66} = \) <span class="answer">2/3</span> ✓</li>
+  </ol>
+  <button class="btn" data-sim='{"mode":"theorem","p":2,"q":3,"u":2,"v":3,"w":5,"l":2,"m":1,"n":3}'>Check it</button>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">2. Proving an identity by the k method</h3>
+  <p>If \(\dfrac{a}{b} = \dfrac{c}{d}\), show that \(\dfrac{a^2 + c^2}{b^2 + d^2} = \dfrac{ac}{bd}\).</p>
+  <ol>
+    <li>Let \(\frac{a}{b} = \frac{c}{d} = k\), so \(a = bk\) and \(c = dk\).</li>
+    <li>Left side: \(\dfrac{b^2k^2 + d^2k^2}{b^2 + d^2} = \dfrac{k^2(b^2 + d^2)}{b^2 + d^2} = k^2\).</li>
+    <li>Right side: \(\dfrac{bk \cdot dk}{bd} = k^2\). Both sides equal \(k^2\): <span class="answer">proved</span></li>
+  </ol>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">3. Mean proportional</h3>
+  <p>Find the mean proportional of 8 and 18.</p>
+  <ol>
+    <li>If \(8, b, 18\) are in continued proportion, \(b^2 = 8 \times 18 = 144\).</li>
+    <li>\(b = \sqrt{144} = \) <span class="answer">12</span>. Check: \(\frac{8}{12} = \frac{12}{18} = \frac{2}{3}\) ✓</li>
+  </ol>
+  <button class="btn" data-sim='{"mode":"cont","a":8,"c":18}'>Check it</button>
+</div>
+
+<h2>Common mistakes</h2>
+<ul class="mistakes" style="margin-top:1rem">
+  <li><strong>Adding any two fractions this way.</strong> 1/2 + 1/3 is not 2/5. Adding tops and bottoms works only to find a ratio equal to ratios that are already equal.</li>
+  <li><strong>Writing a = k/b.</strong> From a/b = k, multiply: a = bk.</li>
+  <li><strong>Forgetting the zero check.</strong> The combined denominator lb + md + nf must not be 0.</li>
+  <li><strong>Averaging for the mean proportional.</strong> The mean proportional of 4 and 9 is √36 = 6, not (4 + 9)/2.</li>
+</ul>
+
+<h2>Quick check</h2>
+<div class="quiz">
+  <fieldset class="q" data-answer="b">
+    <legend>1. If a/b = c/d = 2/5, then (a + c)/(b + d) is…</legend>
+    <div class="opts">
+      <button data-opt="a">2/7</button>
+      <button data-opt="b">2/5</button>
+      <button data-opt="c">4/5</button>
+      <button data-opt="d">5/2</button>
+    </div>
+    <p class="why" hidden>By the theorem on equal ratios, (a + c)/(b + d) equals each of the equal ratios: 2/5.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="c">
+    <legend>2. If a/2 = b/3 = c/4, then (a + b + c)/b is…</legend>
+    <div class="opts">
+      <button data-opt="a">1</button>
+      <button data-opt="b">2</button>
+      <button data-opt="c">3</button>
+      <button data-opt="d">9</button>
+    </div>
+    <p class="why" hidden>Let each ratio be k: a = 2k, b = 3k, c = 4k. Then 9k ÷ 3k = 3.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="a">
+    <legend>3. The mean proportional of 4 and 16 is…</legend>
+    <div class="opts">
+      <button data-opt="a">8</button>
+      <button data-opt="b">10</button>
+      <button data-opt="c">12</button>
+      <button data-opt="d">20</button>
+    </div>
+    <p class="why" hidden>√(4 × 16) = √64 = 8.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="b">
+    <legend>4. If 3, x, 12 are in continued proportion (x positive), then x is…</legend>
+    <div class="opts">
+      <button data-opt="a">4</button>
+      <button data-opt="b">6</button>
+      <button data-opt="c">7.5</button>
+      <button data-opt="d">9</button>
+    </div>
+    <p class="why" hidden>x² = 3 × 12 = 36, so x = 6.</p>
+  </fieldset>
+  <p class="score" aria-live="polite"></p>
+</div>
+<nav class="next-prev" aria-label="Lessons">
+  <a href="properties-of-equal-ratios.html">← Properties of equal ratios</a>
+  <a href="../linear/linear-equations.html">Next chapter: Linear Equations in Two Variables →</a>
+</nav>
+</main>
+
+<footer class="foot">Follows Chapter 4 of the Maharashtra State Board Std 9 Mathematics Part I textbook. Explanations and examples are original.</footer>
+</div>
+
+<script src="../../assets/js/sim-kit.js?v=20261010"></script>
+<script src="../../assets/js/math-kit.js?v=20261010"></script>
+<script src="../../assets/js/sims/ratio-k.js?v=20261010"></script>
+<script src="../../assets/js/quiz.js?v=20261010"></script>
+<script>
+  (function () {
+    var simEl = document.getElementById("sim-main");
+    var sim = RatioKSim.mount(simEl, { mode: "theorem", p: 2, q: 3, u: 3, v: 2, w: 5, l: 1, m: 1, n: 1 });
+    window.lessonSim = sim;
+    // Buttons in the lesson that set up the simulation: data-sim='{...settings}'
+    document.querySelectorAll("main [data-sim]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        sim.set(JSON.parse(b.dataset.sim));
+        sim.play();
+        simEl.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+      });
+    });
+  })();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/contrib/auto-render.min.js"></script>
+<script>
+  renderMathInElement(document.body, {
+    delimiters: [{ left: "$$", right: "$$", display: true }, { left: "\\(", right: "\\)", display: false }],
+    output: window.KATEX_OUTPUT || "htmlAndMathml",
+    throwOnError: false
+  });
+</script>
+
+</body>
+</html>

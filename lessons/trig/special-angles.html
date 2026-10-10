@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ratios of Special Angles · Visual Science &amp; Maths</title>
+<meta name="description" content="Find sin, cos and tan of 30°, 45° and 60° from half an equilateral triangle and half a square, add 0° and 90°, and use the table to solve problems.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.css">
+<link rel="stylesheet" href="../../assets/css/style.css?v=20261010">
+</head>
+<body class="lesson ch-trig">
+<div class="wrap">
+
+<header class="site-head">
+  <a class="brand" href="../../index.html"><svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><path d="M3 27 Q14 -1 29 27" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-dasharray="2.5 3.5"/><circle cx="21" cy="10" r="4.2" fill="var(--vy)"/></svg> Visual <span>Science &amp; Maths</span></a>
+  <nav class="site-nav" aria-label="Main"><a href="../../index.html#maths">Chapters</a><a href="../../index.html#games">Games</a></nav>
+</header>
+
+<main>
+<div class="title-band">
+<p class="eyebrow">Trigonometry, lesson 2</p>
+<h1>Ratios of Special Angles</h1>
+<p class="lede">Your two set squares hold the most useful values in trigonometry. One is half of an equilateral triangle, the other is half of a square, and from them you can work out the ratios of 30°, 45° and 60° exactly.</p>
+<p class="downloads"><a class="btn" href="../../slides/special-angles.pptx" download>Download slides (.pptx)</a> <span>12 slides with teacher notes</span></p>
+</div>
+
+<div id="sim-main"></div>
+
+<section class="prose">
+  <h2>30° and 60°: half of an equilateral triangle</h2>
+  <p>Take an equilateral triangle with side 2. Every angle is \(60^\circ\). The altitude from the top cuts it into two right triangles with angles \(30^\circ\), \(60^\circ\) and \(90^\circ\). In each half:</p>
+  <ul class="mistakes">
+    <li>hypotenuse \(= 2\); the side opposite \(30^\circ\) \(= 1\) (half the base);</li>
+    <li>the altitude, opposite \(60^\circ\), \(= \sqrt{2^2 - 1^2} = \sqrt3\).</li>
+  </ul>
+  <p>So \(\sin 30^\circ = \tfrac12\), \(\cos 30^\circ = \tfrac{\sqrt3}{2}\), \(\tan 30^\circ = \tfrac{1}{\sqrt3}\). From the \(60^\circ\) angle the opposite and adjacent sides swap: \(\sin 60^\circ = \tfrac{\sqrt3}{2}\), \(\cos 60^\circ = \tfrac12\), \(\tan 60^\circ = \sqrt3\).</p>
+
+  <h2>45°: half of a square</h2>
+  <p>A diagonal cuts a square of side 1 into two right isosceles triangles with angles \(45^\circ\), \(45^\circ\), \(90^\circ\). The legs are 1 and 1, the hypotenuse is \(\sqrt{1^2 + 1^2} = \sqrt2\). So \(\sin 45^\circ = \cos 45^\circ = \tfrac{1}{\sqrt2}\) and \(\tan 45^\circ = 1\).</p>
+
+  <h2>0° and 90°</h2>
+  <p>Keep the hypotenuse equal to 1 and make the angle smaller and smaller. The opposite side shrinks to 0 and the adjacent side grows to 1. So \(\sin 0^\circ = 0\), \(\cos 0^\circ = 1\), \(\tan 0^\circ = 0\). As the angle grows to \(90^\circ\) the opposite way happens: \(\sin 90^\circ = 1\), \(\cos 90^\circ = 0\), and \(\tan 90^\circ = \tfrac{1}{0}\) is <strong>not defined</strong>.</p>
+
+  <h2>The table</h2>
+</section>
+
+<div class="table-wrap">
+<table class="compare">
+  <thead><tr><th>θ</th><th>0°</th><th>30°</th><th>45°</th><th>60°</th><th>90°</th></tr></thead>
+  <tbody>
+    <tr><th>sin θ</th><td>0</td><td>\(\tfrac12\)</td><td>\(\tfrac{1}{\sqrt2}\)</td><td>\(\tfrac{\sqrt3}{2}\)</td><td>1</td></tr>
+    <tr><th>cos θ</th><td>1</td><td>\(\tfrac{\sqrt3}{2}\)</td><td>\(\tfrac{1}{\sqrt2}\)</td><td>\(\tfrac12\)</td><td>0</td></tr>
+    <tr><th>tan θ</th><td>0</td><td>\(\tfrac{1}{\sqrt3}\)</td><td>1</td><td>\(\sqrt3\)</td><td>not defined</td></tr>
+  </tbody>
+</table>
+</div>
+
+<section class="prose">
+  <p>A pattern to remember: from \(0^\circ\) to \(90^\circ\), \(\sin\theta\) rises from 0 to 1 and \(\cos\theta\) falls from 1 to 0, the same values in reverse. Every column also obeys \(\sin^2\theta + \cos^2\theta = 1\): for \(30^\circ\), \(\tfrac14 + \tfrac34 = 1\).</p>
+</section>
+<h2>Try it</h2>
+<p class="prose" style="margin-top:1rem">Press an angle, or use the buttons. The chosen column of the table lights up.</p>
+<ul class="tries">
+  <li><span><strong>30°.</strong> Half of an equilateral triangle.</span>
+    <button class="btn" data-sim='{"mode":"special","sa":30}'>Show 30°</button></li>
+  <li><span><strong>45°.</strong> Half of a square.</span>
+    <button class="btn" data-sim='{"mode":"special","sa":45}'>Show 45°</button></li>
+  <li><span><strong>90°.</strong> Why is tan 90° not defined?</span>
+    <button class="btn" data-sim='{"mode":"special","sa":90}'>Show 90°</button></li>
+  <li><span><strong>Check with a real triangle.</strong> ∠A = 60°, hypotenuse 8 cm.</span>
+    <button class="btn" data-sim='{"mode":"ratios","input":"angle","A":60,"hyp":8,"at":"A","similar":false}'>Measure it</button></li>
+</ul>
+<p class="prose" style="margin-top:1rem;font-size:.875rem;color:var(--muted)">What you should see: at 30° the sides are 1, √3 and 2, and sin 30° = 1/2. At 45° both legs are 1, so sin 45° = cos 45° = 1/√2 ≈ 0.707. At 90° the adjacent side is 0, so tan 90° would mean dividing by 0. In the 8 cm triangle the opposite side is about 6.93 cm, and sin 60° ≈ 0.866 = √3/2.</p>
+
+<h2>Worked examples</h2>
+<div class="example">
+  <h3 style="margin-top:0">1. Evaluate</h3>
+  <p>Find the value of \(6\sin 30^\circ - 2\tan 45^\circ\).</p>
+  <ol>
+    <li>\(\sin 30^\circ = \tfrac12\) and \(\tan 45^\circ = 1\).</li>
+    <li>\(6 \times \tfrac12 - 2 \times 1 = 3 - 2 = \) <span class="answer">1</span></li>
+  </ol>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">2. Squares of ratios</h3>
+  <p>Find the value of \(2\cos^2 45^\circ + \tan^2 60^\circ\).</p>
+  <ol>
+    <li>\(\cos^2 45^\circ = \left(\tfrac{1}{\sqrt2}\right)^2 = \tfrac12\) and \(\tan^2 60^\circ = (\sqrt3)^2 = 3\).</li>
+    <li>\(2 \times \tfrac12 + 3 = 1 + 3 = \) <span class="answer">4</span></li>
+  </ol>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">3. A ladder</h3>
+  <p>A 6 m ladder leans against a wall and makes an angle of \(60^\circ\) with the ground. How high up the wall does it reach, and how far is its foot from the wall?</p>
+  <ol>
+    <li>The ladder is the hypotenuse. Height \(= 6\sin 60^\circ = 6 \times \tfrac{\sqrt3}{2} = 3\sqrt3 \approx\) <span class="answer">5.20 m</span></li>
+    <li>Distance from the wall \(= 6\cos 60^\circ = 6 \times \tfrac12 =\) <span class="answer">3 m</span></li>
+  </ol>
+  <button class="btn" data-sim='{"mode":"ratios","input":"angle","A":60,"hyp":6,"at":"A","similar":false}'>Check it in the simulation</button>
+</div>
+
+<h2>Common mistakes</h2>
+<ul class="mistakes" style="margin-top:1rem">
+  <li><strong>Swapping 30° and 60°.</strong> sin 30° = 1/2 and cos 60° = 1/2. Picture the triangle: the short side faces 30°.</li>
+  <li><strong>tan 90° = 0.</strong> tan 90° is not defined: the adjacent side is 0 and you cannot divide by 0.</li>
+  <li><strong>sin (30° + 60°) = sin 30° + sin 60°.</strong> No: sin 90° = 1, but 1/2 + √3/2 ≈ 1.37. Ratios do not add like that.</li>
+  <li><strong>sin 45° = 1/2.</strong> sin 45° = 1/√2 ≈ 0.707. Only sin 30° is 1/2.</li>
+</ul>
+
+<h2>Quick check</h2>
+<div class="quiz">
+  <fieldset class="q" data-answer="b">
+    <legend>1. tan 60° is…</legend>
+    <div class="opts">
+      <button data-opt="a">1/√3</button>
+      <button data-opt="b">√3</button>
+      <button data-opt="c">1</button>
+      <button data-opt="d">√3/2</button>
+    </div>
+    <p class="why" hidden>In the half-equilateral triangle, opposite 60° is √3 and adjacent is 1.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="c">
+    <legend>2. sin 30° + cos 60° equals…</legend>
+    <div class="opts">
+      <button data-opt="a">1/2</button>
+      <button data-opt="b">√3</button>
+      <button data-opt="c">1</button>
+      <button data-opt="d">0</button>
+    </div>
+    <p class="why" hidden>1/2 + 1/2 = 1.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="d">
+    <legend>3. Which of these is not defined?</legend>
+    <div class="opts">
+      <button data-opt="a">sin 90°</button>
+      <button data-opt="b">cos 90°</button>
+      <button data-opt="c">tan 0°</button>
+      <button data-opt="d">tan 90°</button>
+    </div>
+    <p class="why" hidden>tan 90° would need division by cos 90° = 0.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="a">
+    <legend>4. In a right triangle the hypotenuse is 10 cm and one angle is 30°. The side opposite 30° is…</legend>
+    <div class="opts">
+      <button data-opt="a">5 cm</button>
+      <button data-opt="b">10√3 cm</button>
+      <button data-opt="c">20 cm</button>
+      <button data-opt="d">5√3 cm</button>
+    </div>
+    <p class="why" hidden>Opposite = 10 × sin 30° = 10 × 1/2 = 5 cm.</p>
+  </fieldset>
+  <p class="score" aria-live="polite"></p>
+</div>
+<nav class="next-prev" aria-label="Lessons">
+  <a href="trigonometric-ratios.html">← Trigonometric ratios</a>
+  <a href="../volume/cuboids-and-cylinders.html">Next chapter: Surface Area and Volume →</a>
+</nav>
+</main>
+
+<footer class="foot">Follows Chapter 8 of the Maharashtra State Board Std 9 Mathematics Part II textbook. Explanations and examples are original.</footer>
+</div>
+
+<script src="../../assets/js/sim-kit.js?v=20261010"></script>
+<script src="../../assets/js/math-kit.js?v=20261010"></script>
+<script src="../../assets/js/sims/trig-ratios.js?v=20261010"></script>
+<script src="../../assets/js/quiz.js?v=20261010"></script>
+<script>
+  (function () {
+    var simEl = document.getElementById("sim-main");
+    var sim = TrigSim.mount(simEl, { mode: "special", sa: 30 });
+    window.lessonSim = sim;
+    // Buttons in the lesson that set up the simulation: data-sim='{...settings}'
+    document.querySelectorAll("main [data-sim]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        sim.set(JSON.parse(b.dataset.sim));
+        sim.play();
+        simEl.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+      });
+    });
+  })();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/contrib/auto-render.min.js"></script>
+<script>
+  renderMathInElement(document.body, {
+    delimiters: [{ left: "$$", right: "$$", display: true }, { left: "\\(", right: "\\)", display: false }],
+    output: window.KATEX_OUTPUT || "htmlAndMathml",
+    throwOnError: false
+  });
+</script>
+
+</body>
+</html>

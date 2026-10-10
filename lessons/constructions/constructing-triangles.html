@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Constructing Triangles · Visual Science &amp; Maths</title>
+<meta name="description" content="Construct a triangle from its base, a base angle and the sum or difference of the other two sides, or from its perimeter and base angles, with the reason each method works.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.css">
+<link rel="stylesheet" href="../../assets/css/style.css?v=20261010">
+</head>
+<body class="lesson ch-constructions">
+<div class="wrap">
+
+<header class="site-head">
+  <a class="brand" href="../../index.html"><svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><path d="M3 27 Q14 -1 29 27" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-dasharray="2.5 3.5"/><circle cx="21" cy="10" r="4.2" fill="var(--vy)"/></svg> Visual <span>Science &amp; Maths</span></a>
+  <nav class="site-nav" aria-label="Main"><a href="../../index.html#maths">Chapters</a><a href="../../index.html#games">Games</a></nav>
+</header>
+
+<main>
+<div class="title-band">
+<p class="eyebrow">Constructions of Triangles, lesson 2</p>
+<h1>Constructing Triangles</h1>
+<p class="lede">You can already draw a triangle from three sides, or two sides and an angle. But what if you know only the sum of two sides, their difference, or the perimeter? A perpendicular bisector turns each of these into a construction you can do with a compass and ruler.</p>
+<p class="downloads"><a class="btn" href="../../slides/constructing-triangles.pptx" download>Download slides (.pptx)</a> <span>12 slides with teacher notes</span></p>
+</div>
+
+<div id="sim-main"></div>
+
+<section class="prose">
+  <h2>First, a rough figure</h2>
+  <p>Before each construction, draw a <strong>rough figure</strong> and mark the given measures on it. Then ask: which point can I draw straight away, and which point do I have to find? In all three constructions below, the missing vertex is found with a <strong>perpendicular bisector</strong>, using the theorem from the last lesson: a point on the perpendicular bisector of a segment is equidistant from its end points.</p>
+
+  <h2>1. Base, a base angle and the sum of the other two sides</h2>
+  <p>Given \(BC\), \(\angle B\) and \(AB + AC\).</p>
+  <ol>
+    <li>Draw \(BC\). At \(B\) draw ray \(BX\) with the given \(\angle XBC\).</li>
+    <li>Mark \(D\) on ray \(BX\) with \(BD = AB + AC\). Join \(DC\).</li>
+    <li>Draw the perpendicular bisector of \(DC\). It meets \(BD\) at \(A\). Join \(AC\).</li>
+  </ol>
+  <div class="note"><strong>Why it works.</strong> \(A\) is on the perpendicular bisector of \(DC\), so \(AD = AC\). Then \(AB + AC = AB + AD = BD\), which is the given sum.</div>
+  <p>The triangle exists only if \(AB + AC > BC\): the sum of two sides of a triangle is greater than the third side.</p>
+
+  <h2>2. Base, a base angle and the difference of the other two sides</h2>
+  <p>Given \(BC\), \(\angle B\) and the difference of \(AB\) and \(AC\). There are two cases.</p>
+  <ul>
+    <li><strong>\(AB - AC\) is given</strong> (AB is longer). Mark \(D\) on ray \(BX\) with \(BD = AB - AC\). The perpendicular bisector of \(DC\) meets ray \(BX\) at \(A\). Since \(AD = AC\), \(AB - AC = AB - AD = BD\).</li>
+    <li><strong>\(AC - AB\) is given</strong> (AC is longer). Mark \(D\) on the <strong>ray opposite to</strong> \(BX\) with \(BD = AC - AB\). The perpendicular bisector of \(DC\) meets ray \(BX\) at \(A\). Now \(AC = AD = AB + BD\), so \(AC - AB = BD\).</li>
+  </ul>
+  <p>Here the difference must be less than \(BC\), because the difference of two sides of a triangle is less than the third side.</p>
+
+  <h2>3. Perimeter and both base angles</h2>
+  <p>Given \(\angle B\), \(\angle C\) and \(AB + BC + CA\).</p>
+  <ol>
+    <li>Draw segment \(XY\) equal to the perimeter.</li>
+    <li>At \(X\) draw an angle of \(\tfrac12\angle B\), and at \(Y\) an angle of \(\tfrac12\angle C\), on the same side. The rays meet at \(A\).</li>
+    <li>The perpendicular bisectors of \(AX\) and \(AY\) meet \(XY\) at \(B\) and \(C\). Join \(AB\) and \(AC\).</li>
+  </ol>
+  <div class="note"><strong>Why it works.</strong> \(B\) is on the perpendicular bisector of \(AX\), so \(BA = BX\) and \(\triangle ABX\) is isosceles: \(\angle BAX = \angle BXA = \tfrac12\angle B\). \(\angle ABC\) is an exterior angle of \(\triangle ABX\), so it equals \(\tfrac12\angle B + \tfrac12\angle B = \angle B\). In the same way \(CA = CY\). So \(AB + BC + CA = XB + BC + CY = XY\), the perimeter.</div>
+</section>
+<h2>Try it</h2>
+<p class="prose" style="margin-top:1rem">Choose what is given, set the measures, and press “Play construction” or “Next step”.</p>
+<ul class="tries">
+  <li><span><strong>Sum.</strong> BC = 8 cm, ∠B = 60°, AB + AC = 12 cm.</span>
+    <button class="btn" data-sim='{"mode":"sum","a":8,"B":60,"sum":12}'>Construct</button></li>
+  <li><span><strong>Difference, AC longer.</strong> BC = 8 cm, ∠B = 60°, AC − AB = 2 cm.</span>
+    <button class="btn" data-sim='{"mode":"diff","side":"AC","a":8,"B":60,"diff":2}'>Construct</button></li>
+  <li><span><strong>Perimeter.</strong> ∠B = 70°, ∠C = 50°, perimeter 12 cm.</span>
+    <button class="btn" data-sim='{"mode":"perim","B":70,"C":50,"per":12}'>Construct</button></li>
+  <li><span><strong>Impossible.</strong> BC = 7 cm, ∠B = 50°, AB + AC = 6 cm.</span>
+    <button class="btn" data-sim='{"mode":"sum","a":7,"B":50,"sum":6}'>Try it</button></li>
+</ul>
+<p class="prose" style="margin-top:1rem;font-size:.875rem;color:var(--muted)">What you should see: the first two give the same triangle: AB = 5 cm and AC = 7 cm (5 + 7 = 12 and 7 − 5 = 2). With the perimeter 12 cm the angles at X and Y are 35° and 25°, and the sides come out about 3.57 cm, 4.04 cm and 4.38 cm. The last one has no triangle, because 6 is not more than 7.</p>
+
+<h2>Worked examples</h2>
+<div class="example">
+  <h3 style="margin-top:0">1. Given the sum of two sides</h3>
+  <p>Construct \(\triangle ABC\) with \(BC = 8\) cm, \(\angle B = 60^\circ\) and \(AB + AC = 12\) cm. Measure \(AB\) and \(AC\).</p>
+  <ol>
+    <li>Draw \(BC = 8\) cm and ray \(BX\) with \(\angle XBC = 60^\circ\). Mark \(D\) on \(BX\) with \(BD = 12\) cm. Join \(DC\).</li>
+    <li>The perpendicular bisector of \(DC\) meets \(BD\) at \(A\). Join \(AC\).</li>
+    <li>Measure: <span class="answer">AB = 5 cm, AC = 7 cm</span>, and 5 + 7 = 12 ✓</li>
+  </ol>
+  <button class="btn" data-sim='{"mode":"sum","a":8,"B":60,"sum":12}'>Check it</button>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">2. Given the difference of two sides</h3>
+  <p>Construct \(\triangle ABC\) with \(BC = 5\) cm, \(\angle B = 60^\circ\) and \(AB - AC = 1\) cm.</p>
+  <ol>
+    <li>AB is the longer side, so mark \(D\) on ray \(BX\) itself, with \(BD = 1\) cm. Join \(DC\).</li>
+    <li>The perpendicular bisector of \(DC\) meets ray \(BX\) at \(A\). Join \(AC\).</li>
+    <li>Measure: <span class="answer">AB = 8 cm, AC = 7 cm</span>, and 8 − 7 = 1 ✓</li>
+  </ol>
+  <button class="btn" data-sim='{"mode":"diff","side":"AB","a":5,"B":60,"diff":1}'>Check it</button>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">3. Given the perimeter</h3>
+  <p>Construct \(\triangle ABC\) with \(\angle B = 60^\circ\), \(\angle C = 60^\circ\) and perimeter 15 cm. What kind of triangle is it?</p>
+  <ol>
+    <li>Draw \(XY = 15\) cm. At \(X\) draw \(30^\circ\) (half of 60°) and at \(Y\) draw \(30^\circ\). The rays meet at \(A\).</li>
+    <li>Perpendicular bisectors of \(AX\) and \(AY\) give \(B\) and \(C\) on \(XY\).</li>
+    <li>\(\angle A = 180^\circ - 60^\circ - 60^\circ = 60^\circ\): <span class="answer">equilateral, each side 5 cm</span></li>
+  </ol>
+  <button class="btn" data-sim='{"mode":"perim","B":60,"C":60,"per":15}'>Check it</button>
+</div>
+
+<h2>Common mistakes</h2>
+<ul class="mistakes" style="margin-top:1rem">
+  <li><strong>Marking the sum on the base.</strong> BD = AB + AC is marked on the ray at the given angle, not along BC.</li>
+  <li><strong>Wrong ray for AC − AB.</strong> When AC is the longer side, D goes on the ray opposite to BX, below the base.</li>
+  <li><strong>Using the full base angles at X and Y.</strong> In the perimeter construction you draw half of ∠B and half of ∠C.</li>
+  <li><strong>Not checking first.</strong> AB + AC must be more than BC, and a difference must be less than BC, or no triangle exists.</li>
+</ul>
+
+<h2>Quick check</h2>
+<div class="quiz">
+  <fieldset class="q" data-answer="b">
+    <legend>1. To construct △PQR with QR, ∠Q and PQ + PR given, the point D is marked so that QD equals…</legend>
+    <div class="opts">
+      <button data-opt="a">QR</button>
+      <button data-opt="b">PQ + PR</button>
+      <button data-opt="c">PQ − PR</button>
+      <button data-opt="d">half of QR</button>
+    </div>
+    <p class="why" hidden>D is on the ray at the given angle, with QD equal to the given sum.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="b">
+    <legend>2. In that construction, why is PD = PR?</legend>
+    <div class="opts">
+      <button data-opt="a">P is the midpoint of QD</button>
+      <button data-opt="b">P lies on the perpendicular bisector of DR</button>
+      <button data-opt="c">∠Q = ∠R</button>
+      <button data-opt="d">QD = QR</button>
+    </div>
+    <p class="why" hidden>Every point on the perpendicular bisector of DR is equidistant from D and R.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="c">
+    <legend>3. A triangle has ∠B = 80° and ∠C = 50°. In the perimeter construction, the angles drawn at X and Y are…</legend>
+    <div class="opts">
+      <button data-opt="a">80° and 50°</button>
+      <button data-opt="b">160° and 100°</button>
+      <button data-opt="c">40° and 25°</button>
+      <button data-opt="d">50° and 80°</button>
+    </div>
+    <p class="why" hidden>Half of each base angle: 80° ÷ 2 = 40° and 50° ÷ 2 = 25°.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="b">
+    <legend>4. BC = 6 cm, ∠B = 45° and AB + AC = 5 cm. The triangle…</legend>
+    <div class="opts">
+      <button data-opt="a">has AB = AC</button>
+      <button data-opt="b">cannot be drawn</button>
+      <button data-opt="c">is right-angled</button>
+      <button data-opt="d">has AB = 5 cm</button>
+    </div>
+    <p class="why" hidden>AB + AC must be greater than BC, and 5 is less than 6.</p>
+  </fieldset>
+  <p class="score" aria-live="polite"></p>
+</div>
+<nav class="next-prev" aria-label="Lessons">
+  <a href="bisectors.html">← Perpendicular and angle bisectors</a>
+  <a href="../quads/parallelograms.html">Next chapter: Quadrilaterals →</a>
+</nav>
+</main>
+
+<footer class="foot">Follows Chapter 4 of the Maharashtra State Board Std 9 Mathematics Part II textbook. Explanations and examples are original.</footer>
+</div>
+
+<script src="../../assets/js/sim-kit.js?v=20261010"></script>
+<script src="../../assets/js/math-kit.js?v=20261010"></script>
+<script src="../../assets/js/sims/constructions-triangles.js?v=20261010"></script>
+<script src="../../assets/js/quiz.js?v=20261010"></script>
+<script>
+  (function () {
+    var simEl = document.getElementById("sim-main");
+    var sim = ConstrTriSim.mount(simEl, { mode: "sum", a: 8, B: 60, sum: 12 });
+    window.lessonSim = sim;
+    // Buttons in the lesson that set up the simulation: data-sim='{...settings}'
+    document.querySelectorAll("main [data-sim]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        sim.set(JSON.parse(b.dataset.sim));
+        sim.play();
+        simEl.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+      });
+    });
+  })();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/contrib/auto-render.min.js"></script>
+<script>
+  renderMathInElement(document.body, {
+    delimiters: [{ left: "$$", right: "$$", display: true }, { left: "\\(", right: "\\)", display: false }],
+    output: window.KATEX_OUTPUT || "htmlAndMathml",
+    throwOnError: false
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Points, Lines and Distance · Visual Science &amp; Maths</title>
+<meta name="description" content="Point, line and plane, co-ordinates of points on a line, the distance d(A, B), betweenness, segments, rays, comparing segments and the midpoint.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.css">
+<link rel="stylesheet" href="../../assets/css/style.css?v=20261010">
+</head>
+<body class="lesson ch-geometry">
+<div class="wrap">
+
+<header class="site-head">
+  <a class="brand" href="../../index.html"><svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><path d="M3 27 Q14 -1 29 27" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-dasharray="2.5 3.5"/><circle cx="21" cy="10" r="4.2" fill="var(--vy)"/></svg> Visual <span>Science &amp; Maths</span></a>
+  <nav class="site-nav" aria-label="Main"><a href="../../index.html#maths">Chapters</a><a href="../../index.html#games">Games</a></nav>
+</header>
+
+<main>
+<div class="title-band">
+<p class="eyebrow">Basic Concepts in Geometry, lesson 1</p>
+<h1>Points, Lines and Distance</h1>
+<p class="lede">Geometry starts with three ideas we never define: point, line and plane. Put numbers on a line and we can measure distances, decide which point lies between two others, and find the midpoint of a segment.</p>
+<p class="downloads"><a class="btn" href="../../slides/points-lines-and-distance.pptx" download>Download slides (.pptx)</a> <span>12 slides with teacher notes</span></p>
+</div>
+
+<div id="sim-main"></div>
+
+<section class="prose">
+  <h2>Point, line and plane</h2>
+  <p><strong>Point</strong>, <strong>line</strong> and <strong>plane</strong> are basic concepts. We do not define them; we understand them from examples. A sharp pencil tip suggests a point, a tightly stretched thread suggests a line, and the top of a table suggests a plane. A line has no end on either side.</p>
+  <ul class="mistakes">
+    <li>Infinitely many lines can pass through one point.</li>
+    <li>Exactly <strong>one</strong> line passes through two distinct points.</li>
+    <li>Points that lie on one line are <strong>collinear points</strong>. Points that do not all lie on one line are <strong>non-collinear</strong>. Three non-collinear points make a triangle.</li>
+  </ul>
+
+  <h2>Co-ordinates of points on a line</h2>
+  <p>Mark 0 on a line and equal steps on both sides, as on a number line. Then every point on the line matches exactly one real number, and every real number matches exactly one point. The number of a point is its <strong>co-ordinate</strong>. In the simulation, A has co-ordinate −2 and B has co-ordinate 5.</p>
+
+  <h2>Distance between two points</h2>
+  <div class="note"><strong>Distance.</strong> If the co-ordinates of points A and B are \(a\) and \(b\) and \(a &gt; b\), then \(d(A, B) = a - b\). The distance is the <strong>greater co-ordinate minus the smaller</strong>. It can also be written \(d(A, B) = |a - b|\).</div>
+  <p>So the distance is never negative, \(d(A, B) = d(B, A)\), and \(d(A, A) = 0\). For A at −2 and B at 5: \(d(A, B) = 5 - (-2) = 7\).</p>
+  <p>Going the other way: the points at a distance 6 from a point at −3 are at \(-3 + 6 = 3\) and \(-3 - 6 = -9\). There are always two such points, one on each side.</p>
+
+  <h2>Betweenness</h2>
+  <div class="note"><strong>Betweenness.</strong> If P, Q and R are three distinct collinear points and \(d(P, Q) + d(Q, R) = d(P, R)\), then point Q is <strong>between</strong> P and R. We write this as <strong>P-Q-R</strong>.</div>
+  <p>To decide which of three points is between the other two, find the largest distance. If the other two distances add up to it, the points are collinear and the point shared by the two smaller distances is in the middle. If not, the points are not collinear.</p>
+
+  <h2>Segment, ray and congruent segments</h2>
+  <ul class="mistakes">
+    <li><strong>Segment AB</strong> (seg AB) is made of A, B and all the points between them. Its length is \(l(AB) = d(A, B)\).</li>
+    <li><strong>Ray AB</strong> starts at A, passes through B and goes on without end. It contains seg AB and every point P with A-B-P. Two rays from one point in opposite directions along a line are <strong>opposite rays</strong>.</li>
+    <li>If two segments have equal lengths, they are <strong>congruent segments</strong>: \(l(AB) = l(CD)\) means seg AB ≅ seg CD. Every segment is congruent to itself; if seg AB ≅ seg CD then seg CD ≅ seg AB; and if seg AB ≅ seg CD and seg CD ≅ seg EF, then seg AB ≅ seg EF.</li>
+  </ul>
+
+  <h2>Comparing segments, perpendiculars and distance from a line</h2>
+  <ul class="mistakes">
+    <li>If \(l(AB) &lt; l(CD)\), we say seg AB is <strong>smaller</strong> than seg CD and write seg AB &lt; seg CD.</li>
+    <li>Two segments or rays are <strong>perpendicular</strong> if the lines that contain them are perpendicular: seg AB ⊥ seg CD.</li>
+    <li>The <strong>distance of a point from a line</strong> is the length of the perpendicular segment drawn from the point to the line. It is the shortest of all the segments from the point to the line.</li>
+  </ul>
+
+  <h2>Midpoint of a segment</h2>
+  <div class="note"><strong>Midpoint.</strong> If A-M-B and seg AM ≅ seg MB, then M is the <strong>midpoint</strong> of seg AB. Every segment has one and only one midpoint.</div>
+  <p>On a number line the midpoint is halfway between the co-ordinates: for A at \(a\) and B at \(b\), M is at \(\dfrac{a + b}{2}\). Each half is half the length of the segment.</p>
+</section>
+<h2>Try it</h2>
+<p class="prose" style="margin-top:1rem">Choose a view, then drag the points along the line.</p>
+<ul class="tries">
+  <li><span><strong>Distance.</strong> A at −2, B at 5.</span>
+    <button class="btn" data-sim='{"mode":"dist","a":-2,"b":5}'>Show</button></li>
+  <li><span><strong>Between?</strong> A at −4, P at 1, B at 5.</span>
+    <button class="btn" data-sim='{"mode":"betw","a":-4,"p":1,"b":5}'>Show</button></li>
+  <li><span><strong>Not between.</strong> A at −4, P at 6, B at 2.</span>
+    <button class="btn" data-sim='{"mode":"betw","a":-4,"p":6,"b":2}'>Show</button></li>
+  <li><span><strong>Midpoint.</strong> A at −5, B at 2.</span>
+    <button class="btn" data-sim='{"mode":"mid","a":-5,"b":2}'>Show</button></li>
+  <li><span><strong>Only distances.</strong> d(A, B) = 4, d(B, C) = 6, d(A, C) = 9.</span>
+    <button class="btn" data-sim='{"mode":"three","ab":4,"bc":6,"ac":9}'>Try it</button></li>
+</ul>
+<p class="prose" style="margin-top:1rem;font-size:.875rem;color:var(--muted)">What you should see: d(A, B) = 5 − (−2) = 7. With P at 1, d(A, P) + d(P, B) = 5 + 4 = 9 = d(A, B), so A-P-B. With P at 6, 10 + 4 = 14 is not 6, so P is not between A and B; B is in the middle. The midpoint of A(−5) and B(2) is at −1.5, and AM = MB = 3.5. With distances 4, 6 and 9, 4 + 6 = 10 is not 9, so the points are not collinear.</p>
+
+<h2>Worked examples</h2>
+<div class="example">
+  <h3 style="margin-top:0">1. Distance from co-ordinates</h3>
+  <p>The co-ordinates of P and Q on a line are −3 and 4. Find \(d(P, Q)\). Also find \(d(R, S)\) when the co-ordinates of R and S are 2.5 and −1.5.</p>
+  <ol>
+    <li>4 &gt; −3, so \(d(P, Q) = 4 - (-3) = 4 + 3 = \) <span class="answer">7</span></li>
+    <li>2.5 &gt; −1.5, so \(d(R, S) = 2.5 - (-1.5) = \) <span class="answer">4</span></li>
+  </ol>
+  <button class="btn" data-sim='{"mode":"dist","a":-3,"b":4}'>Check it</button>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">2. Which point is between?</h3>
+  <p>For three points, \(d(A, B) = 5\), \(d(B, C) = 8\) and \(d(A, C) = 3\). Which point is between the other two?</p>
+  <ol>
+    <li>The largest distance is \(d(B, C) = 8\).</li>
+    <li>\(d(B, A) + d(A, C) = 5 + 3 = 8 = d(B, C)\).</li>
+    <li>So A is between B and C: <span class="answer">B-A-C</span></li>
+  </ol>
+  <button class="btn" data-sim='{"mode":"three","ab":5,"bc":8,"ac":3}'>Check it</button>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">3. Two possible answers</h3>
+  <p>X, Y and Z are collinear, \(d(X, Y) = 6\) and \(d(Y, Z) = 2.5\). Find all possible values of \(d(X, Z)\).</p>
+  <ol>
+    <li>If X-Y-Z, then \(d(X, Z) = 6 + 2.5 = 8.5\).</li>
+    <li>If X-Z-Y, then \(d(X, Z) + 2.5 = 6\), so \(d(X, Z) = 3.5\).</li>
+    <li>Y-X-Z is impossible, because then \(d(Y, Z)\) would be more than 6.</li>
+    <li>\(d(X, Z) = \) <span class="answer">8.5 or 3.5</span></li>
+  </ol>
+</div>
+
+<h2>Common mistakes</h2>
+<ul class="mistakes" style="margin-top:1rem">
+  <li><strong>A negative distance.</strong> Always subtract the smaller co-ordinate from the greater. A distance is never negative.</li>
+  <li><strong>Sign slips with negatives.</strong> 4 − (−3) = 4 + 3 = 7, not 1. Put negative numbers in brackets before you subtract.</li>
+  <li><strong>Guessing the middle point.</strong> Do not go by the letters. Check that the two smaller distances add up to the largest one.</li>
+  <li><strong>Halving the co-ordinate for the midpoint.</strong> The midpoint of A(−5) and B(2) is at (−5 + 2) ÷ 2 = −1.5, not at 2 ÷ 2. It is the length that is halved.</li>
+</ul>
+
+<h2>Quick check</h2>
+<div class="quiz">
+  <fieldset class="q" data-answer="c">
+    <legend>1. The co-ordinates of P and Q are −5 and 3. Then d(P, Q) is…</legend>
+    <div class="opts">
+      <button data-opt="a">2</button>
+      <button data-opt="b">−8</button>
+      <button data-opt="c">8</button>
+      <button data-opt="d">15</button>
+    </div>
+    <p class="why" hidden>3 − (−5) = 3 + 5 = 8.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="a">
+    <legend>2. d(A, B) = 7, d(B, C) = 4 and d(A, C) = 11. Which is true?</legend>
+    <div class="opts">
+      <button data-opt="a">A-B-C</button>
+      <button data-opt="b">A-C-B</button>
+      <button data-opt="c">B-A-C</button>
+      <button data-opt="d">The points are not collinear</button>
+    </div>
+    <p class="why" hidden>7 + 4 = 11, that is d(A, B) + d(B, C) = d(A, C), so B is between A and C.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="b">
+    <legend>3. M is the midpoint of seg RS and l(RS) = 13. Then l(RM) is…</legend>
+    <div class="opts">
+      <button data-opt="a">13</button>
+      <button data-opt="b">6.5</button>
+      <button data-opt="c">26</button>
+      <button data-opt="d">3.25</button>
+    </div>
+    <p class="why" hidden>The midpoint cuts the segment into two congruent halves: 13 ÷ 2 = 6.5.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="d">
+    <legend>4. How many lines can pass through two distinct points?</legend>
+    <div class="opts">
+      <button data-opt="a">Infinitely many</button>
+      <button data-opt="b">None</button>
+      <button data-opt="c">Two</button>
+      <button data-opt="d">Exactly one</button>
+    </div>
+    <p class="why" hidden>Through one point there are infinitely many lines, but through two distinct points there is exactly one.</p>
+  </fieldset>
+  <p class="score" aria-live="polite"></p>
+</div>
+<nav class="next-prev" aria-label="Lessons">
+  <a href="../../index.html#maths">← All maths chapters</a>
+  <a href="conditional-statements-and-proofs.html">Next: Conditional statements and proofs →</a>
+</nav>
+</main>
+
+<footer class="foot">Follows Chapter 1 of the Maharashtra State Board Std 9 Mathematics Part II textbook. Explanations and examples are original.</footer>
+</div>
+
+<script src="../../assets/js/sim-kit.js?v=20261010"></script>
+<script src="../../assets/js/math-kit.js?v=20261010"></script>
+<script src="../../assets/js/sims/geometry-distance.js?v=20261010"></script>
+<script src="../../assets/js/quiz.js?v=20261010"></script>
+<script>
+  (function () {
+    var simEl = document.getElementById("sim-main");
+    var sim = GeoDistSim.mount(simEl, { mode: "dist", a: -2, b: 5 });
+    window.lessonSim = sim;
+    // Buttons in the lesson that set up the simulation: data-sim='{...settings}'
+    document.querySelectorAll("main [data-sim]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        sim.set(JSON.parse(b.dataset.sim));
+        sim.play();
+        simEl.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+      });
+    });
+  })();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/contrib/auto-render.min.js"></script>
+<script>
+  renderMathInElement(document.body, {
+    delimiters: [{ left: "$$", right: "$$", display: true }, { left: "\\(", right: "\\)", display: false }],
+    output: window.KATEX_OUTPUT || "htmlAndMathml",
+    throwOnError: false
+  });
+</script>
+
+</body>
+</html>

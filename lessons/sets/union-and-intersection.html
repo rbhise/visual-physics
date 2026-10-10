@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Union, Intersection and Counting · Visual Science &amp; Maths</title>
+<meta name="description" content="Find A ∩ B and A ∪ B, learn their properties, and use n(A ∪ B) = n(A) + n(B) − n(A ∩ B) to solve word problems with Venn diagrams.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.css">
+<link rel="stylesheet" href="../../assets/css/style.css?v=20261010">
+</head>
+<body class="lesson ch-sets">
+<div class="wrap">
+
+<header class="site-head">
+  <a class="brand" href="../../index.html"><svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><path d="M3 27 Q14 -1 29 27" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-dasharray="2.5 3.5"/><circle cx="21" cy="10" r="4.2" fill="var(--vy)"/></svg> Visual <span>Science &amp; Maths</span></a>
+  <nav class="site-nav" aria-label="Main"><a href="../../index.html#maths">Chapters</a><a href="../../index.html#games">Games</a></nav>
+</header>
+
+<main>
+<div class="title-band">
+<p class="eyebrow">Sets, lesson 3</p>
+<h1>Union, Intersection and Counting</h1>
+<p class="lede">Some students play cricket, some play football, and some play both. To count them without counting anyone twice, you need the union and the intersection of two sets.</p>
+<p class="downloads"><a class="btn" href="../../slides/union-and-intersection.pptx" download>Download slides (.pptx)</a> <span>12 slides with teacher notes</span></p>
+</div>
+
+<div id="sim-main"></div>
+
+<section class="prose">
+  <h2>Intersection of two sets</h2>
+  <div class="note"><strong>Intersection.</strong> The set of all elements common to set \(A\) and set \(B\) is the <strong>intersection</strong> of \(A\) and \(B\), written \(A \cap B\) and read “\(A\) intersection \(B\)”.
+  $$A \cap B = \{x \mid x \in A \text{ and } x \in B\}$$</div>
+  <p>For \(A = \{1, 2, 3, 4, 6, 12\}\) and \(B = \{2, 4, 6, 8, 10, 12\}\), \(A \cap B = \{2, 4, 6, 12\}\). In a Venn diagram it is the part where the circles overlap. If \(A \cap B = \varnothing\), the sets have nothing in common and are called <strong>disjoint sets</strong>.</p>
+  <p><strong>Properties:</strong> \(A \cap B = B \cap A\); \(A \cap A = A\); \(A \cap \varnothing = \varnothing\); \(A \cap A' = \varnothing\); and if \(A \subseteq B\) then \(A \cap B = A\).</p>
+
+  <h2>Union of two sets</h2>
+  <div class="note"><strong>Union.</strong> The set of all elements that are in \(A\) or in \(B\) (or in both) is the <strong>union</strong> of \(A\) and \(B\), written \(A \cup B\) and read “\(A\) union \(B\)”.
+  $$A \cup B = \{x \mid x \in A \text{ or } x \in B\}$$</div>
+  <p>For the same sets, \(A \cup B = \{1, 2, 3, 4, 6, 8, 10, 12\}\). The common elements 2, 4, 6 and 12 are written only once.</p>
+  <p><strong>Properties:</strong> \(A \cup B = B \cup A\); \(A \cup A = A\); \(A \cup \varnothing = A\); \(A \cup A' = U\); and if \(A \subseteq B\) then \(A \cup B = B\).</p>
+  <p>Shade \((A \cup B)'\) and then \(A' \cap B'\) in the simulation: they are the same region. In the same way \((A \cap B)' = A' \cup B'\). These two rules are called De Morgan’s laws.</p>
+
+  <h2>Number of elements in a union</h2>
+  <div class="note"><strong>Formula.</strong> For any two finite sets \(A\) and \(B\),
+  $$n(A \cup B) = n(A) + n(B) - n(A \cap B)$$</div>
+  <p>Why subtract? The elements in \(A \cap B\) are counted once in \(n(A)\) and again in \(n(B)\). Taking \(n(A \cap B)\) away once means every element is counted exactly once. For the sets above: \(6 + 6 - 4 = 8 = n(A \cup B)\).</p>
+
+  <h2>Word problems</h2>
+  <p>Draw a Venn diagram with four regions: only \(A\), both, only \(B\), and neither. Fill in the <em>both</em> region first, because the other regions are found by subtracting it.</p>
+  <ul class="mistakes">
+    <li>Only \(A\): \(n(A) - n(A \cap B)\)</li>
+    <li>Only \(B\): \(n(B) - n(A \cap B)\)</li>
+    <li>Neither: \(n(U) - n(A \cup B)\)</li>
+  </ul>
+</section>
+<h2>Try it</h2>
+<p class="prose" style="margin-top:1rem">Choose what to shade, and drag numbers to change A and B. For word problems the simulation switches to counts with sliders.</p>
+<ul class="tries">
+  <li><span><strong>Intersection.</strong> Factors of 12 and even numbers up to 12.</span>
+    <button class="btn" data-sim='{"view":"ops","U":[1,2,3,4,5,6,7,8,9,10,11,12],"A":[1,2,3,4,6,12],"B":[2,4,6,8,10,12],"shade":"AiB"}'>Try it</button></li>
+  <li><span><strong>Union.</strong> The same two sets.</span>
+    <button class="btn" data-sim='{"view":"ops","U":[1,2,3,4,5,6,7,8,9,10,11,12],"A":[1,2,3,4,6,12],"B":[2,4,6,8,10,12],"shade":"AuB"}'>Try it</button></li>
+  <li><span><strong>Disjoint sets.</strong> Odd numbers and multiples of 4 up to 10.</span>
+    <button class="btn" data-sim='{"view":"ops","U":[1,2,3,4,5,6,7,8,9,10],"A":[1,3,5,7,9],"B":[4,8],"shade":"AiB"}'>Try it</button></li>
+  <li><span><strong>De Morgan.</strong> Shade (A ∪ B)′, then A′ ∩ B′.</span>
+    <button class="btn" data-sim='{"view":"ops","U":[1,2,3,4,5,6,7,8,9,10,11,12],"A":[1,2,3,4,6,12],"B":[2,4,6,8,10,12],"shade":"AuBc"}'>Try it</button></li>
+  <li><span><strong>Word problem.</strong> 40 students: 25 play cricket, 20 football, 10 both.</span>
+    <button class="btn" data-sim='{"view":"count","nameA":"Cricket","nameB":"Football","nA":25,"nB":20,"nAB":10,"nU":40,"shade":"AuB"}'>Try it</button></li>
+</ul>
+<p class="prose" style="margin-top:1rem;font-size:.875rem;color:var(--muted)">What you should see: A ∩ B = {2, 4, 6, 12} and A ∪ B = {1, 2, 3, 4, 6, 8, 10, 12}; the check reads 6 + 6 − 4 = 8. The odd numbers and {4, 8} share nothing, so A ∩ B = ∅ and 5 + 2 − 0 = 7. (A ∪ B)′ and A′ ∩ B′ are both {5, 7, 9, 11}. In the class, 25 + 20 − 10 = 35 play a game, so 5 play neither.</p>
+
+<h2>Worked examples</h2>
+<div class="example">
+  <h3 style="margin-top:0">1. Union, intersection and the formula</h3>
+  <p>\(A = \{x \mid x \text{ is a factor of } 12\}\) and \(B = \{x \mid x \text{ is an even natural number}, x \le 12\}\). Find \(A \cap B\) and \(A \cup B\), and verify \(n(A \cup B) = n(A) + n(B) - n(A \cap B)\).</p>
+  <ol>
+    <li>\(A = \{1, 2, 3, 4, 6, 12\}\), \(B = \{2, 4, 6, 8, 10, 12\}\).</li>
+    <li><span class="answer">A ∩ B = {2, 4, 6, 12}</span> and <span class="answer">A ∪ B = {1, 2, 3, 4, 6, 8, 10, 12}</span></li>
+    <li>\(n(A) + n(B) - n(A \cap B) = 6 + 6 - 4 = 8 = n(A \cup B)\) ✓</li>
+  </ol>
+  <button class="btn" data-sim='{"view":"ops","U":[1,2,3,4,5,6,7,8,9,10,11,12],"A":[1,2,3,4,6,12],"B":[2,4,6,8,10,12],"shade":"AuB"}'>Check it</button>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">2. How many speak both?</h3>
+  <p>In a group of 60 people, 38 speak Marathi and 30 speak Hindi. Everyone speaks at least one of the two. How many speak both? How many speak only Hindi?</p>
+  <ol>
+    <li>Let \(M\) and \(H\) be the sets. Everyone speaks at least one, so \(n(M \cup H) = 60\).</li>
+    <li>\(60 = 38 + 30 - n(M \cap H)\), so \(n(M \cap H) = 68 - 60 = \) <span class="answer">8 speak both</span></li>
+    <li>Only Hindi: \(30 - 8 = \) <span class="answer">22</span></li>
+  </ol>
+  <button class="btn" data-sim='{"view":"count","nameA":"Marathi","nameB":"Hindi","nA":38,"nB":30,"nAB":8,"nU":60,"shade":"AiB"}'>Check it</button>
+</div>
+
+<div class="example">
+  <h3 style="margin-top:0">3. How many have neither?</h3>
+  <p>In a survey of 70 families, 42 have a two-wheeler, 25 have a car and 15 have both. How many families have neither?</p>
+  <ol>
+    <li>\(n(A \cup B) = 42 + 25 - 15 = 52\) families have at least one.</li>
+    <li>Neither: \(70 - 52 = \) <span class="answer">18 families</span></li>
+  </ol>
+  <button class="btn" data-sim='{"view":"count","nameA":"Two-wheeler","nameB":"Car","nA":42,"nB":25,"nAB":15,"nU":70,"shade":"AuBc"}'>Check it</button>
+</div>
+
+<h2>Common mistakes</h2>
+<ul class="mistakes" style="margin-top:1rem">
+  <li><strong>Writing common elements twice.</strong> In A ∪ B each element appears once: {2, 3} ∪ {3, 5} = {2, 3, 5}.</li>
+  <li><strong>Just adding n(A) and n(B).</strong> That counts the overlap twice. Subtract n(A ∩ B) once.</li>
+  <li><strong>Mixing up ∩ and ∪.</strong> ∩ means “and” (common elements only); ∪ means “or” (everything in either set).</li>
+  <li><strong>Using n(A) for “only A”.</strong> Only A is n(A) − n(A ∩ B). Fill the overlap first.</li>
+</ul>
+
+<h2>Quick check</h2>
+<div class="quiz">
+  <fieldset class="q" data-answer="b">
+    <legend>1. A = {2, 3, 5} and B = {3, 5, 7}. A ∪ B is…</legend>
+    <div class="opts">
+      <button data-opt="a">{3, 5}</button>
+      <button data-opt="b">{2, 3, 5, 7}</button>
+      <button data-opt="c">{2, 3, 3, 5, 5, 7}</button>
+      <button data-opt="d">{2, 7}</button>
+    </div>
+    <p class="why" hidden>Every element of either set, each written once. {3, 5} is A ∩ B.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="c">
+    <legend>2. n(A) = 15, n(B) = 12 and n(A ∩ B) = 5. Then n(A ∪ B) is…</legend>
+    <div class="opts">
+      <button data-opt="a">27</button>
+      <button data-opt="b">32</button>
+      <button data-opt="c">22</button>
+      <button data-opt="d">17</button>
+    </div>
+    <p class="why" hidden>15 + 12 − 5 = 22.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="a">
+    <legend>3. If A ⊆ B, then A ∩ B is…</legend>
+    <div class="opts">
+      <button data-opt="a">A</button>
+      <button data-opt="b">B</button>
+      <button data-opt="c">∅</button>
+      <button data-opt="d">U</button>
+    </div>
+    <p class="why" hidden>Every element of A is already in B, so the common part is all of A.</p>
+  </fieldset>
+  <fieldset class="q" data-answer="a">
+    <legend>4. In a class of 50, each student likes tea or coffee or both. 30 like tea and 25 like coffee. How many like both?</legend>
+    <div class="opts">
+      <button data-opt="a">5</button>
+      <button data-opt="b">20</button>
+      <button data-opt="c">25</button>
+      <button data-opt="d">55</button>
+    </div>
+    <p class="why" hidden>n(T ∪ C) = 50, so n(T ∩ C) = 30 + 25 − 50 = 5.</p>
+  </fieldset>
+  <p class="score" aria-live="polite"></p>
+</div>
+<nav class="next-prev" aria-label="Lessons">
+  <a href="venn-diagrams.html">← Venn diagrams, subsets and complements</a>
+  <a href="../real/rational-numbers-and-decimals.html">Next chapter: Real Numbers →</a>
+</nav>
+</main>
+
+<footer class="foot">Follows Chapter 1 of the Maharashtra State Board Std 9 Mathematics Part I textbook. Explanations and examples are original.</footer>
+</div>
+
+<script src="../../assets/js/sim-kit.js?v=20261010"></script>
+<script src="../../assets/js/math-kit.js?v=20261010"></script>
+<script src="../../assets/js/sims/sets-venn.js?v=20261010"></script>
+<script src="../../assets/js/quiz.js?v=20261010"></script>
+<script>
+  (function () {
+    var simEl = document.getElementById("sim-main");
+    var sim = SetsVennSim.mount(simEl, { view: "ops", U: [1,2,3,4,5,6,7,8,9,10,11,12], A: [1,2,3,4,6,12], B: [2,4,6,8,10,12], shade: "AiB" });
+    window.lessonSim = sim;
+    // Buttons in the lesson that set up the simulation: data-sim='{...settings}'
+    document.querySelectorAll("main [data-sim]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        sim.set(JSON.parse(b.dataset.sim));
+        sim.play();
+        simEl.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+      });
+    });
+  })();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/contrib/auto-render.min.js"></script>
+<script>
+  renderMathInElement(document.body, {
+    delimiters: [{ left: "$$", right: "$$", display: true }, { left: "\\(", right: "\\)", display: false }],
+    output: window.KATEX_OUTPUT || "htmlAndMathml",
+    throwOnError: false
+  });
+</script>
+
+</body>
+</html>
