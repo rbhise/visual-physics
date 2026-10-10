@@ -3,30 +3,30 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Visual Physics</title>
-<meta name="description" content="Std 9 physics and chemistry with simulations you can play with, worked examples, quizzes, games and ready-made slides.">
+<title>Visual Science &amp; Maths</title>
+<meta name="description" content="Std 9 physics, chemistry and maths with simulations you can play with, worked examples, quizzes, games and ready-made slides.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=JetBrains+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="assets/css/style.css?v=20261007">
+<link rel="stylesheet" href="assets/css/style.css?v=20261010">
 </head>
 <body class="home">
 <div class="wrap">
 <header class="site-head">
-  <a class="brand" href="index.html"><svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><path d="M3 27 Q14 -1 29 27" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-dasharray="2.5 3.5"/><circle cx="21" cy="10" r="4.2" fill="var(--vy)"/></svg> Visual <span>Physics</span></a>
-  <nav class="site-nav" aria-label="Main"><a href="#chapters">Chapters</a><a href="#games">Games</a></nav>
+  <a class="brand" href="index.html"><svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><path d="M3 27 Q14 -1 29 27" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-dasharray="2.5 3.5"/><circle cx="21" cy="10" r="4.2" fill="var(--vy)"/></svg> Visual <span>Science &amp; Maths</span></a>
+  <nav class="site-nav" aria-label="Main"><a href="#science">Science</a><a href="#maths">Maths</a><a href="#games">Games</a></nav>
 </header>
 
 <main>
   <section class="hero">
     <div class="hero-text">
-      <h1>Physics you can throw, bounce and switch on.</h1>
-      <p class="lede">Every lesson starts with a simulation you control. Change one thing, watch what happens, and the equations make sense. Follows the Maharashtra State Board Std 9 Science and Technology textbook.</p>
+      <h1>Science and maths you can throw, drag and switch on.</h1>
+      <p class="lede">Every lesson starts with a simulation you control. Change one thing, watch what happens, and the equations make sense. Follows the Maharashtra State Board Std 9 Science and Technology and Mathematics textbooks.</p>
       <div class="hero-cta">
-        <a class="btn primary" href="lessons/motion/distance-and-displacement.html">Start with lesson 1</a>
+        <a class="btn primary" href="#science">Start learning</a>
         <a class="btn" href="#games">Play a game</a>
       </div>
-      <p class="hero-facts"><span><b>36</b> lessons</span><span><b>35</b> slide decks</span><span><b>3</b> games</span></p>
+      <p class="hero-facts"><span><b>77</b> lessons</span><span><b>76</b> slide decks</span><span><b>3</b> games</span></p>
     </div>
     <figure class="toy">
       <canvas id="toy" role="img" aria-label="A ball on a launcher and floating rings. Drag the ball back and let go to throw it through the rings."></canvas>
@@ -34,10 +34,15 @@
     </figure>
   </section>
 
-  <section id="chapters">
-    <h2>Pick a chapter</h2>
-    <p class="section-lede">Each colour is one chapter of the textbook. Inside every lesson: a simulation, worked examples, common mistakes, a quick quiz and slides to download.</p>
-    <ul class="chapters">
+  <section id="chapters" class="subjects">
+    <h2>Pick a subject</h2>
+    <div class="subject-switch" role="tablist" aria-label="Subject">
+      <button type="button" role="tab" id="tab-science" aria-controls="science" aria-selected="true" data-subject="science"><b>Science</b><span>Physics and chemistry, 8 chapters</span></button>
+      <button type="button" role="tab" id="tab-maths" aria-controls="maths" aria-selected="false" data-subject="maths"><b>Maths</b><span>Algebra and geometry, 16 chapters</span></button>
+    </div>
+    <div class="subject-panel" id="science" role="tabpanel" aria-labelledby="tab-science">
+      <p class="section-lede">Each colour is one chapter of the Science and Technology textbook. Inside every lesson: a simulation, worked examples, common mistakes, a quick quiz and slides to download.</p>
+      <ul class="chapters">
     <li class="chap ch-motion">
       <a class="chap-top" href="lessons/motion/distance-and-displacement.html">
         <svg class="glyph" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 41 Q22 -2 43 41" stroke-dasharray="3 4"/><circle cx="31" cy="17" r="5" fill="currentColor" stroke="none"/><path d="M3 41h42"/></svg>
@@ -119,7 +124,161 @@
       <p class="chap-blurb">Beyond the textbook: launch a ball and follow its curve.</p>
       <ul><li><a href="lessons/kinematics/projectile-motion.html">Projectile motion</a></li></ul>
     </li>
-    </ul>
+      </ul>
+    </div>
+    <div class="subject-panel" id="maths" role="tabpanel" aria-labelledby="tab-maths">
+      <p class="section-lede">Graphs you can drag and triangles you can reshape, following the Mathematics Part I (Algebra) and Part II (Geometry) textbooks. Every chapter has lessons, quizzes and slides.</p>
+      <h3 class="part-head">Part I: Algebra</h3>
+      <ul class="chapters">
+    <li class="chap ch-sets">
+      <a class="chap-top" href="lessons/sets/what-is-a-set.html">
+        <svg class="glyph" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="24" r="12"/><circle cx="30" cy="24" r="12"/><path d="M24 14a12 12 0 0 1 0 20a12 12 0 0 1 0-20Z" fill="currentColor" stroke="none" opacity="0.45"/></svg>
+        <span class="chap-meta">Chapter 1<span>Algebra, 3 lessons</span></span>
+        <span class="chap-name">Sets</span>
+      </a>
+      <p class="chap-blurb">Writing sets, Venn diagrams, subsets, union, intersection and counting.</p>
+      <ul><li><a href="lessons/sets/what-is-a-set.html">Sets and how to write them</a></li><li><a href="lessons/sets/venn-diagrams.html">Venn diagrams, subsets and complements</a></li><li><a href="lessons/sets/union-and-intersection.html">Union, intersection and counting</a></li></ul>
+    </li>
+    <li class="chap ch-real">
+      <a class="chap-top" href="lessons/real/rational-numbers-and-decimals.html">
+        <svg class="glyph" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 30h42"/><path d="M8 26v8M24 26v8M40 26v8"/><path d="M8 30 Q20 8 32 30" stroke-dasharray="3 3"/><circle cx="32" cy="30" r="3.5" fill="currentColor" stroke="none"/></svg>
+        <span class="chap-meta">Chapter 2<span>Algebra, 3 lessons</span></span>
+        <span class="chap-name">Real Numbers</span>
+      </a>
+      <p class="chap-blurb">Decimals, irrational numbers on the number line, surds and rationalising.</p>
+      <ul><li><a href="lessons/real/rational-numbers-and-decimals.html">Rational numbers and decimals</a></li><li><a href="lessons/real/irrational-and-real-numbers.html">Irrational and real numbers</a></li><li><a href="lessons/real/surds.html">Surds and rationalising</a></li></ul>
+    </li>
+    <li class="chap ch-poly">
+      <a class="chap-top" href="lessons/poly/polynomials-and-degree.html">
+        <svg class="glyph" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 44V4M4 44h40"/><path d="M8 8 Q14 44 22 30 T42 6"/></svg>
+        <span class="chap-meta">Chapter 3<span>Algebra, 3 lessons</span></span>
+        <span class="chap-name">Polynomials</span>
+      </a>
+      <p class="chap-blurb">Degree, operations, synthetic division, remainder and factor theorems.</p>
+      <ul><li><a href="lessons/poly/polynomials-and-degree.html">Polynomials and their degree</a></li><li><a href="lessons/poly/operations-on-polynomials.html">Operations and synthetic division</a></li><li><a href="lessons/poly/remainder-and-factor-theorems.html">Remainder and factor theorems</a></li></ul>
+    </li>
+    <li class="chap ch-ratio">
+      <a class="chap-top" href="lessons/ratio/ratio-and-proportion.html">
+        <svg class="glyph" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="10" width="14" height="28" rx="2"/><rect x="29" y="22" width="14" height="16" rx="2"/><path d="M5 24h14" stroke-dasharray="3 3"/><path d="M22 30h4"/></svg>
+        <span class="chap-meta">Chapter 4<span>Algebra, 3 lessons</span></span>
+        <span class="chap-name">Ratio and Proportion</span>
+      </a>
+      <p class="chap-blurb">Direct and inverse proportion, properties of equal ratios and the k method.</p>
+      <ul><li><a href="lessons/ratio/ratio-and-proportion.html">Ratio, direct and inverse proportion</a></li><li><a href="lessons/ratio/properties-of-equal-ratios.html">Properties of equal ratios</a></li><li><a href="lessons/ratio/k-method.html">Theorem on equal ratios and the k method</a></li></ul>
+    </li>
+    <li class="chap ch-linear">
+      <a class="chap-top" href="lessons/linear/linear-equations.html">
+        <svg class="glyph" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 42 44 8" /><path d="M4 12 44 38" stroke-dasharray="3 4"/><circle cx="25" cy="24" r="4.5" fill="currentColor" stroke="none"/></svg>
+        <span class="chap-meta">Chapter 5<span>Algebra, 3 lessons</span></span>
+        <span class="chap-name">Linear Equations in Two Variables</span>
+      </a>
+      <p class="chap-blurb">Solutions as points on a line, elimination, substitution and word problems.</p>
+      <ul><li><a href="lessons/linear/linear-equations.html">Linear equations in two variables</a></li><li><a href="lessons/linear/simultaneous-equations.html">Solving simultaneous equations</a></li><li><a href="lessons/linear/word-problems.html">Word problems with two unknowns</a></li></ul>
+    </li>
+    <li class="chap ch-finance">
+      <a class="chap-top" href="lessons/finance/savings-and-investment.html">
+        <svg class="glyph" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 42h36"/><path d="M10 42V30h7v12M21 42V22h7v20M32 42V12h7v30"/><path d="M8 20 22 10l8 5 12-9"/></svg>
+        <span class="chap-meta">Chapter 6<span>Algebra, 2 lessons</span></span>
+        <span class="chap-name">Financial Planning</span>
+      </a>
+      <p class="chap-blurb">Saving, investing, and how income tax is worked out.</p>
+      <ul><li><a href="lessons/finance/savings-and-investment.html">Savings and investment</a></li><li><a href="lessons/finance/income-tax.html">Income tax</a></li></ul>
+    </li>
+    <li class="chap ch-stats">
+      <a class="chap-top" href="lessons/stats/bar-graphs.html">
+        <svg class="glyph" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 43h38"/><path d="M8 43V25h7v18M18 43V13h7v30M28 43V21h7v22"/><path d="M5 18h38" stroke-dasharray="3 3"/></svg>
+        <span class="chap-meta">Chapter 7<span>Algebra, 3 lessons</span></span>
+        <span class="chap-name">Statistics</span>
+      </a>
+      <p class="chap-blurb">Bar graphs, frequency tables, and the mean, median and mode.</p>
+      <ul><li><a href="lessons/stats/bar-graphs.html">Bar graphs</a></li><li><a href="lessons/stats/frequency-tables.html">Frequency tables and cumulative frequency</a></li><li><a href="lessons/stats/mean-median-mode.html">Mean, median and mode</a></li></ul>
+    </li>
+      </ul>
+      <h3 class="part-head">Part II: Geometry</h3>
+      <ul class="chapters">
+    <li class="chap ch-geometry">
+      <a class="chap-top" href="lessons/geometry/points-lines-and-distance.html">
+        <svg class="glyph" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 30h38"/><path d="M38 26l4 4-4 4"/><circle cx="12" cy="30" r="3"/><circle cx="32" cy="30" r="3"/><path d="M12 20h20M12 17v6M32 17v6"/></svg>
+        <span class="chap-meta">Chapter 1<span>Geometry, 2 lessons</span></span>
+        <span class="chap-name">Basic Concepts in Geometry</span>
+      </a>
+      <p class="chap-blurb">Points, lines, distance, betweenness, if-then statements and proofs.</p>
+      <ul><li><a href="lessons/geometry/points-lines-and-distance.html">Points, lines and distance</a></li><li><a href="lessons/geometry/conditional-statements-and-proofs.html">Conditional statements and proofs</a></li></ul>
+    </li>
+    <li class="chap ch-parallel">
+      <a class="chap-top" href="lessons/parallel/angles-and-transversals.html">
+        <svg class="glyph" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 16h40M4 34h40"/><path d="M15 44 33 6"/><path d="M8 12l4 4-4 4M8 30l4 4-4 4"/></svg>
+        <span class="chap-meta">Chapter 2<span>Geometry, 2 lessons</span></span>
+        <span class="chap-name">Parallel Lines</span>
+      </a>
+      <p class="chap-blurb">Transversals, angle pairs, properties of parallel lines and the tests.</p>
+      <ul><li><a href="lessons/parallel/angles-and-transversals.html">Angles made by a transversal</a></li><li><a href="lessons/parallel/tests-for-parallel-lines.html">Tests for parallel lines</a></li></ul>
+    </li>
+    <li class="chap ch-triangles">
+      <a class="chap-top" href="lessons/triangles/angles-of-a-triangle.html">
+        <svg class="glyph" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 41 24 7 42 41Z"/><path d="M13 41a11 11 0 0 0-3-8" /><path d="M37 41a9 9 0 0 1 2-6"/></svg>
+        <span class="chap-meta">Chapter 3<span>Geometry, 3 lessons</span></span>
+        <span class="chap-name">Triangles</span>
+      </a>
+      <p class="chap-blurb">Angle sum, exterior angles, congruence tests and special triangles.</p>
+      <ul><li><a href="lessons/triangles/angles-of-a-triangle.html">Angles of a triangle</a></li><li><a href="lessons/triangles/congruence-of-triangles.html">Congruence of triangles</a></li><li><a href="lessons/triangles/special-triangles.html">Isosceles and right triangles</a></li></ul>
+    </li>
+    <li class="chap ch-constructions">
+      <a class="chap-top" href="lessons/constructions/bisectors.html">
+        <svg class="glyph" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 40H40"/><path d="M8 40 20 12 40 40"/><path d="M24 4v40" stroke-dasharray="3 3"/><path d="M16 9a10 10 0 0 0 16 0"/><path d="M16 43a10 10 0 0 1 16 0"/></svg>
+        <span class="chap-meta">Chapter 4<span>Geometry, 2 lessons</span></span>
+        <span class="chap-name">Constructions of Triangles</span>
+      </a>
+      <p class="chap-blurb">Bisector theorems and triangles from a side sum, difference or perimeter.</p>
+      <ul><li><a href="lessons/constructions/bisectors.html">Perpendicular and angle bisectors</a></li><li><a href="lessons/constructions/constructing-triangles.html">Constructing triangles</a></li></ul>
+    </li>
+    <li class="chap ch-quads">
+      <a class="chap-top" href="lessons/quads/parallelograms.html">
+        <svg class="glyph" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 38 16 10H42L32 38Z"/><path d="M6 38 42 10M16 10l16 28" stroke-dasharray="3 3"/></svg>
+        <span class="chap-meta">Chapter 5<span>Geometry, 3 lessons</span></span>
+        <span class="chap-name">Quadrilaterals</span>
+      </a>
+      <p class="chap-blurb">Parallelograms, special quadrilaterals, trapeziums and the midpoint theorem.</p>
+      <ul><li><a href="lessons/quads/parallelograms.html">Parallelograms</a></li><li><a href="lessons/quads/special-quadrilaterals.html">Rectangle, rhombus, square and trapezium</a></li><li><a href="lessons/quads/midpoint-theorem.html">The midpoint theorem</a></li></ul>
+    </li>
+    <li class="chap ch-circle">
+      <a class="chap-top" href="lessons/circle/chords-of-a-circle.html">
+        <svg class="glyph" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="24" cy="24" r="18"/><path d="M9 14h30"/><path d="M24 24V14"/><circle cx="24" cy="24" r="1.5" fill="currentColor" stroke="none"/></svg>
+        <span class="chap-meta">Chapter 6<span>Geometry, 2 lessons</span></span>
+        <span class="chap-name">Circle</span>
+      </a>
+      <p class="chap-blurb">Chords and the centre, congruent chords, incircle and circumcircle.</p>
+      <ul><li><a href="lessons/circle/chords-of-a-circle.html">Chords of a circle</a></li><li><a href="lessons/circle/incircle-and-circumcircle.html">Incircle and circumcircle</a></li></ul>
+    </li>
+    <li class="chap ch-coords">
+      <a class="chap-top" href="lessons/coords/plotting-points.html">
+        <svg class="glyph" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M24 5v38M5 24h38"/><path d="M33 9v30" stroke-dasharray="3 3"/><circle cx="33" cy="15" r="3" fill="currentColor" stroke="none"/><path d="M24 15h9"/></svg>
+        <span class="chap-meta">Chapter 7<span>Geometry, 2 lessons</span></span>
+        <span class="chap-name">Co-ordinate Geometry</span>
+      </a>
+      <p class="chap-blurb">Axes, quadrants, plotting points and the lines x = a and y = b.</p>
+      <ul><li><a href="lessons/coords/plotting-points.html">Axes, quadrants and plotting points</a></li><li><a href="lessons/coords/lines-parallel-to-axes.html">Lines parallel to the axes</a></li></ul>
+    </li>
+    <li class="chap ch-trig">
+      <a class="chap-top" href="lessons/trig/trigonometric-ratios.html">
+        <svg class="glyph" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 40H42V12Z"/><path d="M14 40a8 8 0 0 0-1.7-4.9"/><path d="M37 40v-5h5"/></svg>
+        <span class="chap-meta">Chapter 8<span>Geometry, 2 lessons</span></span>
+        <span class="chap-name">Trigonometry</span>
+      </a>
+      <p class="chap-blurb">Sin, cos and tan in a right triangle, and ratios of 0°, 30°, 45°, 60°, 90°.</p>
+      <ul><li><a href="lessons/trig/trigonometric-ratios.html">Trigonometric ratios</a></li><li><a href="lessons/trig/special-angles.html">Ratios of special angles</a></li></ul>
+    </li>
+    <li class="chap ch-volume">
+      <a class="chap-top" href="lessons/volume/cuboids-and-cylinders.html">
+        <svg class="glyph" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 40V18l10-8h22v22l-10 8Z"/><path d="M8 18h22v22M30 18l10-8"/></svg>
+        <span class="chap-meta">Chapter 9<span>Geometry, 3 lessons</span></span>
+        <span class="chap-name">Surface Area and Volume</span>
+      </a>
+      <p class="chap-blurb">Cuboids, cylinders, cones and spheres: surface areas and volumes.</p>
+      <ul><li><a href="lessons/volume/cuboids-and-cylinders.html">Cuboids, cubes and cylinders</a></li><li><a href="lessons/volume/cones.html">Cones</a></li><li><a href="lessons/volume/spheres-and-hemispheres.html">Spheres and hemispheres</a></li></ul>
+    </li>
+      </ul>
+    </div>
   </section>
 
   <section id="games" class="games-band">
@@ -143,8 +302,9 @@
   </section>
 </main>
 
-<footer class="foot">Free to use for learning. Lessons follow the Maharashtra State Board Std 9 Science and Technology textbook, with extra topics from the NCERT Class 9 book.</footer>
+<footer class="foot">Free to use for learning. Lessons follow the Maharashtra State Board Std 9 Science and Technology and Mathematics textbooks, with extra topics from the NCERT Class 9 books.</footer>
 </div>
-<script src="assets/js/hero.js?v=20261007"></script>
+<script src="assets/js/hero.js?v=20261010"></script>
+<script src="assets/js/subjects.js?v=20261010"></script>
 </body>
 </html>

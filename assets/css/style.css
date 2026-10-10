@@ -29,6 +29,8 @@
   /* One colour per chapter, used for its card and for the strip on every lesson in it */
   --c-motion: #5b3fd6; --c-energy: #c97a00; --c-electricity: #1571b8; --c-matter: #1f8a5b;
   --c-acids: #c0367a; --c-light: #0a8f8a; --c-sound: #d9512c; --c-space: #2f2a86; --c-further: #56676f;
+  --c-linear: #d4570f; --c-triangles: #0b7fa6;
+  --c-sets: #7a3fd6; --c-real: #2f6fd6; --c-poly: #b0369a; --c-ratio: #8a6d00; --c-finance: #2e7d32; --c-stats: #a33b5a; --c-geometry: #4b5563; --c-parallel: #0f766e; --c-constructions: #9a3412; --c-quads: #6d28d9; --c-circle: #be185d; --c-coords: #1d4ed8; --c-trig: #b45309; --c-volume: #047857;
   --chap: var(--path);
 }
 @media (prefers-color-scheme: dark) {
@@ -36,14 +38,14 @@
     --bg: #0e1618; --surface: #152024; --ink: #e4eceb; --muted: #94a6aa;
     --line: #26363c; --grid: #1d2b30; --path: #a596ff; --vx: #3cc7b3; --vy: #ff8a63;
     --tint: #231f3d; --good: #5cc77f; --bad: #ff8a80; color-scheme: dark;
-    --c-motion: #a596ff; --c-energy: #f2b544; --c-electricity: #6cb4f0; --c-matter: #5cc792; --c-acids: #f07ab4; --c-light: #4fd1c9; --c-sound: #ff8a63; --c-space: #a9a4ff; --c-further: #94a6aa;
+    --c-motion: #a596ff; --c-energy: #f2b544; --c-electricity: #6cb4f0; --c-matter: #5cc792; --c-acids: #f07ab4; --c-light: #4fd1c9; --c-sound: #ff8a63; --c-space: #a9a4ff; --c-further: #94a6aa; --c-linear: #ff9a5c; --c-triangles: #5cc8ec; --c-sets: #b896ff; --c-real: #7aa8ff; --c-poly: #ee7ad8; --c-ratio: #e3c24a; --c-finance: #74c77a; --c-stats: #f08aa8; --c-geometry: #a7b0bd; --c-parallel: #44c9b6; --c-constructions: #f59e6b; --c-quads: #b394ff; --c-circle: #f472b6; --c-coords: #7da2ff; --c-trig: #f6b25a; --c-volume: #4ad6a4;
   }
 }
 :root[data-theme="dark"] {
   --bg: #0e1618; --surface: #152024; --ink: #e4eceb; --muted: #94a6aa;
   --line: #26363c; --grid: #1d2b30; --path: #a596ff; --vx: #3cc7b3; --vy: #ff8a63;
   --tint: #231f3d; --good: #5cc77f; --bad: #ff8a80; color-scheme: dark;
-  --c-motion: #a596ff; --c-energy: #f2b544; --c-electricity: #6cb4f0; --c-matter: #5cc792; --c-acids: #f07ab4; --c-light: #4fd1c9; --c-sound: #ff8a63; --c-space: #a9a4ff; --c-further: #94a6aa;
+  --c-motion: #a596ff; --c-energy: #f2b544; --c-electricity: #6cb4f0; --c-matter: #5cc792; --c-acids: #f07ab4; --c-light: #4fd1c9; --c-sound: #ff8a63; --c-space: #a9a4ff; --c-further: #94a6aa; --c-linear: #ff9a5c; --c-triangles: #5cc8ec; --c-sets: #b896ff; --c-real: #7aa8ff; --c-poly: #ee7ad8; --c-ratio: #e3c24a; --c-finance: #74c77a; --c-stats: #f08aa8; --c-geometry: #a7b0bd; --c-parallel: #44c9b6; --c-constructions: #f59e6b; --c-quads: #b394ff; --c-circle: #f472b6; --c-coords: #7da2ff; --c-trig: #f6b25a; --c-volume: #4ad6a4;
 }
 
 * { box-sizing: border-box; }
@@ -260,6 +262,8 @@ math[display="block"] { margin: 0.5rem 0; font-size: 1.1em; }
 .ch-motion { --chap: var(--c-motion); } .ch-energy { --chap: var(--c-energy); } .ch-electricity { --chap: var(--c-electricity); }
 .ch-matter { --chap: var(--c-matter); } .ch-acids { --chap: var(--c-acids); } .ch-light { --chap: var(--c-light); }
 .ch-sound { --chap: var(--c-sound); } .ch-space { --chap: var(--c-space); } .ch-further { --chap: var(--c-further); } .ch-kinematics { --chap: var(--c-motion); }
+.ch-linear { --chap: var(--c-linear); } .ch-triangles { --chap: var(--c-triangles); }
+.ch-sets { --chap: var(--c-sets); } .ch-real { --chap: var(--c-real); } .ch-poly { --chap: var(--c-poly); } .ch-ratio { --chap: var(--c-ratio); } .ch-finance { --chap: var(--c-finance); } .ch-stats { --chap: var(--c-stats); } .ch-geometry { --chap: var(--c-geometry); } .ch-parallel { --chap: var(--c-parallel); } .ch-constructions { --chap: var(--c-constructions); } .ch-quads { --chap: var(--c-quads); } .ch-circle { --chap: var(--c-circle); } .ch-coords { --chap: var(--c-coords); } .ch-trig { --chap: var(--c-trig); } .ch-volume { --chap: var(--c-volume); }
 
 /* Lesson and game pages: a strip of the chapter colour across the top, graph paper behind the title */
 body.lesson, body.gamepage { background-image: linear-gradient(var(--chap), var(--chap)); background-size: 100% 6px; background-repeat: no-repeat; }
@@ -341,3 +345,44 @@ body.lesson .site-head, body.gamepage .site-head { border-bottom: 0; margin-bott
   .steps li:not(:last-child)::after { display: none; }
 }
 @media (max-width: 600px) { .site-nav { gap: 0.9rem; font-size: var(--step--1); } .games-band { border-radius: 16px; } }
+
+/* Maths simulations */
+.eqn-show { font-family: var(--font-data); font-size: 1.35rem; font-weight: 500; color: var(--chap); background: color-mix(in srgb, var(--chap) 10%, transparent); border-radius: 10px; padding: 0.5rem 0.75rem; text-align: center; }
+.eq-pick { border: 1px solid var(--line); border-radius: 10px; padding: 0.5rem 0.7rem 0.2rem; }
+.eq-pick .seg-label b { font-family: var(--font-data); color: var(--ink); font-weight: 500; }
+.problem-text { font-size: var(--step--1); background: var(--bg); border-left: 3px solid var(--chap); padding: 0.5rem 0.7rem; border-radius: 0 8px 8px 0; }
+.sim-body .steps-list { grid-column: 1 / -1; margin: 0; padding: 0.9rem 1rem 0.9rem 2.6rem; border-top: 1px solid var(--line); font-family: var(--font-data); font-size: 0.9rem; display: grid; gap: 0.3rem; }
+.steps-list li.given { list-style: none; margin-left: -1.6rem; color: var(--muted); }
+.steps-list li.final { font-weight: 700; color: var(--good); }
+
+/* Home: subject switch */
+.subject-switch { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.75rem; margin-top: 1.25rem; max-width: 40rem; }
+.subject-switch button { text-align: left; font: inherit; padding: 0.9rem 1.1rem; border-radius: 14px; border: 2px solid var(--line); background: var(--surface); color: var(--ink); cursor: pointer; }
+.subject-switch button b { display: block; font-family: var(--font-display); font-size: 1.6rem; font-weight: 800; letter-spacing: -0.02em; line-height: 1.1; }
+.subject-switch button span { font-size: var(--step--1); color: var(--muted); }
+.subject-switch button:hover { border-color: var(--ink); }
+.subject-switch button[aria-selected="true"] { background: var(--ink); border-color: var(--ink); color: var(--bg); }
+.subject-switch button[aria-selected="true"] span { color: color-mix(in srgb, var(--bg) 75%, transparent); }
+.subject-panel .section-lede { margin-top: 1.25rem; }
+.chap-soon { background: transparent; border: 2px dashed var(--line); padding: 1.1rem; }
+.soon-head { font-family: var(--font-display); font-weight: 750; font-size: 1.3rem; letter-spacing: -0.02em; }
+.chap-soon .chap-blurb { margin-top: 0.3rem; }
+.chap-soon li { color: var(--muted); }
+.chap-soon li::before { background: var(--line); }
+.brand { white-space: nowrap; }
+@media (max-width: 600px) {
+  .brand { font-size: 1rem; gap: 0.35rem; }
+  .brand .logo { width: 24px; height: 24px; }
+  .site-head { gap: 0.6rem; }
+  .site-nav { gap: 0.7rem; font-size: 0.82rem; }
+}
+@media (max-width: 420px) {
+  .brand { font-size: 0.92rem; }
+  .site-nav { gap: 0.55rem; font-size: 0.78rem; }
+  .site-head { gap: 0.4rem; }
+}
+/* Maths panel: Part I / Part II headings */
+.part-head { margin-top: 2.5rem; font-size: 1.4rem; display: flex; align-items: center; gap: 0.75rem; }
+.part-head::after { content: ""; flex: 1; border-top: 2px dashed var(--line); }
+.subject-panel .section-lede + .part-head { margin-top: 1.5rem; }
+.part-head + .chapters { margin-top: 1rem; }

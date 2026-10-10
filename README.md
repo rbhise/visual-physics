@@ -1,6 +1,6 @@
-# Visual Physics
+# Visual Science & Maths
 
-High school physics explained with interactive simulations. Plain HTML, CSS and JavaScript: no build step, no frameworks, hosted free on GitHub Pages.
+Std 9 science and maths explained with interactive simulations. Plain HTML, CSS and JavaScript: no build step, no frameworks, hosted free on GitHub Pages.
 
 ## Folder layout
 
@@ -19,6 +19,13 @@ lessons/acids/                     Std 9 Chapter 5 lessons (2 pages, chemistry)
 lessons/light/                     Std 9 Chapter 11 lessons (4 pages)
 lessons/sound/                     Std 9 Chapter 12 lessons (4 pages)
 lessons/space/                     Std 9 Chapter 18 lessons (3 pages)
+lessons/sets real poly ratio linear finance stats/
+                                   Maths Part I (Algebra), Chapters 1 to 7
+lessons/geometry parallel triangles constructions quads circle coords trig volume/
+                                   Maths Part II (Geometry), Chapters 1 to 9
+assets/js/math-kit.js              Graph and geometry helpers for the maths simulations
+assets/js/hero.js                  The throwing toy on the home page
+assets/js/subjects.js              The Science / Maths switch on the home page
 assets/js/chem-kit.js              Atomic masses and drawing helpers for chemistry
 assets/js/circuit-kit.js           Drawing helpers for circuit simulations
 lessons/kinematics/projectile-motion.html
@@ -95,5 +102,5 @@ Each lesson can link a deck stored in `slides/`. The button markup is:
 
 ## Changing the site name or colours
 
-- Site name: search for `Visual <span>Physics</span>` in the HTML files.
+- Site name: search for `Visual <span>Science &amp; Maths</span>` in the HTML files.
 - Colours and fonts: the `:root` block at the top of `assets/css/style.css`. Dark mode colours are right below it.
